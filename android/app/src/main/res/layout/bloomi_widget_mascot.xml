@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_mascot_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/widget_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🌸 Bloomi Mascot"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/widget_text_primary" />
+
+        <TextView
+            android:id="@+id/widget_mascot_streak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 Day 1"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/widget_text_secondary" />
+    </LinearLayout>
+
+    <!-- Mascot & Message -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/widget_mascot_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cheerful &amp; Happy! ✨"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/widget_text_primary" />
+
+        <TextView
+            android:id="@+id/widget_mascot_quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take gentle steps today. You are doing wonderfully!"
+            android:textSize="11sp"
+            android:textColor="@color/widget_text_secondary"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to visit Bloomi"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="@color/widget_text_primary" />
+</LinearLayout>

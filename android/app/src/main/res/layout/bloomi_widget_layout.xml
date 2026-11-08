@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/widget_background">
+
+    <!-- 1. Surroundings Section (Weather, Condition, AQI, UV) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:background="@drawable/widget_inner_rounded_neutral">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="☀️"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/widget_weather_temp_cond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="28°C · Pleasant"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_text_primary" />
+
+            <TextView
+                android:id="@+id/widget_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Local Area"
+                android:textSize="10sp"
+                android:textColor="@color/widget_text_secondary"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/widget_aqi_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_pill_mint"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="AQI 42"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/widget_pill_mint_text" />
+
+        <TextView
+            android:id="@+id/widget_uv_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/widget_pill_peach"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="UV 3"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/widget_pill_peach_text" />
+    </LinearLayout>
+
+    <!-- 2. Steps & Water Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!-- Steps Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@drawable/widget_inner_rounded_mint">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👟 Steps"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_text_primary" />
+
+            <TextView
+                android:id="@+id/widget_hub_steps_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_text_primary" />
+
+            <TextView
+                android:id="@+id/widget_hub_steps_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/ 10000 goal"
+                android:textSize="10sp"
+                android:textColor="@color/widget_text_secondary" />
+
+            <ProgressBar
+                android:id="@+id/widget_hub_steps_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/widget_progress_mint" />
+        </LinearLayout>
+
+        <!-- Water Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@drawable/widget_inner_rounded_sky">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💧 Water"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_text_primary" />
+
+            <TextView
+                android:id="@+id/widget_hub_water_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0 ml"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_text_primary" />
+
+            <TextView
+                android:id="@+id/widget_hub_water_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/ 2500 ml goal"
+                android:textSize="10sp"
+                android:textColor="@color/widget_text_secondary" />
+
+            <ProgressBar
+                android:id="@+id/widget_hub_water_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/widget_progress_sky" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 3. Daily Nutrients (Calories, Protein, Carbs, Fat, Fibre) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/widget_inner_rounded_neutral">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Daily Nutrients"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_text_primary" />
+
+            <TextView
+                android:id="@+id/widget_hub_calories_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 / 2000 kcal"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_text_primary" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/widget_hub_calories_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="4dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/widget_progress_orange" />
+
+        <!-- 4 Macros Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Protein"
+                    android:textSize="9sp"
+                    android:textColor="@color/widget_text_secondary" />
+
+                <TextView
+                    android:id="@+id/widget_hub_protein_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0g"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/widget_text_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carbs"
+                    android:textSize="9sp"
+                    android:textColor="@color/widget_text_secondary" />
+
+                <TextView
+                    android:id="@+id/widget_hub_carbs_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0g"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/widget_text_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fat"
+                    android:textSize="9sp"
+                    android:textColor="@color/widget_text_secondary" />
+
+                <TextView
+                    android:id="@+id/widget_hub_fat_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0g"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/widget_text_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fibre"
+                    android:textSize="9sp"
+                    android:textColor="@color/widget_text_secondary" />
+
+                <TextView
+                    android:id="@+id/widget_hub_fibre_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0g"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/widget_text_primary" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

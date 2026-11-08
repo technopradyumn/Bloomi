@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launch_background_color">#F6F7FB</color>
+    <color name="ic_launcher_background">#7ED3B2</color>
+
+    <!-- Widget Semantic Colors (Light) -->
+    <color name="widget_bg">#FFFFFF</color>
+    <color name="widget_border">#E2E8F0</color>
+    <color name="widget_inner_neutral_bg">#F8FAFC</color>
+    <color name="widget_inner_mint_bg">#F0FDF4</color>
+    <color name="widget_inner_sky_bg">#F0F9FF</color>
+    <color name="widget_pill_mint_bg">#DCFCE7</color>
+    <color name="widget_pill_mint_border">#86EFAC</color>
+    <color name="widget_pill_mint_text">#065F46</color>
+    <color name="widget_pill_peach_bg">#FFE4E6</color>
+    <color name="widget_pill_peach_border">#FECDD3</color>
+    <color name="widget_pill_peach_text">#9F1239</color>
+    <color name="widget_text_primary">#1F2A37</color>
+    <color name="widget_text_secondary">#64748B</color>
+</resources>

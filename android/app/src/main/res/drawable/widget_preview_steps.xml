@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="250dp"
+    android:height="110dp"
+    android:viewportWidth="250"
+    android:viewportHeight="110">
+    <!-- Card Background -->
+    <path
+        android:fillColor="#F6F8F6"
+        android:pathData="M16,0 L234,0 A16,16 0 0,1 250,16 L250,94 A16,16 0 0,1 234,110 L16,110 A16,16 0 0,1 0,94 L0,16 A16,16 0 0,1 16,0 Z" />
+    <path
+        android:strokeColor="#20000000"
+        android:strokeWidth="1"
+        android:pathData="M16,0.5 L234,0.5 A15.5,15.5 0 0,1 249.5,16 L249.5,94 A15.5,15.5 0 0,1 234.5,109.5 L16,109.5 A15.5,15.5 0 0,1 0.5,94 L0.5,16 A15.5,15.5 0 0,1 16,0.5 Z" />
+
+    <!-- Icon Circle Mint -->
+    <path
+        android:fillColor="#E6F7F0"
+        android:pathData="M24,18 A12,12 0 1,1 24,42 A12,12 0 1,1 24,18 Z" />
+    <!-- Shoe / Walk glyph hint -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M19,30 L27,30 A2,2 0 0,1 29,32 L29,34 A1,1 0 0,1 28,35 L18,35 A1,1 0 0,1 17,34 L17,32 A2,2 0 0,1 19,30 Z" />
+
+    <!-- Title Bar -->
+    <path
+        android:fillColor="#1F2A37"
+        android:pathData="M44,24 L120,24 A3,3 0 0,1 120,30 L44,30 A3,3 0 0,1 44,24 Z" />
+    <!-- Percent Badge -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M200,22 L236,22 A4,4 0 0,1 240,26 L240,32 A4,4 0 0,1 236,36 L200,36 A4,4 0 0,1 196,32 L196,26 A4,4 0 0,1 200,22 Z" />
+
+    <!-- Steps Big Number -->
+    <path
+        android:fillColor="#1F2A37"
+        android:pathData="M16,52 L90,52 A5,5 0 0,1 90,64 L16,64 A5,5 0 0,1 16,52 Z" />
+    <!-- Target Text -->
+    <path
+        android:fillColor="#6B7785"
+        android:pathData="M98,56 L160,56 A3,3 0 0,1 160,62 L98,62 A3,3 0 0,1 98,56 Z" />
+
+    <!-- Progress Track & Fill -->
+    <path
+        android:fillColor="#E5E7EB"
+        android:pathData="M16,74 L234,74 A4,4 0 0,1 238,78 L238,80 A4,4 0 0,1 234,84 L16,84 A4,4 0 0,1 12,80 L12,78 A4,4 0 0,1 16,74 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M16,74 L160,74 A4,4 0 0,1 164,78 L164,80 A4,4 0 0,1 160,84 L16,84 A4,4 0 0,1 12,80 L12,78 A4,4 0 0,1 16,74 Z" />
+
+    <!-- Sub metrics (Distance + Calories pills) -->
+    <path
+        android:fillColor="#6B7785"
+        android:pathData="M16,92 L80,92 A3,3 0 0,1 80,98 L16,98 A3,3 0 0,1 16,92 Z" />
+    <path
+        android:fillColor="#6B7785"
+        android:pathData="M100,92 L160,92 A3,3 0 0,1 160,98 L100,98 A3,3 0 0,1 100,92 Z" />
+</vector>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="250dp"
+    android:height="110dp"
+    android:viewportWidth="250"
+    android:viewportHeight="110">
+    <!-- Card Background -->
+    <path
+        android:fillColor="#F6F8F6"
+        android:pathData="M16,0 L234,0 A16,16 0 0,1 250,16 L250,94 A16,16 0 0,1 234,110 L16,110 A16,16 0 0,1 0,94 L0,16 A16,16 0 0,1 16,0 Z" />
+    <path
+        android:strokeColor="#20000000"
+        android:strokeWidth="1"
+        android:pathData="M16,0.5 L234,0.5 A15.5,15.5 0 0,1 249.5,16 L249.5,94 A15.5,15.5 0 0,1 234.5,109.5 L16,109.5 A15.5,15.5 0 0,1 0.5,94 L0.5,16 A15.5,15.5 0 0,1 16,0.5 Z" />
+
+    <!-- Mascot Face Circle -->
+    <path
+        android:fillColor="#D1FAE5"
+        android:pathData="M20,25 A30,30 0 1,1 80,25 A30,30 0 1,1 20,25 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M35,45 A4,4 0 1,1 35,53 A4,4 0 1,1 35,45 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M65,45 A4,4 0 1,1 65,53 A4,4 0 1,1 65,45 Z" />
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2"
+        android:pathData="M43,62 Q50,70 57,62" />
+
+    <!-- Speech / Greeting Bubble -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M95,20 L230,20 A10,10 0 0,1 240,30 L240,55 A10,10 0 0,1 230,65 L110,65 L95,78 L98,65 A10,10 0 0,1 90,55 L90,30 A10,10 0 0,1 95,20 Z" />
+    <path
+        android:fillColor="#1F2A37"
+        android:pathData="M110,32 L220,32 A3,3 0 0,1 220,38 L110,38 A3,3 0 0,1 110,32 Z" />
+    <path
+        android:fillColor="#6B7785"
+        android:pathData="M110,46 L180,46 A3,3 0 0,1 180,52 L110,52 A3,3 0 0,1 110,46 Z" />
+
+    <!-- Streak Badge -->
+    <path
+        android:fillColor="#FFC9B5"
+        android:pathData="M95,76 L180,76 A6,6 0 0,1 186,82 L186,96 A6,6 0 0,1 180,102 L95,102 A6,6 0 0,1 89,96 L89,82 A6,6 0 0,1 95,76 Z" />
+</vector>
+

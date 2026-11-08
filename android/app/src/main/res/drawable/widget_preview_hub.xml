@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="250dp"
+    android:height="110dp"
+    android:viewportWidth="250"
+    android:viewportHeight="110">
+    <!-- Outer Card Background -->
+    <path
+        android:fillColor="#F6F8F6"
+        android:pathData="M16,0 L234,0 A16,16 0 0,1 250,16 L250,94 A16,16 0 0,1 234,110 L16,110 A16,16 0 0,1 0,94 L0,16 A16,16 0 0,1 16,0 Z" />
+    <path
+        android:strokeColor="#20000000"
+        android:strokeWidth="1"
+        android:pathData="M16,0.5 L234,0.5 A15.5,15.5 0 0,1 249.5,16 L249.5,94 A15.5,15.5 0 0,1 234.5,109.5 L16,109.5 A15.5,15.5 0 0,1 0.5,94 L0.5,16 A15.5,15.5 0 0,1 16,0.5 Z" />
+
+    <!-- Surroundings Banner -->
+    <path
+        android:fillColor="#E2ECE9"
+        android:pathData="M12,10 L238,10 A8,8 0 0,1 246,18 L246,34 A8,8 0 0,1 238,42 L12,42 A8,8 0 0,1 4,34 L4,18 A8,8 0 0,1 12,10 Z" />
+    <!-- Weather & Air Badges -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M185,16 L210,16 A6,6 0 0,1 216,22 L216,28 A6,6 0 0,1 210,34 L185,34 A6,6 0 0,1 179,28 L179,22 A6,6 0 0,1 185,16 Z" />
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M220,16 L238,16 A6,6 0 0,1 244,22 L244,28 A6,6 0 0,1 238,34 L220,34 A6,6 0 0,1 214,28 L214,22 A6,6 0 0,1 220,16 Z" />
+
+    <!-- Steps Card (Left) -->
+    <path
+        android:fillColor="#E6F7F0"
+        android:pathData="M12,48 L118,48 A8,8 0 0,1 126,56 L126,98 A8,8 0 0,1 118,106 L12,106 A8,8 0 0,1 4,98 L4,56 A8,8 0 0,1 12,48 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M12,98 L118,98 A2,2 0 0,1 120,100 L120,102 A2,2 0 0,1 118,104 L12,104 A2,2 0 0,1 10,102 L10,100 A2,2 0 0,1 12,98 Z" />
+
+    <!-- Water Card (Right) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M132,48 L238,48 A8,8 0 0,1 246,56 L246,98 A8,8 0 0,1 238,106 L132,106 A8,8 0 0,1 124,98 L124,56 A8,8 0 0,1 132,48 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M132,98 L238,98 A2,2 0 0,1 240,100 L240,102 A2,2 0 0,1 238,104 L132,104 A2,2 0 0,1 130,102 L130,100 A2,2 0 0,1 132,98 Z" />
+</vector>

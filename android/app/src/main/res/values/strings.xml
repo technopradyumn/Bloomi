@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bloomi</string>
+    <string name="widget_description">Daily Bloom overview with calories, water and steps</string>
+    <string name="widget_steps_description">Activity snapshot with steps count and distance in km</string>
+    <string name="widget_water_description">Hydration tracker with quick glass logging</string>
+    <string name="widget_nutrition_description">Daily nutrition and macronutrient balance</string>
+    <string name="widget_mascot_description">Mindful mascot companion and active streak</string>
+</resources>
