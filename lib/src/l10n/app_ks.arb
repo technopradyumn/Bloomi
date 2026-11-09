@@ -80,7 +80,7 @@
   "home_greeting_afternoon": "گڈ دوپہر",
   "home_greeting_evening": "شب بخیر",
   "home_streak_title": "کھلنا اسٹریک",
-  "home_streak_days": "{شمار، جمع، =0 {0 days streak} =1 {1 day streak} دیگر{ {count} دنوں کا سلسلہ}}",
+  "home_streak_days": "{count, plural, =0 {0 days streak} =1 {1 day streak} other{ {count} دنوں کا سلسلہ}}",
   "home_calories_burned": "جل گیا۔",
   "home_calories_budget": "کیلوری کا بجٹ",
   "home_calories_remaining": "{kcal} kcal باقی ہے۔",

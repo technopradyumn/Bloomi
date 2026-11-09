@@ -80,7 +80,7 @@
   "home_greeting_afternoon": "শুভ বিকাল",
   "home_greeting_evening": "শুভ সন্ধ্যা",
   "home_streak_title": "ব্লসম স্ট্রিক",
-  "home_streak_days": "{গণনা, বহুবচন, =0 {0 days streak} =1 {1 day streak} অন্যান্য{ {count} দিনের ধারাবাহিকতা}}",
+  "home_streak_days": "{count, plural, =0 {0 days streak} =1 {1 day streak} other{ {count} দিনের ধারাবাহিকতা}}",
   "home_calories_burned": "পুড়ে গেছে",
   "home_calories_budget": "ক্যালোরি বাজেট",
   "home_calories_remaining": "{kcal} kcal অবশিষ্ট",
