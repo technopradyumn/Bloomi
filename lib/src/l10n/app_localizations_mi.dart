@@ -580,7 +580,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get health_sync_now => 'Tukutahi Raraunga Hauora';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Tukutahi whakamutunga: $time';
   }
 

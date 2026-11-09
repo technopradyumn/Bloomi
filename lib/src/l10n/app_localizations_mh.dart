@@ -27,7 +27,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get nav_food_diary => 'bok in mōñā ko';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'Log ng Pagsasanay';
 
   @override
   String get nav_health => 'Ājmour';
@@ -45,7 +45,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get delete => 'Jolok';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'I-edit';
 
   @override
   String get done => 'Eṃōj';
@@ -69,7 +69,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get search => 'Pukot';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'Salain';
 
   @override
   String get all => 'Aolep';
@@ -105,19 +105,19 @@ class AppLocalizationsMh extends AppLocalizations {
   String get success => 'Tōbrak';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Naglo-load...';
 
   @override
   String get no_data => 'Ejelok melele ko rej bed';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'Offline na Mode';
 
   @override
   String get offline_sub => 'Oktak ko renaj sync ñe emoj bar kobalok';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'I-undo';
 
   @override
   String get portion => 'Mõttan';
@@ -126,7 +126,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get quantity => 'Joñan';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'Yunit';
 
   @override
   String get clear => 'Alikar';
@@ -135,7 +135,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get select => 'Kālet';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Mag-apply';
 
   @override
   String get reset => 'Bar kōmmane';
@@ -153,10 +153,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get optional => 'Ejjab aikuj';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Mga calorie';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'protina';
 
   @override
   String get carbs => 'Carbs';
@@ -165,7 +165,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get fat => 'Mōttan';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'Hibla';
 
   @override
   String get water => 'Dān';
@@ -219,13 +219,13 @@ class AppLocalizationsMh extends AppLocalizations {
   String get india => 'India';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'Asya';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Europa';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Gitnang Silangan';
 
   @override
   String get africa => 'Africa';
@@ -264,7 +264,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get home_calories_burned => 'Eṃōj bwil';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Calorie Badyet';
 
   @override
   String home_calories_remaining(Object kcal) {
@@ -292,7 +292,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get home_log_water => 'Dān in wōjke';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Mag-log Workout';
 
   @override
   String get home_log_weight => 'Depakpak in Log';
@@ -374,7 +374,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get food_custom_recipe => 'Mōñā ko im wāween kōmat';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'I-scan ang Barcode';
 
   @override
   String get food_camera_scan => 'AI Food Scanner';
@@ -386,7 +386,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get food_favourites => 'Men ko ij iakwe';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Pagkasira ng Macronutrient';
 
   @override
   String get food_delete_meal_confirm => 'Kwoj ke lukkun kōnan jolok men in?';
@@ -409,7 +409,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get foodSearch_title => 'Pukot Mōñā ko';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'I-scan ang Barcode';
 
   @override
   String get foodSearch_take_photo => 'Snap Food Photo';
@@ -467,16 +467,16 @@ class AppLocalizationsMh extends AppLocalizations {
   String get customFood_name_hint => 'Etan mōñā eo ak men ko ie';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Mga calorie (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'Protina (g)';
 
   @override
   String get customFood_carbs_hint => 'Carbs (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'taba (g)';
 
   @override
   String get customFood_save => 'Kōjparok Recipe eo';
@@ -491,10 +491,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get water_logged_today => 'Emoj deloñ Rainin';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml na Salamin';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ML Bote';
 
   @override
   String get water_custom_amount => 'Joñan eo ekkar';
@@ -509,7 +509,7 @@ class AppLocalizationsMh extends AppLocalizations {
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Log ng Pagsasanay';
 
   @override
   String get workout_add_exercise => 'Kobaik Workout';
@@ -521,7 +521,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get workout_strength => 'Kajoor';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Yoga at Flexibility';
 
   @override
   String get workout_duration => 'Iien';
@@ -563,22 +563,22 @@ class AppLocalizationsMh extends AppLocalizations {
   String get health_body_temperature => 'Bwil im molo enbwin';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Pagsubaybay sa pagtulog';
 
   @override
   String get health_weight_tracking => 'joñan depakpak im joñan enbwinin';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'waist-to-Hip Ratio';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Mga Device at Smartwatch Hub';
 
   @override
   String get health_sync_now => 'Kōllaajrake Data in Ājmour';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Last sync: $time';
   }
 
@@ -589,7 +589,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get health_metric_detail => 'Meļeļe ko an Metric';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Mga Konektadong Health Sensor';
 
   @override
   String get plan_title => 'Karōk in raan otemjej';
@@ -607,7 +607,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get plan_step_target => 'Step Target';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Target sa pagtulog';
 
   @override
   String get plan_meal_suggestions => 'Kōmeļeļe ko kōn m̧ōn̄ā';
@@ -616,7 +616,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get plan_healthy_habits => 'Mwil ko remman im nan in kakapilōk ko';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Mga Rekomendasyon ng Bloomi AI Coach';
 
   @override
   String get plan_generated_title =>
@@ -679,7 +679,7 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Health Connect, Mga Step Sensor, GPS, Mga Notification at Camera';
 
   @override
   String get reminders_notifications => 'Kakememej ko im kōjjelā ko';
@@ -703,47 +703,47 @@ class AppLocalizationsMh extends AppLocalizations {
       'Kajin English, हिन्दी (Hindi), Hinglish & 195+ kajin ko ibelakin lal';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Mga Widget ng Home Screen';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Live na Android widgets: Hub, Steps, Water, Nutrition at Mascot';
 
   @override
   String get wear_os_watch_app => 'Wear OS Watch App';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Kasama sa Smartwatch, mga tile, komplikasyon, at live na vitals';
 
   @override
   String get goals_wellness => 'GOAL KO & WELLNESS INSIGHTS';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Mga Target sa Nutrisyon at Macro Split';
 
   @override
   String get nutrition_targets_sub =>
       'Mejenkajjik in calorie, protein, carbs, bōtōktōk im den';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Lingguhang Wellness Recap';
 
   @override
   String get weekly_recap_sub =>
       '7-raan in calorie average, macro ratio & raan eo emman tata';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Mga Streak at Milestone';
 
   @override
   String get streaks_sub => 'Bōlōk ko rej jerbal, badge ko im tōprak ko';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'MGA KONEKTADO NA DEVICE at ECOSYSTEM';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Mga Device at Smartwatch Hub';
 
   @override
   String get devices_hub_sub =>
@@ -761,22 +761,23 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'AI Plan Coach, 5 widget sa home screen at pagsubaybay sa vitals';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'TUNGKOL & SEGURIDAD';
 
   @override
   String get about_bloomi => 'Kin Bloomi';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub => 'Bumuo ng mga detalye, bersyon, attribution';
 
   @override
   String get privacy_policy => 'Kien in Kōjparok Mejenkajjik';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Offline-una, on-device na arkitektura ng data';
 
   @override
   String get terms_conditions => 'Kien ko im Jekjek ko';
@@ -826,7 +827,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get surroundings_title => 'Jikin ko iturin im jikin ko ibelakin';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Index ng Kalidad ng Hangin';
 
   @override
   String get surroundings_uv => 'UV Index';
@@ -848,7 +849,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get food_quick_search => 'Pukot Mōñā';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'I-scan ang Barcode 👑';
 
   @override
   String get food_quick_water => 'Kobaik Dān';
@@ -860,7 +861,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get surroundings_good => 'Emmōn';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Katamtaman';
 
   @override
   String get surroundings_unhealthy => 'Ejjab ājmour';
@@ -916,7 +917,7 @@ class AppLocalizationsMh extends AppLocalizations {
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Lingguhang Pagtimbang ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
@@ -942,7 +943,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get onboard_get_started => 'Jinoe';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Mag-sign In';
 
   @override
   String get onboard_skip => 'Jolok';
@@ -986,7 +987,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get onboard_enter_bloomi => 'Deloñ ilo Bloomi';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Lingguhang Wellness Recap';
 
   @override
   String insights_best_day(Object day) {
@@ -994,7 +995,7 @@ class AppLocalizationsMh extends AppLocalizations {
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Mga Streak at Milestone';
 
   @override
   String insights_unlocked_on(Object date) {
@@ -1006,7 +1007,7 @@ class AppLocalizationsMh extends AppLocalizations {
       'Wōnm̧aanļo̧k wōt kōn wōnm̧aanļo̧k eo em̧m̧an!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Mga Widget ng Home Screen';
 
   @override
   String widgets_active_count(Object count) {
@@ -1020,10 +1021,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get widgets_steps_title => 'Bun̄tōn ko & Ring eo ej jerbal';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Mabilis na Log ng Hydration';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Kasamang Mascot ng Bloomi';
 
   @override
   String get wear_os_title => 'Kōņak OS Smartwatch';
@@ -1038,7 +1039,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get theme_title => 'Wāween im Unin';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Mode ng Tema';
 
   @override
   String get theme_light => 'Meram';
@@ -1047,16 +1048,16 @@ class AppLocalizationsMh extends AppLocalizations {
   String get theme_dark => 'Marok';
 
   @override
-  String get theme_system => 'System Default';
+  String get theme_system => 'Default ng System';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Palette ng Background';
 
   @override
   String get units_title => 'Unit in joñan';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Sukatan (kg, cm, ml)';
 
   @override
   String get units_imperial => 'Imperial (lbs, in, fl oz)';
@@ -1081,7 +1082,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get home_quick_add => 'Mōkaj in kobaik';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'Live na GPS';
 
   @override
   String get home_calories_remaining_label => 'CALORIE ko rej bed wot';
@@ -1139,10 +1140,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get food_recipe_directions => 'Naan in jiron ko im melele ko';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Kabuuang Nutrisyon ng Recipe';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Bawat Paghahatid ng Nutrisyon';
 
   @override
   String get food_recipe_saved_toast =>
@@ -1189,19 +1190,19 @@ class AppLocalizationsMh extends AppLocalizations {
       'Meļeļe ko kin mōñā ko ilo raan otemjej';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'Pagkasira ng Protina';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'Pagkasira ng Carbs';
 
   @override
   String get food_macro_fat_label => 'Kōmman Fat Breakdown';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Pagkasira ng Hibla';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Target na Paghahambing';
 
   @override
   String food_target_label(Object target) {
@@ -1240,7 +1241,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get water_adjust_goal => 'Kōmmane Mejenkajjik eo an Ran otemjej';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Nakakonekta sa Health Connect';
 
   @override
   String get health_vitals_summary => 'Men ko Raorōk ñan Ājmour Ran otemjej';
@@ -1311,7 +1312,7 @@ class AppLocalizationsMh extends AppLocalizations {
       'Lale smartwatch ko, fitness tracker ko, im health sensor ko.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'I-edit ang Workout';
 
   @override
   String get health_workout_name_label => 'Etan jikin ikkure eo';
@@ -1341,7 +1342,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get plan_coach_badge => 'Bloomi AI Coach';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7-Araw na Wellness Focus';
 
   @override
   String get plan_targets_title =>
@@ -1426,7 +1427,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get settings_about_header => 'Kin Bloomi';
 
   @override
-  String get settings_about_version => 'Version 1.0.0';
+  String get settings_about_version => 'Bersyon 1.0.0';
 
   @override
   String get settings_about_build => 'Kalōk 100';
@@ -1474,7 +1475,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get onboard_step_plan => 'Pojak!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm => 'Access sa Health Connect';
 
   @override
   String get onboard_step_sensors_perm => 'Step Counter Sensor';
@@ -1483,7 +1484,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get onboard_notif_perm => 'Kakememej ko im kōjjelā ko';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'Camera (Barcode at Food Scanner)';
 
   @override
   String get onboard_grant_permissions => 'Lelok maroñ ko';
@@ -1506,7 +1507,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get notif_channel_nutrition_desc => 'Mōñā in jibboñ, raelep, im jota';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Hakbang Milestones';
 
   @override
   String get notif_channel_steps_desc =>

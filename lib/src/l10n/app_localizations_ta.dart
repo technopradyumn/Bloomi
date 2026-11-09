@@ -584,7 +584,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get health_sync_now => 'சுகாதாரத் தரவை ஒத்திசைக்கவும்';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'கடைசியாக ஒத்திசைத்தது: $time';
   }
 

@@ -582,7 +582,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get health_sync_now => 'ಆರೋಗ್ಯ ಡೇಟಾವನ್ನು ಸಿಂಕ್ ಮಾಡಿ';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'ಕೊನೆಯದಾಗಿ ಸಿಂಕ್ ಮಾಡಿದ್ದು: $time';
   }
 

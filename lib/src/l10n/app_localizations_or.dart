@@ -583,7 +583,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get health_sync_now => 'ସ୍ୱାସ୍ଥ୍ୟ ତଥ୍ୟ ସିଙ୍କ କରନ୍ତୁ |';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'ଶେଷ ସିଙ୍କ୍ ହୋଇଛି: $time';
   }
 

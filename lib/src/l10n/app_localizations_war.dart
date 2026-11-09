@@ -585,7 +585,7 @@ class AppLocalizationsWar extends AppLocalizations {
   String get health_sync_now => 'Ig-sync an Datos han Panglawas';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Kataposan nga gin-sync: $time';
   }
 

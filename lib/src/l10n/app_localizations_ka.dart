@@ -583,7 +583,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get health_sync_now => 'ჯანმრთელობის მონაცემების სინქრონიზაცია';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'ბოლო სინქრონიზაცია: $time';
   }
 

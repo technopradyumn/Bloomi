@@ -585,7 +585,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get health_sync_now => 'I-sync ti Datos ti Salun-at';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Naudi a naisinkron: $time .';
   }
 

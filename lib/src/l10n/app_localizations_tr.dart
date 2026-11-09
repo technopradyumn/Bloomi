@@ -582,7 +582,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get health_sync_now => 'Sağlık Verilerini Senkronize Et';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Son senkronizasyon: $time';
   }
 

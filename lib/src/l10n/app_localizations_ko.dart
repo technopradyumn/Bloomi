@@ -575,7 +575,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get health_sync_now => '건강 데이터 동기화';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return '마지막 동기화: $time';
   }
 

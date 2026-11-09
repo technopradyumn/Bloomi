@@ -585,7 +585,7 @@ class AppLocalizationsTpi extends AppLocalizations {
   String get health_sync_now => 'Sinkim Helt Data';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Laspela taim ol i bin bungim: $time';
   }
 

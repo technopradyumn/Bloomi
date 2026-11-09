@@ -581,7 +581,7 @@ class AppLocalizationsNew extends AppLocalizations {
   String get health_sync_now => 'स्वास्थ्य डाटा सिंक';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'लिपांगु सिंक : __पिएच_०__';
   }
 

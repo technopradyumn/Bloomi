@@ -585,7 +585,7 @@ class AppLocalizationsBcl extends AppLocalizations {
   String get health_sync_now => 'I-sync an Data sa Salud';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Huring na-sync: $time';
   }
 

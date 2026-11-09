@@ -581,7 +581,7 @@ class AppLocalizationsTrp extends AppLocalizations {
   String get health_sync_now => 'Khorokma ni Data no sync khai di';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Poito khwlaijak: $time';
   }
 

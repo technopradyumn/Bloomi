@@ -579,7 +579,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get health_sync_now => 'هم وقت صحت ڊيٽا';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'آخري هم وقت: $time';
   }
 

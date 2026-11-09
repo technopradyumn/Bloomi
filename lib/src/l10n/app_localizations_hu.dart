@@ -114,28 +114,29 @@ class AppLocalizationsHu extends AppLocalizations {
   String get offline => 'Offline mód';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'A módosítások szinkronizálódnak az újracsatlakozás után';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'Visszavonás';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'adag';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Mennyiség';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'Egység';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Világos';
 
   @override
-  String get select => 'Select';
+  String get select => 'Válassza ki';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Alkalmazni';
 
   @override
   String get reset => 'Reset';
@@ -144,25 +145,25 @@ class AppLocalizationsHu extends AppLocalizations {
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Igen';
 
   @override
-  String get no => 'No';
+  String get no => 'Nem';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Nem kötelező';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Kalória';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Fehérje';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'szénhidrát';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'Kövér';
 
   @override
   String get fiber => 'Fiber';
@@ -171,7 +172,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get water => 'Water';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Lépések';
 
   @override
   String get kcal => 'kcal';
@@ -192,7 +193,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get centimeters => 'cm';
 
   @override
-  String get inches => 'in';
+  String get inches => 'be';
 
   @override
   String get bpm => 'bpm';
@@ -201,7 +202,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get hours => 'hrs';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'perc';
 
   @override
   String get serving => 'Serving';
@@ -222,19 +223,19 @@ class AppLocalizationsHu extends AppLocalizations {
   String get asia => 'Asia';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Európa';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Közel-Kelet';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'Afrika';
 
   @override
   String get americas => 'Americas';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Otthon';
 
   @override
   String get home_greeting_morning => 'Good Morning';
@@ -243,7 +244,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get home_greeting_afternoon => 'Good Afternoon';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Jó estét!';
 
   @override
   String get home_streak_title => 'Blossom Streak';
@@ -253,22 +254,22 @@ class AppLocalizationsHu extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '$count napos sorozat',
+      one: '1 napos sorozat',
+      zero: '0 napos sorozat',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Leégett';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Kalória költségvetés';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '$kcal kcal maradt';
   }
 
   @override
@@ -280,59 +281,59 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Lépések sétáltak';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Gyors műveletek';
 
   @override
   String get home_log_meal => 'Log Meal';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Log Víz';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Napló edzés';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Napló súlya';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Mai betekintések';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'A kis egészséges választások virágzó átalakulásokat hoznak létre.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Bloom AI edző';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Környezet és levegő';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'Értesítések';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'Napi Wellness Score';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Összes megtekintése';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Élelmiszernapló';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Reggeli';
 
   @override
   String get food_lunch => 'Lunch';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Vacsora';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'Snackek';
 
   @override
   String get food_add_food => 'Add Food';
@@ -356,22 +357,24 @@ class AppLocalizationsHu extends AppLocalizations {
   String get food_total_calories => 'Total Calories';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'Ehhez az étkezéshez még nincsenek regisztrálva élelmiszerek';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'Erre a napra nincs naplózott étkezés';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'Érintse meg a + gombot az első ízletes étkezés naplózásához';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Gyors hozzáadás';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Keresés ételek, gyümölcsök, dal, roti...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Egyedi ételek és receptek';
 
   @override
   String get food_scan_barcode => 'Scan Barcode';
@@ -380,125 +383,124 @@ class AppLocalizationsHu extends AppLocalizations {
   String get food_camera_scan => 'AI Food Scanner';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Legutóbbi ételek';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Kedvencek';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Makrotápanyagok lebontása';
 
   @override
-  String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+  String get food_delete_meal_confirm => 'Biztosan eltávolítja ezt az elemet?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Élelmiszer eltávolítva';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'megmaradt';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'elfogyasztott';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return '$target kcal';
   }
 
   @override
   String get foodSearch_title => 'Search Foods';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Vonalkód beolvasása';
 
   @override
   String get foodSearch_take_photo => 'Snap Food Photo';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Készítsen egyedi ételeket';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Legutóbbi keresések';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Népszerű ételek';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results => 'Nincs a keresésnek megfelelő élelmiszer';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Vonalkód olvasó';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align => 'Igazítsa a vonalkódot a kamera keretébe';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'A termék nem található az adatbázisban';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'A vonalkód szkennelés a Bloom Pro segítségével érhető el';
 
   @override
   String get camera_title => 'AI Food Scanner';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Készítsen tiszta fényképet az ételről';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'Ételtányér elemzése...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Észlelt elemek';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Flash váltás';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Fotó újrafelvétele';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Erősítse meg az elemeket';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Egyedi ételek és receptek';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Étel vagy összetevő neve';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Kalória (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'fehérje (g)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'szénhidrát (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'zsír (g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Recept mentése';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Vízkövető';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Napi hidratálási cél';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Naplózott ma';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml Üveg';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ml-es palack';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Egyéni összeg';
 
   @override
   String get water_reminder_tip =>
@@ -506,404 +508,408 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Naplózott $amount ml víz 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Edzésnapló';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Edzés hozzáadása';
 
   @override
   String get workout_cardio => 'Cardio';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Erő';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Jóga és rugalmasság';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Időtartam';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Intenzitás';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Elégetett kalóriák';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Ma nincs edzés';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'Az edzés sikeresen mentve!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Edzés típusa';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Jegyzetek és elmélkedések';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Egészség és Vitals';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Pulzusszám';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Vér oxigén (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Vérnyomás';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Vércukor';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Testhőmérséklet';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Alváskövetés';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'Súly és testösszetétel';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Derék-csípő arány';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Eszközök és Smartwatch Hub';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'Egészségügyi adatok szinkronizálása';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'Utolsó szinkronizálás: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Kézi egészségügyi bejegyzés';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Metrika részletei';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors =>
+      'Csatlakoztatott egészségügyi érzékelők';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Napi terv';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'Heti Wellness terv';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Kalóriacél';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Hidratációs cél';
 
   @override
   String get plan_step_target => 'Step Target';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Alváscél';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Étkezési javaslatok';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Egészséges szokások és tippek';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Bloom AI Coach ajánlásai';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'Személyre szabott napirend';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Profil';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Profil szerkesztése';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Név';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Életkor';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Nem';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Magasság';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Súly';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Elsődleges cél';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Tevékenységi szint';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Saját Wellness Statisztika';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'A profil sikeresen frissítve';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Testtömeg-index (BMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Tagság';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Beállítások elemre';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'BEÁLLÍTÁSOK ÉS SZOKÁSOK';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Megjelenés és téma';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Sötét, világos, rendszermód és alkalmazás háttérbeállítások';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Engedélyek és rendszerhozzáférés';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Health Connect, lépésérzékelők, GPS, értesítések és kamera';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Emlékeztetők és értesítések';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Étkezési idők, víz, súlyellenőrzés és lefekvés emlékeztetők';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Mértékegységek';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Metrikus (kg, cm, ml, km) vagy angolszász (lbs, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'Alkalmazás nyelve';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'angol, हिन्दी (hindi), hinglish és 195+ globális nyelv';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Kezdőképernyő widgetek';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Élő Android widgetek: Hub, Steps, Water, Nutrition & Mascot';
 
   @override
   String get wear_os_watch_app => 'Wear OS Watch App';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Okosóra társ, csempék, komplikációk és élő létfontosságú adatok';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'CÉLKITŰZÉSEK ÉS JÓLÉTI BETEKINTÉS';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Táplálkozási célok és makromegosztás';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Kalóriacél, fehérje, szénhidrát, zsír és víz cél';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Heti Wellness Összefoglaló';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      '7 napos kalóriaátlag, makroarány és a legjobb nap';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Csíkok és mérföldkövek';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'Aktív virágcsíkok, jelvények és eredmények';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'CSATLAKOZTATOTT ESZKÖZÖK ÉS ÖKOSZISTÉMA';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Eszközök és Smartwatch Hub';
 
   @override
   String get devices_hub_sub =>
       'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Környék és időjárás';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Levegőminőség (AQI), UV-index és időjárási hidratálási tippek';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'Bloom Pro előfizetés';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'AI Plan Coach, 5 kezdőképernyő widget és életfontosságú nyomon követés';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'RÓLUNK ÉS BIZTONSÁG';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Bloomról';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub =>
+      'Építési specifikációk, verzió, hozzárendelések';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'Adatvédelmi szabályzat';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Offline-első, az eszközön lévő adatarchitektúra';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Általános Szerződési Feltételek';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'Szolgáltatási feltételek és wellness irányelvek';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Fiók és adatok törlése';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Visszafordíthatatlanul törli a helyi SQLite-adatokat és a felhőalapú biztonsági másolatokat';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits => 'Gyengéd, tartós wellness szokások kialakítása';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Saját nyomon követett adatok és naplók';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language => 'Keresés nyelv vagy natív írásmód szerint...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Elérhető nyelvek';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'Nem található megfelelő nyelv';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Próbáljon natív írásmód vagy angol helyesírás alapján keresni';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Részben lefordítva';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Teljes';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'A nyelv beállítása $name ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Környezet és környezet';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Levegőminőségi index';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'UV-index';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Hőmérséklet';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Páratartalom';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Maradjon jól hidratált a jelenlegi időjárási körülmények között.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Élelmiszer keresése';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Vonalkód beolvasása 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Adjunk hozzá vizet';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Egyedi ételek';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Jó';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Mérsékelt';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'egészségtelen';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Értesítések és figyelmeztetések';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Nincsenek új értesítések';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Az összes megjelölése olvasottként';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Összes törlése';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Emlékeztető beállításai';
 
   @override
   String get notifications => 'Push Notifications';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Reggeli emlékeztető 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'Jó reggelt! Ideje egy tápláló reggelire itt: $time.';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Emlékeztető ebédre 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Álljon meg, és élvezze a kiegyensúlyozott, figyelmes ebédet itt: $time.';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Vacsora emlékeztető 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Itt az ideje egy könnyű, kielégítő vacsorának itt: $time.';
   }
 
   @override
@@ -911,306 +917,306 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'Ideje inni egy pohár friss vizet! ( $time )';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Heti mérlegelés ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Kövesse nyomon heti testmutatóit a Bloomon ( $time ).';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Lefekvés 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Lazítson és készüljön fel a pihentető alvásra ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Üdvözöljük Bloomban';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Barátságos, offline egészséggel és táplálkozással foglalkozó társad.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Kezdje el';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Jelentkezzen be';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Kihagyás';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal => 'Mi az elsődleges wellness célja?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Gyengéd fogyás';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Izomnövelés és erő';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Napi energia és vitalitás';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'Egészséges tudatos táplálkozás';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Meséljen nekünk magáról';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Az Ön napi rutinja';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'Engedélyek és rendszerhozzáférés';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Hozzáférést biztosít a szinkronizálási lépésekhez, edzésekhez és emlékeztetőkhöz.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Egyedi terved készen áll!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Kíméletes, személyre szabott táplálkozási és wellness ütemtervet készítettünk csak az Ön számára.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Lépj be Boomiba';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Heti Wellness Összefoglaló';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'A legjobb konzisztencia napja: $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Csíkok és mérföldkövek';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Feloldva ekkor: $date';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'Folytasd a fantasztikus fejlődést!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Kezdőképernyő widgetek';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Aktív widgetek: $count';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'Bloom Wellness Hub';
 
   @override
   String get widgets_steps_title => 'Steps & Active Ring';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Hidratálás gyorsnapló';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Boomi Mascot Companion';
 
   @override
   String get wear_os_title => 'Wear OS Smartwatch';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Csatlakoztatva a Watchhoz';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Óraadatok szinkronizálása';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Megjelenés és téma';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Téma mód';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Fény';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Sötét';
 
   @override
   String get theme_system => 'System';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Háttér paletta';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Mértékegységek';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Metrikus (kg, cm, ml)';
 
   @override
   String get units_imperial => 'Imperial (lbs, in, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Nem sikerült betölteni az irányítópultot';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req => 'Health Connect engedély szükséges';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'A Bloomnak Health Connect engedélyre van szüksége a valós lépések, pulzusszám és a mobilház widgetek valós idejű szinkronizálásához.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Health Connect engedélyezése';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'Készen állsz egy figyelmes napra? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Gyors hozzáadás';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'Élő GPS';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'MARADÉK KALÓRIA';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Elfogyasztott: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Csap a vízkövetéshez 💧';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'A napi cél elérve 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml a napi célig';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Részletek';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Frissítsen a személyre szabott napi célok és az AI-terv feloldásához';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Feloldás 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'Gyorsan rögzítsen egy wellness bejegyzést';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Tálalás mérete';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'Tálalás (g)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Az adagok száma';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Kalória adagonként';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Hozzávalók';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Adja hozzá az összetevőt';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Utasítások és megjegyzések';
 
   @override
   String get food_recipe_total => 'Total Recipe Nutrition';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Táplálkozás adagonként';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast => 'Egyedi étel sikeresen mentve!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'Terméket találtunk!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Nem találtuk ezt a vonalkódot a nyitott adatbázisban. Hozzáadhatja egyedi ételként.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Adjon hozzá egyedi ételeket';
 
   @override
   String get food_scan_again => 'Scan Again';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'Tekintse át az észlelt élelmiszereket';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Módosítsa a mennyiséget, vagy távolítsa el a fel nem ismert tételeket';
 
   @override
   String get food_log_selected => 'Log Selected Foods';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Kedvenc Ételek';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Legutóbbi ételek';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Még nincsenek kedvenc ételei. Érintse meg szívét bármely ételre, hogy megmentse itt.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents => 'Nem találhatók nemrég naplózott élelmiszerek.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title => 'A napi táplálkozás részletei';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'A fehérje lebontása';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'A szénhidrátok lebontása';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'Zsírbontás';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Fiber lebontás';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Célok összehasonlítása';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Cél: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Naplóbejegyzés szerkesztése';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Bejegyzés törlése';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams g';
   }
 
   @override
@@ -1220,55 +1226,56 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current / $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Mai víznaplók';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Ma még nincs víz. Hidratáljon, és koppintson a gyors hozzáadás gombra!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Állítsa be a napi célt';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Csatlakoztatva a Health Connecthez';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Napi Egészségügyi Vitals';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Legutóbbi pulzusszám';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Vérnyomás';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Vér oxigén';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Vércukor';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Súly';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Az alvás időtartama';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Kézi mérés hozzáadása';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Történelmi trendek';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'Az egészségügyi adatok sikeresen szinkronizálva!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours óra $mins perc';
   }
 
   @override
@@ -1283,248 +1290,250 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic Hgmm';
   }
 
   @override
   String health_metric_glucose_val(Object val) {
-    return '$val mg/dL';
+    return '$val mg/dl';
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title =>
+      'Csatlakoztatott eszközök és hordható eszközök';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Kezelje a párosított okosórákat, fitneszkövetőket és egészségérzékelőket.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Edzés szerkesztése';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Edzés neve';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Időtartam (perc)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'Becsült kalória (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Dátum és idő';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap => 'Az Ön személyre szabott ütemterve';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Reggeli rutin';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Déli Wellness';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Esti leállás';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Bloom AI edző';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7 napos wellness fókusz';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Wellness célok és célok';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Napi kalóriaköltségvetés';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Napi vízcél';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Napi lépéscél';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Makrotápanyag arány';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Személyes adatok';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Testmérések';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'Beállítások és alkalmazásbeállítások';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'A te neved';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Magasság ( $unit )';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Súly ($unit)';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Életkor';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Férfi';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Nő';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Egyéb / Inkább nem mondom';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Ülő (keveset vagy egyáltalán nem mozog)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light => 'Enyhén aktív (1-3 nap/hét)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate => 'Közepesen aktív (3-5 nap/hét)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'Nagyon aktív (6-7 nap/hét)';
 
   @override
   String get settings_wear_os_header => 'Wear OS Companion App';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Telepítse a Boomi csempét és a szövődményt Wear OS órájára, hogy megnézze a kalóriákat, a vizet és a lépéseket.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'Interaktív Android widgetek';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Rögzítse a valós idejű widgeteket eszköze kezdőképernyőjére az azonnali frissítésekhez.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Bloomról';
 
   @override
   String get settings_about_version => 'Version';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Építsd 100-at';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Gondosan elkészítve a tudatos, egészséges életmód érdekében.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Általános Szerződési Feltételek';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Adatvédelmi szabályzat';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Fiók és adatok törlése';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Ez a művelet nem vonható vissza. Minden étkezésed, edzésed, életfontosságú adataid és profilod véglegesen törlődik.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Végleges törlés';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Üdvözlünk Bloomban ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Gyengéd, figyelmes wellness-követés az Ön életére tervezve.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Rólad';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Az Ön céljai';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Napi szokások';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Engedélyek';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Kész!';
 
   @override
   String get onboard_health_connect_perm => 'Health Connect Access';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Lépésszámláló érzékelő';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Figyelmes emlékeztetők és értesítések';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'Kamera (vonalkód- és ételszkenner)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Engedélyek megadása';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Nyissa meg az Irányítópultot';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'Hidratáló hatások';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Gyengéd vízre emlékeztető a nap folyamán';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name =>
+      'Étkezési és táplálkozási emlékeztetők';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Reggelire, ebédre és vacsorára emlékeztető figyelmeztetések';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Lépés Mérföldkövek';
 
   @override
-  String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+  String get notif_channel_steps_desc => 'Ünnepek a napi lépéscélok elérésekor';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name =>
+      'Egészségügyi és életfontosságú ellenőrzések';
 
   @override
-  String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+  String get notif_channel_vitals_desc => 'Súly- és lefekvésidő-emlékeztetők';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 Rönk +250ml';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'Szundi 15 m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Reggeli';
 
   @override
-  String get language => 'Language';
+  String get language => 'Nyelv';
 
   @override
-  String get share => 'Share';
+  String get share => 'Megosztás';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return '$count napja';
   }
 }

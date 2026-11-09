@@ -584,7 +584,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get health_sync_now => 'ကျန်းမာရေးဒေတာကို စင့်ခ်လုပ်ပါ။';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'နောက်ဆုံး စင့်ခ်လုပ်ထားသည်- $time';
   }
 

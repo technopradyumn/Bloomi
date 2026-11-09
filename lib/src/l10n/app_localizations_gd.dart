@@ -12,166 +12,167 @@ class AppLocalizationsGd extends AppLocalizations {
   String get app_name => 'Bloomi';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'Dhachaigh';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'An-diugh';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'Plana';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'Biadh';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'Leabhar-latha Biadh';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'Log eacarsaich';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'Slàinte';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'Pròifil';
 
   @override
-  String get save => 'Save';
+  String get save => 'Sàbhail';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Sguir dheth';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Sguab às';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Deasaich';
 
   @override
-  String get done => 'Done';
+  String get done => 'Dèanta';
 
   @override
-  String get close => 'Close';
+  String get close => 'Dùin';
 
   @override
-  String get back => 'Back';
+  String get back => 'Air ais';
 
   @override
-  String get next => 'Next';
+  String get next => 'Air adhart';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'Lean air adhart';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Dearbhaich';
 
   @override
-  String get search => 'Search';
+  String get search => 'Rannsaich';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'Criathraich';
 
   @override
-  String get all => 'All';
+  String get all => 'Uile';
 
   @override
-  String get active => 'Active';
+  String get active => 'Gnìomhach';
 
   @override
-  String get today => 'Today';
+  String get today => 'An-diugh';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'An-dè';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'A-màireach';
 
   @override
-  String get add => 'Add';
+  String get add => 'Cuir ris';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'Thoir air falbh';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'Ùraich';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Feuch a-rithist';
 
   @override
-  String get error => 'Error';
+  String get error => 'Mearachd';
 
   @override
-  String get success => 'Success';
+  String get success => 'Soirbheachas';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'A\' luchdachadh...';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'Chan eil dàta ri fhaighinn';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'Modh far loidhne';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'Thèid na h-atharraichean a shioncronachadh nuair a thèid an ath-cheangal';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'Neo-dhèanamh';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'Cuibhreann';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Meud';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'Aonad';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Soilleir';
 
   @override
-  String get select => 'Select';
+  String get select => 'Tagh';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Cuir a-steach';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Ath-shuidhich';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ceart gu leòr';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Seadh';
 
   @override
-  String get no => 'No';
+  String get no => 'Chan eil';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Roghainneil';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Calraidhean';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Pròtain';
 
   @override
   String get carbs => 'Carbs';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'Saill';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'Fibre';
 
   @override
-  String get water => 'Water';
+  String get water => 'Uisge';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Ceumannan';
 
   @override
   String get kcal => 'kcal';
@@ -192,718 +193,727 @@ class AppLocalizationsGd extends AppLocalizations {
   String get centimeters => 'cm';
 
   @override
-  String get inches => 'in';
+  String get inches => 'anns';
 
   @override
   String get bpm => 'bpm';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'uair';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'mion';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'A \'frithealadh';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'Seirbhisean';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'Meud frithealaidh';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => 'gach 100g';
 
   @override
-  String get india => 'India';
+  String get india => 'Na h-Innseachan';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'Àisia';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Roinn-Eòrpa';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'An Ear Mheadhanach';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'Afraga';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'Ameireaga';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Dhachaigh';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'Madainn mhath';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'Feasgar math';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Feasgar math';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'Sreath Blossom';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '_PH_0__ sreath làithean',
+      one: 'Sreath 1 latha',
+      zero: 'Sreath 0 làithean',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Air a losgadh';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Buidseat Calorie';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '_PH_0__ kcal air fhàgail';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'Hydration làitheil';
 
   @override
   String home_water_goal(Object current, Object target) {
-    return '$current / $target ml';
+    return '_PH_0__ / $target ml';
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Ceumannan Coisich';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Gnìomhan luath';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'Clàr-bìdh';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Log uisge';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Log workout';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Log cuideam';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Lèirsinnean an-diugh';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'Bidh roghainnean beaga fallain a \'cruthachadh atharrachaidhean blàth.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Coidse Bloomi AI';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Cuairtean & Adhair';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'Brathan';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'Sgòr Slàinte làitheil';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Seall na h-uile';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Leabhar-latha Biadh';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Bracaist';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'Lòn';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Dinnear';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'Snàthadan-bìdh';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'Cuir Biadh ris';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'Deasaich Biadh';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Cuir Bracaist ris';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Cuir Lòn ris';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Cuir Dinnear ris';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Cuir Snack ris';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Calories iomlan';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'Chan eil biadh sam bith air a chlàradh airson a’ bhiadh seo fhathast';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary =>
+      'Chan eil biadh air a chlàradh airson an latha seo';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'Tap + gus a’ chiad bhiadh blasta agad a chlàradh';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Cuir ris gu sgiobalta';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Rannsaich soithichean, measan, dal, roti ...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Biadh & Reasabaidh Custom';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'Sgan barcode';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'Sganadair bìdh AI';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Biadh o chionn ghoirid';
 
   @override
   String get food_favourites => 'Favourites';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Briseadh sìos Macronutrient';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'A bheil thu cinnteach gu bheil thu airson an rud seo a thoirt air falbh?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Rud bìdh air a thoirt air falbh';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'air fhàgail';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'ga chaitheamh';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return 'de $target kcal';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Lorg Biadh';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Sgan barcode';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => 'Dealbh Biadh Snap';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Cruthaich Biadh Custom';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Rannsachadh o chionn ghoirid';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Miasan mòr-chòrdte';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results =>
+      'Gun bhiadh sam bith a fhreagras air an rannsachadh agad';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Barcode scanner';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align =>
+      'Co-thaobhadh còd-barra taobh a-staigh frèam a’ chamara';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'Bathar nach deach a lorg san stòr-dàta';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'Tha sganadh còd-bàr ri fhaighinn le Bloomi Pro';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'Sganadair bìdh AI';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Gabh dealbh soilleir den mhias agad';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'A’ mion-sgrùdadh clàr bìdh...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Nithean a chaidh a lorg';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Tog Flash';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Gabh an dealbh air ais';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Dearbhaich Nithean';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Biadh & Reasabaidh Custom';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Ainm a’ mhias no an stuth';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Calraidhean (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'Pròtain (g)';
 
   @override
   String get customFood_carbs_hint => 'Carbs (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'Saill (g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Sàbhail reasabaidh';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Lorgaire uisge';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Amas Hydration Làitheil';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Logaichte an-diugh';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml Glainne';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ml botal';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Suim Custom';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'Deoch uisge gu cunbhalach tron ​​latha airson lùth seasmhach.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Logaichte $amount ml uisge 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Log eacarsaich';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Cuir a-steach Workout';
 
   @override
   String get workout_cardio => 'Cardio';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Neart';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Yoga & sùbailteachd';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Fad';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'dianachd';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Calraidhean air an losgadh';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Cha deach trèanadh sam bith a chlàradh an-diugh';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'Sàbhaladh eacarsaich gu soirbheachail!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Seòrsa eacarsaich';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Notaichean & Faileasan';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Slàinte & Beathaichean';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Ìre cridhe';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Ocsaidean fuil (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Bruthadh-fala';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Glùcas fuil';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Teòthachd Corporra';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Sgrùdadh cadail';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'Cuideam & cumadh bodhaig';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Co-mheas Waist-to-Hip';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Innealan & Hub Smartwatch';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'Sioncronaich Dàta Slàinte';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'An sioncronadh mu dheireadh: _PH_0__';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Inntrigeadh Slàinte làimhe';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Mion-fhiosrachadh Metric';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Sensors Slàinte Co-cheangailte';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Plana Làitheil';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'Plana Slàinte na seachdain';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Targaid Calorie';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Targaid Hydration';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'Targaid Ceum';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Targaid cadail';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Molaidhean bìdh';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Cleachdaidhean Slàinte & Molaidhean';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Molaidhean Coidse Bloomi AI';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'Clàr làitheil pearsanaichte';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Pròifil';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Deasaich Pròifil';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Ainm';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Aois';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Gnè';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Àirde';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Cuideam';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Prìomh Amas';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Ìre gnìomhachd';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Na Staitistigean Slàinte agam';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Chaidh am pròifil ùrachadh gu soirbheachail';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Clàr-amais cuirp (BMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Ballrachd';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Suidhichidhean';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'ROIMH-RADH & GNATH-FHOCAIL';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Coltas & Cuspair';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Dorcha, Solas, Modh Siostam & Cùl-roghainnean App';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Ceadan & ruigsinneachd siostam';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Ceangal Slàinte, Sensors Ceum, GPS, Brathan & Camara';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Cuimhneachain & Brathan';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Amannan bìdh, uisge, clàradh cuideam & cuimhneachain àm leabaidh';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Aonadan Tomhais';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Metric (kg, cm, ml, km) no Imperial (lbs, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'Cànan App';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'Beurla, हिन्दी (Hindi), Hinglish & 195+ cànan cruinne';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Widgets sgrion dachaigh';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Widgets Android beò: Hub, Ceumannan, Uisge, Beathachadh & Mascot';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => 'Caith OS Watch App';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Companach smartwatch, leacan, duilgheadasan & beòthachaidhean beò';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'CUSPAIREAN & MOLAIDHEAN SEACHD';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Targaidean Beathachaidh & Macro Split';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Targaid calorie, pròtain, carbs, amas geir is uisge';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Geàrr-chunntas sunnd seachdaineach';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      'Cuibheasachd calorie 7-latha, co-mheas macro & an latha as fheàrr';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Streaks & clachan-mìle';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub =>
+      'Sruthan blàthan gnìomhach, bràistean & coileanaidhean';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'Innealan ceangailte & ECOSYSTEM';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Innealan & Hub Smartwatch';
 
   @override
   String get devices_hub_sub =>
       'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Aimsir mun cuairt';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Càileachd adhair (AQI), clàr-amais UV & molaidhean uisgeachaidh sìde';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'Fo-sgrìobhadh Bloomi Pro';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'Coidse Plana AI, 5 widgets sgrion dachaigh & lorg deatamach';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'ABHAINN & SEARMOINEAN';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Mu Bloomi';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub => 'Tog mion-chomharrachadh, dreach, buadhan';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'Poileasaidh Dìomhaireachd';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Ailtireachd dàta far-loidhne an-toiseach, air-inneal';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Teirmean & Cùmhnantan';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'Cumhachan seirbheis agus stiùireadh sunnd';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Sguab às Cunntas & Dàta';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Cuir às do dhàta ionadail SQLite agus cùl-taic sgòthan gu do-sheachanta';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits => 'Tog cleachdaidhean sunnd socair, maireannach';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'An dàta is na logaichean a chaidh a thracadh agam';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language =>
+      'Rannsaich a rèir cànan no sgriobt dùthchasach ...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Cànanan rim faighinn';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'Cha deach cànanan co-ionnan a lorg';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Feuch ri rannsachadh le sgriobt dùthchasach no litreachadh Beurla';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Eadar-theangachadh gu ìre';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Crìochnaich';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Cànain air a shuidheachadh gu $name ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Àrainneachd agus mun cuairt';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Clàr-innse Càileachd an Adhair';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'Clàr-innse UV';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Teòthachd';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Taiseachd';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Cùm uisgeachadh gu math anns an t-sìde gnàthach.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Lorg Biadh';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Sgan barcode 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Cuir uisge ris';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Biadh Gnàthach';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Glè mhath';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Meadhanach';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'Neo-fhallain';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Brathan & rabhaidhean';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Gun sanasan ùra';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Mark All mar Leugh';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Glan na h-uile';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Roghainnean cuimhneachaidh';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Brathan';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Cuimhneachan bracaist 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'Madainn mhath! Ùine airson bracaist beathachaidh aig $time .';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Cuimhneachan lòn 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Stad agus faigh tlachd bho lòn cothromach, mothachail aig $time .';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Cuimhneachan dinneir 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Ùine airson dìnnear aotrom, sàsachail aig $time .';
   }
 
   @override
@@ -911,602 +921,614 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'Tha an t-àm ann glainne ùr uisge òl! ( _PH_0__ )';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Cuideam seachdaineach ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Cum sùil air na tomhasan bodhaig seachdaineil agad air Bloomi ( $time ).';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Deireadh na leabaidh 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Leig às agus ullaich airson cadal sàmhach ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Fàilte gu Bloomi';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Do chompanach slàinte is beathachaidh càirdeil, far-loidhne.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Tòisich';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Log a-steach';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Leum';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal => 'Dè am prìomh amas slàinte agad?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Caill cuideam gu math';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Meudachadh fèithean agus neart';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Lùth is spionnadh làitheil';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'Ag ithe fallain le inntinn';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Innis dhuinn mu do dheidhinn fhèin';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Do ghnàthas làitheil';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'Ceadan & ruigsinneachd siostam';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Thoir seachad cothrom air ceumannan sioncranachaidh, workouts, agus cuimhneachain.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Tha am Plana Custom agad deiseil!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Chruthaich sinn mapa-rathaid beathachaidh is sunnd socair, pearsanaichte dìreach dhutsa.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Cuir a-steach Bloomi';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Geàrr-chunntas sunnd seachdaineach';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'An latha cunbhalachd as fheàrr: $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Streaks & clachan-mìle';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Gun fhosgladh air $date';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'Cùm suas an adhartas iongantach!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Widgets sgrion dachaigh';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Widgets gnìomhach: $count';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'Ionad Slàinte Bloomi';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'Ceumannan & Cearcall Gnìomhach';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Clàr luath Hydration';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Companach Bloomi Mascot';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'Caith OS Smartwatch';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Ceangailte ri Watch';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Sioncronaich dàta faire';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Coltas & Cuspair';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Modh cuspair';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Solas';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Dorch';
 
   @override
-  String get theme_system => 'System Default';
+  String get theme_system => 'Default siostam';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Cùl-fhiosrachadh Palette';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Aonadan Tomhais';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Meud (kg, cm, ml)';
 
   @override
-  String get units_imperial => 'Imperial (lbs, in, fl oz)';
+  String get units_imperial => 'Imperial (lbs, a-steach, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Cha ghabh an deas-bhòrd a luchdachadh';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req => 'Cead Ceangal Slàinte a dhìth';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'Feumaidh Bloomi cead Health Connect gus fìor cheumannan a tharraing, ìre cridhe, agus sioncranachadh widgets dachaigh gluasadach ann an àm fìor.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Leig le Health Connect';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'Deiseil airson latha cuimhneachail? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Cuir ris gu sgiobalta';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'GPS beò';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'CALORIES A\' MACHAIDH';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Air ithe: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Tap airson Lorgaire Uisge 💧';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'Amas làitheil air a ruighinn 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '_PH_0__ ml gu amas làitheil';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Mion-fhiosrachadh';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Ùrachadh gus targaidean làitheil pearsanta & plana AI fhuasgladh';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Fuasgail 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'Clàraich gu sgiobalta inntrigeadh slàinte';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Meud frithealaidh';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'A\' frithealadh (g)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Àireamh de Sheirbheisean';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Calorie gach seirbheis';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Tàthchuid';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Cuir ris an stuth';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Stiùireadh & Notaichean';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Beathachadh Recipe Iomlan';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Le bhith a \'frithealadh beathachadh';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'Biadh gnàthaichte air a shàbhaladh gu soirbheachail!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'Bathar air a lorg!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Cha b\' urrainn dhuinn an còd-barra seo a lorg san stòr-dàta fosgailte. Faodaidh tu a chur ris mar bhiadh àbhaisteach.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Cuir ris Biadh Custom';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'Dèan scan a-rithist';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'Dèan lèirmheas air Biadhan Lorgte';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Atharraich meudan no thoir air falbh rud neo-aithnichte';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'Log a-steach Biadhan Taghte';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Biadh as fheàrr leotha';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Biadh o chionn ghoirid';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Chan eil biadhan as fheàrr leotha fhathast. Tap cridhe air biadh sam bith airson a shàbhaladh an seo.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents =>
+      'Cha deach biadhan a chaidh a chlàradh o chionn ghoirid a lorg.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title =>
+      'Fiosrachadh beathachaidh làitheil';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'Briseadh sìos pròtain';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'Briseadh sìos carbs';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'Briseadh Saill';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Briseadh Fibre';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Coimeas targaid';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Targaid: _PH_0__';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Deasaich Inntrigeadh Leabhar-latha';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Sguab às Inntrigeadh';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '_PH_0__ g';
   }
 
   @override
   String food_kcal_short(Object kcal) {
-    return '$kcal kcal';
+    return '_PH_0__ kcal';
   }
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '_PH_0__ à $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Clàran uisge an latha an-diugh';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Chan eil uisge air a chlàradh fhathast an-diugh. Hydrate agus tap air putan cuir-ris sgiobalta!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Atharraich Amas Làitheil';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Co-cheangailte ri Health Connect';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Beatha làitheil slàinte';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Ìre cridhe as ùire';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Bruthadh-fala';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Ocsaidean fuil';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Glùcas fuil';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Cuideam';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Ùine cadail';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Cuir a-steach tomhas làimhe';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Claonaidhean Eachdraidheil';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'Chaidh dàta slàinte a shioncronachadh gu soirbheachail!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '_PH_0__ uair $mins mion';
   }
 
   @override
   String health_metric_weight_val(Object val) {
-    return '$val kg';
+    return '_PH_0__ kg';
   }
 
   @override
   String health_metric_hr_val(Object bpm) {
-    return '$bpm bpm';
+    return '_PH_0__ bpm';
   }
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '_PH_0__ %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '_PH_0__ / $diastolic mmHg';
   }
 
   @override
   String health_metric_glucose_val(Object val) {
-    return '$val mg/dL';
+    return '_PH_0__ mg/dL';
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title =>
+      'Innealan co-cheangailte & so-ruigsinneach';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Stiùirich smartwatches càraideach, lorgairean fallaineachd, agus mothachairean slàinte.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Deasaich Workout';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Ainm eacarsaich';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Ùine (mionaidean)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'Calraidhean tuairmseach (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Ceann-latha agus Àm';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap =>
+      'An clàr-rathaid pearsanaichte agad';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Gnàth-shìde na maidne';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Slàinte Mheadhain';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Gaoth-Sios Feasgar';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Coidse Bloomi AI';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => 'Fòcas air sunnd 7-latha';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Amasan & Amasan Slàinte';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Buidseat Calorie Làitheil';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Targaid uisge làitheil';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Amas Ceum Làitheil';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Co-mheas Macronutrient';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Mion-fhiosrachadh Pearsanta';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Tomhais Corp';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'Roghainnean & roghainnean app';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'D’ ainm';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Àirde ( _PH_0__ )';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Cuideam ( _PH_0__ )';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Aois';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Fireann';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Boireann';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Eile / B’ fheàrr leam gun a ràdh';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Sedentary (Glè bheag gun eacarsaich)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light =>
+      'Gnìomhach aotrom (1-3 latha / seachdain)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate =>
+      'Meadhanach gnìomhach (3-5 latha / seachdain)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very =>
+      'Gu math gnìomhach (6-7 latha / seachdain)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => 'Cleachd OS Companion App';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Stàlaich an leac Bloomi agus iom-fhillteachd air an uaireadair Wear OS agad gus sùil a thoirt air calaraidhean, uisge, agus ceumannan.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'Widgets Android eadar-ghnìomhach';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Pin widgets fìor-ùine air scrion dachaigh an inneal agad airson ùrachaidhean sa bhad.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Mu Bloomi';
 
   @override
-  String get settings_about_version => 'Version 1.0.0';
+  String get settings_about_version => 'Tionndadh 1.0.0';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Tog 100';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Air a chiùradh le cùram airson beatha mhothachail, fhallain.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Cumhachan is Cùmhnantan';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Poileasaidh Dìomhaireachd';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Sguab às Cunntas & Dàta';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Chan urrainnear an gnìomh seo a chuir dheth. Thèid na biadhan, na h-àiteachan-obrach, na h-innealan deatamach agus na pròifil agad a dhubhadh às gu buan.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Sguab às gu buan';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Fàilte gu Bloomi ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Rianachd sunnd socair, mothachail air a dhealbhadh timcheall air do bheatha.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Mu do dheidhinn';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Na h-Amasan agad';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Cleachdaidhean Làitheil';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Ceadan';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Deiseil!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm => 'Cothrom Ceangal Slàinte';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Sensor Counter Step';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Cuimhneachain & Fiosan mothachail';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'Camara (Barcode & Scanner Bidhe)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Ceadan Tabhartais';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Deas-bhòrd fosgailte';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'Nudges Hydration';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Cuimhneachain uisge socair fad an latha';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name =>
+      'Cuimhneachain Biadh is Beathachaidh';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Rabhaidhean cuimhneachaidh bracaist, lòn is dìnnear';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Ceum Clach-mhìle';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'Comharraidhean nuair a ruigeas tu targaidean ceum làitheil';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name =>
+      'Sgrùdaidhean Slàinte is Beathaichean';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'Cuimhneachain lùbach cuideam is àm leabaidh';
 
   @override
   String get notif_action_log_water => '💧 Log +250ml';
@@ -1515,16 +1537,16 @@ class AppLocalizationsGd extends AppLocalizations {
   String get notif_action_snooze => 'Snooze 15m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Log biadh';
 
   @override
-  String get language => 'Language';
+  String get language => 'Cànain';
 
   @override
-  String get share => 'Share';
+  String get share => 'Roinn';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return '_PH_0__ d air ais';
   }
 }

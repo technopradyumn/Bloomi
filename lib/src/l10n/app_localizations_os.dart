@@ -582,7 +582,7 @@ class AppLocalizationsOs extends AppLocalizations {
   String get health_sync_now => 'Æнæниздзинады бæрæггæнæнтæ синхронизаци кæнын';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Фæстаг синхронизаци: $time';
   }
 

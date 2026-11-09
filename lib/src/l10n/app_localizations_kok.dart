@@ -581,7 +581,7 @@ class AppLocalizationsKok extends AppLocalizations {
   String get health_sync_now => 'आरोग्य डेटा समक्रमित करा';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'अंतिम समक्रमित: $time';
   }
 

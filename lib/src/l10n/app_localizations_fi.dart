@@ -12,28 +12,28 @@ class AppLocalizationsFi extends AppLocalizations {
   String get app_name => 'Bloomi';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'Kotiin';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'Tänään';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'Suunnittele';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'Ruokaa';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'Ruokapäiväkirja';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'Harjoitusloki';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'Terveys';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'Profiili';
 
   @override
   String get save => 'Tallentaa';
@@ -51,88 +51,89 @@ class AppLocalizationsFi extends AppLocalizations {
   String get done => 'Tehty';
 
   @override
-  String get close => 'Close';
+  String get close => 'Sulje';
 
   @override
-  String get back => 'Back';
+  String get back => 'Takaisin';
 
   @override
-  String get next => 'Next';
+  String get next => 'Seuraavaksi';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'Jatka';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Vahvista';
 
   @override
   String get search => 'Haku';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'Suodata';
 
   @override
   String get all => 'Kaikki';
 
   @override
-  String get active => 'Active';
+  String get active => 'Aktiivinen';
 
   @override
-  String get today => 'Today';
+  String get today => 'Tänään';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'eilen';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Huomenna';
 
   @override
-  String get add => 'Add';
+  String get add => 'Lisää';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'Poista';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'Päivitä';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Yritä uudelleen';
 
   @override
-  String get error => 'Error';
+  String get error => 'Virhe';
 
   @override
-  String get success => 'Success';
+  String get success => 'Menestystä';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ladataan...';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'Tietoja ei ole saatavilla';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'Offline-tila';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'Muutokset synkronoidaan, kun yhteys muodostetaan uudelleen';
 
   @override
   String get undo => 'Kumoa';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'Osa';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Määrä';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'Yksikkö';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Selkeä';
 
   @override
-  String get select => 'Select';
+  String get select => 'Valitse';
 
   @override
   String get apply => 'Käytä';
@@ -144,34 +145,34 @@ class AppLocalizationsFi extends AppLocalizations {
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Kyllä';
 
   @override
-  String get no => 'No';
+  String get no => 'Ei';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Valinnainen';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Kalorit';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Proteiini';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'Hiilihydraatteja';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'Lihava';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'Kuitu';
 
   @override
-  String get water => 'Water';
+  String get water => 'Vesi';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Vaiheet';
 
   @override
   String get kcal => 'kcal';
@@ -192,87 +193,87 @@ class AppLocalizationsFi extends AppLocalizations {
   String get centimeters => 'cm';
 
   @override
-  String get inches => 'in';
+  String get inches => 'sisään';
 
   @override
   String get bpm => 'bpm';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'tuntia';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'min';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'Tarjoilu';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'Annokset';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'Tarjoilukoko';
 
   @override
   String get per_100g => 'per 100g';
 
   @override
-  String get india => 'India';
+  String get india => 'Intia';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'Aasiassa';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Euroopassa';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Lähi-idässä';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'Afrikka';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'Amerikka';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Kotiin';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'Hyvää huomenta';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'Hyvää iltapäivää';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Hyvää iltaa';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'Kukkaputki';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '$count päivän sarja',
+      one: '1 päivän putki',
+      zero: '0 päivän sarja',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Poltettu';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Kaloribudjetti';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '$kcal kcal jäljellä';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'Päivittäinen nesteytys';
 
   @override
   String home_water_goal(Object current, Object target) {
@@ -280,630 +281,634 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Askelia kävelletty';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Nopeat toiminnot';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'Log Ateria';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Log Vesi';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Loki harjoitus';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Tukin paino';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Tämän päivän oivalluksia';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'Pienet terveelliset valinnat luovat kukoistavia muutoksia.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Bloom AI valmentaja';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Ympäristö ja ilma';
 
   @override
   String get home_notifications => 'Ilmoitukset';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'Päivittäiset hyvinvointipisteet';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Näytä kaikki';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Ruokapäiväkirja';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Aamiainen';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'Lounas';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Illallinen';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'Välipaloja';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'Lisää Ruoka';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'Muokkaa ruokaa';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Lisää aamiainen';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Lisää lounas';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Lisää illallinen';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Lisää välipala';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Kalorit yhteensä';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal => 'Tälle aterialle ei ole vielä kirjattu ruokia';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'Ei aterioita kirjattu tälle päivälle';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'Napauta + kirjataksesi ensimmäinen herkullinen ateriasi';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Pikalisäys';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Etsi ruokia, hedelmiä, dalia, rotia...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Räätälöity ruoka ja resepti';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'Skannaa viivakoodi';
 
   @override
   String get food_camera_scan => 'AI Food Scanner';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Viimeaikaiset ruoat';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Suosikit';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Makroravinteiden jakautuminen';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'Haluatko varmasti poistaa tämän kohteen?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Ruokatavara poistettu';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'jäljellä';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'kulutettu';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return '$target kcal';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Etsi elintarvikkeista';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Skannaa viivakoodi';
 
   @override
   String get foodSearch_take_photo => 'Snap Food Photo';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Luo mukautettua ruokaa';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Viimeaikaiset haut';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Suosittuja ruokia';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results => 'Ei hakuasi vastaavia ruokia';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Viivakoodinlukija';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align => 'Kohdista viivakoodi kameran kehyksen sisään';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'Tuotetta ei löydy tietokannasta';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'Viivakoodin skannaus on saatavilla Boomi Prolla';
 
   @override
   String get camera_title => 'AI Food Scanner';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Ota ruokalajistasi selkeä kuva';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'Analysoidaan ruokalautasta...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Havaitut kohteet';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Vaihda Flash';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Ota valokuva uudelleen';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Vahvista kohteet';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Räätälöity ruoka ja resepti';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Ruoan tai ainesosan nimi';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Kalorit (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'Proteiini (g)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'Hiilihydraatit (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'rasva (g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Tallenna resepti';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Veden seurantalaite';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Päivittäinen nesteytystavoite';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Kirjattu tänään';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml lasia';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ml pullo';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Mukautettu määrä';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'Juo vettä säännöllisesti koko päivän ajan tasaisen energian saamiseksi.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Kirjattu $amount ml vettä 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Harjoitusloki';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Lisää harjoitus';
 
   @override
   String get workout_cardio => 'Cardio';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Vahvuus';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Jooga ja joustavuus';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Kesto';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Intensiteetti';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Poltetut kalorit';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Ei harjoituksia kirjattu tänään';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'Harjoitus tallennettu onnistuneesti!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Harjoitustyyppi';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Muistiinpanot ja heijastukset';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Terveys & Vitals';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Syke';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Veren happi (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Verenpaine';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Verensokeri';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Kehon lämpötila';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Unen seuranta';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'Paino ja kehon koostumus';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Vyötärön ja lantion välinen suhde';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Laitteet ja Smartwatch Hub';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'Synkronoi terveystiedot';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'Viimeksi synkronoitu: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Manuaalinen terveysmerkintä';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Mittarin tiedot';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Yhdistetyt terveysanturit';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Päiväsuunnitelma';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'Viikoittainen hyvinvointisuunnitelma';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Kaloritavoite';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Nesteytystavoite';
 
   @override
   String get plan_step_target => 'Step Target';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Nukkumatavoite';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Ateriaehdotuksia';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Terveellisiä tapoja ja vinkkejä';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Bloom AI Coach -suositukset';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'Henkilökohtainen päiväohjelma';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Profiili';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Muokkaa profiilia';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Nimi';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Ikä';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Sukupuoli';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Korkeus';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Paino';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Ensisijainen tavoite';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Aktiviteettitaso';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Omat hyvinvointitilastot';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Profiilin päivitys onnistui';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Painoindeksi (BMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Jäsenyys';
 
   @override
   String get settings => 'Asetukset';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'ASETUKSET & TAVAT';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Ulkonäkö ja teema';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Tumma, vaalea, järjestelmätila ja sovelluksen taustaasetukset';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Käyttöoikeudet ja järjestelmän käyttöoikeudet';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Health Connect, askelanturit, GPS, ilmoitukset ja kamera';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Muistutukset ja ilmoitukset';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Ateriaajat, vesi, painon tarkistus ja nukkumaanmenoaikamuistutukset';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Mittayksiköt';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Metrinen (kg, cm, ml, km) tai keisarillinen (lbs, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'Sovelluksen kieli';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'englanti, हिन्दी (hindi), hinglish ja yli 195 maailmanlaajuista kieltä';
 
   @override
   String get home_screen_widgets => 'Aloitusnäytön widgetit';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Live Android-widgetit: Hub, Steps, Water, Nutrition & Mascot';
 
   @override
   String get wear_os_watch_app => 'Wear OS Watch App';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Älykellokumppani, laatat, komplikaatiot ja live-vitaalit';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'TAVOITTEET JA HYVINVOINTITIEDOT';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Ravitsemustavoitteet ja makrojako';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Kaloritavoite, proteiini-, hiilihydraatti-, rasva- ja vesitavoite';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Viikoittainen hyvinvointikatsaus';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      '7 päivän kalorien keskiarvo, makrosuhde ja paras päivä';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Viivat & virstanpylväät';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'Aktiiviset kukkivat juovat, merkit ja saavutukset';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'YHDISTETYT LAITTEET & EKOSYSTEEMI';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Laitteet ja Smartwatch Hub';
 
   @override
   String get devices_hub_sub =>
       'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Ympäristö & Sää';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Ilmanlaatu (AQI), UV-indeksi ja sään kosteutusvinkit';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'Bloom Pro -tilaus';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'AI Plan Coach, 5 aloitusnäytön widgetiä ja elintoimintojen seuranta';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'TIETOJA JA TURVALLISUUS';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Tietoja Bloomista';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub =>
+      'Rakennuksen tekniset tiedot, versio, määritykset';
 
   @override
   String get privacy_policy => 'Tietosuojakäytäntö';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Offline-ensin, laitteessa oleva tietoarkkitehtuuri';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Ehdot';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub => 'Palveluehdot ja hyvinvointiohjeet';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Poista tili ja tiedot';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Poista peruuttamattomasti paikalliset SQLite-tiedot ja pilvivarmuuskopiot';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits =>
+      'Rakenna lempeitä, kestäviä hyvinvointitottumuksia';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Seuratut tiedot ja lokit';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language => 'Hae kielen tai äidinkielen mukaan...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Saatavilla olevat kielet';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'Vastaavia kieliä ei löytynyt';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Kokeile hakea äidinkielen tai englannin kielen oikeinkirjoituksen mukaan';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Osittain käännetty';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Täydellinen';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Kieleksi asetettu $name ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Ympäristö & ympäristö';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Ilmanlaatuindeksi';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'UV-indeksi';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Lämpötila';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Kosteus';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Pysy hyvin nesteytettynä nykyisissä sääolosuhteissa.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Etsi ruokaa';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Skannaa viivakoodi 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Lisää vettä';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Räätälöity ruoka';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Hyvä';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Kohtalainen';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'Epäterveellistä';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Ilmoitukset ja hälytykset';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Ei uusia ilmoituksia';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Merkitse kaikki luetuiksi';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Tyhjennä kaikki';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Muistutusasetukset';
 
   @override
   String get notifications => 'Push-ilmoitukset';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Aamupalamuistutus 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'Hyvää huomenta! On aika syödä ravitseva aamiainen klo $time.';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Lounasmuistutus 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Pysähdy ja nauti tasapainoisesta, tietoisesta lounaasta klo $time.';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Illallismuistutus 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Aika kevyelle, tyydyttävälle illalliselle klo $time.';
   }
 
   @override
@@ -911,129 +916,131 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'Aika juoda lasillinen raikasta vettä! ( $time )';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Viikoittainen punnitus ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Seuraa viikoittaisia kehon mittareitasi Bloomissa ( $time ).';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Nukkumaanmenoaika 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Rentoudu ja valmistaudu levolliseen uneen ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Tervetuloa Bloomille';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Ystävällinen, offline-tilassa ensimmäinen terveys- ja ravitsemuskumppanisi.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Aloita';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Kirjaudu sisään';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Ohita';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal =>
+      'Mikä on ensisijainen hyvinvointitavoitteesi?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Hellävarainen painonpudotus';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Lihaslisäys ja -voima';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Päivittäistä energiaa ja elinvoimaa';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'Terveellinen tietoinen syöminen';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Kerro meille itsestäsi';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Päivittäinen rutiini';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title =>
+      'Käyttöoikeudet ja järjestelmän käyttöoikeudet';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Myönnä käyttöoikeus synkronoida vaiheita, harjoituksia ja muistutuksia.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Mukautettu suunnitelmasi on valmis!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Teimme sinulle lempeän, henkilökohtaisen ravitsemus- ja hyvinvointisuunnitelman.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Sisään Boomi';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Viikoittainen hyvinvointikatsaus';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'Paras yhtenäisyyspäivä: $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Viivat & virstanpylväät';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Avattu $date';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'Jatka ihmeellistä kehitystä!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Aloitusnäytön widgetit';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Aktiiviset widgetit: $count';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'Bloomin hyvinvointikeskus';
 
   @override
   String get widgets_steps_title => 'Steps & Active Ring';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Nesteytys Quick Log';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Bloomin maskottikumppani';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'Wear OS -älykello';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Yhdistetty Watchiin';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Synkronoi kellotiedot';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Ulkonäkö ja teema';
 
   @override
   String get theme_mode => 'Teematila';
@@ -1048,73 +1055,73 @@ class AppLocalizationsFi extends AppLocalizations {
   String get theme_system => 'Järjestelmä';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Tausta paletti';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Mittayksiköt';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Metri (kg, cm, ml)';
 
   @override
   String get units_imperial => 'Imperial (lbs, in, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Kojelautaa ei voi ladata';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req => 'Health Connect -lupa vaaditaan';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'Boomi vaatii Health Connect -luvan oikeiden askelten, sykkeen ja mobiilikotiwidgetien synkronointia varten reaaliajassa.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Salli Health Connect';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'Oletko valmis tietoiseen päivään? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Pikalisäys';
 
   @override
   String get home_live_gps => 'Live GPS';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'KALORIT JÄLJELLÄ';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Syönyt: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Hana Water Trackerille 💧';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'Päivätavoite saavutettu 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml päivittäiseen tavoitteeseen';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Yksityiskohdat';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Päivitä avataksesi henkilökohtaiset päivittäiset tavoitteet ja tekoälysuunnitelma';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Avaa lukitus 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'Tallenna nopeasti hyvinvointimerkintä';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Tarjoilukoko';
 
   @override
   String get food_serving_grams => 'Serving (g)';
@@ -1126,7 +1133,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get food_calories_per_serving => 'Calories per serving';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Ainesosat';
 
   @override
   String get food_recipe_add_ingredient => 'Add Ingredient';
@@ -1141,17 +1148,18 @@ class AppLocalizationsFi extends AppLocalizations {
   String get food_recipe_per_serving => 'Per Serving Nutrition';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'Räätälöity ruoka tallennettu onnistuneesti!';
 
   @override
   String get food_barcode_found => 'Product Found!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Emme löytäneet tätä viivakoodia avoimesta tietokannasta. Voit lisätä sen räätälöitynä ruoana.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Lisää mukautettua ruokaa';
 
   @override
   String get food_scan_again => 'Scan Again';
@@ -1161,26 +1169,26 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Säädä määriä tai poista tunnistamattomat tuotteet';
 
   @override
   String get food_log_selected => 'Log Selected Foods';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Suosikkiruoat';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Viimeaikaiset ruoat';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'No favourite foods yet. Napauta sydäntä mitä tahansa ruokaa säästääksesi täällä.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents => 'Äskettäin kirjattuja ruokia ei löytynyt.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title => 'Päivittäiset ravitsemustiedot';
 
   @override
   String get food_macro_protein_label => 'Protein Breakdown';
@@ -1192,25 +1200,25 @@ class AppLocalizationsFi extends AppLocalizations {
   String get food_macro_fat_label => 'Fat Breakdown';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Kuitujen jakautuminen';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Tavoitteiden vertailu';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Kohde: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Muokkaa päiväkirjamerkintää';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Poista merkintä';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams g';
   }
 
   @override
@@ -1220,55 +1228,55 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current / $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Tämän päivän vesilokit';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Vettä ei ole tullut vielä tänään. Kostuta ja napauta pikalisäyspainiketta!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Säädä päivittäistä tavoitetta';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Yhdistetty Health Connectiin';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Päivittäiset terveystiedot';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Viimeisin syke';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Verenpaine';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Veren happea';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Verensokeri';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Paino';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Unen kesto';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Lisää manuaalinen mittaus';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Historialliset suuntaukset';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success => 'Terveystiedot synkronoitu onnistuneesti!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours tuntia $mins min';
   }
 
   @override
@@ -1283,239 +1291,246 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg';
   }
 
   @override
   String health_metric_glucose_val(Object val) {
-    return '$val mg/dL';
+    return '$val mg/dl';
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title =>
+      'Yhdistetyt laitteet ja puettavat laitteet';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Hallinnoi pariksi liitettyjä älykelloja, kuntoseurantalaitteita ja terveysantureita.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Muokkaa harjoitusta';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Harjoituksen nimi';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Kesto (minuuttia)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'Arvioidut kalorit (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Päivämäärä ja aika';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap =>
+      'Henkilökohtainen etenemissuunnitelmasi';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Aamun rutiini';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Keskipäivän hyvinvointi';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Illan rauhoittuminen';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Bloom AI valmentaja';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7 päivän hyvinvointifokus';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Hyvinvointitavoitteet ja tavoitteet';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Päivittäinen kaloribudjetti';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Päivittäinen vesitavoite';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Päivittäinen askeltavoite';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Makroravinteiden suhde';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Henkilökohtaiset tiedot';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Kehon mitat';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'Asetukset ja sovellusasetukset';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'Sinun nimesi';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Korkeus ( $unit )';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Paino ($unit)';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Ikä';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Mies';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Nainen';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Muuta / En halua sanoa';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Istuva (vähän tai ei ollenkaan liikuntaa)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light =>
+      'Kevyesti aktiivinen (1-3 päivää/viikko)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate =>
+      'Keskinkertainen aktiivisuus (3-5 päivää/viikko)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'Erittäin aktiivinen (6-7 päivää/viikko)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => 'Wear OS Companion -sovellus';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Asenna Boomi-laatta ja komplikaatio Wear OS -kelloasi katsoaksesi kaloreita, vettä ja askeleita.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'Interaktiiviset Android-widgetit';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Kiinnitä reaaliaikaiset widgetit laitteesi aloitusnäyttöön saadaksesi välittömiä päivityksiä.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Tietoja Bloomista';
 
   @override
   String get settings_about_version => 'Versio';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Rakenna 100';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Valmistettu huolella tietoista, terveellistä elämää varten.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Ehdot';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Tietosuojakäytäntö';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Poista tili ja tiedot';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Tätä toimintoa ei voi kumota. Kaikki ateriat, harjoitukset, elintärkeät tiedot ja profiilisi poistetaan pysyvästi.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Poista pysyvästi';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Tervetuloa Bloomille ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Hellävarainen, tietoinen hyvinvointiseuranta, joka on suunniteltu elämäsi ympärille.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Tietoja sinusta';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Sinun tavoitteesi';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Päivittäiset tavat';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Käyttöoikeudet';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Valmis!';
 
   @override
   String get onboard_health_connect_perm => 'Health Connect Access';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Askellaskurin anturi';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Tietoiset muistutukset ja ilmoitukset';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'Kamera (viivakoodi- ja ruokaskanneri)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Myönnä käyttöoikeudet';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Avaa Dashboard';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'Nesteytys nudges';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Hellävaraiset vesimuistutukset koko päivän ajan';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name =>
+      'Ateria- ja ravitsemusmuistutukset';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Aamiaisen, lounaan ja illallisen muistutushälytykset';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Vaiheen virstanpylväät';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'Juhlia päivittäisten askeltavoitteiden saavuttamisen yhteydessä';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name =>
+      'Terveys- ja elintoimintojen tarkastukset';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'Muistutukset painon ja nukkumaanmenon lopettamisesta';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 Tukki +250ml';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'Torkku 15m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Hirsiruoka';
 
   @override
   String get language => 'Kieli';

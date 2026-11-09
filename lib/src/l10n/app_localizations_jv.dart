@@ -583,7 +583,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get health_sync_now => 'Sinkronisasi Data Kesehatan';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Terakhir diselarasake: $time';
   }
 

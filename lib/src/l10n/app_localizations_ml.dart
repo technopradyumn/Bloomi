@@ -584,7 +584,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get health_sync_now => 'ആരോഗ്യ ഡാറ്റ സമന്വയിപ്പിക്കുക';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'അവസാനം സമന്വയിപ്പിച്ചത്: $time';
   }
 

@@ -583,7 +583,7 @@ class AppLocalizationsTyv extends AppLocalizations {
   String get health_sync_now => 'Кадыкшыл дугайында медээлерни синхроннаар';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Сөөлгү катап синхронизациялаан: $time';
   }
 

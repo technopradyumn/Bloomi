@@ -581,7 +581,7 @@ class AppLocalizationsMwr extends AppLocalizations {
   String get health_sync_now => 'स्वास्थ्य डेटा नै सिंक करो';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'लास्ट सिंक: $time';
   }
 

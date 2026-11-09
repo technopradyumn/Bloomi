@@ -583,7 +583,7 @@ class AppLocalizationsCv extends AppLocalizations {
   String get health_sync_now => 'Сывлӑх даннӑйӗсене синхронизацилесси';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Юлашки хут синхронизациленӗ: $time';
   }
 

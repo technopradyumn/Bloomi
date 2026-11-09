@@ -582,7 +582,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get health_sync_now => 'Համաժամեցրեք առողջության տվյալները';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Վերջին համաժամացումը՝ $time';
   }
 

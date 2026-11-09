@@ -581,7 +581,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get health_sync_now => 'ធ្វើសមកាលកម្មទិន្នន័យសុខភាព';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'ធ្វើសមកាលកម្មចុងក្រោយ៖ $time';
   }
 

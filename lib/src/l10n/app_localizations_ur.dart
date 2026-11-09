@@ -582,7 +582,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get health_sync_now => 'صحت کے ڈیٹا کو ہم آہنگ کریں۔';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'آخری بار مطابقت پذیری: $time';
   }
 

@@ -582,7 +582,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get health_sync_now => 'සෞඛ්‍ය දත්ත සමමුහුර්ත කරන්න';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'අවසන් වරට සමමුහුර්ත කළේ: $time';
   }
 

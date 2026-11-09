@@ -588,7 +588,7 @@ class AppLocalizationsKha extends AppLocalizations {
   String get health_sync_now => 'Sync ia ki jingtip jong ka koit ka khiah';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Ka jingpynkylla kaba khatduh: $time';
   }
 

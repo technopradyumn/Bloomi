@@ -581,7 +581,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get health_sync_now => 'د روغتیا ډاټا همغږي کړئ';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'وروستی همغږي شوی: $time';
   }
 

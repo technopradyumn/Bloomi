@@ -580,7 +580,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get health_sync_now => 'همگام سازی داده های سلامت';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'آخرین همگام سازی: $time';
   }
 

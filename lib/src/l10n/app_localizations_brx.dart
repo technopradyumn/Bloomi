@@ -582,7 +582,7 @@ class AppLocalizationsBrx extends AppLocalizations {
   String get health_sync_now => 'স্বাস্থ্য তথ্য ছিঙ্ক কৰক';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'শেষবাৰৰ বাবে সিঙ্ক কৰা হৈছে: $time';
   }
 

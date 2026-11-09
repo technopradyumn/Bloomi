@@ -580,7 +580,7 @@ class AppLocalizationsBua extends AppLocalizations {
   String get health_sync_now => 'Элүүрые хамгаалгын мэдээсэл синхронизацилха';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Һүүлшынхиеэ синхронизацилагдаһан: $time';
   }
 

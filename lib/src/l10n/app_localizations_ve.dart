@@ -12,166 +12,167 @@ class AppLocalizationsVe extends AppLocalizations {
   String get app_name => 'Bloomi';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'Hayani';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'Namusi';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'Pulane';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'Zwiḽiwa';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'Dayari ya zwiḽiwa';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'Logo ya u ḓiḓowedza';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'Mutakalo';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'Phurofaili';
 
   @override
-  String get save => 'Save';
+  String get save => 'Vhulunga';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Khansela';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Phumula';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Swaya';
 
   @override
-  String get done => 'Done';
+  String get done => 'Ndo fhedza';
 
   @override
-  String get close => 'Close';
+  String get close => 'Vala';
 
   @override
-  String get back => 'Back';
+  String get back => 'Vhuya';
 
   @override
-  String get next => 'Next';
+  String get next => 'Zwi tevhelaho';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'Bvela phanda';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Kha vha khwaṱhisedze';
 
   @override
-  String get search => 'Search';
+  String get search => 'Setsha';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'Sefa';
 
   @override
-  String get all => 'All';
+  String get all => 'Zwothe';
 
   @override
-  String get active => 'Active';
+  String get active => 'A khou shuma';
 
   @override
-  String get today => 'Today';
+  String get today => 'Namusi';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Mulovha';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Matshelo';
 
   @override
-  String get add => 'Add';
+  String get add => 'Engedza';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'Bvisani';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'U vusuludza';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Lingedzani hafhu';
 
   @override
-  String get error => 'Error';
+  String get error => 'Vhukhakhi';
 
   @override
-  String get success => 'Success';
+  String get success => 'U bvelela';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ri khou ḓadza...';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'Ahuna data ine ya vha hone';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'Moudu wa u sa vha kha inthanethe';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'Tshanduko dzi ḓo ṱanganelana musi dzo no ṱangana hafhu';
 
   @override
   String get undo => 'Undo';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'Tshipiḓa';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Tshivhalo';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'Yuniti';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Kha vha bvise';
 
   @override
-  String get select => 'Select';
+  String get select => 'Khethani';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Kha vha ite khumbelo';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Setha hafhu';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Zwo luga';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ee';
 
   @override
-  String get no => 'No';
+  String get no => 'Hai';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Zwi sa ṱoḓei';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Khalori';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Phurotheini';
 
   @override
   String get carbs => 'Carbs';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'Mapfura';
 
   @override
   String get fiber => 'Fiber';
 
   @override
-  String get water => 'Water';
+  String get water => 'Maḓi';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Maga';
 
   @override
   String get kcal => 'kcal';
@@ -192,28 +193,28 @@ class AppLocalizationsVe extends AppLocalizations {
   String get centimeters => 'cm';
 
   @override
-  String get inches => 'in';
+  String get inches => 'kha';
 
   @override
   String get bpm => 'bpm';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'awara';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'minete';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'U shumela';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'U ṋekedza';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'Saizi ya u ṋekedza';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => 'nga 100g';
 
   @override
   String get india => 'India';
@@ -222,57 +223,57 @@ class AppLocalizationsVe extends AppLocalizations {
   String get asia => 'Asia';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Yuropa';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Vhubvaḓuvha Vhukati';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'Afurika';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'Amerika';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Hayani';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'Ndi matsheloni';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'Ndi masiari';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Ndi madekwana';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'Mutevhe wa Maluvha';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '$count maḓuvha a mutevhe',
+      one: 'Mutevhe wa ḓuvha ḽithihi',
+      zero: '0 maḓuvha o tevhekanaho',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Yo fhiswa';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Mugaganyagwama wa Khaḽori';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '$kcal kcal dzo salaho';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'Ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
   String home_water_goal(Object current, Object target) {
@@ -280,995 +281,1023 @@ class AppLocalizationsVe extends AppLocalizations {
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Maga o tshimbilaho';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Nyito dza u Ṱavhanya';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'Zwiḽiwa zwa Log';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Maḓi a Log';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'U ḓiḓowedza ha Log';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Tshileme tsha Log';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Nḓivho dza Ṋamusi';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'Khetho ṱhukhu dza mutakalo dzi sika tshanduko dzine dza khou bvelela.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Mugudisi wa Bloomi AI';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Zwo tingeledzwaho na Muya';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'Nḓivhadzo';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score =>
+      'Tshikoro tsha Mutakalo wa Ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Vhonani zwothe';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Dayari ya zwiḽiwa';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Vhuragane';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'Tshiswiṱulo';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Tshilalelo';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'Zwiḽiwa';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'Engedza Zwiḽiwa';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'Edit Zwiḽiwa';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Engedza vhuragane';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Engedza zwiḽiwa zwa masiari';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Engedza Tshilalelo';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Engedza Snack';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Khaḽori dzoṱhe';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal => 'Ahuna zwiliwa zwo ṅwaliwaho zwa zwiḽiwa izwi';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'Ahuna zwiliwa zwo ṅwaliwaho zwa ḽeneḽi ḓuvha';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'Kha vha dzhene kha + u ṅwala zwiḽiwa zwavho zwa u thoma zwi ḓifhaho';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'U engedza nga u ṱavhanya';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Setshani zwiliwa, mitshelo, dal, roti...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Zwiḽiwa zwo khetheaho na Resipi';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'Skena Barkhoudu';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'AI Tshikene tsha Zwiḽiwa';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Zwiḽiwa zwa zwenezwino';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Zwine nda zwi funesa';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'U fhandekanywa ha pfushi khulwane';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'Ni na vhutanzi uri ni khou toda u bvisa tshithu itshi?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Tshithu tsha zwiḽiwa tsho bviswa';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'zwo salaho';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'yo ḽiwa';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return 'ya $target kcal';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Setshani Zwiḽiwa';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Skena Barkhoudu';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => 'Snap tshinepe tsha zwiḽiwa';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Kha vha sike zwiḽiwa zwo khetheaho';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Tsetshi dza zwenezwino';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Zwiḽiwa zwi takalelwaho';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results =>
+      'Ahuna zwiliwa zwine zwa tshimbilelana na zwine na khou toda';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Tshikena tsha Barkhoudu';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align =>
+      'Kha vha linganise barcode nga ngomu ha fureme ya khamera';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'Tshibveledzwa a tshi wanali kha database';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'U ṱola barcode zwi a wanala na Bloomi Pro .';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'AI Tshikene tsha Zwiḽiwa';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint =>
+      'Kha vha dzhie tshinepe tshi re khagala tsha zwiḽiwa zwavho';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'U sengulusa phuleithi ya zwiḽiwa...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Zwithu zwo wanalaho';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Tshintshani Fuḽeshe';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Dovhani ni dzhie tshinepe';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Kha vha khwaṱhisedze zwithu';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Zwiḽiwa zwo khetheaho na Resipi';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Dzina ḽa zwiḽiwa kana zwishumiswa';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Khaḽori (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'Phurotheini (g)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'Khaboidi (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'Mapfura (g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Vhulungani risipi';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Tshitevheli tsha maḓi';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target =>
+      'Tshipikwa tsha u ṋea maḓi ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Yo ṅwaliwa ṋamusi';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml ngilasi';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ml Boḓelo';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Tshivhalo tsho dzudzanywaho';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'U nwa maḓi tshifhinga tshoṱhe ḓuvha ḽoṱhe u itela u wana maanḓa o khwaṱhaho.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Ho ṅwaliwa $amount ml ya maḓi 💧 .';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Logo ya u ḓiḓowedza';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Engedza u ḓiḓowedza';
 
   @override
   String get workout_cardio => 'Cardio';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Maanḓa';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Yoga & U tendelana na zwiimo';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Tshifhinga';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Vhuhali';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Khalori dzo fhiswaho';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Ahuna dzi workout dzo ṅwaliwaho ṋamusi';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success =>
+      'Workout yo vhulungwa nga nḓila yo bvelelaho!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Lushaka lwa u ḓiḓowedza';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Notsi & Zwihumbudzo';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Mutakalo & Zwithu zwa ndeme';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'U rwa ha mbilu';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Okisidzheni ya malofha (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Mutsiko wa malofha';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Swigiri ya malofha';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Mufhiso wa Muvhili';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'U tevhela u eḓela';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'Tshileme & Vhubvo ha Muvhili';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Nḓisedzo ya khundu u ya kha khundu';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Zwishumiswa & Habu ya Smartwatch';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'U ṱanganya Datha ya Mutakalo';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'U fhedzisela u ṱanganya: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'U dzhena ha Mutakalo nga Zwanḓa';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Zwidodombedzwa zwa Metriki';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors =>
+      'Sensara dza Mutakalo dzo Ṱanganelanaho';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Pulane ya Ḓuvha Ḽiṅwe na Ḓuvha';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'Pulane ya Vhuḓifari ha Vhege iṅwe na iṅwe';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Tshipikwa tsha Khaḽori';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Tshipikwa tsha u ṋea maḓi';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'Tshipikwa tsha vhukando';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Tshipikwa tsha u eḓela';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Nyeletshedzo dza zwiḽiwa';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Nḓowelo ya Mutakalo & Nyeletshedzo';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Themendelo dza Mugudisi wa Bloomi AI';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title =>
+      'Mbekanyamushumo ya Ḓuvha ḽiṅwe na ḽiṅwe yo Ḓiitelaho';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Phurofaili';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Swaya Phurofaili';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Dzina';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Minwaha';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Mbeu';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Vhulapfu';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Tshileme';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Tshipikwa tshihulwane';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Vhuimo ha Mushumo';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Zwidodombedzwa zwanga zwa Mutakalo';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Phurofaili yo khwiniswa zwo bvelela';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Indekisi ya Vhundeme ha Muvhili (BMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Vhurangeli';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Zwishumiswa';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'ZWINE NDA ZWI FUNA NA NDOVHE';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Mbonalo & Thero';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Swiswi, Tshedza, Moudu wa Sisiṱeme & Khetho dza Mupo wa App';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Thendelo & Tswikelelo ya Sisiṱeme';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Vhuṱumani ha Mutakalo, Sensara dza Vhukando, GPS, Nḓivhadzo & Khamera';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Khumbudzo na Nḓivhadzo';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Zwifhinga zwa zwiḽiwa, maḓi, u ṱola tshileme na zwihumbudzo zwa tshifhinga tsha u eḓela';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Yunithi dza u ela';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Methiki (kg, cm, ml, km) kana Imperiaḽa (lbs, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'Luambo lwa App';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'Luisimane, हिन्दी (Luhindi), Luisimane & nyambo dza ḽifhasi ḽoṱhe dza 195+';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Zwishumiswa zwa Tshikirini tsha Hayani';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Zwishumiswa zwa Android zwi tshilaho: Hub, Maga, Maḓi, Mufusho & Mascot';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => 'Ambara App ya OS Watch';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Khonani ya watshi ya vhuṱali, thaela, vhuleme & zwithu zwa ndeme zwi tshilaho';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'ZWIPIKWA & ṰHOḒISISO DZA VHUḒIFHILO';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets =>
+      'Zwipikwa zwa Mufusho & U Fhandekana ha Makro';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Tshipikwa tsha khaḽori, phurotheini, khaboidi, mapfura & tshipikwa tsha maḓi';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Recap ya Vhuḓifari ha Vhege iṅwe na iṅwe';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      'Avhareji ya khalori ya maḓuvha a 7, nḓisedzo khulwane & ḓuvha ḽa khwine';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Mitevhe & Zwipikwa';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub =>
+      'Mitevhe ya maluvha i shumaho, bege na zwine zwa swikelelwa';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'ZWISHUMISWA ZWO ṰANGANEDZWAHO & EKOSISITEME';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Zwishumiswa & Habu ya Smartwatch';
 
   @override
   String get devices_hub_sub =>
-      'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
+      'Vhuṱumani ha Mutakalo, Watshi ya Galaxy, Watshi ya Pixel, Garmin';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Mupo & Mutsho';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Khwalithi ya muya (AQI), index ya UV & nyeletshedzo dza u ṋuṋedza mutsho';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'U ḓiṅwalisa ha Bloomi Pro';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'Mugudisi wa Pulane ya AI, zwishumiswa zwa tshikirini tsha hayani zwa 5 & u tevhela zwithu zwa ndeme';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'NGA HA & TSHISIRELEDZO';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Nga ha Bloomi';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub =>
+      'Kha vha fhaṱe zwidodombedzwa, mbekanyamushumo, zwidodombedzwa';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'Mbekanyamaitele ya zwa vhuṋe';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Offline-ya u thoma, kha tshishumiswa tsha vhufhaṱi ha datha';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Milayo na Nyimele';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'Maitele a tshumelo na vhulivhisi ha mutakalo';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Phumula akhaunthu na datha';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Phumula nga nḓila i sa vhuyedzei murahu data ya SQLite yapo na bekhaphu dza gole';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits =>
+      'Fhaṱani nḓowelo ya mutakalo ya vhulenda, ya tshifhinga tshilapfu';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Datha yanga yo tevhelwaho & ḽogo';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language => 'Setsha nga luambo kana maṅwalo a ḓamuni...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Nyambo dzi re hone';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages =>
+      'Ahuna nyambo dzi tshimbilelanaho dzo wanalaho';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Lingedzani u setsha nga maṅwalo a ḓamuni kana mupeleṱo wa Luisimane';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Zwo ṱalutshedzelwa zwiṱuku';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'U fhedza';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Luambo lwo vhewa kha $name ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Mupo & Mupo';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Index ya Khwalithi ya Muya';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'Indekisi ya UV';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Mufhiso';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Muṋu';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'U dzula wo hydrated zwavhuḓi kha nyimelo dza mutsho wa zwino.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Setshani Zwiḽiwa';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Skena Barkhoudu 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Engedza Maḓi';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Zwiḽiwa zwa mvelele';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Zwavhudi';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Vhukati';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'A si na mutakalo';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Nḓivhadzo & Tsivhudzo';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Ahuna nḓivhadzo ntswa';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Swayani Zwoṱhe sa Zwo Vhaliwaho';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Kha vha bvise zwothe';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Zwiṱirathedzhi zwa Khumbudzo';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Nḓivhadzo';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Humbudzo ya vhuragane 🍳 .';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'Ndi matsheloni! Tshifhinga tsha vhuragane vhu re na pfushi kha $time .';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Humbudzo ya Lunch 🥗 .';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Imani ni ḓiphine nga zwiḽiwa zwa masiari zwo linganelaho, zwi re na muhumbulo kha $time .';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Humbudzo ya Tshilalelo 🍲 .';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Tshifhinga tsha tshilalelo tshi leluwaho, tshi fushaho kha $time .';
   }
 
   @override
-  String get reminders_water_title => 'Hydration Nudge 💧';
+  String get reminders_water_title => 'Nudge ya u ṋea maḓi 💧';
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'Tshifhinga tsha u nwa ngilasi ya maḓi a kunaho! (_PH_0__)';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'U kala vhege inwe na inwe ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Tevhelani methiki dza muvhili wa vhege iṅwe na iṅwe kha Bloomi ( $time ).';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Tshifhinga tsha u eḓela Muya-fhasi 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'U ḓifhumudza na u lugisela u eḓela ho fholaho ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Vho ni tanganedza kha Bloomi';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Khonani yaṋu ya vhukonani, ya u thoma ya mutakalo na pfushi i siho kha inthanethe.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Thomani';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Kha vha dzhene';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'U pfuka';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal =>
+      'Ndi tshifhio tshipikwa tshaṋu tshihulwane tsha mutakalo?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'U fhungudza muvhili nga vhulenda';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'U wana misipha na maanḓa';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy =>
+      'Fulufulu na Vhutshilo ha Ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'U ḽa zwiḽiwa zwi re na mutakalo';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Ri vhudzeni nga ha inwi';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Nḓowelo yaṋu ya Ḓuvha Ḽiṅwe na Ḽiṅwe';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'Thendelo & Tswikelelo ya Sisiṱeme';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Ṋeani tswikelelo kha maga a u ṱanganya, u ḓiḓowedza, na khumbudzo.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Pulane yaṋu ya Mukhwa yo Lugela!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Ro ita mbekanyamaitele ya pfushi na mutakalo ya vhulenda, yo khetheaho yo itelwa inwi fhedzi.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Kha vha dzhene kha Bloomi';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report =>
+      'Recap ya Vhuḓifari ha Vhege iṅwe na iṅwe';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'Duvha la khwine la u sa shanduka: $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Mitevhe & Zwipikwa';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Yo vulea nga $date';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going =>
+      'Bvelani phanḓa na mvelaphanḓa yavhuḓi vhukuma!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Zwishumiswa zwa Tshikirini tsha Hayani';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Zwishumiswa zwi shumaho: $count';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'Habu ya Mutakalo wa Bloomi';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'Maga & Rinngi i shumaho';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Logo ya u ṱavhanya ya u ṋea maḓi';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Mufarisi wa Mascot wa Bloomi';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'Ambara Watshi ya Smart ya OS';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Yo ṱumanaho na Watch';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'U ṱanganya Datha ya Watshi';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Mbonalo & Thero';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Moudu wa Thero';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Tshedza';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Swiswi';
 
   @override
-  String get theme_system => 'System Default';
+  String get theme_system => 'Tshivhumbeo tsha Sisiṱeme';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Phaḽethe ya murahu';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Yunithi dza u ela';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Methiki (kg, cm, ml)';
 
   @override
-  String get units_imperial => 'Imperial (lbs, in, fl oz)';
+  String get units_imperial => 'Vhuhosi (lbs, nga, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'A thi koni u ḓadza dashibodo';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req =>
+      'Thendelo ya Vhuṱumani ha Mutakalo i a Ṱoḓea';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'Bloomi i ṱoḓa thendelo ya Health Connect u kokodza maga a vhukuma, u rwa ha mbilu, na u ṱanganya zwishumiswa zwa hayani zwi tshimbilaho nga tshifhinga tsha vhukuma.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Tendelani Vhuṱumani ha Mutakalo';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'Vho lugela duvha la muhumbulo? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'U engedza nga u ṱavhanya';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'GPS i tshilaho';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'KHALORI DZO SALAHO';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Zwo ḽiwa: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Pompo ya Tshiṱoḓisisi tsha Maḓi 💧 .';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached =>
+      'Tshipikwa tsha duvha na duvha tsho swikeleliwa 🎉 .';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml kha tshipikwa tsha duvha na duvha';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Zwidodombedzwa';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'U khwinisa u itela u vula zwipikwa zwo khetheaho zwa ḓuvha ḽiṅwe na ḽiṅwe & pulane ya AI';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'U vula 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'U ṱavhanya u rekhoda u dzhena ha mutakalo';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Saizi ya u ṋekedza';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'U shuma (g)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Tshivhalo tsha u ṋekedza';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Khaḽori nga zwiḽiwa';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Thimbinywa';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Engedza Thimbinywa';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Ndaela na Notsi';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Mufusho woṱhe wa Resipi';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Mufusho nga u ṋekedza';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'Zwiḽiwa zwa custom zwo vhulungwa nga nḓila yo bvelelaho!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'Tshibveledzwa tsho wanala!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Ro vha ri sa koni u wana barcode iyi kha database yo vuleaho. Unga zwi engedza sa zwiḽiwa zwa mvelele.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Engedza Zwiḽiwa Zwo Ḓiitelaho';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'Skena Hafhu';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'U vusuludza zwiḽiwa zwo wanalaho';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Kha vha dzudzanye tshivhalo kana vha bvise tshithu tshiṅwe na tshiṅwe tshi sa ḓivhei';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'Log Zwiḽiwa zwo Khethwaho';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Zwiḽiwa zwine nda zwi funesa';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Zwiḽiwa zwa zwenezwino';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Ahuna zwiḽiwa zwine nda zwi funesa. Tap heart kha zwiliwa zwinwe na zwinwe u vhulunga hafha.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents =>
+      'Ahuna zwiḽiwa zwo ṅwaliwaho zwenezwino zwo wanalaho.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title =>
+      'Zwidodombedzwa zwa Mufusho wa Ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'U fhandekana ha phurotheini';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'U fhandekana ha Carbs';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'U fhandekana ha mapfura';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'U fhandekana ha fiber';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'U vhambedza zwipikwa';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Tshipikwa: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Kha vha dzudzanye zwe vha ṅwala kha dayari';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Kha vha phumule zwe vha dzhena';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams g';
   }
 
   @override
   String food_kcal_short(Object kcal) {
-    return '$kcal kcal';
+    return '$kcal khilo';
   }
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current ya $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Logo dza Maḓi dza Ṋamusi';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Ahuna maḓi o ṅwaliwaho ṋamusi. Hydrate ni ṱoḓe buthano ḽa u engedza nga u ṱavhanya!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal =>
+      'Lugisani Tshipikwa tsha Ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'U ṱumana na Mutakalo Ṱumana';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary =>
+      'Zwithu zwa ndeme zwa Mutakalo wa Ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Mbilu ya zwenezwino';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Mutsiko wa malofha';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Okisidzheni ya malofha';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Swigiri ya malofha';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Tshileme';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Tshifhinga tsha u eḓela';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Engedza Muelo wa Zwanḓa';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Nḓila dza ḓivhazwakale';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'Datha ya mutakalo yo ṱanganedzwa nga nḓila yo bvelelaho!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours awara $mins minete';
   }
 
   @override
@@ -1278,17 +1307,17 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String health_metric_hr_val(Object bpm) {
-    return '$bpm bpm';
+    return '$bpm mufhiso';
   }
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg';
   }
 
   @override
@@ -1297,234 +1326,244 @@ class AppLocalizationsVe extends AppLocalizations {
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title =>
+      'Zwishumiswa zwo Ṱanganelanaho & Zwiambara';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Langulani watshi dza vhuṱali dzo ṱanganaho, zwiṱirakha zwa u ḓilugisa, na sensara dza mutakalo.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Swaya mushumo wa u ḓiḓowedza';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Dzina ḽa u ḓiḓowedza';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Tshifhinga (mimunithi)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'Khaḽori dzo anganyelwaho (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Datumu na Tshifhinga';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap =>
+      'Mbekanyamushumo ya Nḓila yaṋu yo Ḓiitelaho';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Nḓowelo ya Matsheloni';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Mutakalo wa masiari';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Muya-Fhasi wa Madekwana';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Mugudisi wa Bloomi AI';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7-Maḓuvha a u Sedza Mutakalo';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Zwipikwa na Zwipikwa zwa Mutakalo';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label =>
+      'Mugaganyagwama wa Khaḽori dza Ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label =>
+      'Tshipikwa tsha Maḓi tsha Ḓuvha Ḽiṅwe na Ḓuvha';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label =>
+      'Tshipikwa tsha vhukando ha ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Nḓisedzo ya pfushi khulwane';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Zwidodombedzwa zwa vhuṋe';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Mielo ya muvhili';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences =>
+      'Zwine na zwi takalela & Nzudzanyo dza App';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'Dzina lavho';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Vhulapfu (_PH_0__)';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Tshileme (_PH_0__)';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Minwaha';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Munna';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Mufumakadzi';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Zwiṅwe / Ndi funa u sa amba .';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary => 'U dzula (U sa ita nyonyoloso)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light => 'U shuma zwiṱuku (maḓuvha a 1-3/vhege)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate =>
+      'U shuma nga nḓila yo linganelaho (maḓuvha a 3-5/vhege)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'U a shuma vhukuma (maḓuvha a 6-7/vhege)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => 'Ambara App ya Mufarisi wa OS';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Ṱanganedzani thaela ya Bloomi na vhuleme kha watshi yaṋu ya Wear OS u itela u sedza khaḽori, maḓi, na zwiṱepisi.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header =>
+      'Zwishumiswa zwa Android zwi shumisanaho';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Pin zwishumiswa zwa tshifhinga tsha vhukuma kha tshikirini tsha hayani tsha tshishumiswa tshavho u itela u khwiniswa nga u ṱavhanya.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Nga ha Bloomi';
 
   @override
-  String get settings_about_version => 'Version 1.0.0';
+  String get settings_about_version => 'Vhesheni 1.0.0';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Fhaṱani 100';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Yo itwa nga vhuronwane u itela u tshila nga muhumbulo, mutakalo.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Milayo na Nyimele';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Mbekanyamaitele ya zwa vhuṋe';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Phumula akhaunthu na datha';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Nyito iyi a i nga ḓo vhuyedzedzwa murahu. Zwiḽiwa zwaṋu zwoṱhe, u ḓiḓowedza, zwithu zwa ndeme, na phrofaili zwi ḓo phumulwa lwa tshoṱhe.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Phumula lwa tshoṱhe';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Ni ṱanganedzwa kha Bloomi ✨ .';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'U tevhela ha mutakalo wa vhulenda, wa muhumbulo wo itelwaho u mona na vhutshilo haṋu.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Nga ha Inwi';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Zwipikwa zwaṋu';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Nḓowelo ya Ḓuvha Ḽiṅwe na Ḽiṅwe';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Thendelo';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Ro lugela!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm =>
+      'Tswikelelo ya Vhuṱumani ha Mutakalo';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Sensara ya Muvhali wa Vhukando';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Khumbudzo na Nḓivhadzo dza Muhumbulo';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm =>
+      'Khamera (Khoudu ya Bara & Tshiṱirathedzhi tsha Zwiḽiwa)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Thendelo dza u ṋea';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Vula Dashibodo';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'Nudges dza u ṋea maḓi';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Humbudzo dza maḓi a vhulenda ḓuvha ḽoṱhe';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name => 'Zwiḽiwa & Khumbudzo dza Mufusho';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Nḓivhadzo dza u humbudza vhuragane, tshiswiṱulo, na tshilalelo';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Vhukando ha ndeme';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'Vhuṱambo musi ri tshi swikelela zwipikwa zwa vhukando ha ḓuvha ḽiṅwe na ḽiṅwe';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name => 'Mutakalo & Vhuṱoli ha ndeme';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'Zwihumbudzo zwa u fhungudzea ha tshileme na tshifhinga tsha u eḓela';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 Logo +250ml';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'U eḓela 15m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Zwiḽiwa zwa Log';
 
   @override
-  String get language => 'Language';
+  String get language => 'Luambo';
 
   @override
-  String get share => 'Share';
+  String get share => 'Kovhelanani';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return '$count maḓuvha o fhiraho';
   }
 }

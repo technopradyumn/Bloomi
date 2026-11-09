@@ -588,7 +588,7 @@ class AppLocalizationsHil extends AppLocalizations {
   String get health_sync_now => 'I-sync ang Data sa Panglawas';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Katapusan nga gin-sync: $time';
   }
 

@@ -9,169 +9,170 @@ class AppLocalizationsAy extends AppLocalizations {
   AppLocalizationsAy([String locale = 'ay']) : super(locale);
 
   @override
-  String get app_name => 'Bloomi';
+  String get app_name => 'Bloomi kullakajj ukham luräna';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'Uta';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'Jichhürunakanxa';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'Amtañani';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'Manq’añanaka';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'Manq’añanaka Diario';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'Entrenamiento Log ukax mä juk’a pachanakanwa';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'K’umaräñapataki';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'Perfil ukax mä juk’a pachanakanwa';
 
   @override
-  String get save => 'Save';
+  String get save => 'Qhispiyaña';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Cancelar sañ muni';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Chhaqtayaña';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get done => 'Done';
+  String get done => 'Lurawayxiwa';
 
   @override
-  String get close => 'Close';
+  String get close => 'Jist’antaña';
 
   @override
-  String get back => 'Back';
+  String get back => 'Qhipäxaru';
 
   @override
-  String get next => 'Next';
+  String get next => 'Ukxarusti';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'Ukhama sarantaskakiwa';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Chiqañchaña';
 
   @override
-  String get search => 'Search';
+  String get search => 'Uñakipt’aña';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'Filtro ukaxa mä juk’a pachanakwa lurasi';
 
   @override
-  String get all => 'All';
+  String get all => 'Taqi kunasa';
 
   @override
-  String get active => 'Active';
+  String get active => 'Activo ukhamawa';
 
   @override
-  String get today => 'Today';
+  String get today => 'Jichhürunakanxa';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Qharüruxa';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Qharüruxa';
 
   @override
-  String get add => 'Add';
+  String get add => 'Ukhamaraki';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'Ukaxa apsutawa';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'Refresco luraña';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Wasitat yantʼañamawa';
 
   @override
-  String get error => 'Error';
+  String get error => 'Pantjasiwi';
 
   @override
-  String get success => 'Success';
+  String get success => 'Suma sarnaqaña';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ukax mä...';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'Janiw kuna datos ukanakas utjkiti';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'Modo Offline ukax mä juk’a pachanakanwa';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'Mayjt’awinakax mä kuti wasitat mayachatäxi ukhax sincronizatäniwa';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'Mä t’aqa';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Jakhuwi';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'Unidad';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Qhana';
 
   @override
-  String get select => 'Select';
+  String get select => 'Ajlliñani';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Uka tuqitxa';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ukhamajj walikïskiwa';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Jisa';
 
   @override
-  String get no => 'No';
+  String get no => 'Janiwa';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Opcional ukhamawa';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Calorías ukanaka';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Proteína ukaxa wali ch’amawa';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'Carbohidratos ukanaka';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'Q’añu';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'Fibra satawa';
 
   @override
-  String get water => 'Water';
+  String get water => 'Uma';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Ukax mä juk’a pachanakanwa';
 
   @override
   String get kcal => 'kcal';
@@ -204,75 +205,76 @@ class AppLocalizationsAy extends AppLocalizations {
   String get minutes => 'mins';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'Servicio luraña';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'Servicios ukanaka';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'Servidor Tamapa';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => 'sapa 100g';
 
   @override
-  String get india => 'India';
+  String get india => 'India markanxa';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'Asia tuqina';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Europa markanxa';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Oriente Medio uksanxa';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'África markanwa';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'América markanxa';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Uta';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'Suma alwa';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'Suma Tarde';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Suma Jayp’u';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'Panqara Racha';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '$count urunak saraqatat',
+      one: '1 uru saraqata',
+      zero: '0 urunak saraqataruw puri',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Nina phichhantatänwa';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget =>
+      'Presupuesto de Calorías ukax mä juk’a pachanakanwa';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '$kcal kcal ukax qhiparakiwa';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'Sapa uru Hidratación ukampi';
 
   @override
   String home_water_goal(Object current, Object target) {
@@ -280,1251 +282,1308 @@ class AppLocalizationsAy extends AppLocalizations {
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Pasos Walked ukax mä juk’a pachanakanwa';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Jank’aki Luräwinaka';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'Log Manq’aña';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Log Uma';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Log Workout ukax mä juk’a pachanakanwa';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Log Peso ukaxa';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Jichhürunakan Insights';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'Jisk’a k’umara ajlliwinakax panqar mayjt’awinak uñstayapxi.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Bloomi AI ukax mä entrenador ukhamawa';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Muyuntat & Aire ukanaka';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'Yatiyawinaka';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'Sapa uru Suma jakañ Puntuacion';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Taqi kuna uñjaña';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Manq’añanaka Diario';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Desayuno ukat juk’ampinaka';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'Chika uru manq’aña';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Manq’añanaka';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'T’ant’anaka';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'Manq’añanaka yapxataña';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'Manq’añanaka Editar';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Ukhamaraki Desayuno';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Chika uru manq’aña yapxataña';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Ukhama Manq’aña';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Ukaxa Snack satawa';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Taqi Calorías ukanaka';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'Janiw kuna manq’anakas aka manq’añatakix qillqt’atäkiti';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary =>
+      'Aka urutakix janiw manq’añanakax qillqt’atäkiti';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      '+ ukxaru ch’iqt’aña nayrïri suma manq’aña qillqt’añataki';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Jank’aki Yatiqañataki';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Uka manq’anaka, frutanaka, dal, roti...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Manq’añanaka & Receta Costumbre';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode =>
+      'Código de Barras de Escanear ukax mä juk’a pachanakanwa';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'AI Manq’añanaka Escáner';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Jichha Manq’añanaka';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Favoritos ukanaka';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary =>
+      'Macronutrientes ukaxa mä juk’a pachanakwa lurasi';
 
   @override
-  String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+  String get food_delete_meal_confirm => '¿Jumax aka yänak apsuñ munasmati?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Manq’a yänaka apsuña';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'qhiparapxi';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'manq’antatawa';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return 'ukatsti $target kcal';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Manq’añanaka thaqhaña';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode =>
+      'Código de Barras de Escanear ukax mä juk’a pachanakanwa';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => 'Snap Manq’añ Foto';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Manq’añanaka Custom luraña';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Jichha pacha thaqhatanaka';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Wali uñt’at manq’anaka';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results =>
+      'Janiwa manq’anaka thaqhañampi kikipakiti';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title =>
+      'Escáner de Código de Barras ukax mä juk’a pachanakanwa';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align =>
+      'Código de barras ukax cámara marco manqhan alinear';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found =>
+      'Producto ukax janiw base de datos ukan jikxataskiti';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'Código de barras ukan escaneo ukax Bloomi Pro ukampiw lurasi';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'AI Manq’añanaka Escáner';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Mä qhana foto apsuñamawa platomanxa';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'Manq’a plato uñakipaña...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Uñt’ata yänaka';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Flash ukar mayjt’ayaña';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Foto wasitat apsuña';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Chiqañchaña yänaka';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Manq’añanaka & Receta Costumbre';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Plato jan ukax ingrediente sutipa';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Calorías (kcal) ukat juk’ampinaka.';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'Proteína ukaxa (g) .';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'Carbohidratos (g) ukat juk’ampinaka.';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'Q’añu (g) .';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Save Receta ukaxa';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Uma thaqhiri';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Sapa uru Hidratación uka amtawi';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Jichhürunakan qillqt’ata';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml Vidrio ukat juk’ampinaka';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ml Botella ukaxa';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount =>
+      'Custom Cantidad ukax mä juk’a pachanakanwa';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'Uma sapa kutiw urux umañama, ukhamat jan ch’amanïñapataki.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Logged $amount ml uma 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Entrenamiento Log ukax mä juk’a pachanakanwa';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Ukhamaraki Entrenamiento';
 
   @override
-  String get workout_cardio => 'Cardio';
+  String get workout_cardio => 'Cardio ukax mä juk’a pachanakanwa';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Ch’amanïña';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Yoga & Flexibilidad ukanak luraña';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Kuna pachakamasa';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Intensidad ukat juk’ampinaka';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Calorías ukax phichhantatänwa';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty =>
+      'Jichhürunakanx janiw kuna entrenamientos ukanakas registratäkiti';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success =>
+      '¡Entrenamiento ukax wali suma qhispiyatawa!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Ukax Tipo de Entrenamiento ukawa';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Notas & Reflexiones ukanak uñakipt’aña';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'K’umaräñapataki & Vitales ukanaka';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Chuyma ch’allxtawi';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Wilan Oxígeno (SpO2) ukax 1.1.';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Wila ch’akhanaka';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Wila Glucosa ukaxa';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Cuerpo ukan Temperaturapa';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Ikit sarnaqañ tuqit yatxataña';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking =>
+      'Peso & Composición corporal ukaxa mä juk’a pachanakwa lurasi';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Cintura-Cadera ukax mä juk’a pachanakanwa';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub =>
+      'Dispositivos & Smartwatch Hub ukax mä jach’a uñacht’äwiwa';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'K’umar jakañ tuqit yatiyawinak sincronización';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'Qhipa sincronización: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Manual K’umaräñapataki Mantaña';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail =>
+      'Detalles Métricos ukax mä juk’a pachanakanwa';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Sensores de Salud ukampi chikt’ata';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Sapa uru Plan';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title =>
+      'Plan de Bienestar Semanal ukax mä jach’a amtawiwa';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Calorías ukax mä juk’a pachanakanwa';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Hidratación ukax mä amtawiwa';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'Paso Target ukax mä jach’a amtawiwa';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Ukax mä Target ukhamawa';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Manq’añ tuqit iwxt’awinaka';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'K’umara sarnaqawi & Iwxt’awinaka';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Bloomi AI Coach ukan iwxt’awinakapax';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'Sapa uru Horario Personalizado';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Perfil ukax mä juk’a pachanakanwa';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Perfil ukar chiqañchaña';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Suti';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Uka mara';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Género ukat juk’ampinaka';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Alturapaxa wali jach’awa';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Peso ukaxa wali ch’amawa';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Nayrïr Amtäwi';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Nivel de Actividad ukaxa';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Nayan Estadísticas de Bienestar ukax utjiwa';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Perfil ukax wali sumaw machaqt’ayata';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Índice de Masa Corporal (IMC) ukax 1.1.';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Miembronakaxa';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'JISK’A JAQINAKANAKA & SARNAQÄWINAKAPA';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Uñnaqa & Tema';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Ch’amaka, Qhana, Sistema Modo & App Fondo ukan amtawinakapa';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Permisos & Sistema ukar mantaña';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'K’umar jakañ tuqit Conectar, Sensores de Paso, GPS, Yatiyawinaka & Cámara';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Amtawinaka & Yatiyawinaka';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Manq’añ pacha, uma, pesaje check-in & ikiñ pacha amtayaña';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Unidades de Medición ukanaka';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Métrico (kg, cm, ml, km) jan ukax Imperial (lbs, ft/in, fl oz) ukax mä juk’a pachanakanwa.';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'App Aru uñt’ayaña';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'Inglés, हिन्दी (Hindi), Hinglish & 195+ uraqpachan arunaka';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Pantalla Uta Widgets ukanaka';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Android widgets jakaski: Hub, Pasos, Uma, Nutrición & Mascota';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => 'Ukax OS Watch App ukampiw uñt’ayasi';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Smartwatch compañero, azulejos, complicaciones & vitales jakaña';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'AMTAWI & SUMA UTJAWIPA';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Nutrición Objetivos & Macro Jaljawi';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Calorías meta, proteína, carbohidratos, grasa & uma meta';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Semanal Suma jakañ Recap';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      '7 urunaka calorías promedio, macro ratio & suma uru';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Rayas & Hitos ukanakaw utji';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub =>
+      'Rayas de flores activas, insignias & logros ukat juk’ampinaka';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices =>
+      'DISPOSITIVO CONECTODO & ECOSISTEMA UKA UTJAWIPA';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub =>
+      'Dispositivos & Smartwatch Hub ukax mä jach’a uñacht’äwiwa';
 
   @override
   String get devices_hub_sub =>
-      'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
+      'K’umar jakañ tuqit Conectar, Galaxy Watch, Pixel Watch, Garmin ukanak uñt’ayaña';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Muyuntat & Pachamapa';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Calidad del aire (AQI), índice UV & pacha hidratación uka tuqita iwxt’awinaka';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'Bloomi Pro ukax mä suscripción ukhamawa';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'AI Plan Coach, 5 pantalla de inicio widgets & vitales ukanakax arknaqatawa';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'UKHAMARAKI & SEGURIDAD UKA TUQITA';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Bloomi tuqit yatxataña';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub =>
+      'Uñstayaña especificaciones, versión, atribuciones ukanaka';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy =>
+      'Política de Privacidad ukax mä juk’a pachanakanwa';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Offline-nayraqata, dispositivo ukan arquitectura de datos';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Condiciones ukat Condiciones ukanaka';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'Condiciones de servicio ukatxa suma jakaña tuqita kamachinaka';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Cuenta & Datos ukanak chhaqtayaña';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Irreversiblemente SQLite local ukan datos ukat cloud backups ukanakar chhaqtayaña';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits =>
+      'Llamp’u chuymani, wiñayatak suma jakasiñ costumbrenak luraña';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Nayan Rastreo Datos & Registronakaja';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language =>
+      'Aru jan ukax nativo script ukarjam thaqhaña...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Arunaka Uñstayata';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'Janiw mä uñtasit arunakax jikxataskiti';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Nativo guion jan ukax inglés arut qillqañ tuqit thaqhañ yant’apxam';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Mä juk’a jaqukipata';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Phuqata';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Arunakax $name ($nativeName) ukar uñt’ayatawa.';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Muyuntat & Pachamaman uñt’atanaka';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi =>
+      'Índice de Calidad del Aire ukax mä juk’a pachanakanwa';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'Índice UV ukax mä juk’a pachanakanwa';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Ukaxa wali sumawa';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Humedad ukaxa wali ch’amawa';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Jichha pachanxa suma hidratado ukhama qhiparañawa.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Manq’añanaka thaqhaña';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Código de Barras ukax 👑 ukan uñt’ayatawa';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Umampi yapxataña';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Custom Manq’añanaka';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Suma';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'Jan k’umara';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Yatiyawinaka & Alertas ukanaka';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Janiw machaq yatiyawinakax utjkiti';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Taqiniruw Liyt’atjam chimpuntañama';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Taqi kunas q’umachaña';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Amtañataki wakicht’awinaka';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Yatiyawinaka';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Desayuno Amtawi 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return '¡Suma alwa! Mä manq’añ desayuno lurañataki pacha $time .';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Chika uru Amtawi 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Mä juk’a samart’añamawa ukat mä equilibrado, amuyt’at chika uru manq’añ $time ukan kusist’añamawa.';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Manq\'añ Amtawi 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Mä qhana, satisfactorio manq’añ pachax $time ukanwa.';
   }
 
   @override
-  String get reminders_water_title => 'Hydration Nudge 💧';
+  String get reminders_water_title => 'Hidratación Nudge ukax 💧';
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return '¡Mä fresco vaso uma umañ pacha! ($time) ukat juk’ampinaka.';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Sapa semanan Pesamiento ukax ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Bloomi ( $time ) ukanx sapa semanan cuerpon métricas ukanakax uñakipt’atawa.';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Ikintaña pacha Thaya-uñt’ayaña 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Samart’añamawa ukat mä samarañ ikiñar wakicht’asiñamawa ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Bloomi ukarux walikpun jutapxtaxa';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Juman suma, jan internetan nayrïr k’umaräñ ukhamarak manq’añ tuqit masima.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Qalltañataki';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Uñt’ayasiñataki';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal =>
+      '¿Kunas jumatakix nayrïr amtäwimaxa suma jakasiñataki?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Llamp’u chuymampi Peso Perdir';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Musculo Ganancia & Ch’ama';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Sapa uru Energía & Vitalidad ukampi';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'K’umara Amuyu Manq’aña';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Juma pachpat yatiyapxita';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Sapa uru Rutinama';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'Permisos & Sistema ukar mantaña';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Sincronización pasos, entrenamientos ukat amtawinakar mantañax churañawa.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title =>
+      '¡Plan Personalizado ukax Wakicht’atawa!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Mä llamp’u, personalizado nutrición ukat bienestar ukanak jumanakatakikiw lurapxta.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Bloomi ukar mantañamawa';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Semanal Suma jakañ Recap';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'Suma Consistencia uru: $day .';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Rayas & Hitos ukanakaw utji';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Ukax $date ukan jist\'antatawa.';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going =>
+      '¡Wali muspharkañ nayrar sartañax sarantaskakiwa!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Pantalla Uta Widgets ukanaka';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Widgets activos ukax akhamawa: $count .';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'Bloomi Wellness Hub ukax mä jach’a utaw';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'Pasos & Anillo Activo ukat juk’ampinaka';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title =>
+      'Hidratación Quick Log ukaxa mä juk’a pachanakwa lurasi';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title =>
+      'Bloomi Mascota Compañero ukax mä jach’a uñacht’äwiwa';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'Ukax OS Smartwatch ukampiw uñt’ayasi';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Uñch’ukiñamp chikt’ata';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Uñakipaña Datos ukanaka sincronización';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Uñnaqa & Tema';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Modo de Tema ukax mä juk’a pachanakanwa';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Qhana';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Ch’amaka';
 
   @override
-  String get theme_system => 'System Default';
+  String get theme_system => 'Sistema Default ukax mä juk’a pachanakanwa';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette =>
+      'Paleta de Fondos ukax mä juk’a pachanakanwa';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Unidades de Medición ukanaka';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Métrico (kg, cm, ml) ukat juk’ampinaka.';
 
   @override
-  String get units_imperial => 'Imperial (lbs, in, fl oz)';
+  String get units_imperial => 'Imperial (lbs, in, fl oz) ukat juk’ampinaka.';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Janiw dashboard ukar apkatañjamäkiti';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req =>
+      'K’umar jakañ Conectar Permiso ukax wakisiwa';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'Bloomi ukax Health Connect ukan permiso ukaruw munaraki, chiqpach thakhinak apsuñataki, chuyma ch’allxtawi, ukat chiqpach pachan widgets de casa móvil ukanakar sincronización lurañataki.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'K’umar jakañ tuqit Conectar ukar jaysaña';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day =>
+      '¿Mä amuyt’ir urutakix wakicht’atätati? ✨ ukat juk’ampinaka';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Jank’aki Yatiqañataki';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'GPS ukax jakaskiwa';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'CALORIAS UKAX UTJAÑAPAWA';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Manq’ata: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Grifo ukax Uma Tracker 💧 ukatakiw';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'Sapa uru amtaruw puri 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml ukax sapa uru amtaruw puri';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Detalles ukanaka';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Jisk’achawix sapa uru amtawinak personalizados & plan AI ukar jist’arañataki';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Jisk’a 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'Jank’akiw mä suma jakañ tuqit qillqt’aña';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Servidor Tamapa';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'Servimiento (g) 1.1.';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Jakhuwi Servicios ukanaka';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Calorías sapa manq’añataki';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Ukhamaraki Ingrediente ukampi';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Yatichäwinaka & Notas ukanaka';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Taqi Receta Nutrición ukampi';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving =>
+      'Per Serving Nutrición ukaxa mä juk’a pachanakwa lurasi';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      '¡Manq’a costumbre ukax wali suma qhispiyatawa!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => '¡Producto Uñstayata!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Aka código de barras ukax janiw jist’arat base de datos ukan jikxataskänti. Ukaxa mä costumbre manq’jamawa yapxataspa.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Ukhamaraki Custom Manq’añanaka';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'Escanear Mayampi';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'Uñakipata Manq’anaka uñakipaña';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Jakhunaka chiqañchaña jan ukax kuna jan uñt’at yänak apsuña';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'Log Ajllit Manq’anaka';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Munat Manq’añanaka';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Jichha Manq’añanaka';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Janiw kuna munat manq’anakas utjkiti. Chuyma ch’allt’aña kuna manq’anaka akan qhispiyañataki.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents =>
+      'Janiw jichhak qillqt’at manq’anakax jikxataskiti.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title =>
+      'Sapa uru manq’añanaka tuqita Detalles';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'Proteínas ukanakax t’unjatawa';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'Carbohidratos ukanakax t’unjatawa';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'Q’añu T’unjaña';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Fibra Ukaxa mä juk’a pachanakwa lurasi';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison =>
+      'Target Comparación ukax mä juk’a pachanakanwa';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Amtäwi: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Diario ukar qillqt’aña';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Chhaqtayaña Entrada';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams ukax mä g';
   }
 
   @override
   String food_kcal_short(Object kcal) {
-    return '$kcal kcal';
+    return '$kcal kcal ukat juk’ampinaka';
   }
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current ukaxa $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Jichhürunakanx Uma Qullunaka';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Jichhürunakanx janiw umax qilqtatäkiti. ¡Hidratar ukat mä botón jank’ak yapxatañaruw ch’iqt’añama!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Sapa uru amtar mayjtʼayaña';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner =>
+      'K’umar jakañ tuqit Conectado ukampi chikt’ata';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Sapa uru K’umaräñ Vitales';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Qhipa Chuyma ch’allxtawi';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Wila ch’akhanaka';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Wila Oxígeno ukampi';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Wila Glucosa ukaxa';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Peso ukaxa wali ch’amawa';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Kuna pachakamas ikiñax wakisi';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Manual Medición ukampi yapxataña';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Tendencias Históricas ukanaka';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      '¡K’umar jakañ tuqit yatiyawinakax sum sincronizado!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours pachanaka $mins pachanaka';
   }
 
   @override
   String health_metric_weight_val(Object val) {
-    return '$val kg';
+    return '$val ukax kg';
   }
 
   @override
   String health_metric_hr_val(Object bpm) {
-    return '$bpm bpm';
+    return '$bpm bpm ukax mä juk’a pachanakanwa';
   }
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct % ukat juk’ampinaka.';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg ukat juk’ampinaka';
   }
 
   @override
   String health_metric_glucose_val(Object val) {
-    return '$val mg/dL';
+    return '$val mg/dL ukampi';
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title =>
+      'Dispositivos conectados & Wearables ukax mä juk’a pachanakanwa';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Inteligente relojes pariados, fitness trackers ukat k’umaräñ tuqit sensores ukanakar apnaqaña.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title =>
+      'Editar Entrenamiento ukax mä juk’a pachanakanwa';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Entrenamiento Suti';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Kuna pachakamas (minutonaka) .';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label =>
+      'Ukax Calorías (kcal) ukanakaw utji.';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Uraqi ukat kuna pachas';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap =>
+      'Ukax mä Hoja de Ruta Personalizada ukawa';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Alwat Rutina';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Chika uru Suma jakaña';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Jayp’u Thaya-Uka';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Bloomi AI ukax mä entrenador ukhamawa';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7-Uru Suma jakañ tuqit amuyt’aña';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Suma jakañ amtanaka & Amtanaka';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Sapa uru Calorías ukat Presupuesto';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Sapa uru Uma Amtawi';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Sapa uru Paso Amta';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label =>
+      'Ratio de Macronutriente ukaxa mä juk’a pachanakwa lurasi';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Jaqinakan Detalles ukanakapa';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Cuerpo tupunaka';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences =>
+      'Preferencias & App ukan utt’ayatanakapa';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'Juman sutimax';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Alturapaxa ($unit) .';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Ukax ($unit) .';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Uka mara';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Chacha';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Warmi';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Yaqha / Janiw sañ munkiti';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Sedentario (Jichhax ejercicio lurañax jukʼakiwa) .';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light => 'K’achachata (1-3 urunaka/semana) .';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate =>
+      'Moderada Activo (3-5 urunaka/semana) .';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'Wali Activo (6-7 urunaka/semana) .';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header =>
+      'Ukax OS Compañero App ukampiw uñt’ayasi';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Bloomi azulejo ukat complicación ukanak Wear OS reloj ukar uskt’añamawa, calorías, uma ukat pasos ukanakar uñakipañataki.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header =>
+      'Widgets Android ukax interactivos ukanakaw utji';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Chiqpach pachan widgets ukanakax dispositivo pantalla de inicio ukar pin ukax mäkiw machaqar tukuyañataki.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Bloomi tuqit yatxataña';
 
   @override
-  String get settings_about_version => 'Version 1.0.0';
+  String get settings_about_version => 'Ukax 1.0.0 ukan uñt’ayatawa';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Ukax 100 ukhawa';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Amuyumpi, k’umara jakañataki suma wakicht’ata.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Condiciones ukat Condiciones ukanaka';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header =>
+      'Política de Privacidad ukax mä juk’a pachanakanwa';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Cuenta & Datos ukanak chhaqtayaña';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Aka lurawixa janiwa mayjt’ayatäkaspati. Taqi manq’añanaka, entrenamientos, vitales ukat perfil ukanakax wiñayatakiw chhaqtayatäni.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Wiñayataki Chhaqtayaña';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Bloomi ✨ ukarux walikpun jutapxtaxa';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Llamp’u, amuyt’ir suma jakañ arknaqañax jakäwiman muyuntat luratawa.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Jumanakat parltʼañäni';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Amtanakamax';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Sapa uru sarnaqawi';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Permisonaka';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => '¡Wakicht’atäpxtawa!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm =>
+      'K’umar jakañ tuqit Conectar Acceso';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm =>
+      'Paso Contador Sensor ukax mä juk’a pachanakanwa';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Amuyu Amtawinaka & Yatiyawinaka';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm =>
+      'Camara (Código de barras & Manq’añanaka escáner) .';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Permisonaka churaña';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Ukax Dashboard ukan jist’aratawa';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name =>
+      'Hidratación Nudges ukax mä juk’a pachanakanwa';
 
   @override
-  String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+  String get notif_channel_hydration_desc => 'Llamp’u uma amtawi urunaka';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name =>
+      'Manq’añanaka & Manq’añanaka Amtawinaka';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Desayuno, chika uru ukat jayp’u manq’añ amtañ alertas';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Paso Hitos ukanaka';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'Sapa uru paso amtanakar puriñkamax jach’a phunchhawinaka';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name =>
+      'K’umaräñapataki & Vitales ukanaka uñakipaña';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'Peso ukat ikiñkamax thaya tuqit amtañanaka';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 Log +250ml ukat juk’ampinaka';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'Ukax 15m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Tronco Manq’aña';
 
   @override
-  String get language => 'Language';
+  String get language => 'Arunaka';
 
   @override
-  String get share => 'Share';
+  String get share => 'Compartir';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return '$count d nayra';
   }
 }

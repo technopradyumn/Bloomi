@@ -581,7 +581,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get health_sync_now => 'ఆరోగ్య డేటాను సమకాలీకరించండి';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'చివరిగా సమకాలీకరించబడినది: $time';
   }
 

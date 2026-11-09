@@ -9,1522 +9,1532 @@ class AppLocalizationsSr extends AppLocalizations {
   AppLocalizationsSr([String locale = 'sr']) : super(locale);
 
   @override
-  String get app_name => 'Bloomi';
+  String get app_name => 'Блооми';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'Хоме';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'данас';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'План';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'Храна';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'Дневник хране';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'Дневник тренинга';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'Здравље';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'Профил';
 
   @override
-  String get save => 'Save';
+  String get save => 'Сачувај';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Откажи';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Избриши';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Уреди';
 
   @override
-  String get done => 'Done';
+  String get done => 'Готово';
 
   @override
-  String get close => 'Close';
+  String get close => 'Затвори';
 
   @override
-  String get back => 'Back';
+  String get back => 'Назад';
 
   @override
-  String get next => 'Next';
+  String get next => 'Следеће';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'Настави';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Потврди';
 
   @override
-  String get search => 'Search';
+  String get search => 'Тражи';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'Филтер';
 
   @override
-  String get all => 'All';
+  String get all => 'Све';
 
   @override
-  String get active => 'Active';
+  String get active => 'Активан';
 
   @override
-  String get today => 'Today';
+  String get today => 'данас';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Јучер';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'сутра';
 
   @override
-  String get add => 'Add';
+  String get add => 'Додај';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'Уклони';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'Освежи';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Покушајте поново';
 
   @override
-  String get error => 'Error';
+  String get error => 'Грешка';
 
   @override
-  String get success => 'Success';
+  String get success => 'Успех';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Учитавање...';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'Нема доступних података';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'Оффлине Моде';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'Промене ће се синхронизовати када се поново повежете';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'Поништи';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'Порција';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Количина';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'Јединица';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Јасно';
 
   @override
-  String get select => 'Select';
+  String get select => 'Изаберите';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Пријавите се';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Ресетуј';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ОК';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Да';
 
   @override
-  String get no => 'No';
+  String get no => 'бр';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Опционо';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Калорије';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Протеин';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'Царбс';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'Фат';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'Влакна';
 
   @override
-  String get water => 'Water';
+  String get water => 'Вода';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Степс';
 
   @override
-  String get kcal => 'kcal';
+  String get kcal => 'кцал';
 
   @override
-  String get grams => 'g';
+  String get grams => 'г';
 
   @override
-  String get milliliters => 'ml';
+  String get milliliters => 'мл';
 
   @override
-  String get kilograms => 'kg';
+  String get kilograms => 'кг';
 
   @override
-  String get pounds => 'lbs';
+  String get pounds => 'лбс';
 
   @override
-  String get centimeters => 'cm';
+  String get centimeters => 'цм';
 
   @override
-  String get inches => 'in';
+  String get inches => 'ин';
 
   @override
-  String get bpm => 'bpm';
+  String get bpm => 'бпм';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'сати';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'мин';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'Сервинг';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'Порције';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'Величина сервирања';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => 'по 100г';
 
   @override
-  String get india => 'India';
+  String get india => 'Индија';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'Азија';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Европа';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Блиски исток';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'Африка';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'Америке';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Хоме';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'Добро јутро';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'Добар дан';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Добро вече';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'Блоссом Стреак';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '__ПХ_0__ низ дана',
+      one: '1 дан низ',
+      zero: '0 дана низа',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Спаљена';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Буџет калорија';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return 'Преостало __ПХ_0__ кцал';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'Дневна хидратација';
 
   @override
   String home_water_goal(Object current, Object target) {
-    return '$current / $target ml';
+    return '__ПХ_0__ / __ПХ_1__ мл';
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Степс Валкед';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Брзе акције';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'Лог Меал';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Лог Ватер';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Лог Воркоут';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Тежина трупаца';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Данашњи увиди';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'Мали здрави избори стварају цветајуће трансформације.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Блооми АИ тренер';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Околина и ваздух';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'Обавештења';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'Дневни Веллнесс Сцоре';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Прикажи све';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Дневник хране';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Доручак';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'Ручак';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Вечера';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'Грицкалице';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'Додај храну';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'Уреди храну';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Додај доручак';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Додај ручак';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Додај вечеру';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Додајте ужину';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Укупне калорије';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'Још увек није евидентирана храна за овај оброк';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'Нема евидентираних оброка за овај дан';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'Додирните + да бисте забележили свој први укусни оброк';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Брзо додавање';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Претражите јела, воће, дал, роти...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Прилагођена храна и рецепт';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'Скенирај бар код';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'АИ скенер хране';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Рецент Фоодс';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Фаворитес';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Мацронутриент Бреакдовн';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'Да ли сте сигурни да желите да уклоните ову ставку?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Храна је уклоњена';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'преосталих';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'конзумиран';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return 'од __ПХ_0__ кцал';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Сеарцх Фоодс';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Скенирај бар код';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => 'Снап Фоод Пхото';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Направите прилагођену храну';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Недавне претраге';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Популарна јела';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results => 'Нема хране која одговара вашој претрази';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Барцоде Сцаннер';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align => 'Поравнајте бар код унутар оквира камере';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'Производ није пронађен у бази података';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'Скенирање бар кодова је доступно уз Блооми Про';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'АИ скенер хране';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Снимите јасну фотографију свог јела';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'Анализирање тањира за храну...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Откривене ставке';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Укључите Фласх';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Поново снимите фотографију';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Потврдите ставке';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Прилагођена храна и рецепт';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Назив јела или састојка';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Калорије (кцал)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'Протеини (г)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'угљени хидрати (г)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'маст (г)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Сачувај рецепт';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Ватер Трацкер';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Дневни циљ хидратације';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Логгед Тодаи';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 мл Стакло';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 мл Боца';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Прилагођени износ';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'Пијте воду редовно током дана за стабилну енергију.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Забележено __ПХ_0__ мл воде 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Дневник тренинга';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Додајте тренинг';
 
   @override
-  String get workout_cardio => 'Cardio';
+  String get workout_cardio => 'Цардио';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Снага';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Јога и флексибилност';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Трајање';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Интензитет';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Сагореле калорије';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Данас није забележен ниједан тренинг';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'Вежбање је успешно сачувано!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Воркоут Типе';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Нотес & Рефлецтионс';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Здравље и витални елементи';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Откуцаји срца';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Кисеоник у крви (СпО2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Крвни притисак';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Глукоза у крви';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Температура тела';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Праћење спавања';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'Тежина и састав тела';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Однос струка и бокова';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Уређаји и чвориште за паметне сатове';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'Синхронизујте здравствене податке';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'Последња синхронизација: __ПХ_0__';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Ручни унос здравља';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Метриц Детаилс';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Повезани здравствени сензори';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Дневни план';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'Недељни веллнесс план';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Цалорие Таргет';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Циљ хидратације';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'Степ Таргет';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Слееп Таргет';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Предлози за оброк';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Здраве навике и савети';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Препоруке тренера Блооми АИ';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'Персонализовани дневни распоред';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Профил';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Уреди профил';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Име';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Старост';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Пол';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Висина';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Тежина';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Примарни циљ';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Ниво активности';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Ми Веллнесс Статс';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Профил је успешно ажуриран';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Индекс телесне масе (БМИ)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Чланство';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Подешавања';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'ПРЕФЕРЕНЦИЈЕ И НАВИКЕ';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Изглед и тема';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Тамно, Светло, Системски режим и Опције позадине апликације';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Дозволе и приступ систему';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Хеалтх Цоннецт, сензори корака, ГПС, обавештења и камера';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Подсетници и обавештења';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Време оброка, вода, провера тежине и подсетници за спавање';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Јединице мере';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Метрички (кг, цм, мл, км) или империјални (лбс, фт/ин, фл оз)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'Језик апликације';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'енглески, हिनदी (хинди), хинглиш и 195+ глобалних језика';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Виџети за почетни екран';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Андроид виџети уживо: Хуб, Степс, Ватер, Нутритион & Масцот';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => 'Апликација Веар ОС Ватцх';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Пратилац за паметни сат, плочице, компликације и витални подаци';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'ЦИЉЕВИ И ВЕЛЛНЕСС УВИДИ';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Нутритион Таргетс & Мацро Сплит';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Циљ калорија, протеина, угљених хидрата, масти и воде';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Недељни преглед здравља';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      'Просек калорија за 7 дана, макро однос и најбољи дан';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Низови и прекретнице';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'Активни цветни низови, значке и достигнућа';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'ПОВЕЗАНИ УРЕЂАЈИ И ЕКОСИСТЕМ';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Уређаји и чвориште за паметне сатове';
 
   @override
   String get devices_hub_sub =>
-      'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
+      'Хеалтх Цоннецт, Галаки Ватцх, Пикел Ватцх, Гармин';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Околина & Време';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Квалитет ваздуха (АКИ), УВ индекс и савети за временску хидратацију';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'Блооми Про претплата';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'АИ План Цоацх, 5 виџета за почетни екран и праћење виталних функција';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'О И БЕЗБЕДНОСТИ';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'О Блуми';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub => 'Спецификације израде, верзија, атрибуције';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'Политика приватности';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Архитектура података на уређају, прва ван мреже';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Услови и одредбе';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'Услови коришћења услуге и смернице за добробит';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Избришите налог и податке';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Неповратно обришите локалне СКЛите податке и резервне копије у облаку';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits => 'Изградите нежне, трајне навике за здравље';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Моји праћени подаци и евиденције';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language => 'Претрага по језику или матерњем писму...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Доступни језици';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages =>
+      'Није пронађен ниједан одговарајући језик';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Покушајте да претражујете по изворном писму или енглеском правопису';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Делимично преведено';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Завршено';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Језик је подешен на __ПХ_0__ ( __ПХ_1__)';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Околина и животна средина';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Индекс квалитета ваздуха';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'УВ индекс';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Температура';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Влажност';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Останите добро хидрирани у тренутним временским условима.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Сеарцх Фоод';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Скенирајте бар код 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Додајте воду';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Цустом Фоод';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Добро';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Умерено';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'Нездраво';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Обавештења и упозорења';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Нема нових обавештења';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Означи све као прочитано';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Обриши све';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Подешавања подсетника';
 
   @override
   String get notifications => 'Push Notifications';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Подсетник за доручак 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'Добро јутро! Време је за хранљив доручак у __ПХ_0__.';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Подсетник за ручак 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Паузирајте и уживајте у уравнотеженом ручку са пажњом у __ПХ_0__.';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Подсетник на вечеру 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Време је за лагану, задовољавајућу вечеру у __ПХ_0__.';
   }
 
   @override
-  String get reminders_water_title => 'Hydration Nudge 💧';
+  String get reminders_water_title => 'Хидратион Нудге 💧';
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'Време је да попијете чашу свеже воде! ( __ПХ_0__ )';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Недељно вагање ⚖';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Пратите недељне показатеље тела на Блооми ( __ПХ_0__ ).';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Одмарање пре спавања 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Опустите се и припремите се за миран сан ( __ПХ_0__ ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Добродошли у Блооми';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Ваш пријатељски, ван мреже први сапутник за здравље и исхрану.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Започните';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Пријавите се';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Скип';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal => 'Који је ваш примарни веллнесс циљ?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Нежан губитак тежине';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Добитак мишића и снага';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Дневна енергија и виталност';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'Здрава свесна исхрана';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Реците нам нешто о себи';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Ваша дневна рутина';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'Дозволе и приступ систему';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Одобрите приступ корацима синхронизације, вежбама и подсетницима.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Ваш прилагођени план је спреман!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Направили смо нежан, персонализован план за исхрану и добробит само за вас.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Улази Блооми';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Недељни преглед здравља';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'Најбољи дан конзистентности: __ПХ_0__';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Низови и прекретнице';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Откључано __ПХ_0__';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'Наставите са фантастичним напретком!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Виџети за почетни екран';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Активни виџети: __ПХ_0__';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'Блооми Веллнесс Хуб';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'Степенице и активни прстен';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Брзи дневник хидратације';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Блооми Масцот Цомпанион';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'Носите ОС Смартватцх';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Повезано са Ватцх';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Синхронизујте податке о гледању';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Изглед и тема';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Тхеме Моде';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Светлост';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Дарк';
 
   @override
   String get theme_system => 'System';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Палета позадине';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Јединице мере';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Метрички (кг, цм, мл)';
 
   @override
-  String get units_imperial => 'Imperial (lbs, in, fl oz)';
+  String get units_imperial => 'Империјал (лбс, ин, фл оз)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Није могуће учитати контролну таблу';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req =>
+      'Потребна је дозвола за Хеалтх Цоннецт';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'Блооми-у је потребна дозвола Хеалтх Цоннецт да би направио стварне кораке, откуцаје срца и синхронизовао виџете мобилне куће у реалном времену.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Дозволите Хеалтх Цоннецт';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'Спремни за дан са пажњом? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Брзо додавање';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'ГПС уживо';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'ПРЕОСТАЛЕ КАЛОРИЈЕ';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Поједено: __ПХ_0__ / __ПХ_1__ кцал';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Тап фор Ватер Трацкер 💧';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'Дневни циљ је постигнут 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '__ПХ_0__ мл до дневног циља';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Детаљи';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Надоградите да бисте откључали персонализоване дневне циљеве и АИ план';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Откључај 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'Брзо снимите унос у веллнесс';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Величина сервирања';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'Послуживање (г)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Број порција';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Калорије по порцији';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Састојци';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Додајте састојак';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Упутства и напомене';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Тотал Реципе Нутритион';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Исхрана по порцији';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'Прилагођена храна је успешно сачувана!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'Пронађен производ!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Нисмо могли да пронађемо овај бар код у отвореној бази података. Можете га додати као прилагођену храну.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Додајте прилагођену храну';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'Сцан Агаин';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'Прегледајте откривену храну';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Прилагодите количине или уклоните све непрепознате артикле';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'Запишите одабрану храну';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Фаворите Фоодс';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Рецент Фоодс';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Још нема омиљене хране. Куцните срцем на било коју храну да бисте сачували овде.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents => 'Није пронађена недавно регистрована храна.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title => 'Дневни детаљи о исхрани';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'Протеин Бреакдовн';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'Царбс Бреакдовн';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'Фат Бреакдовн';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Фибер Бреакдовн';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Поређење циља';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Циљ: __ПХ_0__';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Уреди унос у дневник';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Избриши унос';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '__ПХ_0__ г';
   }
 
   @override
   String food_kcal_short(Object kcal) {
-    return '$kcal kcal';
+    return '__ПХ_0__ кцал';
   }
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '__ПХ_0__ од __ПХ_1__ мл';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Данашњи дневници';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Данас још нема воде. Хидрирајте и додирните дугме за брзо додавање!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Прилагодите дневни циљ';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Повезано са Хеалтх Цоннецт-ом';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Дневне виталне вредности здравља';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Најновији пулс';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Крвни притисак';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Крвни кисеоник';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Глукоза у крви';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Тежина';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Трајање спавања';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Додајте ручно мерење';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Хисторицал Трендс';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'Здравствени подаци су успешно синхронизовани!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '__ПХ_0__ сати __ПХ_1__ мин';
   }
 
   @override
   String health_metric_weight_val(Object val) {
-    return '$val kg';
+    return '__ПХ_0__ кг';
   }
 
   @override
   String health_metric_hr_val(Object bpm) {
-    return '$bpm bpm';
+    return '__ПХ_0__ бпм';
   }
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '__ПХ_0__ %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '__ПХ_0__ / __ПХ_1__ ммХг';
   }
 
   @override
   String health_metric_glucose_val(Object val) {
-    return '$val mg/dL';
+    return '__ПХ_0__ мг/дЛ';
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title => 'Повезани уређаји и носиви уређаји';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Управљајте упареним паметним сатовима, фитнес трацкерима и здравственим сензорима.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Уреди тренинг';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Назив тренинга';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Трајање (минути)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'Процењене калорије (кцал)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Датум и време';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap => 'Ваш персонализовани путоказ';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Јутарња рутина';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Миддаи Веллнесс';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Евенинг Винд-Довн';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Блооми АИ тренер';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7-дневни веллнесс фокус';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Веллнесс циљеви и циљеви';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Дневни буџет калорија';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Дневни циљ за воду';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Дневни циљ корака';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Однос макронутријената';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Лични подаци';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Боди Меасурементс';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'Подешавања и подешавања апликације';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'Твоје име';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Висина ( __ПХ_0__ )';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Тежина ( __ПХ_0__ )';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Старост';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Мушко';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Фемале';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Друго / Радије не кажем';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Седентарни (мало или нимало вежбања)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light => 'Лагано активан (1-3 дана недељно)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate => 'Умерено активан (3-5 дана недељно)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'Веома активан (6-7 дана недељно)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => 'Апликација Веар ОС Цомпанион';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Инсталирајте Блооми плочицу и компликацију на свој Веар ОС сат да бисте погледали калорије, воду и кораке.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'Интерактивни Андроид виџети';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Закачите виџете у реалном времену на почетни екран уређаја за тренутна ажурирања.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'О Блуми';
 
   @override
   String get settings_about_version => 'Version';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Буилд 100';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Направљен са пажњом за пажљив, здрав живот.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Услови и одредбе';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Политика приватности';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Избришите налог и податке';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Ова радња се не може опозвати. Сви ваши оброци, вежбе, витални показатељи и профил ће бити трајно избрисани.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Трајно избрисати';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Добродошли у Блооми ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Нежно, пажљиво праћење здравља дизајнирано око вашег живота.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'О теби';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Ваши циљеви';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Даили Хабитс';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Дозволе';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Спремни!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm => 'Хеалтх Цоннецт приступ';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Сензор бројача корака';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Пажљиви подсетници и обавештења';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'Камера (бар код и скенер хране)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Дајте дозволе';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Отворите контролну таблу';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'Хидратион Нудгес';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Нежни подсетници на воду током целог дана';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name => 'Подсетници на оброке и исхрану';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Обавештења о подсетницима за доручак, ручак и вечеру';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Степ Милестонес';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'Славље приликом достизања дневних циљева корака';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name => 'Здравствене и виталне провере';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'Подсетници на тежину и време за спавање';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 Дневник +250мл';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'Одложи 15м';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Дневни оброк';
 
   @override
-  String get language => 'Language';
+  String get language => 'Језик';
 
   @override
-  String get share => 'Share';
+  String get share => 'Схаре';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return 'пре __ПХ_0__ д';
   }
 }

@@ -1589,7 +1589,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Last synced: {time}'**
-  String health_last_synced(Object time);
+  String health_last_synced(Object time, Object yeroo);
 
   /// No description provided for @health_manual_entry.
   ///

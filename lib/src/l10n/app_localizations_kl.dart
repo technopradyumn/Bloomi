@@ -12,166 +12,167 @@ class AppLocalizationsKl extends AppLocalizations {
   String get app_name => 'Bloomi';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'Angerlarsimaffik';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'Ullumikkut';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'Pilersaarut';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'Nerisassat';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'Nerisassat Ullorsiutiat';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'Timersorneq Log';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'Peqqinneq';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'Profili';
 
   @override
-  String get save => 'Save';
+  String get save => 'Annaakkit';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Unitsigit';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Piiuk';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Aaqqissuussineq';
 
   @override
-  String get done => 'Done';
+  String get done => 'Piareerpoq';
 
   @override
-  String get close => 'Close';
+  String get close => 'Qanittoq';
 
   @override
-  String get back => 'Back';
+  String get back => 'Taarsiullugu';
 
   @override
-  String get next => 'Next';
+  String get next => 'Tullia';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'Ingerlaqqigit';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Uppernarsaruk';
 
   @override
-  String get search => 'Search';
+  String get search => 'Ujaasineq';
 
   @override
   String get filter => 'Filter';
 
   @override
-  String get all => 'All';
+  String get all => 'Tamarmik';
 
   @override
-  String get active => 'Active';
+  String get active => 'Aktiv';
 
   @override
-  String get today => 'Today';
+  String get today => 'Ullumikkut';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Ippassaq';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Aqagu';
 
   @override
-  String get add => 'Add';
+  String get add => 'Ilanngussaq';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'Peerlugu';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'Nutarterineq';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Misilittariaqarpat';
 
   @override
-  String get error => 'Error';
+  String get error => 'Kukkuneq';
 
   @override
-  String get success => 'Success';
+  String get success => 'Angusaqarluarneq';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ikkussineq...';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'Paasissutissat pissarsiarineqarsinnaanngillat';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'Offline-imik atuineq';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'Allanngortiterinerit synkroniseqartassapput attaveqaqqittoqarpat';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'Utertitsineq';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'Immikkoortoq';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Amerlassuseq';
 
   @override
   String get unit => 'Unit';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Erseqqissoq';
 
   @override
-  String get select => 'Select';
+  String get select => 'Toqqaruk';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Qinnuteqarit';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Nutarterineq';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Aap';
 
   @override
-  String get no => 'No';
+  String get no => 'Naamik';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Toqqagassaq';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Kaloriit';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Proteini';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'Kulhydratit';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'Fedt';
 
   @override
   String get fiber => 'Fiber';
 
   @override
-  String get water => 'Water';
+  String get water => 'Imeq';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Trinsit';
 
   @override
   String get kcal => 'kcal';
@@ -186,10 +187,10 @@ class AppLocalizationsKl extends AppLocalizations {
   String get kilograms => 'kg';
 
   @override
-  String get pounds => 'lbs';
+  String get pounds => 'pund';
 
   @override
-  String get centimeters => 'cm';
+  String get centimeters => 'cm.-iupput';
 
   @override
   String get inches => 'in';
@@ -198,81 +199,81 @@ class AppLocalizationsKl extends AppLocalizations {
   String get bpm => 'bpm';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'kl';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => '10.00.00';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'Kiffartuussineq';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'Serverit';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'Servering Annertussuseq';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => '100g-imut ataatsimut';
 
   @override
-  String get india => 'India';
+  String get india => 'Indiami';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'Aasiaat';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Europami';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Mellemøsten';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'Afrikami';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'Amerikami';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Angerlarsimaffik';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'Ullaakkut';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'Ulloq nuannersoq';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Unnuk nuannersoq';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'Naasut streak';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '$count ullut ingerlaneranni',
+      one: '1 ulloq streak',
+      zero: '0 ullut streak',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Ikuallanneqarpoq';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Kaloriinik aningaasartuutit';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '$kcal kcal-it sinneruttut';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'Ulluinnarni Hydraterneq';
 
   @override
   String home_water_goal(Object current, Object target) {
@@ -280,937 +281,962 @@ class AppLocalizationsKl extends AppLocalizations {
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Trin Pisuppoq';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Suliassat sukkasuumik';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'Log Nerisassaq';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Log Imeq';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Log Timersorneq';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Log Oqimaassuseq';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Ullumikkut Paasissutissat';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'Peqqissumik toqqakkat mikisut allanngortitsinernik pilersitsisarput.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Bloomi AI-mik sungiusaasuq';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Eqqaani & Luft';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'Nalunaaruteqarneq';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'Ulluinnarni Peqqissutsimut Point';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Tamaasa takukkit';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Nerisassat Ullorsiutiat';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Ullaakkorsiorneq';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'Ullup-qeqqanut';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Unnukkorsiorneq';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'Nerisassat';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'Add Nerisassat';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'Edit Nerisassat';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Ilanngukkit Morgenmad';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Ullup-qeqqanut ilanngukkit';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Add Unnukkorsiorneq';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Snack ilanngukkit';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Katillugit Kaloriit';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'Nerisassat tassunga suli nerisassat nalunaarsorneqarsimanngillat';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary =>
+      'Ulloq manna nerisassanik nalunaarsortoqanngilaq';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      '+ tooruk nerisassat mamartut siulliit nalunaarsorniarlugit';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Sukkanniut ilanngussaq';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Nerisassat, paarnaq, dal, roti...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Nerisassat & Nerisassiorneq';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'Scan Stregkode';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'AI Nerisassanik Skanner';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Nerisassat kingulliit';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Favoritit';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Makronutrientinik agguaassineq';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'Qularnanngilaq atortoq una peerniarlugu?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Nerisassaq peerneqarpoq';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'sinnerusoq';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'atuineq';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return '$target kcal-inik annertussusilik';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Ujartuineq Nerisassat';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Scan Stregkode';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => 'Snap Nerisassat Assilisaq';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Nerisassanik Pilersitsineq';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Kingullermik Ujaasinerit';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Nerisassat nuannarineqarluartut';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results =>
+      'Nerisassat ujaasinernut naleqquttut peqanngillat';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Stregkode-mik scanneri';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align =>
+      'Kamerap qalipaataata iluani stregkode-mik naleqqussaaneq';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found =>
+      'Nioqqutissaq paasissutissaavimmi nassaarineqanngilaq';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'Stregkode-mik scannerneq Bloomi Pro atorlugu atorneqarsinnaavoq';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'AI Nerisassanik Skanner';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Nerisassat ersarissumik assilisassiariuk';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'Nerisassanik plademik misissuineq...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Nioqqutissat paasineqarsimasut';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Flash-imik allanngortitsigit';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Assilisaq Retake';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Uppernarsaruk Nioqqutissat';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Nerisassat & Nerisassiorneq';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Nerisassaq imaluunniit atortussap aqqa';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Kaloriit (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'Proteini (g)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'Kulhydratit (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'Fedt (g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Save Recept';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Imermik malinnaasoq';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Ullormut Hydraterineq Anguniagaq';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Ullumikkut Logged';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml Igalaaq';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ml Flaske';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Aningaasat atuuttut';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'Ulloq naallugu imeq imertaruk, nukissaq toqqissisimasumik pissarsiariniarlugu.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Log $amount ml imeq 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Timersorneq Log';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Timersorneq ilanngukkit';
 
   @override
-  String get workout_cardio => 'Cardio';
+  String get workout_cardio => 'Uummat';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Nukittussuseq';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Yoga & Pisinnaassuseqarneq';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Sivisussusaa';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Intensiteti';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Kaloriit Ikuallanneqarput';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Ullumikkut sungiusartoqanngilaq';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'Workout iluatsilluartumik annaaneqarpoq!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Timersorneq Type';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Oqaaseqaatit & Eqqarsaatit';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Peqqinneq & Inuunermi';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Uummat Pulsi';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Aqqani sulfidi (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Blodtryk';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Aqqani glukose';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Timiup kissarnera';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Sinnattumik malinnaaneq';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking =>
+      'Oqimaaqatigiinneq & Timimik sananeqaateqarneq';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Talje-til-Hip-Ratio';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Atortut & Smartur Hub';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'Peqqissutsimut paasissutissat synkroniseriuk';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'Kingullermik synkroniseqartoq: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Manual Peqqissutsimut Allagartaq';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Metrikkimik kisitsisit';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Peqqissutsimut Sensorit Attaveqartut';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Ullormut Pilersaarut';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title =>
+      'Sapaatip akunnerani Peqqissutsimut Pilersaarut';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Kaloriinik anguniagaq';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Hydrateringsmål';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'Trin Siunertaq';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Sinnattoq Target';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Nerisassat siunnersuutaat';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Peqqissumik ileqqut & Tips';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Bloomi AI-mik sungiusaasutut siunnersuutit';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title =>
+      'Ullormut pilersaarusiorneq nammineq piumassutsimik';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Profili';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Profili allanngortiguk';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Aqqa';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Ukiut';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Køn';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Højde';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Oqimaaqatigiinneq';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Anguniagaq pingaarneq';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Suliassaqarfimmi Niveau';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Uanga Peqqissutsimut Statistik';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Profili iluatsilluartumik nutarterneqarpoq';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Timikkut oqimaassuseq (BMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Ilaasortanngorneq';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Inniminniinerit';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'PISSARSIAT & PISSARSIARINEQ';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Isikkoq & Tema';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Taartoq, Qaamasoq, Systemmodus & App-ip tunuliaqutaa toqqagassat';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Akuersissutit & Systemimut isersinnaaneq';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Peqqissutsimut attaveqarneq, trinsensorit, GPS, nalunaarutit & Kamera';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications =>
+      'Eqqaatissiissutit & Nalunaarutiginninnerit';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Nerisaqarnerup piffissaa, imeq, oqimaassutsimik check-in & unnuinermut eqqaamasassanik';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Mittarfiit Unitit';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Mittarfik (kg, cm, ml, km) imaluunniit imperial (pund, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'App Oqaatsit';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'Tuluttut, हिन्दी (hindi), hingliskisut & 195+ nunarsuarmi oqaatsit';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Angerlarsimaffimmi Widgetit';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Android-imik atortut: Hub, Trin, Imeq, Nerisassat & Maskot';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => 'OS-imik Ulloriarsiorneq App-imik atuineq';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Smartwatch-imik ilaqutariit, fliser, ajornartorsiutit & inuunermi pingaaruteqartut';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'ANGUNERSAAT & PISSARSIARSIORNERMUT PAASISSAQ';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Nerisaqarnermut Anguniagassat & Makro Split';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Kaloriinik anguniagaq, proteini, kulhydratit, fedt & imermik anguniagaq';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Sapaatip akunnerani Wellness Recap';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      'Ullut 7-it kaloriinik agguaqatigiissillugu, makro-ratio & ulloq pitsaanerpaaq';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Streaks & Milestenit';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'Aktiv blomsterstreaks, badges & angusat';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'ATTAVEQARTUT & EKOSYSTEM';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Atortut & Smartur Hub';
 
   @override
   String get devices_hub_sub =>
-      'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
+      'Peqqissutsimut attaveqarneq, Galaxy-ur, Pixel-ur, Garmin';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Eqqaani & Sila';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Silaannaap pitsaassusaa (AQI), UV-indeksi & silap pissusaata allanngoriartorneranut siunnersuutit';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'Bloomi Pro-mik pisartagaqarneq';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'AI-mik pilersaarummik sungiusaasuq, hjemmeskærmimi widgetit 5-it & pingaaruteqartunik malinnaaneq';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'PILLUGIT & ISULLANNEQ';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Bloomi pillugu';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub =>
+      'Immikkuualuttut sanaartorneq, saqqummersitsineq, tunniussineq';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'Personvernpolitikki';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Offline-siullermik, atortumi paasissutissanik sanaartorneq';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Atukkat & Piumasaqaatit';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'Sullissinermut piumasaqaatit aamma wellness-imut najoqqutassat';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Konto & Data-t piiakkit';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Sumiiffinni SQLite-data-t aamma cloud-imi sillimmasiissutit utertinneqarsinnaanngitsumik piiarsinnaavatit';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits =>
+      'Pilersitsigit sapinngisamik, piujuartumik wellness-imik ileqqut';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Uanga malinnaavigineqarsimasut Data & Logs';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language =>
+      'Oqaatsit imaluunniit nunap inoqqaavisa allattorsimaffiat malillugu ujarlerneq...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Oqaatsit Atorneqarsinnaasut';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages =>
+      'Oqaatsit naleqquttut nassaarineqanngillat';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Nunap inoqqaavisa allattorsimaffiat imaluunniit tuluttut allattorsimaffik atorlugu ujarlerneq misilikkit';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Ilaatigut nutserneqarsimasoq';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Tamakkiisoq';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Oqaatsit $name-mut inissinneqarput ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Eqqaani & Avatangiisit';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Silaannaap pitsaassusaanik indeksi';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'UV-Indeksi';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Kissarneq';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Imermik';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Ullumikkut silap pissusaata allanngoriartornerani hydraterluartarit.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Ujartuineq Nerisassat';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Scan Stregkode 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Imeq ilanngukkit';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Nerisassat naleqquttut';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Pitsaasoq';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Nalinginnaasumik';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'Peqqinnanngitsoq';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Nalunaarutiginninnerit & Alertitsinerit';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Nutaanik nalunaaruteqartoqanngilaq';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read =>
+      'Tamarmik Atuarsimasutut nalunaarutigiuk';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Tamarmik erseqqissarlugit';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Eqqaatissiissut Inniminniinerit';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Nalunaaruteqarneq';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Morgenmad Eqqaatissiissut 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'Ullaakkut! Piffissanngorpoq $time -mi peqqissaartumik ullaakkorsiornissaq.';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Ullup-qeqqanut Eqqaatissiissut 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Pause aamma $time -mi eqqissisimasumik, eqqarsaatersorluni nerisassiorneq nuannaarutigiuk.';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Unnukkorsiornermut Eqqaatissiissut 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Piffissanngorpoq unnukkorsiornissaq qaqutigoortoq, naammagisimaarnartoq $time -mi.';
   }
 
   @override
-  String get reminders_water_title => 'Hydration Nudge 💧';
+  String get reminders_water_title => 'Fukterings Nudge 💧';
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'Piffissanngorpoq imermik nutaamik imigassartornissaq! ($time)';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Sapaatip akunnerani Weigh-in ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Sapaatip akunnerani timimik misissuinerit Bloomimi ( $time ) malinnaavigisinnaavatit.';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Unnuinermi Wind-down 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Eqqissisimallutit eqqissisimallutit sinilluarnissaq piareersarlugu ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Bloomimut tikilluaqqusaagut';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Illit ikinngutaasoq, offline-siullertut peqqissutsimut nerisaqarnermullu inngiaqatitit.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Aallartitsigit';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Allatsigit';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Aallarit';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal =>
+      'Wellness-imik anguniagassat pingaarnerpaaq sunaava?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Sakkukitsumik oqimaassuseq';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Muskel-inik pissarsineq & Nukissaq';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Ulluinnarni Energi & Vitaliteti';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'Peqqissumik Eqqarsaatigalugu Nerisaqarneq';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Nammineq Pillugu Oqaluttuaruk';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Ulluinnarni Rutini';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title =>
+      'Akuersissutit & Systemimut isersinnaaneq';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Synkroniseringsstep-inut, timersornernut, aamma eqqaamasassanut isertitsigit.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Pilersaarut Piareersimavoq!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Nerisaqarnermut peqqissutsimullu aqqutissiuussineq ajunngitsoq, nammineq piumassutsimik suliarisimavarput.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Bloomimut iserit';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Sapaatip akunnerani Wellness Recap';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'Ulloq pitsaanerpaamik ataqatigiissaarineq: $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Streaks & Milestenit';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return '$date-mi ammarneqarpoq.';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'Ineriartorneq fantastisk ingerlateqqiguk!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Angerlarsimaffimmi Widgetit';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Atortut atuuttut: $count';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'Bloomi Peqqissutsimut Ingerlatsivik';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'Trin & Aktiv Ring';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Hydraterineq Sukkanniut Log';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Bloomi Maskot-imik Inuussutissarsiorneq';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'OS Smartur-imik atuineq';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Watch-imut atassuteqarpoq';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Synkronisering Uddata';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Isikkoq & Tema';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Temamodus';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Qinngorneq';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Taartoq';
 
   @override
-  String get theme_system => 'System Default';
+  String get theme_system => 'Systemip atorneqarnera';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Tungaviusumik palette';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Mittarfiit Unitit';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Mittarfik (kg, cm, ml)';
 
   @override
-  String get units_imperial => 'Imperial (lbs, in, fl oz)';
+  String get units_imperial => 'Naalagaaffik (pund, in, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Dashboardimik ikkussinnaanngilaq';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req =>
+      'Peqqissutsimut attaveqarnermut akuersissut pisariaqarpoq';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'Bloomip Health Connect-imik akuersissummik piumasaqarpoq, iliuusissat ilumoortut, uummallunneq, aamma mobilhjemminut widgetit piffissaq eqqorlugu synkroniserisinnaallugit.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Peqqissutsimut Attaveqarneq Akueriuk';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day =>
+      'Ulloq eqqarsaatersorluni piareersimavit? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Sukkanniut ilanngussaq';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'GPS-imik toqqaannartumik';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'KALORIIT SINNERSUUT';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Nerineqartoq: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Imermik malinnaasoq 💧-mut toqqaruk';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'Ullormut anguniagaq anguneqarpoq 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml ullormut anguniagaq';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Immikkuualuttut';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Ulluinnarni anguniakkanik nammineq piumassutsimik & AI-mik pilersaarut ammarniarlugu nutarterineq';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Avammut 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint =>
+      'Wellness-imik allaaserisaq sukkasuumik allattorlugu';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Servering Annertussuseq';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'Kiffartuussineq (g)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Serverit amerlassusaat';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Kaloriit portionimut ataatsimut';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Ingredienserit';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Ingrediens ilanngukkit';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Ilitsersuutit & Nalunaarutit';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Total Recept Nerisassat';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Per Servering Nerisassat';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'Nerisassat naleqquttut iluatsilluartumik annaaneqarput!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'Nioqqutissaq Nassaarineqarpoq!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Stregkode taanna ammasumik paasissutissaavimmi nassaarisinnaasimanngilagut. Nerisassatut ilanngussinnaavat.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Nerisassat Custom-it ilanngukkit';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'Scan-erlugu';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'Review Nerisassat Nassaarneqartut';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Amerlassutsit naleqqussarlugit imaluunniit tunniunneqanngitsut peerlugit';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'Log Nerisassat Toqqakkat';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Nerisassat nuannarinerpaasat';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Nerisassat kingulliit';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Suli nerisassat nuannarinerpaasavut. Uani annaasaqarnissamut nerisassat suulluunniit pillugit uummat tooruk.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents =>
+      'Nerisassat kingullermik nalunaarsorneqarsimasut nassaarineqanngillat.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title =>
+      'Ulluinnarni Nerisaqarnermut Detaljer';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'Proteinimik avitseqatigiinneq';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'Kulhydratit Avinneqarnerat';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'Fedt-imik avitseqatigiinneq';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Fiber-ip aserorneqarnera';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Target Naligiissitsineq';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Anguniagaq: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Edit Ullorsiutit allattorsimaffiat';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Allattoq piiaruk';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams g';
   }
 
   @override
@@ -1220,55 +1246,56 @@ class AppLocalizationsKl extends AppLocalizations {
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current aamma $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Ullumikkut Imeq Logs';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Ullumikkut suli imeq nalunaarsorneqanngilaq. Hydratere aammalu quick add-knappi tooruk!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Ullormut anguniagaq naleqqussarlugu';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Peqqissutsimut attaveqartoq';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Ulluinnarni Peqqissutsimut Vitals';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Kingullermik Uummat pulsi';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Blodtryk';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Blod Sulligen';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Aqqani glukose';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Oqimaaqatigiinneq';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Siniffiup Sivisussusaa';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Manuelt Måling ilanngullugu';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Oqaluttuarisaanermi pissutsit';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'Peqqissutsimut paasissutissat iluatsilluartumik synkroniseerneqarput!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours nalunaaquttap ingerlanerani $mins minutsit';
   }
 
   @override
@@ -1278,253 +1305,261 @@ class AppLocalizationsKl extends AppLocalizations {
 
   @override
   String health_metric_hr_val(Object bpm) {
-    return '$bpm bpm';
+    return '$bpm pissuseq';
   }
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg';
   }
 
   @override
   String health_metric_glucose_val(Object val) {
-    return '$val mg/dL';
+    return '$val mg/dl';
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title => 'Atortut attaveqarfiusut & Wearables';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Smartwatchit paarlattuanik, timersornermut malinnaaviit, aamma peqqissutsimut maluginiagassat aqukkit.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Edit Timersorneq';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Timersorneq Aqqa';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Sivisussusaa (minutsit)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label =>
+      'Naatsorsuutigineqartut kaloriit (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Ulloq aamma nalunaaqutaq';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap => 'Illit Personlig Aqqutissiuussineq';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Ullaap tungaani Rutine';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Ullup qeqqanut Peqqinneq';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Unnukkut Wind-Down';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Bloomi AI-mik sungiusaasuq';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => 'Ullut 7-it Peqqissutsimut Fokus';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Peqqissutsimut Anguniakkat & Anguniagassat';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Ullormut Kaloriinik Budget';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Ullormut Imeq Target';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Ullormut Step Anguniagaq';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Makronutrient-it annertussusaat';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Inuttut paasissutissat';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Timimik Mittarfeqarneq';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences =>
+      'Piumasaqaatit & App-ip inissititerneqarnera';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'Aqqatit';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Højde ($unit)';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Oqimaassuseq (_PH_0__)';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Ukiut';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Angut';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Arnaq';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Allat / Oqannginnissaq piumasaraara';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Sedentary (Timersorneq annikitsumik imaluunniit annikitsumik)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light =>
+      'Qinngasaartumik (ullut 1-3/sapaatip akunnerani)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate =>
+      'Annertuumik Aktiv (ullut 3-5/sapaatip akunnerani)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very =>
+      'Annertuumik aallaaveqartoq (ullut 6-7/sapaatip akunnerani)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => 'OS-imik ilaasortaq App-imik atuineq';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Wear OS-imi ur-imut Bloomi-mik fliser aamma komplikation ikkukkit, kaloriit, imermik aamma trin-inik qiviarnissamut.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'Android-imut atortut atorsinnaasut';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Piffissaq eqqorlugu widgetit atortup hjemmeskærmianut ikkukkit, piaartumik nutarterisoqarnissaanut.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Bloomi pillugu';
 
   @override
-  String get settings_about_version => 'Version 1.0.0';
+  String get settings_about_version => 'Saqqummersitsineq 1.0.0';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => '100-nik sanaartorneq';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Eqqarsaatigilluarlugu, peqqissumik inuuneqarnissamut isumaginninnikkut suliarineqarsimavoq.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Piumasaqaatit aamma Piumasaqaatit';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Personvernpolitikki';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Konto & Data-t piiakkit';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Suliaq taanna unitsinneqarsinnaanngilaq. Nerisassat, timersornerit, vitalit, aamma profilit tamarmik piujuartumik piiarneqassapput.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Permanent-imik piiaaneq';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Bloomimut tikilluaqqusaavutit ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Sapinngisamik, eqqarsaatersorluni wellness-imik malinnaaneq inuunerpit eqqaani sananeqarsimasoq.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Illit pillugu';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Anguniakkatit';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Ulluinnarni ileqqut';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Akuersissutit';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Piareersimavugut!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm => 'Peqqissutsimut Attaveqarneq';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Trin-imik naatsorsuinermik Sensor';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm =>
+      'Mindful Eqqaatissiissutit & Nalunaarutiginninnerit';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'Kamera (Stregkode & Nerisassanik Scanner)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Akuersissutinik tunniussineq';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Avammut Dashboard';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'Hydraterineq Nukiit';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Ulloq naallugu imermik eqqaamasassanik';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name =>
+      'Nerisassat & Nerisaqarnermut Eqqaatissiissutit';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Ullaakkorsiornermut, ullup-qeqqanut, unnukkorsiornermullu eqqaamasassanik mianersoqqussut';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Trin Milestones';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'Ulluinnarni step-target-it anguneqarneranni nalliuttorsiornerit';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name => 'Peqqinneq & Vitals Misissuinerit';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'Oqimaaqatigiissitsineq aamma unnuinermi wind-down-imik eqqaamasassanik';
 
   @override
   String get notif_action_log_water => '💧 Log +250ml';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'Unnuineq 15m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Log Nerisassaq';
 
   @override
-  String get language => 'Language';
+  String get language => 'Oqaatsit';
 
   @override
-  String get share => 'Share';
+  String get share => 'Dere';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return '$count d matuma siorna';
   }
 }

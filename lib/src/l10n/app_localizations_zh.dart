@@ -575,7 +575,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get health_sync_now => '同步健康数据';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return '上次同步：$time';
   }
 
@@ -2065,7 +2065,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get health_sync_now => '同步健康数据';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return '上次同步：$time';
   }
 
@@ -3555,7 +3555,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get health_sync_now => '同步健康數據';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return '上次同步：$time';
   }
 

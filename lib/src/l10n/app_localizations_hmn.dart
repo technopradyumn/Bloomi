@@ -585,7 +585,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get health_sync_now => 'Sync Health Data';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Kawg synced: $time';
   }
 

@@ -586,7 +586,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get health_sync_now => 'Sync Fakamatala Mo\'ui Lelei';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Fakafehokotaki fakamuimuitaha: $time';
   }
 

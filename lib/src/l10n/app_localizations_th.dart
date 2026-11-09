@@ -577,7 +577,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get health_sync_now => 'ซิงค์ข้อมูลสุขภาพ';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'ซิงค์ครั้งล่าสุด: $time';
   }
 

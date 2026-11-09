@@ -582,7 +582,7 @@ class AppLocalizationsTcy extends AppLocalizations {
   String get health_sync_now => 'ಆರೋಗ್ಯ ಡೇಟಾನ್ ಸಿಂಕ್ ಮಲ್ಪುಲೆ';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'ಕಡೆತ ಸಿಂಕ್: $time';
   }
 

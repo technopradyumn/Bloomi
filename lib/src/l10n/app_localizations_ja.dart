@@ -575,7 +575,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get health_sync_now => '健康データを同期する';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return '最終同期日: $time';
   }
 

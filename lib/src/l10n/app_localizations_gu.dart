@@ -579,7 +579,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get health_sync_now => 'આરોગ્ય ડેટા સમન્વયિત કરો';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'છેલ્લે સમન્વયિત: $time';
   }
 

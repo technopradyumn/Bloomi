@@ -585,7 +585,7 @@ class AppLocalizationsDz extends AppLocalizations {
   String get health_sync_now => 'འཕྲོད་བསྟེན་གྲངས་ཐོ་མཉམ་སྒྲིག་བྱེད་པ།';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'མཐའ་མའི་མཉམ་སྒྲིག: $time';
   }
 

@@ -9,251 +9,252 @@ class AppLocalizationsKs extends AppLocalizations {
   AppLocalizationsKs([String locale = 'ks']) : super(locale);
 
   @override
-  String get app_name => 'Bloomi';
+  String get app_name => 'بلومی۔';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'گھر';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'آج';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'منصوبہ';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'کھانا';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'فوڈ ڈائری';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'ورزش لاگ';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'صحت';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'پروفائل';
 
   @override
-  String get save => 'Save';
+  String get save => 'محفوظ کریں۔';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'منسوخ کریں۔';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'حذف کریں۔';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'ترمیم کریں۔';
 
   @override
-  String get done => 'Done';
+  String get done => 'ہو گیا';
 
   @override
-  String get close => 'Close';
+  String get close => 'بند';
 
   @override
-  String get back => 'Back';
+  String get back => 'پیچھے';
 
   @override
-  String get next => 'Next';
+  String get next => 'اگلا';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'جاری رکھیں';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'تصدیق کریں۔';
 
   @override
-  String get search => 'Search';
+  String get search => 'تلاش کریں۔';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'فلٹر';
 
   @override
-  String get all => 'All';
+  String get all => 'تمام';
 
   @override
-  String get active => 'Active';
+  String get active => 'فعال';
 
   @override
-  String get today => 'Today';
+  String get today => 'آج';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'کل';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'کل';
 
   @override
-  String get add => 'Add';
+  String get add => 'شامل کریں۔';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'ہٹا دیں۔';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'ریفریش کریں۔';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'دوبارہ کوشش کریں۔';
 
   @override
-  String get error => 'Error';
+  String get error => 'خرابی';
 
   @override
-  String get success => 'Success';
+  String get success => 'کامیابی';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'لوڈ ہو رہا ہے...';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'کوئی ڈیٹا دستیاب نہیں ہے۔';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'آف لائن موڈ';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'دوبارہ منسلک ہونے کے بعد تبدیلیاں مطابقت پذیر ہو جائیں گی۔';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'کالعدم';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'حصہ';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'مقدار';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'یونٹ';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'صاف';
 
   @override
-  String get select => 'Select';
+  String get select => 'منتخب کریں۔';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'لگائیں';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'دوبارہ ترتیب دیں۔';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ٹھیک ہے';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'جی ہاں';
 
   @override
-  String get no => 'No';
+  String get no => 'نہیں';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'اختیاری';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'کیلوریز';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'پروٹین';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'کاربوہائیڈریٹ';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'موٹا';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'فائبر';
 
   @override
-  String get water => 'Water';
+  String get water => 'پانی';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'قدم';
 
   @override
   String get kcal => 'kcal';
 
   @override
-  String get grams => 'g';
+  String get grams => 'جی';
 
   @override
-  String get milliliters => 'ml';
+  String get milliliters => 'ملی لیٹر';
 
   @override
-  String get kilograms => 'kg';
+  String get kilograms => 'کلو';
 
   @override
-  String get pounds => 'lbs';
+  String get pounds => 'پونڈ';
 
   @override
-  String get centimeters => 'cm';
+  String get centimeters => 'سینٹی میٹر';
 
   @override
-  String get inches => 'in';
+  String get inches => 'میں';
 
   @override
-  String get bpm => 'bpm';
+  String get bpm => 'بی پی ایم';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'گھنٹے';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'منٹ';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'سرونگ';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'سرونگز';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'سرونگ سائز';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => 'فی 100 گرام';
 
   @override
-  String get india => 'India';
+  String get india => 'انڈیا';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'ایشیا';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'یورپ';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'مشرق وسطیٰ';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'افریقہ';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'امریکہ';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'گھر';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'صبح بخیر';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'گڈ دوپہر';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'شب بخیر';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'کھلنا اسٹریک';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
+      other: ' $count دنوں کا سلسلہ',
       one: '1 day streak',
       zero: '0 days streak',
     );
@@ -261,956 +262,961 @@ class AppLocalizationsKs extends AppLocalizations {
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'جل گیا۔';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'کیلوری کا بجٹ';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '$kcal kcal باقی ہے۔';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'روزانہ ہائیڈریشن';
 
   @override
   String home_water_goal(Object current, Object target) {
-    return '$current / $target ml';
+    return '$current / $target ملی لیٹر';
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'قدم چل پڑے';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'فوری اقدامات';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'لاگ کھانا';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'لاگ پانی';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'لاگ ورزش';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'لاگ وزن';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'آج کی بصیرتیں۔';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'چھوٹے صحت مند انتخاب کھلتے ہوئے تبدیلیاں پیدا کرتے ہیں۔';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'بلومی اے آئی کوچ';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'ماحول اور ہوا';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'اطلاعات';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'روزانہ فلاح و بہبود کا اسکور';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'سبھی دیکھیں';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'فوڈ ڈائری';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'ناشتہ';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'دوپہر کا کھانا';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'رات کا کھانا';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'نمکین';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'کھانا شامل کریں۔';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'خوراک میں ترمیم کریں۔';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'ناشتہ شامل کریں۔';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'دوپہر کا کھانا شامل کریں۔';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'رات کا کھانا شامل کریں۔';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'سنیک شامل کریں۔';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'کل کیلوریز';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'اس کھانے کے لیے ابھی تک کوئی خوراک لاگ ان نہیں ہوئی ہے۔';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'اس دن کے لیے کوئی کھانا لاگ ان نہیں ہے۔';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'اپنے پہلے مزیدار کھانے کو لاگ کرنے کے لیے + کو تھپتھپائیں۔';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'فوری شامل کریں۔';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'پکوان، پھل، دال، روٹی تلاش کریں...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'حسب ضرورت کھانا اور ترکیب';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'بارکوڈ اسکین کریں۔';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'AI فوڈ سکینر';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'حالیہ فوڈز';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'پسندیدہ';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'میکرونٹرینٹ کی خرابی';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'کیا آپ واقعی اس آئٹم کو ہٹانا چاہتے ہیں؟';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'کھانے کی چیز ہٹا دی گئی۔';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'باقی';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'استعمال';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return 'کا $target kcal';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'کھانے کی اشیاء تلاش کریں۔';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'بارکوڈ اسکین کریں۔';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => 'اسنیپ فوڈ فوٹو';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'اپنی مرضی کے مطابق کھانا بنائیں';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'حالیہ تلاشیں۔';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'مشہور پکوان';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results => 'کوئی خوراک آپ کی تلاش سے مماثل نہیں ہے۔';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'بارکوڈ سکینر';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align => 'کیمرہ فریم کے اندر بارکوڈ کو سیدھ کریں۔';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'ڈیٹا بیس میں پروڈکٹ نہیں ملا';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'بار کوڈ اسکیننگ بلومی پرو کے ساتھ دستیاب ہے۔';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'AI فوڈ سکینر';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'اپنی ڈش کی واضح تصویر لیں۔';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'کھانے کی پلیٹ کا تجزیہ کیا جا رہا ہے...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'دریافت شدہ اشیاء';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'فلیش کو ٹوگل کریں۔';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'تصویر دوبارہ لیں۔';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'آئٹمز کی تصدیق کریں۔';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'حسب ضرورت کھانا اور ترکیب';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'ڈش یا اجزاء کا نام';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'کیلوریز (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'پروٹین (جی)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'کاربوہائیڈریٹ (جی)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'چربی (جی)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'نسخہ محفوظ کریں۔';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'واٹر ٹریکر';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'روزانہ ہائیڈریشن کا ہدف';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'آج لاگ ان ہوا۔';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ملی لیٹر گلاس';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ملی لیٹر کی بوتل';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'حسب ضرورت رقم';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'مستقل توانائی کے لیے دن بھر باقاعدگی سے پانی پییں۔';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'لاگ ان $amount ملی لیٹر پانی 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'ورزش لاگ';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'ورزش شامل کریں۔';
 
   @override
-  String get workout_cardio => 'Cardio';
+  String get workout_cardio => 'کارڈیو';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'طاقت';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'یوگا اور لچک';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'دورانیہ';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'شدت';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'کیلوریز جل گئیں۔';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'آج کوئی ورزش لاگ ان نہیں ہے۔';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'ورزش کامیابی سے محفوظ ہو گئی!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'ورزش کی قسم';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'نوٹس اور عکاسی۔';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'صحت اور حیاتیات';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'دل کی دھڑکن';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'خون کی آکسیجن (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'بلڈ پریشر';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'خون میں گلوکوز';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'جسمانی درجہ حرارت';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'نیند سے باخبر رہنا';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'وزن اور جسمانی ساخت';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'کمر سے کولہے کا تناسب';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'ڈیوائسز اور اسمارٹ واچ حب';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'صحت کے ڈیٹا کو ہم آہنگ کریں۔';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'آخری بار مطابقت پذیری: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'دستی ہیلتھ انٹری';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'میٹرک تفصیلات';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'منسلک ہیلتھ سینسر';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'روزانہ کی منصوبہ بندی';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'ہفتہ وار فلاح و بہبود کا منصوبہ';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'کیلوری کا ہدف';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'ہائیڈریشن کا ہدف';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'مرحلہ وار ہدف';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'نیند کا ہدف';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'کھانے کی تجاویز';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'صحت مند عادات اور نکات';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'بلومی اے آئی کوچ کی سفارشات';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'ذاتی نوعیت کا روزانہ کا شیڈول';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'پروفائل';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'پروفائل میں ترمیم کریں۔';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'نام';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'عمر';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'جنس';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'اونچائی';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'وزن';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'بنیادی مقصد';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'سرگرمی کی سطح';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'میری فلاح و بہبود کے اعدادوشمار';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'پروفائل کامیابی کے ساتھ اپ ڈیٹ ہو گیا۔';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'باڈی ماس انڈیکس (BMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'رکنیت';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'ترتیبات';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'ترجیحات اور عادات';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'ظاہری شکل اور تھیم';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'گہرا، ہلکا، سسٹم موڈ اور ایپ کے پس منظر کے اختیارات';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'اجازتیں اور سسٹم تک رسائی';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'ہیلتھ کنیکٹ، سٹیپ سینسرز، GPS، اطلاعات اور کیمرہ';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'یاد دہانیاں اور اطلاعات';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'کھانے کے اوقات، پانی، وزن کی جانچ پڑتال اور سونے کے وقت کی یاددہانی';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'پیمائش کی اکائیاں';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'میٹرک (kg, cm, ml, km) یا امپیریل (lbs, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'ایپ کی زبان';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'انگریزی، ہندی (ہندی)، ہنگلش اور 195+ عالمی زبانیں۔';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'ہوم اسکرین وجیٹس';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'لائیو اینڈرائیڈ وجیٹس: حب، اسٹیپس، واٹر، نیوٹریشن اور میسکوٹ';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => 'OS واچ ایپ پہنیں۔';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'اسمارٹ واچ کا ساتھی، ٹائلیں، پیچیدگیاں اور لائیو وائٹلز';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'اہداف اور فلاح و بہبود کی بصیرتیں۔';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'غذائیت کے اہداف اور میکرو تقسیم';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'کیلوری کا ہدف، پروٹین، کاربوہائیڈریٹ، چربی اور پانی کا ہدف';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'ہفتہ وار فلاح و بہبود کا خلاصہ';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      '7 دن کی کیلوری اوسط، میکرو ریشو اور بہترین دن';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'لکیریں اور سنگ میل';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'فعال کھلنے کی لکیریں، بیجز اور کامیابیاں';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'منسلک آلات اور ماحولیاتی نظام';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'ڈیوائسز اور اسمارٹ واچ حب';
 
   @override
-  String get devices_hub_sub =>
-      'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
+  String get devices_hub_sub => 'ہیلتھ کنیکٹ، گلیکسی واچ، پکسل واچ، گارمن';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'ماحول اور موسم';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'ہوا کا معیار (AQI)، UV انڈیکس اور موسم کی ہائیڈریشن ٹپس';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'بلومی پرو سبسکرپشن';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'اے آئی پلان کوچ، 5 ہوم اسکرین ویجٹ اور وائٹلز ٹریکنگ';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'کے بارے میں اور سیکورٹی';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'بلومی کے بارے میں';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub => 'وضاحتیں، ورژن، انتسابات بنائیں';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'رازداری کی پالیسی';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'آف لائن سب سے پہلے، آن ڈیوائس ڈیٹا فن تعمیر';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'شرائط و ضوابط';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'سروس کی شرائط اور فلاح و بہبود کے رہنما خطوط';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'اکاؤنٹ اور ڈیٹا کو حذف کریں۔';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'مقامی SQLite ڈیٹا اور کلاؤڈ بیک اپ کو ناقابل واپسی طور پر مٹا دیں۔';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits => 'نرم، دیرپا تندرستی کی عادات بنائیں';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'میرا ٹریک کردہ ڈیٹا اور لاگز';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language =>
+      'زبان یا مقامی رسم الخط کے لحاظ سے تلاش کریں...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'زبانیں دستیاب ہیں۔';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'کوئی مماثل زبانیں نہیں ملی';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'مقامی رسم الخط یا انگریزی ہجے کے ذریعہ تلاش کرنے کی کوشش کریں۔';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'جزوی طور پر ترجمہ کیا گیا۔';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'مکمل';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'زبان کو $name پر سیٹ کیا گیا ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'ماحول اور ماحول';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'ایئر کوالٹی انڈیکس';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'یووی انڈیکس';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'درجہ حرارت';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'نمی';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'موجودہ موسمی حالات میں اچھی طرح ہائیڈریٹ رہیں۔';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'کھانا تلاش کریں۔';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'بارکوڈ اسکین کریں 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'پانی شامل کریں۔';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'حسب ضرورت کھانا';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'اچھا';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'اعتدال پسند';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'غیر صحت مند';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'اطلاعات اور انتباہات';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'کوئی نئی اطلاعات نہیں ہیں۔';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'سبھی کو پڑھا ہوا نشان زد کریں۔';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'تمام صاف کریں۔';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'یاد دہانی کی ترتیبات';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'اطلاعات';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'ناشتے کی یاد دہانی 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'صبح بخیر! $time پر غذائیت سے بھرپور ناشتے کا وقت۔';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'دوپہر کے کھانے کی یاد دہانی 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'توقف کریں اور $time پر متوازن، ذہین لنچ سے لطف اندوز ہوں۔';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'رات کے کھانے کی یاد دہانی 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return '$time پر ہلکے، اطمینان بخش رات کے کھانے کا وقت۔';
   }
 
   @override
-  String get reminders_water_title => 'Hydration Nudge 💧';
+  String get reminders_water_title => 'ہائیڈریشن نج 💧';
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'تازہ گلاس پانی پینے کا وقت! ( $time )';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'ہفتہ وار وزن ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'بلومی ( $time ) پر اپنے ہفتہ وار باڈی میٹرکس کو ٹریک کریں۔';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'سونے کا وقت ونڈ ڈاون 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'کھولیں اور پر سکون نیند کے لیے تیاری کریں ( $time )۔';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'بلومی میں خوش آمدید';
 
   @override
-  String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+  String get onboard_sub => 'آپ کا دوستانہ، آف لائن-پہلا صحت اور غذائی ساتھی۔';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'شروع کریں';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'سائن ان کریں۔';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'چھوڑیں۔';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal => 'آپ کا بنیادی فلاح و بہبود کا مقصد کیا ہے؟';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'نرم وزن میں کمی';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'پٹھوں کا فائدہ اور طاقت';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'روزانہ کی توانائی اور جیورنبل';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'صحت مند دماغی کھانا';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'ہمیں اپنے بارے میں بتائیں';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'آپ کا روزانہ کا معمول';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'اجازتیں اور سسٹم تک رسائی';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'مطابقت پذیری کے مراحل، ورزش اور یاد دہانیوں تک رسائی فراہم کریں۔';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'آپ کا حسب ضرورت منصوبہ تیار ہے!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'ہم نے صرف آپ کے لیے ایک نرم، ذاتی غذائیت اور تندرستی کا روڈ میپ تیار کیا ہے۔';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'بلومی داخل کریں۔';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'ہفتہ وار فلاح و بہبود کا خلاصہ';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'بہترین مستقل مزاجی کا دن: $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'لکیریں اور سنگ میل';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return '$date پر غیر مقفل';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'شاندار پیش رفت جاری رکھیں!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'ہوم اسکرین وجیٹس';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'فعال وجیٹس: $count';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'بلومی ویلنس ہب';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'اقدامات اور ایکٹو رنگ';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'ہائیڈریشن کوئیک لاگ';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'بلومی میسکوٹ ساتھی';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'OS اسمارٹ واچ پہنیں۔';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'واچ سے منسلک ہے۔';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'واچ ڈیٹا کو سنک کریں۔';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'ظاہری شکل اور تھیم';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'تھیم موڈ';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'روشنی';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'اندھیرا';
 
   @override
-  String get theme_system => 'System Default';
+  String get theme_system => 'سسٹم ڈیفالٹ';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'پس منظر پیلیٹ';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'پیمائش کی اکائیاں';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'میٹرک (کلوگرام، سینٹی میٹر، ملی لیٹر)';
 
   @override
-  String get units_imperial => 'Imperial (lbs, in, fl oz)';
+  String get units_imperial => 'امپیریل (lbs, in, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'ڈیش بورڈ لوڈ کرنے سے قاصر';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req => 'ہیلتھ کنیکٹ کی اجازت درکار ہے۔';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'بلومی کو حقیقی قدم، دل کی دھڑکن، اور موبائل ہوم وجیٹس کو حقیقی وقت میں مطابقت پذیر بنانے کے لیے ہیلتھ کنیکٹ کی اجازت درکار ہے۔';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'ہیلتھ کنیکٹ کی اجازت دیں۔';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'ایک ذہن ساز دن کے لیے تیار ہیں؟ ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'فوری شامل کریں۔';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'لائیو GPS';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'باقی کیلوریز';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'کھایا گیا: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'واٹر ٹریکر 💧 کے لیے تھپتھپائیں۔';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'روزانہ کا مقصد 🎉 تک پہنچ گیا۔';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ملی لیٹر تا یومیہ مقصد';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'تفصیلات';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'ذاتی نوعیت کے روزانہ اہداف اور AI پلان کو غیر مقفل کرنے کے لیے اپ گریڈ کریں۔';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'غیر مقفل کریں 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint =>
+      'صحت مندی کے اندراج کو جلدی سے ریکارڈ کریں۔';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'سرونگ سائز';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'سرونگ (جی)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'سرونگز کی تعداد';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'فی سرونگ کیلوری';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'اجزاء';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'اجزاء شامل کریں۔';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'ہدایات اور نوٹس';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'ٹوٹل ریسیپی نیوٹریشن';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'فی سرونگ نیوٹریشن';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'اپنی مرضی کے کھانے کو کامیابی کے ساتھ محفوظ کیا گیا!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'پروڈکٹ مل گیا!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'ہم یہ بارکوڈ اوپن ڈیٹا بیس میں نہیں ڈھونڈ سکے۔ آپ اسے حسب ضرورت کھانے کے طور پر شامل کر سکتے ہیں۔';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'حسب ضرورت کھانا شامل کریں۔';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'دوبارہ اسکین کریں۔';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'دریافت شدہ کھانوں کا جائزہ لیں۔';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'مقدار کو ایڈجسٹ کریں یا کسی بھی غیر تسلیم شدہ شے کو ہٹا دیں۔';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'منتخب کھانے کی اشیاء کو لاگ ان کریں۔';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'پسندیدہ کھانے';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'حالیہ فوڈز';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'ابھی تک کوئی پسندیدہ کھانا نہیں ہے۔ یہاں بچانے کے لیے کسی بھی کھانے پر دل کو تھپتھپائیں۔';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents => 'کوئی حال ہی میں لاگ ان فوڈز نہیں ملے۔';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title => 'روزانہ غذائیت کی تفصیلات';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'پروٹین کی خرابی۔';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'کاربوہائیڈریٹ کی خرابی۔';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'چربی کی خرابی';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'فائبر کی خرابی۔';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'ہدف کا موازنہ';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'ہدف: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'ڈائری کے اندراج میں ترمیم کریں۔';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'اندراج کو حذف کریں۔';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams جی';
   }
 
   @override
@@ -1220,60 +1226,61 @@ class AppLocalizationsKs extends AppLocalizations {
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current از $target ملی لیٹر';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'آج کے واٹر لاگز';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'آج تک پانی نہیں بھرا۔ ہائیڈریٹ کریں اور فوری ایڈ بٹن کو تھپتھپائیں!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'ڈیلی گول کو ایڈجسٹ کریں۔';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'ہیلتھ کنیکٹ سے منسلک ہے۔';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'روزانہ ہیلتھ وائٹلز';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'تازہ ترین دل کی شرح';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'بلڈ پریشر';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'بلڈ آکسیجن';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'خون میں گلوکوز';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'وزن';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'نیند کا دورانیہ';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'دستی پیمائش شامل کریں۔';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'تاریخی رجحانات';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'صحت کا ڈیٹا کامیابی کے ساتھ مطابقت پذیر ہو گیا!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours گھنٹے $mins منٹ';
   }
 
   @override
   String health_metric_weight_val(Object val) {
-    return '$val kg';
+    return '$val کلوگرام';
   }
 
   @override
@@ -1283,12 +1290,12 @@ class AppLocalizationsKs extends AppLocalizations {
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg';
   }
 
   @override
@@ -1297,234 +1304,232 @@ class AppLocalizationsKs extends AppLocalizations {
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title => 'منسلک آلات اور پہننے کے قابل';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'جوڑا بنائے گئے سمارٹ واچز، فٹنس ٹریکرز اور ہیلتھ سینسرز کا نظم کریں۔';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'ورزش میں ترمیم کریں۔';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'ورزش کا نام';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'دورانیہ (منٹ)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'تخمینی کیلوریز (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'تاریخ اور وقت';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap => 'آپ کا پرسنلائزڈ روڈ میپ';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'صبح کا معمول';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'دوپہر کی فلاح و بہبود';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'شام ونڈ ڈاؤن';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'بلومی اے آئی کوچ';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7 دن کی فلاح و بہبود کا فوکس';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'فلاح و بہبود کے اہداف اور اہداف';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'روزانہ کیلوری کا بجٹ';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'روزانہ پانی کا ہدف';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'ڈیلی سٹیپ گول';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'میکرونٹرینٹ تناسب';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'ذاتی تفصیلات';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'جسمانی پیمائش';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'ترجیحات اور ایپ کی ترتیبات';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'آپ کا نام';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'اونچائی ( $unit )';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'وزن ( $unit )';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'عمر';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'مرد';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'خاتون';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'دیگر / نہ کہنے کو ترجیح دیں۔';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary => 'بیہودہ (تھوڑی سی ورزش نہ کرنا)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light => 'ہلکے سے فعال (1-3 دن / ہفتہ)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate => 'اعتدال سے فعال (3-5 دن / ہفتہ)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'بہت فعال (6-7 دن/ہفتہ)';
 
   @override
   String get settings_wear_os_header => 'Wear OS Companion App';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'کیلوریز، پانی اور قدموں کو دیکھنے کے لیے اپنی Wear OS گھڑی پر بلومی ٹائل اور پیچیدگی انسٹال کریں۔';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'انٹرایکٹو اینڈرائیڈ وجیٹس';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'فوری اپ ڈیٹس کے لیے اپنے آلے کی ہوم اسکرین پر ریئل ٹائم ویجٹس کو پن کریں۔';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'بلومی کے بارے میں';
 
   @override
-  String get settings_about_version => 'Version 1.0.0';
+  String get settings_about_version => 'ورژن 1.0.0';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => '100 بنائیں';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'ہوشیار، صحت مند زندگی گزارنے کے لیے دیکھ بھال کے ساتھ تیار کیا گیا ہے۔';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'شرائط و ضوابط';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'رازداری کی پالیسی';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'اکاؤنٹ اور ڈیٹا کو حذف کریں۔';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'اس کارروائی کو کالعدم نہیں کیا جا سکتا۔ آپ کے تمام کھانے، ورزش، وائٹلز اور پروفائل مستقل طور پر حذف کر دیے جائیں گے۔';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'مستقل طور پر حذف کریں۔';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'بلومی میں خوش آمدید ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'آپ کی زندگی کے ارد گرد ڈیزائن کیا گیا نرم، ذہن مند فلاح و بہبود سے باخبر رہنا۔';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'آپ کے بارے میں';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'آپ کے مقاصد';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'روزانہ کی عادات';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'اجازتیں';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'تیار!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm => 'ہیلتھ کنیکٹ رسائی';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'سٹیپ کاؤنٹر سینسر';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'ذہن نشین یاد دہانیاں اور اطلاعات';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'کیمرہ (بار کوڈ اور فوڈ سکینر)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'اجازتیں دیں۔';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'ڈیش بورڈ کھولیں۔';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'ہائیڈریشن نجز';
 
   @override
-  String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+  String get notif_channel_hydration_desc => 'دن بھر نرم پانی کی یاد دہانی';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name => 'کھانا اور غذائیت کی یاد دہانیاں';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'ناشتہ، دوپہر کا کھانا، اور رات کے کھانے کی یاد دہانی کے انتباہات';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'سنگ میل کے قدم';
 
   @override
-  String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+  String get notif_channel_steps_desc => 'یومیہ قدم کے اہداف تک پہنچنے پر جشن';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name => 'صحت اور وائٹلز کی جانچ';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'وزن اور سونے کے وقت ونڈ ڈاون یاد دہانیاں';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 لاگ +250ml';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => '15m اسنوز کریں۔';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 لاگ کھانا';
 
   @override
-  String get language => 'Language';
+  String get language => 'زبان';
 
   @override
-  String get share => 'Share';
+  String get share => 'شیئر کریں۔';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return '$count دن پہلے';
   }
 }

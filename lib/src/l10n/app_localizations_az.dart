@@ -583,7 +583,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get health_sync_now => 'Sağlamlıq Məlumatlarını Sinxronlaşdırın';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Son sinxronizasiya: $time';
   }
 

@@ -581,7 +581,7 @@ class AppLocalizationsPag extends AppLocalizations {
   String get health_sync_now => 'I-sync so Health Data';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Kaunoran ya in-sync: $time';
   }
 

@@ -114,64 +114,64 @@ class AppLocalizationsRo extends AppLocalizations {
   String get offline => 'Modul offline';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub => 'Modificările se vor sincroniza după reconectare';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'Anulați';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'Porțiune';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Cantitatea';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'unitate';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Clar';
 
   @override
-  String get select => 'Select';
+  String get select => 'Selectați';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Aplicați';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Resetați';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Da';
 
   @override
-  String get no => 'No';
+  String get no => 'Nu';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Opțional';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Calorii';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Proteine';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'Carbohidrați';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'grăsime';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'Fibră';
 
   @override
-  String get water => 'Water';
+  String get water => 'apă';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Pași';
 
   @override
   String get kcal => 'kcal';
@@ -198,22 +198,22 @@ class AppLocalizationsRo extends AppLocalizations {
   String get bpm => 'bpm';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'ore';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'min';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'Servire';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'Porții';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'Dimensiunea porției';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => 'la 100g';
 
   @override
   String get india => 'India';
@@ -222,57 +222,57 @@ class AppLocalizationsRo extends AppLocalizations {
   String get asia => 'Asia';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Europa';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Orientul Mijlociu';
 
   @override
   String get africa => 'Africa';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'Americi';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Acasă';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'Bună dimineața';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'Bună după-amiaza';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Buna seara';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'Dâra de înflorire';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '$count zile consecutive',
+      one: '1 zi consecutiv',
+      zero: '0 zile consecutiv',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Ars';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Bugetul de calorii';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '$kcal kcal rămase';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'Hidratare zilnică';
 
   @override
   String home_water_goal(Object current, Object target) {
@@ -280,716 +280,725 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Pași parcurși';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Acțiuni rapide';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'Masa din busteni';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Bușteni de apă';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Înregistrați antrenamentul';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Greutatea jurnalului';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Perspectivele de azi';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'Micile alegeri sănătoase creează transformări înfloritoare.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Antrenor Bloomi AI';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Împrejurimi și aer';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'Notificări';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'Scorul zilnic de bunăstare';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Vezi toate';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Jurnal alimentar';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Micul dejun';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'Prânzul';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Cina';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'Gustări';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'Adăugați mâncare';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'Editați mâncarea';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Adăugați Micul dejun';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Adăugați prânzul';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Adăugați Cina';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Adăugați o gustare';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Calorii totale';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'Nu există alimente înregistrate încă pentru această masă';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'Nicio masă înregistrată pentru această zi';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'Atingeți + pentru a vă înregistra prima masă delicioasă';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Adăugare rapidă';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint =>
+      'Căutați feluri de mâncare, fructe, dal, roti...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Mâncare și rețetă personalizate';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'Scanați codul de bare';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'Scanner AI pentru alimente';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Alimente recente';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Favorite';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Defalcarea macronutrienților';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'Sigur doriți să eliminați acest articol?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Produs alimentar eliminat';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'ramanand';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'consumat';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return 'de $target kcal';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Caută alimente';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Scanați codul de bare';
 
   @override
   String get foodSearch_take_photo => 'Snap Food Photo';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Creați mâncare personalizată';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Căutări recente';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Mâncăruri populare';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results =>
+      'Nu există alimente care să corespundă căutării dvs';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Scanner de coduri de bare';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align =>
+      'Aliniați codul de bare în interiorul cadrului camerei';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'Produsul nu a fost găsit în baza de date';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'Scanarea codurilor de bare este disponibilă cu Bloomi Pro';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'Scanner AI pentru alimente';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Faceți o fotografie clară a preparatului dvs';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'Se analizează farfuria cu mâncare...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Articole detectate';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Comutați Flash';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Refaceți fotografia';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Confirmați articole';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Mâncare și rețetă personalizate';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint =>
+      'Numele preparatului sau al ingredientului';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Calorii (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'proteine (g)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'Carbohidrați (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'grăsime (g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Salvați rețeta';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Urmăritor de apă';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Obiectivul zilnic de hidratare';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Conectat astăzi';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml Sticlă';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+ Flacon de 500 ml';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Sumă personalizată';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'Bea apă în mod regulat pe tot parcursul zilei pentru energie constantă.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'S-au înregistrat $amount ml de apă 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Jurnal de antrenament';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Adăugați antrenament';
 
   @override
   String get workout_cardio => 'Cardio';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Puterea';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Yoga și flexibilitate';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Durata';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Intensitate';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Calorii arse';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Nu au fost înregistrate antrenamente astăzi';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'Antrenamentul a fost salvat cu succes!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Tip de antrenament';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Note și reflecții';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Sănătate și elemente vitale';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Ritmul cardiac';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Oxigenul din sânge (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Tensiunea arterială';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Glicemia';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Temperatura corpului';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Urmărirea somnului';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'Greutate și compoziție corporală';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Raportul talie la șold';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Dispozitive și Smartwatch Hub';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'Sincronizați datele de sănătate';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'Ultima sincronizare: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Introducere manuală în sănătate';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Detalii metrice';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Senzori de sănătate conectați';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Plan zilnic';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'Plan săptămânal de wellness';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'țintă de calorii';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Țintă de hidratare';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'Pas țintă';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Țintă de somn';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Sugestii de masă';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Obiceiuri și sfaturi sănătoase';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Recomandări ale antrenorului Bloomi AI';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'Program zilnic personalizat';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Profil';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Editați profilul';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Nume';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Vârsta';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Gen';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Înălțime';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Greutate';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Scopul principal';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Nivel de activitate';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Statisticile mele de sănătate';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Profil actualizat cu succes';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Indicele de masă corporală (IMC)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Calitatea de membru';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Setări';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'PREFERINȚE ȘI OBIECȚURI';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Aspect și temă';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Opțiuni de fundal întuneric, deschis, modul sistem și aplicație';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Permisiuni și acces la sistem';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Health Connect, senzori de pas, GPS, notificări și cameră';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Mementouri și notificări';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Orele de masă, apă, verificarea greutății și mementouri pentru ora de culcare';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Unități de măsură';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Metric (kg, cm, ml, km) sau imperial (lbs, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'Limba aplicației';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'Engleză, हिन्दी (Hindi), Hinglish și peste 195 de limbi globale';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Widgeturi pe ecranul de pornire';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Widgeturi live Android: hub, pași, apă, nutriție și mascotă';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => 'Aplicația Wear OS Watch';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Smartwatch însoțitor, plăci, complicații și elemente vitale vii';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'OBIECTIVE ȘI PERSPECTIVE DE SĂNĂTATE';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Ținte nutriționale și Macro Split';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'țintă de calorii, proteine, carbohidrați, grăsimi și apă';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Recapitulare săptămânală de sănătate';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      'Medie calorică pe 7 zile, raport macro și cea mai bună zi';
 
   @override
   String get streaks_milestones => 'Streaks & Milestones';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'Dâre active de înflorire, insigne și realizări';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'DISPOZITIVE ȘI ECOSISTEM CONECTATE';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Dispozitive și Smartwatch Hub';
 
   @override
   String get devices_hub_sub =>
       'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Împrejurimi și vreme';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Calitatea aerului (AQI), indicele UV și sfaturi pentru hidratarea vremii';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'Abonament Bloomi Pro';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'AI Plan Coach, 5 widget-uri pe ecranul de pornire și urmărire a elementelor vitale';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'DESPRE & SECURITATE';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Despre Bloomi';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub =>
+      'Specificații de construcție, versiune, atribuții';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'Politica de confidențialitate';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub => 'Arhitectură de date offline, pe dispozitiv';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Termeni și condiții';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub => 'Termeni și reguli de bunăstare';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Ștergeți contul și datele';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Ștergeți ireversibil datele SQLite locale și backup-urile din cloud';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits =>
+      'Construiește obiceiuri blânde și de durată de sănătate';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Datele și jurnalele mele urmărite';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language => 'Căutați după limbă sau script nativ...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Limbi disponibile';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'Nu s-au găsit limbi care se potrivesc';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Încercați să căutați după scrierea nativă sau ortografia engleză';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Parțial tradus';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Complet';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Limba setată la $name ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Împrejurimi și Mediu';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Indicele de calitate a aerului';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'Index UV';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Temperatura';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Umiditate';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Rămâneți bine hidratat în condițiile meteo actuale.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Caută Mâncare';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Scanează codul de bare 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Adăugați apă';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Mâncare personalizată';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Bun';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Moderat';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'Nesănătos';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Notificări și alerte';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Fără notificări noi';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Marcați toate ca citite';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Ștergeți tot';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Setări de memento';
 
   @override
   String get notifications => 'Push Notifications';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Memento pentru micul dejun 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'Bună dimineața! Este timpul pentru un mic dejun hrănitor la $time .';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Memento de prânz 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Faceți o pauză și bucurați-vă de un prânz echilibrat și atent la $time .';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Memento pentru cină 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Este timpul pentru o cină ușoară și satisfăcătoare la $time .';
   }
 
   @override
-  String get reminders_water_title => 'Hydration Nudge 💧';
+  String get reminders_water_title => 'Hidratare Nudge 💧';
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'E timpul să bei un pahar de apă proaspătă! ( $time )';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Cântărire săptămânală ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Urmăriți valorile corporale săptămânale pe Bloomi ( $time ).';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Relaxarea la culcare 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Relaxează-te și pregătește-te pentru un somn odihnitor ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Bun venit la Bloomi';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Partenerul tău prietenos, offline pentru sănătate și nutriție.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Începeți';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Conectați-vă';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Sari peste';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal =>
+      'Care este obiectivul tău principal de sănătate?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Pierdere uşoară în greutate';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Creștere musculară și forță';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Energie și vitalitate zilnică';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'Alimentație sănătoasă și atentă';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Povestește-ne despre tine';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Rutina ta zilnică';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'Permisiuni și acces la sistem';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Acordați acces la pașii de sincronizare, antrenamente și mementouri.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Planul dvs. personalizat este gata!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Am creat o foaie de parcurs blândă, personalizată pentru nutriție și sănătate, doar pentru tine.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Intră Bloomi';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Recapitulare săptămânală de sănătate';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'Cea mai bună zi a consistenței: $day';
   }
 
   @override
@@ -997,61 +1006,61 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Deblocat pe $date';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'Continuați cu progresul fantastic!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Widgeturi pe ecranul de pornire';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Widgeturi active: $count';
   }
 
   @override
   String get widgets_hub_title => 'Bloomi Wellness Hub';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'Pași și inel activ';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Jurnal rapid de hidratare';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Companionul mascotei Bloomi';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'Purtați Smartwatch OS';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Conectat la Watch';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Sincronizați datele de vizionare';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Aspect și temă';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Modul Temă';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Lumină';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Întuneric';
 
   @override
   String get theme_system => 'System';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Paleta de fundal';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Unități de măsură';
 
   @override
   String get units_metric => 'Metric (kg, cm, ml)';
@@ -1060,157 +1069,159 @@ class AppLocalizationsRo extends AppLocalizations {
   String get units_imperial => 'Imperial (lbs, in, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Nu se poate încărca tabloul de bord';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req =>
+      'Este necesară permisiunea Health Connect';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'Bloomi necesită permisiunea Health Connect pentru a efectua pași reali, frecvența cardiacă și sincronizarea widget-urilor pentru casele mobile în timp real.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Permite Health Connect';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'Sunteți gata pentru o zi atentă? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Adăugare rapidă';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'GPS live';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'CALORII RĂMÂNSE';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Mâncat: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Atingeți pentru Water Tracker 💧';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'Obiectivul zilnic atins 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml până la obiectivul zilnic';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Detalii';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Faceți upgrade pentru a debloca ținte zilnice personalizate și plan AI';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Deblocați 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'Înregistrați rapid o intrare de wellness';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Dimensiunea porției';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'Porție (g)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Numărul de porții';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Calorii per porție';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Ingrediente';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Adăugați ingredient';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Instrucțiuni și note';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Nutriție totală rețetă';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Nutriție per porție';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'Mâncare personalizată salvată cu succes!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'Produs găsit!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Nu am putut găsi acest cod de bare în baza de date deschisă. Îl poți adăuga ca aliment personalizat.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Adăugați mâncare personalizată';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'Scanați din nou';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'Examinați alimentele detectate';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Ajustați cantitățile sau eliminați orice articol nerecunoscut';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'Înregistrați alimentele selectate';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Alimentele preferate';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Alimente recente';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Nu există alimente preferate încă. Apăsați inima pe orice mâncare pentru a salva aici.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents => 'Nu s-au găsit alimente înregistrate recent.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title => 'Detalii de nutriție zilnică';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'Defalcarea proteinelor';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'Defalcarea carbohidraților';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'Defalcarea grăsimilor';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Defalcarea fibrei';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Comparație țintă';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Țintă: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Editați intrarea din jurnal';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Ștergeți intrarea';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams g';
   }
 
   @override
@@ -1220,55 +1231,56 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current din $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Jurnalele de apă de astăzi';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Nu s-a înregistrat încă apă azi. Hidratează-te și atinge un buton de adăugare rapidă!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Ajustați obiectivul zilnic';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Conectat la Health Connect';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Elementele vitale zilnice ale sănătății';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Cel mai recent ritm cardiac';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Tensiunea arterială';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Oxigenul din sânge';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Glicemia';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Greutate';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Durata somnului';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Adăugați măsurarea manuală';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Tendințe istorice';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'Datele de sănătate au fost sincronizate cu succes!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours ore $mins minute';
   }
 
   @override
@@ -1283,12 +1295,12 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg';
   }
 
   @override
@@ -1297,234 +1309,239 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title =>
+      'Dispozitive și dispozitive purtabile conectate';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Gestionați ceasurile inteligente asociate, trackerele de fitness și senzorii de sănătate.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Editați antrenamentul';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Numele antrenamentului';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Durata (minute)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'Calorii estimate (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Data și ora';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap => 'Foaia ta de parcurs personalizată';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Rutina de dimineață';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Wellness la amiază';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Seara Wind-Down';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Antrenor Bloomi AI';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => 'Focalizare de wellness de 7 zile';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Obiective și obiective de wellness';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Bugetul zilnic de calorii';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Țintă zilnică de apă';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Obiectiv de pas zilnic';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Raportul de macronutrienți';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Detalii personale';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Măsurătorile corpului';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'Preferințe și setări pentru aplicații';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'Numele tău';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Înălțime ( $unit )';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Greutate ( $unit )';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Vârsta';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Bărbat';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Femeie';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Altele / Prefer să nu spun';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Sedentar (Puțin sau deloc exercițiu)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light => 'Usor activ (1-3 zile/saptamana)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate => 'Moderat activ (3-5 zile/saptamana)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'Foarte activ (6-7 zile/saptamana)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => 'Aplicația Wear OS Companion';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Instalează țiglă Bloomi și complicația pe ceasul tău Wear OS pentru a arunca o privire asupra caloriilor, apei și pașilor.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'Widgeturi interactive Android';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Fixați widgeturi în timp real pe ecranul de pornire al dispozitivului pentru actualizări instantanee.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Despre Bloomi';
 
   @override
   String get settings_about_version => 'Version';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Construiește 100';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Creat cu grijă pentru o viață sănătoasă și atentă.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Termeni și condiții';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Politica de confidențialitate';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Ștergeți contul și datele';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Această acțiune nu poate fi anulată. Toate mesele, antrenamentele, elementele vitale și profilul dvs. vor fi șterse definitiv.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Ștergeți definitiv';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Bun venit la Bloomi ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Urmărire blândă și atentă a stării de bine concepute în jurul vieții tale.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Despre tine';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Obiectivele tale';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Obiceiuri zilnice';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Permisiuni';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Gata!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm => 'Acces Health Connect';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Senzor de contor de pași';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Mementouri și notificări atent';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm =>
+      'Cameră (cod de bare și scaner pentru alimente)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Acordați permisiuni';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Deschideți tabloul de bord';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'Îmbunătățiri de hidratare';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Mementouri blânde de apă pe tot parcursul zilei';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name =>
+      'Mementouri pentru mese și nutriție';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Alerte de memento pentru micul dejun, prânz și cină';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Etape de reper';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'Sărbători atunci când atingeți obiectivele de pas zilnice';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name =>
+      'Verificări de sănătate și vitalitate';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'Mementouri privind greutatea și ora de culcare';
 
   @override
   String get notif_action_log_water => '💧 Log +250ml';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'Amânați 15 m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Masa din busteni';
 
   @override
-  String get language => 'Language';
+  String get language => 'Limba';
 
   @override
-  String get share => 'Share';
+  String get share => 'Distribuie';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return 'acum $count zi';
   }
 }

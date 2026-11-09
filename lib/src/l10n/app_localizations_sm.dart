@@ -583,7 +583,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get health_sync_now => 'Fa\'atasi Fa\'amatalaga Soifua Maloloina';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Fa\'atasiga mulimuli: $time';
   }
 

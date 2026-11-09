@@ -579,7 +579,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get health_sync_now => 'Hoʻopili i ka ʻikepili olakino';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Hana ʻia hope: $time';
   }
 

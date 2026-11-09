@@ -584,7 +584,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get health_sync_now => 'Синхронизатсияи маълумоти саломатӣ';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Синхронизатсияи охирин: $time';
   }
 

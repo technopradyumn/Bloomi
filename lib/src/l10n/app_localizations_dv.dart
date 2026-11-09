@@ -583,7 +583,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get health_sync_now => 'ހެލްތު ޑޭޓާ ސިންކް ކުރުން';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'އެންމެ ފަހުން ސިންކް ކުރެވުނީ: $time';
   }
 

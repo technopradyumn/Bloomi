@@ -582,7 +582,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get health_sync_now => 'ਸਿਹਤ ਡਾਟਾ ਸਿੰਕ ਕਰੋ';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'ਆਖਰੀ ਵਾਰ ਸਿੰਕ ਕੀਤਾ ਗਿਆ: $time';
   }
 

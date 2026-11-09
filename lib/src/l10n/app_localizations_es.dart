@@ -584,7 +584,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get health_sync_now => 'Sincronizar datos de salud';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Última sincronización: $time';
   }
 

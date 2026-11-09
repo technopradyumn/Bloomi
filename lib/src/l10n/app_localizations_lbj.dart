@@ -9,251 +9,252 @@ class AppLocalizationsLbj extends AppLocalizations {
   AppLocalizationsLbj([String locale = 'lbj']) : super(locale);
 
   @override
-  String get app_name => 'Bloomi';
+  String get app_name => 'བྷུ་ལུ་མི།';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'ཁྱིམ།';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'དེ་རིང་།';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'འཆར་གཞི།';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'ཟས་རིགས།';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'ཟས་རིགས་ཉིན་ཐོ།';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'ལུས་སྦྱོང་དྲན་ཐོ།';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'འཕྲོད་བསྟེན།';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'ངོ་སྤྲོད།';
 
   @override
-  String get save => 'Save';
+  String get save => 'ཉར་ཚགས་བྱེད་པ།';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'ཆ་མེད་གཏོང་བ།';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'སུབ་པ།';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'རྩོམ་སྒྲིག།';
 
   @override
-  String get done => 'Done';
+  String get done => 'གྲུབ་སོང་།';
 
   @override
-  String get close => 'Close';
+  String get close => 'སྒོ་བརྒྱབ།';
 
   @override
-  String get back => 'Back';
+  String get back => 'ཕྱིར་ལོག';
 
   @override
-  String get next => 'Next';
+  String get next => 'རྗེས་མ།';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'མུ་མཐུད།';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'གཏན་འཁེལ་བྱེད་པ།';
 
   @override
-  String get search => 'Search';
+  String get search => 'འཚོལ་ཞིབ།';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'ཚགས་ཆས།';
 
   @override
-  String get all => 'All';
+  String get all => 'ཚང་མ།';
 
   @override
-  String get active => 'Active';
+  String get active => 'ཤུགས་ལྡན་པ།';
 
   @override
-  String get today => 'Today';
+  String get today => 'དེ་རིང་།';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ཁ་སང་།';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'སང་ཉིན།';
 
   @override
-  String get add => 'Add';
+  String get add => 'ཁ་སྣོན།';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'བཏོན་པ།';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'གསར་བརྗེ།';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ཡང་བསྐྱར་ཚོད་ལྟ་བྱེད་པ།';
 
   @override
-  String get error => 'Error';
+  String get error => 'ནོར་འཁྲུལ།';
 
   @override
-  String get success => 'Success';
+  String get success => 'མཐར་ཕྱིན་པ།';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'མངོན་འགྱུར་བྱེད་བཞིན་པ།';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'གཞི་གྲངས་མེད་པ།';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཐབས་ལམ།';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'བསྐྱར་དུ་མཐུད་རྗེས་བསྒྱུར་བཅོས་དུས་མཉམ་བཟོ་གི་རེད།';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'ཕྱིར་འཐེན་བྱེད་པ།';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'ཆ་ཤས།';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'གྲངས་ཚད།';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'སྡེ་ཚན།';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'གསལ་བ།';
 
   @override
-  String get select => 'Select';
+  String get select => 'འདེམས།';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'འཇུག་པ།';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'བསྐྱར་སྒྲིག་བྱེད་པ།';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'འགྲིག་གམ།';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'རེད།';
 
   @override
-  String get no => 'No';
+  String get no => 'མ་རེད།';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'གདམ་གསེས།';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'ཚ་ཚད།';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'སྤྲི་དཀར།';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'ཀར་བ།';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'ཚིལ།';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'སྐུད་པ།';
 
   @override
-  String get water => 'Water';
+  String get water => 'ཆུ།';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'གོམ་པ།';
 
   @override
   String get kcal => 'kcal';
 
   @override
-  String get grams => 'g';
+  String get grams => 'ག';
 
   @override
   String get milliliters => 'ml';
 
   @override
-  String get kilograms => 'kg';
+  String get kilograms => 'ཀེ་ཇི་།';
 
   @override
-  String get pounds => 'lbs';
+  String get pounds => 'ལི་ཊར་';
 
   @override
-  String get centimeters => 'cm';
+  String get centimeters => 'cm.';
 
   @override
-  String get inches => 'in';
+  String get inches => 'ལོར།';
 
   @override
   String get bpm => 'bpm';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'ཆུ་ཚོད།';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'སྐར་མ།';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'ཞབས་ཞུ་སྒྲུབ་པ།';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'ཞབས་ཞུ།';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'ཞབས་ཞུའི་ཚད་གཞི།';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => '100gརེར་';
 
   @override
-  String get india => 'India';
+  String get india => 'རྒྱ་གར།';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'ཨེ་ཤ་ཡ།';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'ཡུ་རོབ།';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'དཀྱིལ་ཤར་ཤར་མ།';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'ཨ་ཧྥེ་རི་ཁ།';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'ཨ་མེ་རི་ཁ།';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'ཁྱིམ།';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'ཞོགས་པ་བདེ་ལེགས།';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'ཉིན་གུང་བདེ་ལེགས།';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'དགོང་མོ་བདེ་ལེགས།';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'མེ་ཏོག་བཞད།';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
+      other: ' $count ཉིན་གྲངས་རིམ་པ་',
       one: '1 day streak',
       zero: '0 days streak',
     );
@@ -261,18 +262,18 @@ class AppLocalizationsLbj extends AppLocalizations {
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'མེར་བསྲེགས།';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'ཚ་དྲོད་འཆར་དངུལ།';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return '$kcalཀེ་ཀལ་ལྷག་མ།';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'ཉིན་རེར་ཆུ་གསོས།';
 
   @override
   String home_water_goal(Object current, Object target) {
@@ -280,1000 +281,1015 @@ class AppLocalizationsLbj extends AppLocalizations {
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'གོམ་པ་སྤོས་པ།';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'མགྱོགས་མྱུར་བྱ་སྤྱོད།';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'ལོག་ཁ་ལག་།';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'ལོག་ཆུ།';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'དྲན་ཐོའི་ལུས་སྦྱོང་།';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'ལོག་ལྗིད་ཚད།';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'དེ་རིང་གི་ཤེས་རྟོགས།';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'འཕྲོད་བསྟེན་ལྡན་པའི་འདམ་ག་ཆུང་ཆུང་གིས་མེ་ཏོག་བཞད་པའི་འགྱུར་ལྡོག་བསྐྲུན་གྱི་ཡོད།';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'བྷུ་ལུ་མི་མིས་བཟོས་རིག་ནུས་སློབ་སྟོན་པ།';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'མཐའ་འཁོར་དང་མཁའ་དབུགས།';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'བརྡ་ཐོ།';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'ཉིན་རེའི་བདེ་ཐང་གི་སྐར་གྲངས།';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'ཚང་མར་གཟིགས།';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'ཟས་རིགས་ཉིན་ཐོ།';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'ཞོགས་ཇ།';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'ཉིན་གུང་ཟས།';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'དགོང་ཟས།';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'ཞལ་ཏོག།';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'ཁ་ལག་ཁ་སྣོན།';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'ཟས་རིགས་རྩོམ་སྒྲིག།';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'ཞོགས་ཇ་སྣོན་པ།';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'གུང་ཚིགས་ཁ་སྣོན།';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'དགོང་ཟས་ཁ་སྣོན།';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'ཞལ་ལག་ཁ་སྣོན།';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'ཚ་དྲོད་བསྡོམས་འབོར།';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'ཁ་ལག་འདིའི་ཆེད་དུ་ད་དུང་ཟས་རིགས་གང་ཡང་ཐོ་འགོད་བྱས་མེད།';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'ཉིན་འདིར་ཁ་ལག་ཐོ་འགོད་བྱས་མེད།';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'ཁྱེད་རང་གི་ཁ་ལག་ཞིམ་པོ་ཐོག་མ་དེ་ཐོ་འགོད་བྱེད་པར་+ལ་མནན་དགོས།';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'མགྱོགས་མྱུར་ཁ་སྣོན།';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'འཚོལ་སྡེར་དང་། ཤིང་ཏོག དལ། རོ་ཏི།';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'རང་མོས་ཟས་རིགས་དང་བཟོ་སྟངས།';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'ཐིག་ཁྲམ་པར་བཤུད།';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'AIཟས་རིགས་པར་བཤེར་འཕྲུལ་ཆས།';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'ཉེ་ཆར་གྱི་ཟས་རིགས།';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'དགའ་མོས་ཅན།';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'འཚོ་བཅུད་ཆེ་མོའི་དབྱེ་འབྱེད།';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'ཁྱེད་ཀྱིས་རྣམ་གྲངས་འདི་མེད་པར་བཟོ་རྒྱུ་ཡིན་པ་གཏན་ཁེལ་ཡིན་ནམ།';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'བཟའ་བཅའི་རྣམ་གྲངས་མེད་པར་བཟོས་པ།';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'ལྷག་མ།';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'འཛད་སྤྱོད་བྱས་པ།';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return '$target ཀེ་ཀཱལ།';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'ཟས་རིགས་འཚོལ་ཞིབ།';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'ཐིག་ཁྲམ་པར་བཤུད།';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => 'ཟ་མའི་པར་བླངས།';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'རང་མོས་ཟས་རིགས་བཟོས།';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'ཉེ་བའི་འཚོལ་ཞིབ།';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'ཡོངས་གྲགས་ཅན་གྱི་ཟས་རིགས།';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results =>
+      'ཁྱེད་རང་གི་འཚོལ་ཞིབ་དང་མཐུན་པའི་ཟས་རིགས་མེད།';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'ཐིག་རིས་པར་བཤེར་འཕྲུལ་ཆས།';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align =>
+      'པར་ཆས་ཀྱི་སྒྲོམ་གཞིའི་ནང་དུ་ཐིག་རིས་ཕྲེང་བསྒྲིགས།';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'ཐོན་རྫས་གཞི་གྲངས་མཛོད་ནང་མ་རྙེད།';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'ཐིག་རིས་པར་བཤུས་བྱེད་པ་དེ་Blooomi Pro དང་མཉམ་དུ་ཐོབ་ཐུབ།';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'AIཟས་རིགས་པར་བཤེར་འཕྲུལ་ཆས།';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'ཁྱེད་རང་གི་ཟ་མའི་པར་གསལ་པོ་ཞིག་བླངས།';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'ཁ་ལག་གི་སྡེར་མ་ལ་དབྱེ་ཞིབ་བྱེད་པ།';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'ཤེས་རྟོགས་བྱུང་བའི་རྣམ་གྲངས།';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'གློག་འོད་བསྒྱུར།';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'པར་བསྐྱར་དུ་བླངས།';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'རྣམ་གྲངས་གཏན་འཁེལ་བྱེད་པ།';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'རང་མོས་ཟས་རིགས་དང་བཟོ་སྟངས།';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'ཟས་རིགས་སམ་རྒྱུ་ཆའི་མིང་།';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'ཚ་དྲོད་(kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'སྤྲི་དཀར་(g)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'ཀར་བོན་(g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'ཚིལ་(g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'བཟོ་སྟངས་ཉར་ཚགས་བྱེད།';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'ཆུ་རྗེས་འདེད་འཕྲུལ་ཆས།';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'ཉིན་རེར་ཆུ་བསྡུ་བའི་དམིགས་ཡུལ།';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'དེ་རིང་ཐོ་འགོད་བྱས།';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250mlཤེལ།';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500mlདམ་སྦྱིས།';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'རང་མོས་དངུལ་འབོར།';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'ནུས་ཤུགས་བརྟན་པོ་ཡོང་ཆེད་ཉིན་གང་བོར་རྒྱུན་དུ་ཆུ་འཐུང་དགོས།';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return '$amount ཆུའི་ml 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'ལུས་སྦྱོང་དྲན་ཐོ།';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'ལུས་སྦྱོང་ཁ་སྣོན།';
 
   @override
-  String get workout_cardio => 'Cardio';
+  String get workout_cardio => 'སྙིང་རྩ།';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'སྟོབས་ཤུགས།';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'ཡོ་ག་དང་མཉེན་ཆས།';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'དུས་ཡུན།';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'ཤུགས་ཚད།';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'ཚ་དྲོད་འཚིག་པ།';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'དེ་རིང་ལུས་རྩལ་གང་ཡང་ཐོ་འགོད་བྱས་མེད།';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success =>
+      'ལུས་རྩལ་དེ་ལེགས་འགྲུབ་བྱུང་ནས་ཉར་ཚགས་བྱས།';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'ལུས་རྩལ་གྱི་རིགས།';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'མཆན་འགྲེལ་དང་བསམ་གཞིགས།';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'འཕྲོད་བསྟེན་དང་གལ་ཆེའི་ཆ་རྐྱེན།';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'སྙིང་གི་འཕར་ཚད།';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'ཁྲག་གི་སྲོག་རླུང་(SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'ཁྲག་ཤེད།';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'ཁྲག་གི་མངར་ཚད།';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'གཟུགས་པོའི་དྲོད་ཚད།';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'གཉིད་རྗེས་འདེད།';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'ལྗིད་ཚད་དང་གཟུགས་པོའི་གྲུབ་ཆ།';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'རྐེད་པ་བར་གྱི་བསྡུར་ཚད།';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'ཡོ་ཆས་དང་ཆུ་ཚོད་རིག་ནུས་ལྟེ་གནས།';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'འཕྲོད་བསྟེན་གྲངས་ཐོ་མཉམ་སྒྲིག་བྱེད་པ།';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'མཐའ་མའི་མཉམ་སྒྲིག: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'ལག་ཐོག་འཕྲོད་བསྟེན་ཐོ་འགོད།';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'ཚད་གཞིའི་ཞིབ་ཕྲ།';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'འཕྲོད་བསྟེན་ཚོར་བྱེད་སྦྲེལ་མཁན།';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'ཉིན་རེའི་འཆར་གཞི།';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'གཟའ་འཁོར་རེའི་བདེ་ཐང་འཆར་གཞི།';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'ཚ་དྲོད་དམིགས་འབེན།';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'རློན་གཤེར་དམིགས་འབེན།';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'གོམ་པའི་དམིགས་འབེན།';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'གཉིད་ཀྱི་དམིགས་འབེན།';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'ཁ་ལག་གི་བསམ་འཆར།';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'བདེ་ཐང་གི་གོམས་གཤིས་དང་བསླབ་བྱ།';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice =>
+      'བྷུ་ལུའོ་མིས་མིས་བཟོས་རིག་ནུས་སློབ་སྟོན་པའི་བསམ་འཆར།';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'མི་སྒེར་གྱི་ཉིན་རེའི་འཆར་གཞི།';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'ངོ་སྤྲོད།';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'ངོ་དེབ་རྩོམ་སྒྲིག།';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'མིང་།';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'ལོ་ཚད།';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'ཕོ་མོ།';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'མཐོ་ཚད།';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'ལྗིད་ཚད།';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'དམིགས་འབེན་གཙོ་བོ།';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'བྱེད་སྒོའི་རིམ་པ།';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'ངའི་བདེ་ཐང་གི་གྲངས་གཞི།';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'གསལ་སྡུད་གསར་བཅོས་ལེགས་འགྲུབ་བྱུང་།';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'གཟུགས་པོའི་ལྗིད་ཚད་ཀྱི་ཚད་གཞི་(BMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'ཚོགས་མི།';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'སྒྲིག་སྟངས།';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'དགའ་མོས་དང་གོམས་གཤིས།';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'ཕྱི་ཚུལ་དང་བརྗོད་གཞི།';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'མུན་ནག་དང་འོད་དང་མ་ལག་གི་ཐབས་ལམ་དང་མཉེན་ཆས་ཀྱི་རྒྱབ་ལྗོངས་གདམ་ག';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'ཆོག་མཆན་དང་མ་ལག་གི་འཛུལ་སྤྱོད།';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'འཕྲོད་བསྟེན་མཐུད་ཁ། གོམ་པ་ཚོར་བྱེད། GPS། བརྡ་ཐོ། པར་ཆས།';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'དྲན་སྐུལ་དང་བརྡ་ཐོ།';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'ཁ་ལག་གི་དུས་ཚོད་དང་། ཆུ། ལྗིད་ཚད་ཞིབ་བཤེར་དང་ཉལ་བའི་དུས་ཚོད་ཀྱི་དྲན་སྐུལ།';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'ཚད་གཞིའི་ཚད་གཞི།';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'མེ་ཊིག་(ཀེ་ཇི་, སེནཊི་མི་ཊར་, མི་ལི་ལི་ཊར་, ཀི་ལོ་མི་ཊར་) ཡང་ན་ཨིམ་པི་རི་ཡལ་ (ལྗིད་ཐིག ཕིཊ་/ཨིན་ཙི། ཕོ་ལོ་ཟི)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'མཉེན་ཆས་སྐད་ཡིག';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'དབྱིན་ཡིག, हिन्दी (ཧིན་དུ།), ཧིན་ལིཤ་ & 195+ འཛམ་གླིང་སྐད་ཡིག';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'གཙོ་གཟུགས་འཆར་ཤེལ་གྱི་ཆ་ཤས།';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'ཐད་གཏོང་ཨེན་ཀྲོཌ་ཡོ་ཆས། ལྟེ་གནས་དང་། གོམ་པ་། ཆུ། འཚོ་བཅུད། མཚོན་རྟགས།';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => 'OS ཆུ་ཚོད་མཉེན་ཆས་གྱོན།';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'ཆུ་ཚོད་རིག་ནུས་ཀྱི་གྲོགས་པོ། རྡོ་གཡར། རྙོག་འཛིང་དང་འཚོ་བའི་གལ་ཆེའི་ཆ་རྐྱེན།';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'དམིགས་ཡུལ་དང་བདེ་ཐང་ཤེས་རྟོགས།';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'འཚོ་བཅུད་དམིགས་འབེན་དང་ཆེ་གྲས་བགོ་འགྲེམས།';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'འཚོ་བཅུད་དམིགས་འབེན་དང་། ཟས་བཅུད། མངར་ཆ། ཚིལ་དང་ཆུའི་དམིགས་ཡུལ།';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'བདུན་ཕྲག་རེའི་བདེ་ཐང་ཕྱོགས་བསྡོམས།';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      'ཉིན་7ཡི་ཚ་ཚད་ཆ་སྙོམས་དང་། ཆེས་ཆེ་བའི་ཆ་སྙོམས། ཉིན་མོ་ཡག་ཤོས།';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'ལམ་ཐིག་དང་ལམ་ཚད་རྡོ་རིང་།';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'མེ་ཏོག་བཞད་པའི་ཐིག་ལེ་དང་རྟགས་མ་དང་གྲུབ་འབྲས།';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'མཐུད་པའི་སྒྲིག་ཆས་དང་སྐྱེ་ཁམས་མ་ལག';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'ཡོ་ཆས་དང་ཆུ་ཚོད་རིག་ནུས་ལྟེ་གནས།';
 
   @override
   String get devices_hub_sub =>
-      'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
+      'འཕྲོད་བསྟེན་མཐུད་ཁ། གྷ་ལེག་སི་ཆུ་ཚོད། པིག་སེལ་ཆུ་ཚོད། གྷར་མིན།';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'མཐའ་འཁོར་དང་གནམ་གཤིས།';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'རླུང་གི་སྤུས་ཚད་(AQI)དང་། UVཟུར་ཐོ། གནམ་གཤིས་ཆུ་བསྡུ་བའི་བསླབ་བྱ།';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'བྷུ་ལུ་མི་པྲོ་ཡི་མངགས་ཉོ།';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'མིས་བཟོས་རིག་ནུས་འཆར་གཞིའི་སློབ་སྟོན་པ། ཁྱིམ་གྱི་གློག་ཀླད་ཀྱི་ཡོ་ཆས་5དང་གལ་ཆེའི་རྗེས་འདེད།';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'སྐོར་དང་བདེ་འཇགས།';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'བྷུ་ལུ་མིའི་སྐོར།';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub =>
+      'བཟོ་བསྐྲུན་གྱི་ཆ་རྐྱེན་དང་། ཐོན་རིམ། ཁྱད་ཆོས།';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'གསང་བའི་སྲིད་ཇུས།';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཐོག་མ། ཡོ་ཆས་སྟེང་གི་གྲངས་ཐོའི་བཟོ་བཀོད།';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'ཆ་རྐྱེན་དང་ཆ་རྐྱེན།';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub => 'ཞབས་ཞུའི་ཆ་རྐྱེན་དང་བདེ་ཐང་ལམ་སྟོན།';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'རྩིས་ཁྲ་དང་གྲངས་ཐོ་སུབ་པ།';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'ཕྱིར་མི་ལྡོག་པར་ས་གནས་ཀྱི་SQLiteགཞི་གྲངས་དང་སྤྲིན་པའི་རྒྱབ་སྣོན་བསུབས་ཐུབ།';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits =>
+      'འཇམ་པོ་དང་ཡུན་རིང་བདེ་ཐང་གི་གོམས་གཤིས་འཛུགས་དགོས།';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'ངའི་རྗེས་འདེད་བྱས་པའི་གཞི་གྲངས་དང་དྲན་ཐོ།';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language =>
+      'སྐད་ཡིག ཡང་ན་ས་གནས་ཀྱི་ཡི་གེ་ལ་བརྟེན་ནས་འཚོལ་ཞིབ།';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'སྐད་ཡིག་ཡོད་པ།';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'མཐུན་པའི་སྐད་ཡིག་མ་རྙེད།';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'ས་གནས་ཀྱི་ཡི་གེའམ་དབྱིན་ཡིག་གི་དག་ཆ་ལ་བརྟེན་ནས་འཚོལ་བཤེར་ཚོད་ལྟ་བྱོས།';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'ཆ་ཤས་བསྒྱུར།';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'འཐུས་ཚང་།';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'སྐད་ཡིག་དེ་ $name ( $nativeName ) ལ་སྒྲིག་ཡོད།';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'མཐའ་འཁོར་དང་ཁོར་ཡུག';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'མཁའ་དབུགས་སྤུས་ཚད་ཀྱི་ཚད་གཞི།';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'UV ཟུར་ཐོ།';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'དྲོད་ཚད།';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'བརླན་ཚད།';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'ད་ལྟའི་གནམ་གཤིས་ཆ་རྐྱེན་འོག་ཆུ་ཡག་པོ་བསྡད་དགོས།';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'ཟས་འཚོལ་བ།';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'ཐིག་རིས་པར་བཤུབ། 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'ཆུ་བླུགས།';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'སྲོལ་རྒྱུན་ཟས་རིགས།';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'ཡག་པོ་འདུག';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'འབྲིང་བ།';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'བདེ་ཐང་མེད་པ།';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'བརྡ་ཐོ་དང་ཉེན་བརྡ།';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'བརྡ་ཐོ་གསར་བ་མེད།';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'ཚང་མ་བཀླགས་ཟིན།';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'ཚང་མ་གཙང་བཟོ།';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'དྲན་སྐུལ་སྒྲིག་སྟངས།';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'བརྡ་ཐོ།';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'ཞོགས་ཟས་དྲན་སྐུལ།';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'ཞོགས་པ་བདེ་ལེགས། $time ལ་ཟས་བཅུད་ལྡན་པའི་ཞོགས་ཇ་ཟ་བའི་དུས་ཚོད་རེད།';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'གུང་ཚིགས་དྲན་སྐུལ།';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return '$time ལ་མཚམས་འཇོག་བྱས་ནས་དོ་མཉམ་དང་སེམས་ཁམས་ལྡན་པའི་གུང་ཚིགས་ལ་རོལ་རོགས།';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'དགོང་ཟས་དྲན་སྐུལ།';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return '$time ལ་དགོང་ཟས་འཇམ་པོ་དང་ཡིད་ཚིམས་པའི་དུས་ཚོད།';
   }
 
   @override
-  String get reminders_water_title => 'Hydration Nudge 💧';
+  String get reminders_water_title => 'ཆུ་བསྡུ་རུབ། 💧';
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'ཆུ་ཕོར་གང་འཐུང་བའི་དུས་ཚོད་རེད། ($time)';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'བདུན་ཕྲག་རེར་ལྗིད་ཚད་འཇལ་ཐབས།';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'ཁྱེད་ཀྱི་བདུན་ཕྲག་རེའི་གཟུགས་པོའི་ཚད་གཞི་དེ་བྷུ་ལུ་མི་( $time ) ཐོག་ལ་ལྟ་ཞིབ་བྱོས།';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'ཉལ་བའི་དུས་སུ་རླུང་མར་འགྱུར།';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'ངལ་གསོ་བྱས་ནས་གཉིད་ཁུག་པར་གྲ་སྒྲིག་བྱོས། ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'བྷུ་ལུ་མི་ལ་ཕེབས་པར་དགའ་བསུ་ཞུ།';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'ཁྱེད་ཀྱི་གྲོགས་པོ་དང་དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་འཕྲོད་བསྟེན་དང་འཚོ་བཅུད་ཀྱི་གྲོགས་པོ།';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'འགོ་འཛུགས།';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'ཐོ་འགོད།';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'མཆོང་།';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal =>
+      'ཁྱེད་རང་གི་བདེ་ཐང་གི་དམིགས་ཡུལ་གཙོ་བོ་གང་ཡིན་ནམ།';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'ལྗིད་ཚད་འཇམ་པོ།';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'ཤ་གནད་འཕར་སྣོན་དང་སྟོབས་ཤུགས།';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'ཉིན་རེའི་ནུས་ཤུགས་དང་གསོན་ཤུགས།';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'བདེ་ཐང་གི་སེམས་ཁམས་ལྡན་པའི་ཟས་སྤྱོད།';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'ཁྱེད་རང་གི་སྐོར་ང་ཚོར་གསུང་དང་།';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'ཁྱེད་ཀྱི་ཉིན་རྒྱུན་གྱི་ལས་རིམ།';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'ཆོག་མཆན་དང་མ་ལག་གི་འཛུལ་སྤྱོད།';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'དུས་མཉམ་གྱི་གོམ་པ་དང་ལུས་རྩལ་དང་དྲན་སྐུལ་ལ་འཛུལ་ཞུགས་བྱེད།';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'ཁྱེད་རང་གི་འཆར་གཞི་གྲ་སྒྲིག་ཟིན་འདུག';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'ང་ཚོས་ཁྱེད་ཀྱི་ཆེད་དུ་ཟས་བཅུད་དང་བདེ་ཐང་གི་ལམ་ཕྱོགས་འཇམ་པོ་དང་སྒེར་གྱི་ལམ་ཕྱོགས་ཤིག་བཟོས་ཡོད།';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'བྷུ་ལུམ་ནང་དུ་འཛུལ་རོགས།';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'བདུན་ཕྲག་རེའི་བདེ་ཐང་ཕྱོགས་བསྡོམས།';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'གཅིག་མཐུན་ཉིན་མོ་ཡག་ཤོས། $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'ལམ་ཐིག་དང་ལམ་ཚད་རྡོ་རིང་།';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return '$date ཐོག་ལྡེ་མིག་ཕྱེ་ཡོད།';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'ཡར་རྒྱས་ཡག་པོ་མུ་མཐུད་དུ་གཏོང་རོགས།';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'གཙོ་གཟུགས་འཆར་ཤེལ་གྱི་ཆ་ཤས།';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'ཤུགས་ལྡན་གྱི་ཡོ་ཆས། $count';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => 'བྷུ་ལུ་མི་བདེ་ཐང་ལྟེ་གནས་ཁང་།';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'གོམ་པ་དང་ཤུགས་ལྡན་གྱི་མཛུབ་དཀྱི།';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'རླན་གཤེར་མགྱོགས་མྱུར་དྲན་ཐོ།';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'བུལུ་མིའི་མཚོན་རྟགས་ཀྱི་རོགས་སྐྱོར།';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'OS ཆུ་ཚོད་རིག་ནུས་ཅན་གྱོན།';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'ཆུ་ཚོད་དང་སྦྲེལ་ཡོད།';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'དུས་མཉམ་ལྟ་ཞིབ་གྲངས་ཐོ།';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'ཕྱི་ཚུལ་དང་བརྗོད་གཞི།';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'བརྗོད་དོན་ཐབས་ལམ།';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'འོད།';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'མུན་ནག་པོ།';
 
   @override
-  String get theme_system => 'System Default';
+  String get theme_system => 'མ་ལག་སྔོན་སྒྲིག';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'རྒྱབ་ལྗོངས་ཀྱི་ཚོན་མདོག';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'ཚད་གཞིའི་ཚད་གཞི།';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'མེ་ཊིག (ཀེ་ཇི་, སེན་ཊི་མི་ཊར། མི་ལི་ལི་ཊར་)';
 
   @override
-  String get units_imperial => 'Imperial (lbs, in, fl oz)';
+  String get units_imperial => 'ཨིམ་པི་རི་ཡལ་ (ལྗིད་ཚད་དང་། ནང་། ཧྥོལ་ཨོ་ཟི།)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'མཛུབ་སྟོན་སྒྲོམ་མངོན་མི་ཐུབ།';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req =>
+      'འཕྲོད་བསྟེན་མཐུད་ཆོག་པའི་ཆོག་མཆན་དགོས།';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'བུལུ་མི་ལ་དུས་ཚོད་ངོ་མའི་ནང་གོམ་པ་ངོ་མ་དང་། སྙིང་གི་འཕར་ཚད། དེ་བཞིན་ཁ་པར་གྱི་ཁྱིམ་གྱི་ཡོ་ཆས་མཉམ་སྒྲིག་བྱེད་པར་འཕྲོད་བསྟེན་མཐུད་ཆོག་པའི་ཆོག་མཆན་དགོས།';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'འཕྲོད་བསྟེན་འབྲེལ་མཐུད་བྱེད་དུ་འཇུག་པ།';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day =>
+      'སེམས་ཁམས་ལྡན་པའི་ཉིན་མོ་ཞིག་ལ་གྲ་སྒྲིག་ཡིན་ནམ། ✨ .';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'མགྱོགས་མྱུར་ཁ་སྣོན།';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'ཐད་གཏོང་GPS';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'ཚ་དྲོད་ལྷག་མ།';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'ཟོས་ཚད། $consumed / $targetཀེ་ཀལ་';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'ཆུ་རྗེས་འདེད་འཕྲུལ་ཆས་ལ་རྡེབ།';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'ཉིན་རེའི་དམིགས་ཡུལ་འགྲུབ་སོང་།';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml ཉིན་རེའི་དམིགས་ཚད།';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'ཞིབ་ཕྲ།';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'སྒེར་གྱི་ཉིན་རེའི་དམིགས་འབེན་དང་མིས་བཟོས་རིག་ནུས་འཆར་གཞིའི་ལྡེ་མིག་ཕྱེ་བར་རིམ་སྤོར།';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'ལྡེ་མིག་ཕྱེ་བ།';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'མགྱོགས་མྱུར་ངང་བདེ་ཐང་ཐོ་འགོད་བྱས།';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'ཞབས་ཞུའི་ཚད་གཞི།';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'ཞབས་ཞུ། (ག)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'ཞབས་ཞུའི་གྲངས།';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'ཟས་རིགས་རེར་ཚ་ཚད།';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'རྒྱུ་ཆ།';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'རྒྱུ་ཆ་ཁ་སྣོན་བྱེད་པ།';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'མཛུབ་སྟོན་དང་དྲན་ཐོ།';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'བཟོ་སྟངས་ཀྱི་འཚོ་བཅུད་བསྡོམས་འབོར།';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'ཟས་བཅུད་ཟས་རིགས་རེ།';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'སྲོལ་རྒྱུན་གྱི་ཟ་མ་ལེགས་འགྲུབ་བྱུང་ནས་ཉར་ཚགས་བྱས།';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'ཐོན་རྫས་རྙེད་སོང་།';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'ང་ཚོས་ཁ་ཕྱེ་བའི་གཞི་གྲངས་མཛོད་ནས་ཐིག་རིས་འདི་རྙེད་མ་ཐུབ། ཁྱེད་ཀྱིས་དེ་སྲོལ་རྒྱུན་གྱི་ཟས་རིགས་ལྟར་ཁ་སྣོན་བྱེད་ཐུབ།';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'རང་མོས་ཟས་རིགས་ཁ་སྣོན།';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'ཡང་བསྐྱར་པར་བཤུས།';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'བརྟག་དཔྱད་བྱས་པའི་ཟས་རིགས།';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'གྲངས་ཚད་སྙོམ་སྒྲིག་བྱེད་པའམ་ཡང་ན་ངོས་འཛིན་མ་ཐུབ་པའི་དངོས་པོ་གང་རུང་མེད་པར་བཟོ་བ།';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'ལོག་བདམས་པའི་ཟས་རིགས།';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'དགའ་མོས་ཆེ་ཤོས་ཀྱི་ཟས་རིགས།';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'ཉེ་ཆར་གྱི་ཟས་རིགས།';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'ད་དུང་དགའ་མོས་ཆེ་ཤོས་ཀྱི་ཟ་མ་མེད། འདིར་ཉར་ཚགས་བྱེད་པའི་ཁ་ལག་གང་རུང་ཞིག་ལ་སེམས་ལ་རྡེབ་རོགས།';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents => 'ཉེ་ཆར་ཐོ་འགོད་བྱས་པའི་ཟས་རིགས་གང་ཡང་རྙེད་མེད།';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title => 'ཉིན་རེའི་འཚོ་བཅུད་ཞིབ་ཕྲ།';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'སྤྲི་དཀར་འགྱེར།';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'ཀར་བོན་གྱི་གཤེར་ཁུ།';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'ཚིལ་གཅོད་པ།';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'སྐུད་པ་གཅོད་པ།';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'དམིགས་ཚད་བསྡུར་ཚུལ།';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'དམིགས་ཚད། $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'ཉིན་ཐོ་རྩོམ་སྒྲིག་བྱེད་པ།';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'ཐོ་འགོད་སུབ།';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams ག';
   }
 
   @override
   String food_kcal_short(Object kcal) {
-    return '$kcal kcal';
+    return '$kcal ཀེ་ཀཱལ།';
   }
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$currentཡི་$target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'དེ་རིང་གི་ཆུ་ལོག།';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'དེ་རིང་ད་དུང་ཆུ་འཛག་མེད། ཆུ་བླུགས་ནས་མགྱོགས་མྱུར་ཁ་སྣོན་བྱེད་པའི་མཐེབ་གཞོང་ལ་རྡེབ་རོགས།';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'ཉིན་རེའི་དམིགས་འབེན་སྙོམ་སྒྲིག་བྱེད་པ།';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'འཕྲོད་བསྟེན་མཐུད་སྦྲེལ་བྱས་པ།';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'ཉིན་རེའི་འཕྲོད་བསྟེན་གལ་ཆེ།';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'སྙིང་གི་འཕར་ཚད་གསར་ཤོས།';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'ཁྲག་ཤེད།';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'ཁྲག་གི་སྲོག་རླུང་།';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'ཁྲག་གི་མངར་ཚད།';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'ལྗིད་ཚད།';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'གཉིད་ཀྱི་དུས་ཡུན།';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'ལག་ཐོག་ཚད་འཇལ་ཁ་སྣོན།';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'ལོ་རྒྱུས་ཀྱི་འགྲོ་ཕྱོགས།';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'འཕྲོད་བསྟེན་གྱི་གཞི་གྲངས་ལེགས་འགྲུབ་བྱུང་ནས་མཉམ་སྒྲིག་བྱས།';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hoursཆུ་ཚོད་$minsསྐར་མ།';
   }
 
   @override
   String health_metric_weight_val(Object val) {
-    return '$val kg';
+    return '$valཀེ་ཇི་';
   }
 
   @override
@@ -1283,12 +1299,12 @@ class AppLocalizationsLbj extends AppLocalizations {
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg';
   }
 
   @override
@@ -1297,234 +1313,238 @@ class AppLocalizationsLbj extends AppLocalizations {
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title => 'མཐུད་པའི་སྒྲིག་ཆས་དང་གྱོན་ཆས།';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'ཆུ་ཚོད་རིག་རྩལ་ཆ་གཅིག་དང་ལུས་རྩལ་རྗེས་འདེད་འཕྲུལ་ཆས་དང་འཕྲོད་བསྟེན་ཚོར་བྱེད་དོ་དམ་བྱེད།';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'ལུས་རྩལ་རྩོམ་སྒྲིག';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'ལུས་རྩལ་གྱི་མིང་།';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'དུས་ཡུན།(སྐར་མ)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'ཚོད་དཔག་བྱས་པའི་ཚ་དྲོད་(kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'ཚེས་གྲངས་དང་དུས་ཚོད།';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap =>
+      'ཁྱེད་རང་གི་སྒེར་གྱི་ལམ་ཕྱོགས་ས་ཁྲ།';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'ཞོགས་པའི་རྒྱུན་སྲོལ།';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'ཉིན་གུང་བདེ་ཐང་།';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'དགོང་མོའི་རླུང་གཡབ།';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'བྷུ་ལུ་མི་མིས་བཟོས་རིག་ནུས་སློབ་སྟོན་པ།';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => 'ཉིན་བདུན་གྱི་བདེ་ཐང་དམིགས་ཡུལ།';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'བདེ་ཐང་དམིགས་འབེན་དང་དམིགས་ཡུལ།';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'ཉིན་རེའི་ཚ་དྲོད་འཆར་དངུལ།';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'ཉིན་རེའི་ཆུའི་དམིགས་འབེན།';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'ཉིན་རེའི་གོམ་པའི་དམིགས་ཡུལ།';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'འཚོ་བཅུད་ཆེ་བའི་བསྡུར་ཚད།';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'མི་སྒེར་གྱི་ཆ་འཕྲིན།';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'གཟུགས་པོའི་ཚད་གཞི།';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'དགའ་མོས་དང་མཉེན་ཆས་སྒྲིག་སྟངས།';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'ཁྱེད་ཀྱི་མིང་།';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'མཐོ་ཚད། ($unit)';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'ལྗིད་ཚད། ($unit)';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'ལོ་ཚད།';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'ཕོ།';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'བུད་མེད།';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'གཞན། / མ་བཤད་པར་དགའ།';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary => 'ལུས་རྩལ་ཉུང་ཉུང་ནས་མེད་པ)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light =>
+      'ཅུང་ཟད་འགུལ་སྐྱོད་བྱེད་པ། (བདུན་ཕྲག་རེར་ཉིན་1-3)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate =>
+      'བར་མའི་འགུལ་སྐྱོད་(བདུན་ཕྲག་རེར་ཉིན་3ནས་5བར)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very =>
+      'ཧ་ཅང་འགུལ་སྐྱོད་ཆེན་པོ་ཡོད། (བདུན་ཕྲག་རེར་ཉིན་6-7)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => 'OS མཉམ་རོགས་མཉེན་ཆས་གྱོན།';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'ཁྱེད་རང་གི་Wear OSཆུ་ཚོད་སྟེང་ལ་Bluomi གྱི་རྡོ་ཆས་དང་མགོ་རྙོག་དེ་བཙུགས་ནས་ཚ་དྲོད་དང་། ཆུ། གོམ་པ་སོགས་ལ་ལྟ་དགོས།';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'འབྲེལ་འདྲིས་ཅན་གྱི་ཨེན་ཀྲོཌ་ཡོ་ཆས།';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'ལམ་སེང་གསར་བརྗེ་བྱེད་ཆེད་དུ་དུས་ཚོད་ངོ་མའི་ཝི་ཇེཊ་རྣམས་ཁྱེད་ཀྱི་ཐབས་འཕྲུལ་གྱི་གདོང་ངོས་སྟེང་ལ་སྦྱར་རོགས།';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'བྷུ་ལུ་མིའི་སྐོར།';
 
   @override
-  String get settings_about_version => 'Version 1.0.0';
+  String get settings_about_version => 'ཐོན་རིམ་ ༡་༠་༠།';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => '100 བཟོ་སྐྲུན།';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'སེམས་ཁམས་ལྡན་པ་དང་བདེ་ཐང་གི་འཚོ་བ་སྐྱེལ་ཆེད་དུ་གཟབ་གཟབ་བྱས་ནས་བཟོས་ཡོད།';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'ཆ་རྐྱེན་དང་ཆ་རྐྱེན།';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'གསང་བའི་སྲིད་ཇུས།';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'རྩིས་ཁྲ་དང་གྲངས་ཐོ་སུབ་པ།';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'བྱ་སྤྱོད་འདི་ཕྱིར་འཐེན་བྱེད་མི་ཐུབ། ཁྱེད་ཀྱི་ཁ་ལག་དང་། ལུས་རྩལ། གལ་ཆེའི་དངོས་པོ། དེ་བཞིན་ངོ་སྤྲོད་བཅས་ཚང་མ་གཏན་འཇགས་སུ་བསུབས་རྒྱུ་རེད།';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'གཏན་དུ་བསུབ་པ།';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'བྷུ་ལུ་མི་ལ་ཕེབས་པར་དགའ་བསུ་ཞུ།';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'ཁྱེད་རང་གི་མི་ཚེའི་མཐའ་འཁོར་དུ་བཟོས་པའི་འཇམ་པོ་དང་སེམས་ཁམས་ལྡན་པའི་བདེ་ཐང་རྗེས་འདེད་བྱེད་པ།';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'ཁྱེད་ཀྱི་སྐོར།';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'རང་གི་དམིགས་ཡུལ།';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'ཉིན་རེའི་གོམས་གཤིས།';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'ཆོག་མཆན།';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'གྲ་སྒྲིག་ཡིན།';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm => 'འཕྲོད་བསྟེན་མཐུད་སྣེ།';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'གོམ་པ་བགྲང་ཆས་ཚོར་བྱེད།';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'དྲན་སྐུལ་དང་བརྡ་ཐོ།';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'པར་ཆས། (ཐིག་ཁྲམ་དང་ཟས་རིགས་པར་ཆས།)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'ཆོག་མཆན་སྤྲོད་པ།';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'མཛུབ་སྟོན་སྒྲོམ་ཁ་ཕྱེ།';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'ཆུ་བསྡུ་རུབ།';
 
   @override
-  String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+  String get notif_channel_hydration_desc => 'ཉིན་གང་བོར་ཆུའི་དྲན་སྐུལ་འཇམ་པོ།';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name => 'ཁ་ལག་དང་འཚོ་བཅུད་དྲན་སྐུལ།';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'ཞོགས་ཇ་དང་གུང་ཚིགས་དང་དགོང་ཚིགས་དྲན་སྐུལ་ཉེན་བརྡ།';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'གོམ་སྟབས་ཀྱི་ལམ་ཚད།';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'ཉིན་རེའི་གོམ་སྟབས་དམིགས་འབེན་ལ་སླེབས་སྐབས་རྟེན་འབྲེལ་ཞུ་བ།';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name =>
+      'འཕྲོད་བསྟེན་དང་ཚེ་སྲོག་གི་བརྟག་དཔྱད།';
 
   @override
   String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+      'ལྗིད་ཚད་དང་ཉལ་དུས་ཀྱི་རླུང་མར་དྲན་སྐུལ་བྱེད་པ།';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 ལོག་+250ml';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'གཉིད་ཁུག་པ་15m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 ལོག་ཟས་';
 
   @override
-  String get language => 'Language';
+  String get language => 'སྐད་ཡིག།';
 
   @override
-  String get share => 'Share';
+  String get share => 'མཉམ་སྤེལ།';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return '$count ཉིན།';
   }
 }

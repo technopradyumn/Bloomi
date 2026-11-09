@@ -1,10 +1,4 @@
 {
-  "ak": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "av": [
     "language",
     "share",
@@ -12,12 +6,6 @@
   ],
 
   "awa": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "ay": [
     "language",
     "share",
     "common_days"
@@ -41,19 +29,7 @@
     "common_days"
   ],
 
-  "bm": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "bo": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "br": [
     "language",
     "share",
     "common_days"
@@ -89,30 +65,6 @@
     "common_days"
   ],
 
-  "chr": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "co": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "cr": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "csb": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "cv": [
     "language",
     "share",
@@ -137,25 +89,7 @@
     "common_days"
   ],
 
-  "ee": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "en_IN": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "eo": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "ff": [
     "language",
     "share",
     "common_days"
@@ -167,49 +101,7 @@
     "common_days"
   ],
 
-  "fo": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "fur": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "fy": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "ga": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "gbm": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "gd": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "gn": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "ha": [
     "language",
     "share",
     "common_days"
@@ -233,25 +125,7 @@
     "common_days"
   ],
 
-  "ht": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "ig": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "ilo": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "iu": [
     "language",
     "share",
     "common_days"
@@ -269,12 +143,6 @@
     "common_days"
   ],
 
-  "kl": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "kok": [
     "language",
     "share",
@@ -282,36 +150,6 @@
   ],
 
   "ksw": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "la": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "lb": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "lg": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "lij": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "ln": [
     "language",
     "share",
     "common_days"
@@ -335,12 +173,6 @@
     "common_days"
   ],
 
-  "mg": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "mi": [
     "language",
     "share",
@@ -353,19 +185,7 @@
     "common_days"
   ],
 
-  "mt": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "mwr": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "nah": [
     "language",
     "share",
     "common_days"
@@ -377,49 +197,7 @@
     "common_days"
   ],
 
-  "nr": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "nv": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "ny": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "oc": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "oj": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "om": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "os": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "pap": [
     "language",
     "share",
     "common_days"
@@ -431,25 +209,7 @@
     "common_days"
   ],
 
-  "qu": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "raj": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "rm": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "rw": [
     "language",
     "share",
     "common_days"
@@ -473,12 +233,6 @@
     "common_days"
   ],
 
-  "sc": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "sd": [
     "language",
     "share",
@@ -497,37 +251,7 @@
     "common_days"
   ],
 
-  "sn": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "so": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "ss": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "st": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "su": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "szl": [
     "language",
     "share",
     "common_days"
@@ -545,19 +269,7 @@
     "common_days"
   ],
 
-  "ti": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "tk": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "tn": [
     "language",
     "share",
     "common_days"
@@ -581,12 +293,6 @@
     "common_days"
   ],
 
-  "ts": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "tt": [
     "language",
     "share",
@@ -605,49 +311,7 @@
     "common_days"
   ],
 
-  "ve": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "vec": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
   "war": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "wo": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "xh": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "yi": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "yo": [
-    "language",
-    "share",
-    "common_days"
-  ],
-
-  "yua": [
     "language",
     "share",
     "common_days"

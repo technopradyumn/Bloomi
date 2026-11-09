@@ -581,7 +581,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get health_sync_now => 'Эрүүл мэндийн өгөгдлийг синк хийх';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Сүүлд синк хийсэн: $time';
   }
 

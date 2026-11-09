@@ -582,7 +582,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get health_sync_now => 'Đồng bộ hóa dữ liệu sức khỏe';
 
   @override
-  String health_last_synced(Object time) {
+  String health_last_synced(Object time, Object yeroo) {
     return 'Đồng bộ hóa lần cuối: $time';
   }
 

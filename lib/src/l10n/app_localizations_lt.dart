@@ -9,169 +9,170 @@ class AppLocalizationsLt extends AppLocalizations {
   AppLocalizationsLt([String locale = 'lt']) : super(locale);
 
   @override
-  String get app_name => 'Bloomi';
+  String get app_name => 'Bloom';
 
   @override
-  String get nav_home => 'Home';
+  String get nav_home => 'Pradžia';
 
   @override
-  String get nav_today => 'Today';
+  String get nav_today => 'Šiandien';
 
   @override
-  String get nav_plan => 'Plan';
+  String get nav_plan => 'Planuoti';
 
   @override
-  String get nav_food => 'Food';
+  String get nav_food => 'Maistas';
 
   @override
-  String get nav_food_diary => 'Food Diary';
+  String get nav_food_diary => 'Maisto dienoraštis';
 
   @override
-  String get nav_workout => 'Workout Log';
+  String get nav_workout => 'Treniruočių žurnalas';
 
   @override
-  String get nav_health => 'Health';
+  String get nav_health => 'Sveikata';
 
   @override
-  String get nav_profile => 'Profile';
+  String get nav_profile => 'Profilis';
 
   @override
-  String get save => 'Save';
+  String get save => 'Išsaugoti';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Atšaukti';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Ištrinti';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Redaguoti';
 
   @override
-  String get done => 'Done';
+  String get done => 'Atlikta';
 
   @override
-  String get close => 'Close';
+  String get close => 'Uždaryti';
 
   @override
-  String get back => 'Back';
+  String get back => 'Atgal';
 
   @override
-  String get next => 'Next';
+  String get next => 'Kitas';
 
   @override
-  String get continue_btn => 'Continue';
+  String get continue_btn => 'Tęsti';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Patvirtinti';
 
   @override
-  String get search => 'Search';
+  String get search => 'Ieškoti';
 
   @override
-  String get filter => 'Filter';
+  String get filter => 'Filtruoti';
 
   @override
-  String get all => 'All';
+  String get all => 'Visi';
 
   @override
-  String get active => 'Active';
+  String get active => 'Aktyvus';
 
   @override
-  String get today => 'Today';
+  String get today => 'Šiandien';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'vakar';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Rytoj';
 
   @override
-  String get add => 'Add';
+  String get add => 'Pridėti';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'Pašalinti';
 
   @override
-  String get refresh => 'Refresh';
+  String get refresh => 'Atnaujinti';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Bandykite dar kartą';
 
   @override
-  String get error => 'Error';
+  String get error => 'Klaida';
 
   @override
-  String get success => 'Success';
+  String get success => 'Sėkmės';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Įkeliama...';
 
   @override
-  String get no_data => 'No data available';
+  String get no_data => 'Nėra duomenų';
 
   @override
-  String get offline => 'Offline Mode';
+  String get offline => 'Režimas neprisijungus';
 
   @override
-  String get offline_sub => 'Changes will sync once reconnected';
+  String get offline_sub =>
+      'Pakeitimai bus sinchronizuojami, kai vėl prisijungsite';
 
   @override
-  String get undo => 'Undo';
+  String get undo => 'Anuliuoti';
 
   @override
-  String get portion => 'Portion';
+  String get portion => 'Porcija';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity => 'Kiekis';
 
   @override
-  String get unit => 'Unit';
+  String get unit => 'Vienetas';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'Aišku';
 
   @override
-  String get select => 'Select';
+  String get select => 'Pasirinkite';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Taikyti';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Nustatyti iš naujo';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Gerai';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Taip';
 
   @override
-  String get no => 'No';
+  String get no => 'Nr';
 
   @override
-  String get optional => 'Optional';
+  String get optional => 'Neprivaloma';
 
   @override
-  String get calories => 'Calories';
+  String get calories => 'Kalorijos';
 
   @override
-  String get protein => 'Protein';
+  String get protein => 'Baltymai';
 
   @override
-  String get carbs => 'Carbs';
+  String get carbs => 'Angliavandeniai';
 
   @override
-  String get fat => 'Fat';
+  String get fat => 'Riebalai';
 
   @override
-  String get fiber => 'Fiber';
+  String get fiber => 'Pluoštas';
 
   @override
-  String get water => 'Water';
+  String get water => 'Vanduo';
 
   @override
-  String get steps => 'Steps';
+  String get steps => 'Žingsniai';
 
   @override
   String get kcal => 'kcal';
@@ -186,7 +187,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get kilograms => 'kg';
 
   @override
-  String get pounds => 'lbs';
+  String get pounds => 'svarų';
 
   @override
   String get centimeters => 'cm';
@@ -198,81 +199,81 @@ class AppLocalizationsLt extends AppLocalizations {
   String get bpm => 'bpm';
 
   @override
-  String get hours => 'hrs';
+  String get hours => 'val';
 
   @override
-  String get minutes => 'mins';
+  String get minutes => 'min';
 
   @override
-  String get serving => 'Serving';
+  String get serving => 'Serviravimas';
 
   @override
-  String get servings => 'Servings';
+  String get servings => 'Porcijos';
 
   @override
-  String get serving_size => 'Serving Size';
+  String get serving_size => 'Porcijos dydis';
 
   @override
-  String get per_100g => 'per 100g';
+  String get per_100g => 'už 100 g';
 
   @override
-  String get india => 'India';
+  String get india => 'Indija';
 
   @override
-  String get asia => 'Asia';
+  String get asia => 'Azija';
 
   @override
-  String get europe => 'Europe';
+  String get europe => 'Europa';
 
   @override
-  String get middle_east => 'Middle East';
+  String get middle_east => 'Artimieji Rytai';
 
   @override
-  String get africa => 'Africa';
+  String get africa => 'Afrika';
 
   @override
-  String get americas => 'Americas';
+  String get americas => 'Amerika';
 
   @override
-  String get home_title => 'Home';
+  String get home_title => 'Pradžia';
 
   @override
-  String get home_greeting_morning => 'Good Morning';
+  String get home_greeting_morning => 'Labas rytas';
 
   @override
-  String get home_greeting_afternoon => 'Good Afternoon';
+  String get home_greeting_afternoon => 'Laba diena';
 
   @override
-  String get home_greeting_evening => 'Good Evening';
+  String get home_greeting_evening => 'Labas vakaras';
 
   @override
-  String get home_streak_title => 'Blossom Streak';
+  String get home_streak_title => 'Žiedų ruožas';
 
   @override
   String home_streak_days(num count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '$count dienų serija',
+      one: '1 dienos serija',
+      zero: '0 dienų serija',
     );
     return '$_temp0';
   }
 
   @override
-  String get home_calories_burned => 'Burned';
+  String get home_calories_burned => 'Sudegė';
 
   @override
-  String get home_calories_budget => 'Calorie Budget';
+  String get home_calories_budget => 'Kalorijų biudžetas';
 
   @override
   String home_calories_remaining(Object kcal) {
-    return '$kcal kcal remaining';
+    return 'Liko $kcal kcal';
   }
 
   @override
-  String get home_water_title => 'Daily Hydration';
+  String get home_water_title => 'Kasdienis drėkinimas';
 
   @override
   String home_water_goal(Object current, Object target) {
@@ -280,937 +281,949 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
-  String get home_steps_title => 'Steps Walked';
+  String get home_steps_title => 'Žingsniai ėjo';
 
   @override
-  String get home_quick_actions => 'Quick Actions';
+  String get home_quick_actions => 'Greiti veiksmai';
 
   @override
-  String get home_log_meal => 'Log Meal';
+  String get home_log_meal => 'Rąsto valgis';
 
   @override
-  String get home_log_water => 'Log Water';
+  String get home_log_water => 'Log Vanduo';
 
   @override
-  String get home_log_workout => 'Log Workout';
+  String get home_log_workout => 'Log treniruotė';
 
   @override
-  String get home_log_weight => 'Log Weight';
+  String get home_log_weight => 'Rąsto svoris';
 
   @override
-  String get home_insights_title => 'Today\'s Insights';
+  String get home_insights_title => 'Šiandienos įžvalgos';
 
   @override
   String get home_quote =>
-      'Small healthy choices create blooming transformations.';
+      'Maži sveiki pasirinkimai sukuria žydinčias transformacijas.';
 
   @override
-  String get home_ai_coach_tip => 'Bloomi AI Coach';
+  String get home_ai_coach_tip => 'Bloom AI treneris';
 
   @override
-  String get home_surroundings => 'Surroundings & Air';
+  String get home_surroundings => 'Aplinka ir oras';
 
   @override
-  String get home_notifications => 'Notifications';
+  String get home_notifications => 'Pranešimai';
 
   @override
-  String get home_daily_score => 'Daily Wellness Score';
+  String get home_daily_score => 'Dienos sveikatingumo balas';
 
   @override
-  String get home_view_all => 'View All';
+  String get home_view_all => 'Žiūrėti viską';
 
   @override
-  String get food_diary_title => 'Food Diary';
+  String get food_diary_title => 'Maisto dienoraštis';
 
   @override
-  String get food_breakfast => 'Breakfast';
+  String get food_breakfast => 'Pusryčiai';
 
   @override
-  String get food_lunch => 'Lunch';
+  String get food_lunch => 'Pietūs';
 
   @override
-  String get food_dinner => 'Dinner';
+  String get food_dinner => 'Vakarienė';
 
   @override
-  String get food_snacks => 'Snacks';
+  String get food_snacks => 'Užkandžiai';
 
   @override
-  String get food_add_food => 'Add Food';
+  String get food_add_food => 'Pridėti Maisto';
 
   @override
-  String get food_edit_food => 'Edit Food';
+  String get food_edit_food => 'Redaguoti maistą';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Pridėti pusryčius';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Pridėti pietus';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Pridėti vakarienę';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Pridėti užkandį';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Bendras kalorijų kiekis';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal =>
+      'Šiam patiekalui dar nėra užregistruotų maisto produktų';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'Šiai dienai valgymų neužregistruota';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'Bakstelėkite +, kad užregistruotumėte pirmąjį skanų patiekalą';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Greitas pridėjimas';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Ieškokite patiekalų, vaisių, dal, roti...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Individualus maistas ir receptas';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'Nuskaityti brūkšninį kodą';
 
   @override
-  String get food_camera_scan => 'AI Food Scanner';
+  String get food_camera_scan => 'AI maisto skaitytuvas';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Naujausi maisto produktai';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Mėgstamiausi';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Makroelementų suskirstymas';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'Ar tikrai norite pašalinti šį elementą?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Pašalintas maisto produktas';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'likę';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'suvartojama';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return '$target kcal';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Ieškoti maisto produktų';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Nuskaityti brūkšninį kodą';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => '„Snap Food“ nuotr';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Sukurkite individualų maistą';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Naujausios paieškos';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Populiarūs patiekalai';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results =>
+      'Nėra jūsų paiešką atitinkančių maisto produktų';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Brūkšninių kodų skaitytuvas';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align => 'Sulygiuokite brūkšninį kodą kameros rėmelyje';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'Prekė nerasta duomenų bazėje';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'Brūkšninių kodų nuskaitymas galimas naudojant „Bloomi Pro“.';
 
   @override
-  String get camera_title => 'AI Food Scanner';
+  String get camera_title => 'AI maisto skaitytuvas';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Aiškiai nufotografuokite savo patiekalą';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'Analizuojama maisto lėkštė...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Aptikti daiktai';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Perjungti blykstę';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Pakartoti nuotrauką';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Patvirtinti elementus';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Individualus maistas ir receptas';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Patiekalo arba ingrediento pavadinimas';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Kalorijos (kcal)';
 
   @override
-  String get customFood_protein_hint => 'Protein (g)';
+  String get customFood_protein_hint => 'Baltymai (g)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'angliavandeniai (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'riebalai (g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Išsaugoti receptą';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Vandens stebėjimo priemonė';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Kasdienis hidratacijos tikslas';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Prisiregistravo šiandien';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml Stiklas';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ml buteliukas';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Tinkinta suma';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'Reguliariai gerkite vandenį visą dieną, kad gautumėte nuolatinę energiją.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Užregistruota $amount ml vandens 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Treniruočių žurnalas';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Pridėti treniruotę';
 
   @override
-  String get workout_cardio => 'Cardio';
+  String get workout_cardio => 'Kardio';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Jėga';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Joga ir lankstumas';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Trukmė';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Intensyvumas';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Sudegintos kalorijos';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Šiandien neužregistruota jokių treniruočių';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'Treniruotė sėkmingai išsaugota!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Treniruotės tipas';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Pastabos ir atspindžiai';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Sveikata ir gyvybiškai svarbūs dalykai';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Širdies ritmas';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Kraujo deguonis (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Kraujo spaudimas';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Gliukozės kiekis kraujyje';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Kūno temperatūra';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Miego sekimas';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'Svoris ir kūno sudėtis';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Liemens ir klubų santykis';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Įrenginiai ir išmaniųjų laikrodžių centras';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'Sinchronizuoti sveikatos duomenis';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'Paskutinį kartą sinchronizuota: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Rankinis sveikatos įvedimas';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Metrikos detalės';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Prijungti sveikatos jutikliai';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Dienos planas';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'Savaitės sveikatingumo planas';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Kalorijų tikslas';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Hidratacijos tikslas';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'Žingsnis Tikslas';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Miego tikslas';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Maitinimo pasiūlymai';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Sveiki įpročiai ir patarimai';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => '„Bloomi AI Coach“ rekomendacijos';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'Asmeninis dienos grafikas';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Profilis';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Redaguoti profilį';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Vardas';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Amžius';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Lytis';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Aukštis';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Svoris';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Pagrindinis tikslas';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Veiklos lygis';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Mano sveikatingumo statistika';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Profilis sėkmingai atnaujintas';
 
   @override
-  String get profile_bmi => 'Body Mass Index (BMI)';
+  String get profile_bmi => 'Kūno masės indeksas (KMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Narystė';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Nustatymai';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'NUORODOS IR ĮPROČIAI';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Išvaizda ir tema';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Tamsios, šviesios, sistemos režimo ir programos fono parinktys';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Leidimai ir prieiga prie sistemos';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      '„Health Connect“, žingsnių jutikliai, GPS, pranešimai ir fotoaparatas';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Priminimai ir pranešimai';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Valgymo laikas, vanduo, svorio registracija ir priminimai apie miegą';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Matavimo vienetai';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Metrinė (kg, cm, ml, km) arba imperinė (lbs, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'Programos kalba';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'Anglų, हिन्दी (hindi), hingų ir 195 ir daugiau pasaulinių kalbų';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Pagrindinio ekrano valdikliai';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Tiesioginiai „Android“ valdikliai: centras, žingsniai, vanduo, mityba ir talismanas';
 
   @override
-  String get wear_os_watch_app => 'Wear OS Watch App';
+  String get wear_os_watch_app => '„Wear OS Watch“ programa';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Išmaniojo laikrodžio kompanionas, plytelės, komplikacijos ir gyvybiškai svarbūs dalykai';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'TIKSLAI IR SVEIKATOS ĮŽVALGOS';
 
   @override
-  String get nutrition_targets => 'Nutrition Targets & Macro Split';
+  String get nutrition_targets => 'Mitybos tikslai ir makro padalijimas';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Tikslas kalorijų kiekis, baltymų, angliavandenių, riebalų ir vandens tikslas';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Savaitės sveikatingumo apžvalga';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      '7 dienų kalorijų vidurkis, makro santykis ir geriausia diena';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Juostos ir etapai';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'Aktyvūs žiedų ruožai, ženkleliai ir pasiekimai';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'PRIJUNGTI PRIETAISAI IR EKOSISTEMA';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Įrenginiai ir išmaniųjų laikrodžių centras';
 
   @override
   String get devices_hub_sub =>
       'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Apylinkės ir orai';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Oro kokybės (AQI), UV indekso ir oro drėkinimo patarimai';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => '„Bloomi Pro“ prenumerata';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'AI plano treneris, 5 pagrindinio ekrano valdikliai ir gyvybinių funkcijų stebėjimas';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'APIE IR SAUGUMAS';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Apie Bloomą';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub =>
+      'Sukūrimo specifikacijos, versija, priskyrimai';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'Privatumo politika';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub =>
+      'Pirmiausia neprisijungus, įrenginio duomenų architektūra';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Taisyklės ir sąlygos';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'Paslaugų teikimo sąlygos ir sveikatingumo gairės';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Ištrinkite paskyrą ir duomenis';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Negrįžtamai ištrinkite vietinius SQLite duomenis ir debesies atsargines kopijas';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits =>
+      'Sukurkite švelnius, ilgalaikius sveikatingumo įpročius';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Mano sekami duomenys ir žurnalai';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language => 'Ieškoti pagal kalbą arba gimtąjį raštą...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Galimos kalbos';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'Atitinkančių kalbų nerasta';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Pabandykite ieškoti pagal gimtąją arba anglų kalbos rašybą';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Iš dalies išversta';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Užbaigti';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Kalba nustatyta į $name ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Aplinka ir aplinka';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Oro kokybės indeksas';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'UV indeksas';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Temperatūra';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Drėgmė';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Išlikite gerai hidratuoti esamomis oro sąlygomis.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Ieškoti maisto';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Nuskaityti brūkšninį kodą 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Įpilkite vandens';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Individualus maistas';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Gerai';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Vidutinis';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'Nesveika';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Pranešimai ir įspėjimai';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Nėra naujų pranešimų';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Pažymėti viską kaip perskaitytą';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Išvalyti viską';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Priminimo nustatymai';
 
   @override
   String get notifications => 'Push Notifications';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Pusryčių priminimas 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'Labas rytas! Laikas sočių pusryčių $time.';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Pietų priminimas 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Sustabdykite ir mėgaukitės subalansuotais, apgalvotais pietumis $time.';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Vakarienės priminimas 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Laikas lengvai ir sočiai vakarienei $time.';
   }
 
   @override
-  String get reminders_water_title => 'Hydration Nudge 💧';
+  String get reminders_water_title => 'Drėkinamoji priemonė 💧';
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'Laikas išgerti stiklinę šviežio vandens! ( $time )';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Savaitinis svėrimas ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Stebėkite savo savaitės kūno metriką „Bloom“ ( $time ).';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Poilsis prieš miegą 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Atsipalaiduokite ir pasiruoškite ramiam miegui ( $time ).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Sveiki atvykę į Bloomą';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Jūsų draugiškas, neprisijungęs sveikatos ir mitybos draugas.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Pradėkite';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Prisijunkite';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Praleisti';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal =>
+      'Koks jūsų pagrindinis sveikatingumo tikslas?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Švelnus svorio metimas';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Raumenų padidėjimas ir stiprumas';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Kasdieninė energija ir gyvybingumas';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'Sveika sąmoninga mityba';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Papasakokite apie save';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Jūsų kasdienė rutina';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'Leidimai ir prieiga prie sistemos';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Suteikite prieigą prie sinchronizavimo veiksmų, treniruočių ir priminimų.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Jūsų tinkintas planas paruoštas!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Sukūrėme švelnų, individualizuotą mitybos ir sveikatingumo planą kaip tik jums.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Įeikite Bloom';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Savaitės sveikatingumo apžvalga';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'Geriausios nuoseklumo diena: $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Juostos ir etapai';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Atrakinta $date';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'Tęskite fantastišką pažangą!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Pagrindinio ekrano valdikliai';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Aktyvūs valdikliai: $count';
   }
 
   @override
-  String get widgets_hub_title => 'Bloomi Wellness Hub';
+  String get widgets_hub_title => '„Bloomi“ sveikatingumo centras';
 
   @override
-  String get widgets_steps_title => 'Steps & Active Ring';
+  String get widgets_steps_title => 'Žingsniai ir aktyvus žiedas';
 
   @override
-  String get widgets_water_title => 'Hydration Quick Log';
+  String get widgets_water_title => 'Hidratacijos greitas žurnalas';
 
   @override
-  String get widgets_mascot_title => 'Bloomi Mascot Companion';
+  String get widgets_mascot_title => 'Bloomo talismano kompanionas';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => '„Wear OS“ išmanusis laikrodis';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Prijungtas prie laikrodžio';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Sinchronizuoti laikrodžio duomenis';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Išvaizda ir tema';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Temos režimas';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Šviesa';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Tamsus';
 
   @override
   String get theme_system => 'System';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Fono paletė';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Matavimo vienetai';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Metrika (kg, cm, ml)';
 
   @override
-  String get units_imperial => 'Imperial (lbs, in, fl oz)';
+  String get units_imperial => 'Imperatoriškasis (lbs, in, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Nepavyko įkelti prietaisų skydelio';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req =>
+      'Reikalingas „Health Connect“ leidimas';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      '„Bloom“ reikalingas „Health Connect“ leidimas, kad būtų galima nustatyti tikrus žingsnius, širdies ritmą ir sinchronizuoti mobiliojo namo valdiklius realiuoju laiku.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Leisti „Health Connect“.';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'Pasiruošę dėmesingai dienai? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Greitas pridėjimas';
 
   @override
-  String get home_live_gps => 'Live GPS';
+  String get home_live_gps => 'Tiesioginis GPS';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'LIKO KALORIJOS';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Suvalgyta: $consumed / $target kcal';
   }
 
   @override
-  String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
+  String get home_tap_water_tracker => 'Vandens stebėjimo čiaupas 💧';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'Dienos tikslas pasiektas 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml iki dienos tikslo';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Detalės';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Atnaujinkite, kad atrakintumėte suasmenintus kasdienius tikslus ir AI planą';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Atrakinti 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'Greitai įrašykite sveikatingumo įrašą';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Porcijos dydis';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'Patiekimas (g)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Porcijų skaičius';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Kalorijų vienai porcijai';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Ingredientai';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Pridėti ingredientą';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Instrukcijos ir pastabos';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Viso recepto mityba';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Mityba porcijai';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast =>
+      'Pagal užsakymą maistas sėkmingai išsaugotas!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'Produktas rastas!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Negalėjome rasti šio brūkšninio kodo atviroje duomenų bazėje. Galite pridėti jį kaip individualų maistą.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Pridėti individualų maistą';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'Nuskaityti dar kartą';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'Peržiūrėkite aptiktus maisto produktus';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Koreguokite kiekius arba pašalinkite neatpažintą prekę';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected =>
+      'Prisijunkite prie pasirinktų maisto produktų';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Mėgstamiausias maistas';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Naujausi maisto produktai';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Mėgstamiausių maisto produktų dar nėra. Bakstelėkite bet kokį maistą, kad sutaupytumėte čia.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents => 'Nerasta neseniai įrašytų maisto produktų.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title =>
+      'Išsami informacija apie kasdienę mitybą';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'Baltymų skaidymas';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'Angliavandenių suskirstymas';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'Riebalų skaidymas';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Pluošto skaidymas';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Tikslų palyginimas';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Tikslas: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Redaguoti dienoraščio įrašą';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Ištrinti įrašą';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams g';
   }
 
   @override
@@ -1220,55 +1233,56 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current iš $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Šiandienos vandens žurnalai';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Šiandien dar nėra vandens. Drėkinkite ir bakstelėkite greito pridėjimo mygtuką!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Koreguokite dienos tikslą';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Prisijungta prie „Health Connect“.';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Kasdieniai sveikatos rodikliai';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Naujausias širdies ritmas';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Kraujo spaudimas';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Kraujo deguonis';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Gliukozės kiekis kraujyje';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Svoris';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Miego trukmė';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Pridėti rankinį matavimą';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Istorinės tendencijos';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success =>
+      'Sveikatos duomenys sėkmingai sinchronizuoti!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours val. $mins min';
   }
 
   @override
@@ -1283,12 +1297,12 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg';
   }
 
   @override
@@ -1297,234 +1311,239 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title =>
+      'Prijungti įrenginiai ir nešiojami įrenginiai';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Tvarkykite suporuotus išmaniuosius laikrodžius, kūno rengybos stebėjimo priemones ir sveikatos jutiklius.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Redaguoti treniruotę';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Treniruotės pavadinimas';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Trukmė (min.)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'Apskaičiuotos kalorijos (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Data ir laikas';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap => 'Jūsų asmeninis planas';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Ryto rutina';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Vidurdienio sveikatingumas';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Vakaro ramybė';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Bloom AI treneris';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7 dienų sveikatingumo dėmesys';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Sveikatos tikslai ir tikslai';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Dienos kalorijų biudžetas';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Dienos vandens tikslas';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Dienos žingsnio tikslas';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Makroelementų santykis';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Asmeniniai duomenys';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Kūno išmatavimai';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'Parinktys ir programos nustatymai';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'Tavo vardas';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Aukštis ( $unit )';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Svoris ($unit)';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Amžius';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Vyriška';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Moteris';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Kita / Nenorėčiau pasakyti';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Sėdimas (mažai arba visai nesportuoja)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light =>
+      'Lengvai aktyvus (1-3 dienas per savaitę)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate =>
+      'Vidutiniškai aktyvus (3-5 dienas per savaitę)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'Labai aktyvus (6-7 dienas per savaitę)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => '„Wear OS Companion“ programa';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Įdiekite „Bloomi“ plytelę ir komplikaciją „Wear OS“ laikrodyje, kad pažvelgtumėte į kalorijas, vandenį ir žingsnius.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'Interaktyvūs Android valdikliai';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Prisekite realaus laiko valdiklius pagrindiniame įrenginio ekrane, kad gautumėte tiesioginius naujinius.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Apie Bloomą';
 
   @override
   String get settings_about_version => 'Version';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Pastatyti 100';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Sukurtas rūpestingai sąmoningam, sveikam gyvenimui.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Taisyklės ir sąlygos';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Privatumo politika';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Ištrinkite paskyrą ir duomenis';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Šio veiksmo anuliuoti negalima. Visi jūsų valgiai, treniruotės, gyvybiškai svarbūs elementai ir profilis bus visam laikui ištrinti.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Ištrinti visam laikui';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Sveiki atvykę į Bloom ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Švelnus, dėmesingas sveikatos stebėjimas, sukurtas atsižvelgiant į jūsų gyvenimą.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Apie Tave';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Jūsų tikslai';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Kasdieniai įpročiai';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Leidimai';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Pasiruošę!';
 
   @override
-  String get onboard_health_connect_perm => 'Health Connect Access';
+  String get onboard_health_connect_perm => '„Health Connect“ prieiga';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Žingsnių skaitiklio jutiklis';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Sąmoningi priminimai ir pranešimai';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm =>
+      'Kamera (brūkšninių kodų ir maisto skaitytuvas)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Suteikite leidimus';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Atidarykite prietaisų skydelį';
 
   @override
-  String get notif_channel_hydration_name => 'Hydration Nudges';
+  String get notif_channel_hydration_name => 'Drėkinimo stimuliatoriai';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Švelnūs vandens priminimai visą dieną';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name => 'Maitinimo ir mitybos priminimai';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Pusryčių, pietų ir vakarienės priminimo įspėjimai';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Žingsnio etapai';
 
   @override
   String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+      'Šventės, kai pasiekiami dienos žingsnių tikslai';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name =>
+      'Sveikatos ir gyvybinių funkcijų patikrinimai';
 
   @override
-  String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+  String get notif_channel_vitals_desc => 'Priminimai apie svorį ir miegą';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 Rąstas +250ml';
 
   @override
-  String get notif_action_snooze => 'Snooze 15m';
+  String get notif_action_snooze => 'Snausti 15m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Rąstinis valgis';
 
   @override
-  String get language => 'Language';
+  String get language => 'Kalba';
 
   @override
-  String get share => 'Share';
+  String get share => 'Dalintis';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return 'Prieš $count d';
   }
 }

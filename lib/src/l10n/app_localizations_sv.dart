@@ -253,9 +253,9 @@ class AppLocalizationsSv extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days streak',
-      one: '1 day streak',
-      zero: '0 days streak',
+      other: '$count dagars rad',
+      one: '1 dags rad',
+      zero: '0 dagars rad',
     );
     return '$_temp0';
   }
@@ -340,569 +340,571 @@ class AppLocalizationsSv extends AppLocalizations {
   String get food_edit_food => 'Redigera mat';
 
   @override
-  String get food_add_breakfast => 'Add Breakfast';
+  String get food_add_breakfast => 'Lägg till frukost';
 
   @override
-  String get food_add_lunch => 'Add Lunch';
+  String get food_add_lunch => 'Lägg till lunch';
 
   @override
-  String get food_add_dinner => 'Add Dinner';
+  String get food_add_dinner => 'Lägg till middag';
 
   @override
-  String get food_add_snack => 'Add Snack';
+  String get food_add_snack => 'Lägg till mellanmål';
 
   @override
-  String get food_total_calories => 'Total Calories';
+  String get food_total_calories => 'Totala kalorier';
 
   @override
-  String get food_empty_meal => 'No foods logged for this meal yet';
+  String get food_empty_meal => 'Inga livsmedel loggade för denna måltid än';
 
   @override
-  String get food_empty_diary => 'No meals logged for this day';
+  String get food_empty_diary => 'Inga måltider loggade för denna dag';
 
   @override
-  String get food_log_first_meal => 'Tap + to log your first delicious meal';
+  String get food_log_first_meal =>
+      'Tryck på + för att logga din första utsökta måltid';
 
   @override
-  String get food_quick_add => 'Quick Add';
+  String get food_quick_add => 'Snabb tillägg';
 
   @override
-  String get food_search_hint => 'Search dishes, fruits, dal, roti...';
+  String get food_search_hint => 'Sök efter rätter, frukt, dal, roti...';
 
   @override
-  String get food_custom_recipe => 'Custom Food & Recipe';
+  String get food_custom_recipe => 'Anpassad mat & recept';
 
   @override
-  String get food_scan_barcode => 'Scan Barcode';
+  String get food_scan_barcode => 'Skanna streckkod';
 
   @override
   String get food_camera_scan => 'AI Food Scanner';
 
   @override
-  String get food_recent => 'Recent Foods';
+  String get food_recent => 'Senaste livsmedel';
 
   @override
-  String get food_favourites => 'Favourites';
+  String get food_favourites => 'Favoriter';
 
   @override
-  String get food_macro_summary => 'Macronutrient Breakdown';
+  String get food_macro_summary => 'Fördelning av makronäringsämnen';
 
   @override
   String get food_delete_meal_confirm =>
-      'Are you sure you want to remove this item?';
+      'Är du säker på att du vill ta bort det här objektet?';
 
   @override
-  String get food_item_deleted => 'Food item removed';
+  String get food_item_deleted => 'Livsmedel borttaget';
 
   @override
-  String get food_remaining => 'remaining';
+  String get food_remaining => 'återstående';
 
   @override
-  String get food_consumed => 'consumed';
+  String get food_consumed => 'konsumeras';
 
   @override
   String food_of_target(Object target) {
-    return 'of $target kcal';
+    return 'av $target kcal';
   }
 
   @override
-  String get foodSearch_title => 'Search Foods';
+  String get foodSearch_title => 'Sök mat';
 
   @override
-  String get foodSearch_scan_barcode => 'Scan Barcode';
+  String get foodSearch_scan_barcode => 'Skanna streckkod';
 
   @override
-  String get foodSearch_take_photo => 'Snap Food Photo';
+  String get foodSearch_take_photo => 'Snap Food Foto';
 
   @override
-  String get foodSearch_custom_food => 'Create Custom Food';
+  String get foodSearch_custom_food => 'Skapa anpassad mat';
 
   @override
-  String get foodSearch_recent_searches => 'Recent Searches';
+  String get foodSearch_recent_searches => 'Senaste sökningar';
 
   @override
-  String get foodSearch_popular => 'Popular Dishes';
+  String get foodSearch_popular => 'Populära rätter';
 
   @override
-  String get foodSearch_no_results => 'No foods matching your search';
+  String get foodSearch_no_results => 'Ingen mat som matchar din sökning';
 
   @override
-  String get barcode_title => 'Barcode Scanner';
+  String get barcode_title => 'Streckkodsläsare';
 
   @override
-  String get barcode_align => 'Align barcode inside the camera frame';
+  String get barcode_align => 'Rikta in streckkoden inuti kameraramen';
 
   @override
-  String get barcode_not_found => 'Product not found in database';
+  String get barcode_not_found => 'Produkten hittades inte i databasen';
 
   @override
   String get barcode_premium_feature =>
-      'Barcode scanning is available with Bloomi Pro';
+      'Streckkodsskanning är tillgänglig med Bloomi Pro';
 
   @override
   String get camera_title => 'AI Food Scanner';
 
   @override
-  String get camera_tap_hint => 'Take a clear photo of your dish';
+  String get camera_tap_hint => 'Ta ett tydligt foto av din maträtt';
 
   @override
-  String get camera_analysing => 'Analysing food plate...';
+  String get camera_analysing => 'Analyserar mattallrik...';
 
   @override
-  String get camera_detected => 'Detected items';
+  String get camera_detected => 'Upptäckta föremål';
 
   @override
-  String get camera_flash => 'Toggle Flash';
+  String get camera_flash => 'Växla Flash';
 
   @override
-  String get camera_retake => 'Retake Photo';
+  String get camera_retake => 'Ta om foto';
 
   @override
-  String get camera_confirm_food => 'Confirm Items';
+  String get camera_confirm_food => 'Bekräfta objekt';
 
   @override
-  String get customFood_title => 'Custom Food & Recipe';
+  String get customFood_title => 'Anpassad mat & recept';
 
   @override
-  String get customFood_name_hint => 'Dish or ingredient name';
+  String get customFood_name_hint => 'Rättens eller ingrediensens namn';
 
   @override
-  String get customFood_calories_hint => 'Calories (kcal)';
+  String get customFood_calories_hint => 'Kalorier (kcal)';
 
   @override
   String get customFood_protein_hint => 'Protein (g)';
 
   @override
-  String get customFood_carbs_hint => 'Carbs (g)';
+  String get customFood_carbs_hint => 'Kolhydrater (g)';
 
   @override
-  String get customFood_fat_hint => 'Fat (g)';
+  String get customFood_fat_hint => 'Fett (g)';
 
   @override
-  String get customFood_save => 'Save Recipe';
+  String get customFood_save => 'Spara recept';
 
   @override
-  String get water_tracker_title => 'Water Tracker';
+  String get water_tracker_title => 'Vattenspårare';
 
   @override
-  String get water_daily_target => 'Daily Hydration Goal';
+  String get water_daily_target => 'Dagligt hydreringsmål';
 
   @override
-  String get water_logged_today => 'Logged Today';
+  String get water_logged_today => 'Loggade idag';
 
   @override
-  String get water_add_glass => '+250 ml Glass';
+  String get water_add_glass => '+250 ml glas';
 
   @override
-  String get water_add_bottle => '+500 ml Bottle';
+  String get water_add_bottle => '+500 ml flaska';
 
   @override
-  String get water_custom_amount => 'Custom Amount';
+  String get water_custom_amount => 'Anpassat belopp';
 
   @override
   String get water_reminder_tip =>
-      'Drink water regularly throughout the day for steady energy.';
+      'Drick vatten regelbundet under dagen för stadig energi.';
 
   @override
   String water_logged_toast(Object amount) {
-    return 'Logged $amount ml of water 💧';
+    return 'Loggade $amount ml vatten 💧';
   }
 
   @override
-  String get workout_title => 'Workout Log';
+  String get workout_title => 'Träningslogg';
 
   @override
-  String get workout_add_exercise => 'Add Workout';
+  String get workout_add_exercise => 'Lägg till träning';
 
   @override
   String get workout_cardio => 'Cardio';
 
   @override
-  String get workout_strength => 'Strength';
+  String get workout_strength => 'Styrka';
 
   @override
-  String get workout_yoga => 'Yoga & Flexibility';
+  String get workout_yoga => 'Yoga & flexibilitet';
 
   @override
-  String get workout_duration => 'Duration';
+  String get workout_duration => 'Varaktighet';
 
   @override
-  String get workout_intensity => 'Intensity';
+  String get workout_intensity => 'Intensitet';
 
   @override
-  String get workout_calories_burned => 'Calories Burned';
+  String get workout_calories_burned => 'Förbrända kalorier';
 
   @override
-  String get workout_empty => 'No workouts logged today';
+  String get workout_empty => 'Inga träningspass loggade idag';
 
   @override
-  String get workout_save_success => 'Workout saved successfully!';
+  String get workout_save_success => 'Träningspasset har sparats!';
 
   @override
-  String get workout_type => 'Workout Type';
+  String get workout_type => 'Typ av träning';
 
   @override
-  String get workout_notes => 'Notes & Reflections';
+  String get workout_notes => 'Anteckningar & reflektioner';
 
   @override
-  String get health_overview_title => 'Health & Vitals';
+  String get health_overview_title => 'Hälsa & Vitals';
 
   @override
-  String get health_heart_rate => 'Heart Rate';
+  String get health_heart_rate => 'Puls';
 
   @override
-  String get health_blood_oxygen => 'Blood Oxygen (SpO2)';
+  String get health_blood_oxygen => 'Blodsyre (SpO2)';
 
   @override
-  String get health_blood_pressure => 'Blood Pressure';
+  String get health_blood_pressure => 'Blodtryck';
 
   @override
-  String get health_blood_glucose => 'Blood Glucose';
+  String get health_blood_glucose => 'Blodglukos';
 
   @override
-  String get health_body_temperature => 'Body Temperature';
+  String get health_body_temperature => 'Kroppstemperatur';
 
   @override
-  String get health_sleep_tracking => 'Sleep Tracking';
+  String get health_sleep_tracking => 'Sömnspårning';
 
   @override
-  String get health_weight_tracking => 'Weight & Body Composition';
+  String get health_weight_tracking => 'Vikt & Kroppssammansättning';
 
   @override
-  String get health_waist_hip => 'Waist-to-Hip Ratio';
+  String get health_waist_hip => 'Midja-till-höft-förhållande';
 
   @override
-  String get health_devices_hub => 'Devices & Smartwatch Hub';
+  String get health_devices_hub => 'Enheter & Smartwatch Hub';
 
   @override
-  String get health_sync_now => 'Sync Health Data';
+  String get health_sync_now => 'Synkronisera hälsodata';
 
   @override
-  String health_last_synced(Object time) {
-    return 'Last synced: $time';
+  String health_last_synced(Object time, Object yeroo) {
+    return 'Senast synkroniserad: $time';
   }
 
   @override
-  String get health_manual_entry => 'Manual Health Entry';
+  String get health_manual_entry => 'Manuell hälsoinmatning';
 
   @override
-  String get health_metric_detail => 'Metric Details';
+  String get health_metric_detail => 'Metriska detaljer';
 
   @override
-  String get health_connected_sensors => 'Connected Health Sensors';
+  String get health_connected_sensors => 'Anslutna hälsosensorer';
 
   @override
-  String get plan_title => 'Daily Plan';
+  String get plan_title => 'Dagsplan';
 
   @override
-  String get plan_weekly_title => 'Weekly Wellness Plan';
+  String get plan_weekly_title => 'Veckovis hälsoplan';
 
   @override
-  String get plan_calorie_target => 'Calorie Target';
+  String get plan_calorie_target => 'Kalorimål';
 
   @override
-  String get plan_water_target => 'Hydration Target';
+  String get plan_water_target => 'Hydrationsmål';
 
   @override
-  String get plan_step_target => 'Step Target';
+  String get plan_step_target => 'Stegmål';
 
   @override
-  String get plan_sleep_target => 'Sleep Target';
+  String get plan_sleep_target => 'Sömnmål';
 
   @override
-  String get plan_meal_suggestions => 'Meal Suggestions';
+  String get plan_meal_suggestions => 'Måltidsförslag';
 
   @override
-  String get plan_healthy_habits => 'Healthy Habits & Tips';
+  String get plan_healthy_habits => 'Hälsosamma vanor och tips';
 
   @override
-  String get plan_coach_advice => 'Bloomi AI Coach Recommendations';
+  String get plan_coach_advice => 'Bloomi AI Coach rekommendationer';
 
   @override
-  String get plan_generated_title => 'Personalized Daily Schedule';
+  String get plan_generated_title => 'Personligt dagligt schema';
 
   @override
-  String get profile_title => 'Profile';
+  String get profile_title => 'Profil';
 
   @override
-  String get profile_edit => 'Edit Profile';
+  String get profile_edit => 'Redigera profil';
 
   @override
-  String get profile_name => 'Name';
+  String get profile_name => 'Namn';
 
   @override
-  String get profile_age => 'Age';
+  String get profile_age => 'Ålder';
 
   @override
-  String get profile_gender => 'Gender';
+  String get profile_gender => 'Kön';
 
   @override
-  String get profile_height => 'Height';
+  String get profile_height => 'Höjd';
 
   @override
-  String get profile_weight => 'Weight';
+  String get profile_weight => 'Vikt';
 
   @override
-  String get profile_goal => 'Primary Goal';
+  String get profile_goal => 'Primärt mål';
 
   @override
-  String get profile_activity_level => 'Activity Level';
+  String get profile_activity_level => 'Aktivitetsnivå';
 
   @override
-  String get profile_stats => 'My Wellness Stats';
+  String get profile_stats => 'Min hälsostatistik';
 
   @override
-  String get profile_saved => 'Profile updated successfully';
+  String get profile_saved => 'Profilen har uppdaterats';
 
   @override
   String get profile_bmi => 'Body Mass Index (BMI)';
 
   @override
-  String get profile_membership => 'Membership';
+  String get profile_membership => 'Medlemskap';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Inställningar';
 
   @override
-  String get preferences_habits => 'PREFERENCES & HABITS';
+  String get preferences_habits => 'PREFERENSER OCH VANOR';
 
   @override
-  String get appearance_theme => 'Appearance & Theme';
+  String get appearance_theme => 'Utseende & Tema';
 
   @override
   String get appearance_theme_sub =>
-      'Dark, Light, System Mode & App Background Options';
+      'Mörk, ljus, systemläge och appbakgrundsalternativ';
 
   @override
-  String get permissions => 'Permissions & System Access';
+  String get permissions => 'Behörigheter och systemåtkomst';
 
   @override
   String get permissions_sub =>
-      'Health Connect, Step Sensors, GPS, Notifications & Camera';
+      'Health Connect, stegsensorer, GPS, aviseringar och kamera';
 
   @override
-  String get reminders_notifications => 'Reminders & Notifications';
+  String get reminders_notifications => 'Påminnelser och meddelanden';
 
   @override
   String get reminders_sub =>
-      'Meal times, water, weight check-in & bedtime reminders';
+      'Måltider, vatten, viktincheckning och läggdagspåminnelser';
 
   @override
-  String get units_of_measurement => 'Units of Measurement';
+  String get units_of_measurement => 'Måttenheter';
 
   @override
   String get units_sub =>
-      'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)';
+      'Metriskt (kg, cm, ml, km) eller Imperial (lbs, ft/in, fl oz)';
 
   @override
-  String get app_language => 'App Language';
+  String get app_language => 'Appens språk';
 
   @override
   String get language_sub =>
-      'English, हिन्दी (Hindi), Hinglish & 195+ global languages';
+      'engelska, हिन्दी (Hindi), Hinglish & 195+ globala språk';
 
   @override
-  String get home_screen_widgets => 'Home Screen Widgets';
+  String get home_screen_widgets => 'Hemskärmswidgetar';
 
   @override
   String get widgets_sub =>
-      'Live Android widgets: Hub, Steps, Water, Nutrition & Mascot';
+      'Live Android-widgets: Hub, Steps, Water, Nutrition & Mascot';
 
   @override
   String get wear_os_watch_app => 'Wear OS Watch App';
 
   @override
   String get wear_os_sub =>
-      'Smartwatch companion, tiles, complications & live vitals';
+      'Smartwatch-följeslagare, brickor, komplikationer och levande vitala';
 
   @override
-  String get goals_wellness => 'GOALS & WELLNESS INSIGHTS';
+  String get goals_wellness => 'MÅL OCH VÄLKOMANSINSIKT';
 
   @override
   String get nutrition_targets => 'Nutrition Targets & Macro Split';
 
   @override
   String get nutrition_targets_sub =>
-      'Calorie target, protein, carbs, fat & water goal';
+      'Mål för kalorier, protein, kolhydrater, fett och vatten';
 
   @override
-  String get weekly_recap => 'Weekly Wellness Recap';
+  String get weekly_recap => 'Veckans välbefinnande sammanfattning';
 
   @override
   String get weekly_recap_sub =>
-      '7-day calorie average, macro ratio & best day';
+      '7-dagars kalorimedelvärde, makroförhållande och bästa dag';
 
   @override
-  String get streaks_milestones => 'Streaks & Milestones';
+  String get streaks_milestones => 'Sträckor och milstolpar';
 
   @override
-  String get streaks_sub => 'Active blossom streaks, badges & achievements';
+  String get streaks_sub => 'Aktiva blomstränder, märken och prestationer';
 
   @override
-  String get connected_devices => 'CONNECTED DEVICES & ECOSYSTEM';
+  String get connected_devices => 'ANSLUTNA ENHETER OCH EKOSYSTEM';
 
   @override
-  String get devices_hub => 'Devices & Smartwatch Hub';
+  String get devices_hub => 'Enheter & Smartwatch Hub';
 
   @override
   String get devices_hub_sub =>
       'Health Connect, Galaxy Watch, Pixel Watch, Garmin';
 
   @override
-  String get surroundings_weather => 'Surroundings & Weather';
+  String get surroundings_weather => 'Omgivning & väder';
 
   @override
   String get surroundings_sub =>
-      'Air quality (AQI), UV index & weather hydration tips';
+      'Luftkvalitet (AQI), UV-index & väderhydreringstips';
 
   @override
-  String get bloomi_pro => 'Bloomi Pro Subscription';
+  String get bloomi_pro => 'Bloomi Pro-prenumeration';
 
   @override
   String get bloomi_pro_sub =>
-      'AI Plan Coach, 5 home screen widgets & vitals tracking';
+      'AI Plan Coach, 5 widgets på startskärmen och spårning av vitals';
 
   @override
-  String get about_security => 'ABOUT & SECURITY';
+  String get about_security => 'OM & SÄKERHET';
 
   @override
-  String get about_bloomi => 'About Bloomi';
+  String get about_bloomi => 'Om Bloomi';
 
   @override
-  String get about_bloomi_sub => 'Build specifications, version, attributions';
+  String get about_bloomi_sub => 'Byggspecifikationer, version, attributioner';
 
   @override
-  String get privacy_policy => 'Privacy Policy';
+  String get privacy_policy => 'Sekretesspolicy';
 
   @override
-  String get privacy_policy_sub => 'Offline-first, on-device data architecture';
+  String get privacy_policy_sub => 'Offline-först, på enhetens dataarkitektur';
 
   @override
-  String get terms_conditions => 'Terms & Conditions';
+  String get terms_conditions => 'Allmänna villkor';
 
   @override
-  String get terms_conditions_sub => 'Terms of service and wellness guidelines';
+  String get terms_conditions_sub =>
+      'Användarvillkor och riktlinjer för friskvård';
 
   @override
-  String get delete_account => 'Delete Account & Data';
+  String get delete_account => 'Ta bort konto och data';
 
   @override
   String get delete_account_sub =>
-      'Irreversibly erase local SQLite data and cloud backups';
+      'Oåterkalleligt radera lokala SQLite-data och molnsäkerhetskopior';
 
   @override
-  String get healthy_habits => 'Build gentle, lasting wellness habits';
+  String get healthy_habits => 'Bygg försiktiga, varaktiga hälsovanor';
 
   @override
-  String get all_logs => 'My Tracked Data & Logs';
+  String get all_logs => 'Mina spårade data och loggar';
 
   @override
-  String get search_language => 'Search by language or native script...';
+  String get search_language => 'Sök efter språk eller inbyggt manus...';
 
   @override
-  String get languages_available => 'Languages Available';
+  String get languages_available => 'Tillgängliga språk';
 
   @override
-  String get no_matching_languages => 'No matching languages found';
+  String get no_matching_languages => 'Inga matchande språk hittades';
 
   @override
   String get try_searching =>
-      'Try searching by native script or English spelling';
+      'Försök att söka med inbyggt skript eller engelsk stavning';
 
   @override
-  String get partially_translated => 'Partially translated';
+  String get partially_translated => 'Delvis översatt';
 
   @override
-  String get complete_translation => 'Complete';
+  String get complete_translation => 'Komplett';
 
   @override
   String language_changed_toast(Object name, Object nativeName) {
-    return 'Language set to $name ($nativeName)';
+    return 'Språk inställt på $name ( $nativeName )';
   }
 
   @override
-  String get surroundings_title => 'Surroundings & Environment';
+  String get surroundings_title => 'Omgivning & Miljö';
 
   @override
-  String get surroundings_aqi => 'Air Quality Index';
+  String get surroundings_aqi => 'Luftkvalitetsindex';
 
   @override
-  String get surroundings_uv => 'UV Index';
+  String get surroundings_uv => 'UV-index';
 
   @override
-  String get surroundings_temp => 'Temperature';
+  String get surroundings_temp => 'Temperatur';
 
   @override
-  String get surroundings_humidity => 'Humidity';
+  String get surroundings_humidity => 'Fuktighet';
 
   @override
   String get surroundings_hydration_advice =>
-      'Stay well hydrated in current weather conditions.';
+      'Håll dig väl hydrerad i nuvarande väderförhållanden.';
 
   @override
   String get surroundings_refresh => 'Update Environmental Data';
 
   @override
-  String get food_quick_search => 'Search Food';
+  String get food_quick_search => 'Sök mat';
 
   @override
-  String get food_quick_barcode => 'Scan Barcode 👑';
+  String get food_quick_barcode => 'Skanna streckkoden 👑';
 
   @override
-  String get food_quick_water => 'Add Water';
+  String get food_quick_water => 'Tillsätt vatten';
 
   @override
-  String get food_quick_custom => 'Custom Food';
+  String get food_quick_custom => 'Anpassad mat';
 
   @override
-  String get surroundings_good => 'Good';
+  String get surroundings_good => 'Bra';
 
   @override
-  String get surroundings_moderate => 'Moderate';
+  String get surroundings_moderate => 'Måttlig';
 
   @override
-  String get surroundings_unhealthy => 'Unhealthy';
+  String get surroundings_unhealthy => 'Ohälsosamt';
 
   @override
-  String get notifications_title => 'Notifications & Alerts';
+  String get notifications_title => 'Aviseringar och varningar';
 
   @override
-  String get notifications_empty => 'No new notifications';
+  String get notifications_empty => 'Inga nya aviseringar';
 
   @override
-  String get notifications_mark_read => 'Mark All as Read';
+  String get notifications_mark_read => 'Markera alla som lästa';
 
   @override
-  String get notifications_clear => 'Clear All';
+  String get notifications_clear => 'Rensa alla';
 
   @override
-  String get reminders => 'Reminder Settings';
+  String get reminders => 'Påminnelseinställningar';
 
   @override
   String get notifications => 'Push Notifications';
 
   @override
-  String get reminders_breakfast_title => 'Breakfast Reminder 🍳';
+  String get reminders_breakfast_title => 'Frukostpåminnelse 🍳';
 
   @override
   String reminders_breakfast_body(Object time) {
-    return 'Good morning! Time for a nourishing breakfast at $time.';
+    return 'God morgon! Dags för en närande frukost på $time .';
   }
 
   @override
-  String get reminders_lunch_title => 'Lunch Reminder 🥗';
+  String get reminders_lunch_title => 'Lunchpåminnelse 🥗';
 
   @override
   String reminders_lunch_body(Object time) {
-    return 'Pause and enjoy a balanced, mindful lunch at $time.';
+    return 'Pausa och njut av en balanserad, medveten lunch på $time .';
   }
 
   @override
-  String get reminders_dinner_title => 'Dinner Reminder 🍲';
+  String get reminders_dinner_title => 'Påminnelse om middag 🍲';
 
   @override
   String reminders_dinner_body(Object time) {
-    return 'Time for a light, satisfying dinner at $time.';
+    return 'Dags för en lätt, tillfredsställande middag på $time .';
   }
 
   @override
@@ -910,104 +912,104 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String reminders_water_body(Object time) {
-    return 'Time to drink a fresh glass of water! ($time)';
+    return 'Dags att dricka ett glas färskt vatten! ( $time )';
   }
 
   @override
-  String get reminders_weight_title => 'Weekly Weigh-in ⚖️';
+  String get reminders_weight_title => 'Veckovis invägning ⚖️';
 
   @override
   String reminders_weight_body(Object time) {
-    return 'Track your weekly body metrics on Bloomi ($time).';
+    return 'Spåra din veckovisa kroppsstatistik på Bloomi ( $time ).';
   }
 
   @override
-  String get reminders_sleep_title => 'Bedtime Wind-down 🌙';
+  String get reminders_sleep_title => 'Sovdags varva ner 🌙';
 
   @override
   String reminders_sleep_body(Object time) {
-    return 'Unwind and prepare for a restful sleep ($time).';
+    return 'Varva ner och förbered dig för en god sömn ($time).';
   }
 
   @override
-  String get onboard_welcome => 'Welcome to Bloomi';
+  String get onboard_welcome => 'Välkommen till Bloomi';
 
   @override
   String get onboard_sub =>
-      'Your friendly, offline-first health and nutrition companion.';
+      'Din vänliga, offline-första hälso- och kostkompis.';
 
   @override
-  String get onboard_get_started => 'Get Started';
+  String get onboard_get_started => 'Kom igång';
 
   @override
-  String get onboard_sign_in => 'Sign In';
+  String get onboard_sign_in => 'Logga in';
 
   @override
-  String get onboard_skip => 'Skip';
+  String get onboard_skip => 'Hoppa över';
 
   @override
-  String get onboard_choose_goal => 'What is your primary wellness goal?';
+  String get onboard_choose_goal => 'Vilket är ditt primära hälsomål?';
 
   @override
-  String get onboard_goal_weight_loss => 'Gentle Weight Loss';
+  String get onboard_goal_weight_loss => 'Mild viktminskning';
 
   @override
-  String get onboard_goal_muscle => 'Muscle Gain & Strength';
+  String get onboard_goal_muscle => 'Muskelökning och styrka';
 
   @override
-  String get onboard_goal_energy => 'Daily Energy & Vitality';
+  String get onboard_goal_energy => 'Daglig energi och vitalitet';
 
   @override
-  String get onboard_goal_habits => 'Healthy Mindful Eating';
+  String get onboard_goal_habits => 'Hälsosam medveten kost';
 
   @override
-  String get onboard_about_you => 'Tell Us About Yourself';
+  String get onboard_about_you => 'Berätta om dig själv';
 
   @override
-  String get onboard_lifestyle => 'Your Daily Routine';
+  String get onboard_lifestyle => 'Din dagliga rutin';
 
   @override
-  String get onboard_permissions_title => 'Permissions & System Access';
+  String get onboard_permissions_title => 'Behörigheter och systemåtkomst';
 
   @override
   String get onboard_permissions_sub =>
-      'Grant access to sync steps, workouts, and reminders.';
+      'Ge åtkomst till synkroniseringssteg, träningspass och påminnelser.';
 
   @override
-  String get onboard_plan_ready_title => 'Your Custom Plan is Ready!';
+  String get onboard_plan_ready_title => 'Din anpassade plan är klar!';
 
   @override
   String get onboard_plan_ready_sub =>
-      'We crafted a gentle, personalized nutrition and wellness roadmap just for you.';
+      'Vi skapade en skonsam, personlig färdplan för näring och välbefinnande just för dig.';
 
   @override
-  String get onboard_enter_bloomi => 'Enter Bloomi';
+  String get onboard_enter_bloomi => 'Gå in i Bloomi';
 
   @override
-  String get insights_weekly_report => 'Weekly Wellness Recap';
+  String get insights_weekly_report => 'Veckans välbefinnande sammanfattning';
 
   @override
   String insights_best_day(Object day) {
-    return 'Best Consistency Day: $day';
+    return 'Bästa konsistensdagen: $day';
   }
 
   @override
-  String get insights_streaks_badges => 'Streaks & Milestones';
+  String get insights_streaks_badges => 'Sträckor och milstolpar';
 
   @override
   String insights_unlocked_on(Object date) {
-    return 'Unlocked on $date';
+    return 'Upplåst på $date';
   }
 
   @override
-  String get insights_keep_going => 'Keep up the fantastic progress!';
+  String get insights_keep_going => 'Fortsätt med de fantastiska framstegen!';
 
   @override
-  String get widgets_title => 'Home Screen Widgets';
+  String get widgets_title => 'Hemskärmswidgetar';
 
   @override
   String widgets_active_count(Object count) {
-    return 'Active Widgets: $count';
+    return 'Aktiva widgetar: $count';
   }
 
   @override
@@ -1023,193 +1025,193 @@ class AppLocalizationsSv extends AppLocalizations {
   String get widgets_mascot_title => 'Bloomi Mascot Companion';
 
   @override
-  String get wear_os_title => 'Wear OS Smartwatch';
+  String get wear_os_title => 'Bär OS Smartwatch';
 
   @override
-  String get wear_os_connected => 'Connected to Watch';
+  String get wear_os_connected => 'Ansluten till Watch';
 
   @override
-  String get wear_os_sync => 'Sync Watch Data';
+  String get wear_os_sync => 'Synkronisera klockdata';
 
   @override
-  String get theme_title => 'Appearance & Theme';
+  String get theme_title => 'Utseende & Tema';
 
   @override
-  String get theme_mode => 'Theme Mode';
+  String get theme_mode => 'Temaläge';
 
   @override
-  String get theme_light => 'Light';
+  String get theme_light => 'Ljus';
 
   @override
-  String get theme_dark => 'Dark';
+  String get theme_dark => 'Mörkt';
 
   @override
   String get theme_system => 'System';
 
   @override
-  String get theme_background_palette => 'Background Palette';
+  String get theme_background_palette => 'Bakgrundspalett';
 
   @override
-  String get units_title => 'Units of Measurement';
+  String get units_title => 'Måttenheter';
 
   @override
-  String get units_metric => 'Metric (kg, cm, ml)';
+  String get units_metric => 'Metrisk (kg, cm, ml)';
 
   @override
   String get units_imperial => 'Imperial (lbs, in, fl oz)';
 
   @override
-  String get home_unable_load => 'Unable to load dashboard';
+  String get home_unable_load => 'Det gick inte att ladda instrumentpanelen';
 
   @override
-  String get home_health_permission_req => 'Health Connect Permission Required';
+  String get home_health_permission_req => 'Health Connect-tillstånd krävs';
 
   @override
   String get home_health_permission_desc =>
-      'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.';
+      'Bloomi kräver Health Connect-tillstånd för att dra riktiga steg, puls och synkronisera husbilswidgets i realtid.';
 
   @override
-  String get home_allow_health => 'Allow Health Connect';
+  String get home_allow_health => 'Tillåt Health Connect';
 
   @override
-  String get home_ready_mindful_day => 'Ready for a mindful day? ✨';
+  String get home_ready_mindful_day => 'Redo för en medveten dag? ✨';
 
   @override
-  String get home_quick_add => 'Quick Add';
+  String get home_quick_add => 'Snabb tillägg';
 
   @override
   String get home_live_gps => 'Live GPS';
 
   @override
-  String get home_calories_remaining_label => 'CALORIES REMAINING';
+  String get home_calories_remaining_label => 'KALORIER KVAR';
 
   @override
   String home_eaten_target(Object consumed, Object target) {
-    return 'Eaten: $consumed / $target kcal';
+    return 'Ätit: $consumed / $target kcal';
   }
 
   @override
   String get home_tap_water_tracker => 'Tap for Water Tracker 💧';
 
   @override
-  String get home_water_goal_reached => 'Daily goal reached 🎉';
+  String get home_water_goal_reached => 'Dagsmål nått 🎉';
 
   @override
   String home_water_to_daily_goal(Object remaining) {
-    return '$remaining ml to daily goal';
+    return '$remaining ml till det dagliga målet';
   }
 
   @override
-  String get home_details => 'Details';
+  String get home_details => 'Detaljer';
 
   @override
   String get home_upgrade_plan_desc =>
-      'Upgrade to unlock personalized daily targets & AI plan';
+      'Uppgradera för att låsa upp personliga dagliga mål och AI-plan';
 
   @override
-  String get home_unlock => 'Unlock 👑';
+  String get home_unlock => 'Lås upp 👑';
 
   @override
-  String get home_quick_log_hint => 'Quickly record a wellness entry';
+  String get home_quick_log_hint => 'Spela in ett friskvårdsinlägg snabbt';
 
   @override
-  String get food_serving_size => 'Serving Size';
+  String get food_serving_size => 'Serveringsstorlek';
 
   @override
-  String get food_serving_grams => 'Serving (g)';
+  String get food_serving_grams => 'Servering (g)';
 
   @override
-  String get food_number_servings => 'Number of Servings';
+  String get food_number_servings => 'Antal portioner';
 
   @override
-  String get food_calories_per_serving => 'Calories per serving';
+  String get food_calories_per_serving => 'Kalorier per portion';
 
   @override
-  String get food_recipe_ingredients => 'Ingredients';
+  String get food_recipe_ingredients => 'Ingredienser';
 
   @override
-  String get food_recipe_add_ingredient => 'Add Ingredient';
+  String get food_recipe_add_ingredient => 'Tillsätt ingrediens';
 
   @override
-  String get food_recipe_directions => 'Instructions & Notes';
+  String get food_recipe_directions => 'Instruktioner och anteckningar';
 
   @override
-  String get food_recipe_total => 'Total Recipe Nutrition';
+  String get food_recipe_total => 'Total Recept Nutrition';
 
   @override
-  String get food_recipe_per_serving => 'Per Serving Nutrition';
+  String get food_recipe_per_serving => 'Näring per portion';
 
   @override
-  String get food_recipe_saved_toast => 'Custom food saved successfully!';
+  String get food_recipe_saved_toast => 'Anpassad mat sparad framgångsrikt!';
 
   @override
-  String get food_barcode_found => 'Product Found!';
+  String get food_barcode_found => 'Produkt hittad!';
 
   @override
   String get food_barcode_not_found_desc =>
-      'We could not find this barcode in the open database. You can add it as a custom food.';
+      'Vi kunde inte hitta den här streckkoden i den öppna databasen. Du kan lägga till det som specialmat.';
 
   @override
-  String get food_add_custom_btn => 'Add Custom Food';
+  String get food_add_custom_btn => 'Lägg till anpassad mat';
 
   @override
-  String get food_scan_again => 'Scan Again';
+  String get food_scan_again => 'Skanna igen';
 
   @override
-  String get food_review_items => 'Review Detected Foods';
+  String get food_review_items => 'Granska upptäckta livsmedel';
 
   @override
   String get food_review_hint =>
-      'Adjust quantities or remove any unrecognized item';
+      'Justera kvantiteter eller ta bort alla okända föremål';
 
   @override
-  String get food_log_selected => 'Log Selected Foods';
+  String get food_log_selected => 'Logga valda livsmedel';
 
   @override
-  String get food_favourites_title => 'Favourite Foods';
+  String get food_favourites_title => 'Favoritmat';
 
   @override
-  String get food_recent_title => 'Recent Foods';
+  String get food_recent_title => 'Senaste livsmedel';
 
   @override
   String get food_no_favourites =>
-      'No favourite foods yet. Tap heart on any food to save here.';
+      'Ingen favoritmat än. Tryck hjärtat på valfri mat för att spara här.';
 
   @override
-  String get food_no_recents => 'No recently logged foods found.';
+  String get food_no_recents => 'Inga nyligen loggade livsmedel hittades.';
 
   @override
-  String get food_nutrition_details_title => 'Daily Nutrition Details';
+  String get food_nutrition_details_title => 'Daglig näringsinformation';
 
   @override
-  String get food_macro_protein_label => 'Protein Breakdown';
+  String get food_macro_protein_label => 'Proteinnedbrytning';
 
   @override
-  String get food_macro_carbs_label => 'Carbs Breakdown';
+  String get food_macro_carbs_label => 'Kolhydratnedbrytning';
 
   @override
-  String get food_macro_fat_label => 'Fat Breakdown';
+  String get food_macro_fat_label => 'Fettnedbrytning';
 
   @override
-  String get food_macro_fiber_label => 'Fiber Breakdown';
+  String get food_macro_fiber_label => 'Fibernedbrytning';
 
   @override
-  String get food_daily_target_comparison => 'Target Comparison';
+  String get food_daily_target_comparison => 'Måljämförelse';
 
   @override
   String food_target_label(Object target) {
-    return 'Target: $target';
+    return 'Mål: $target';
   }
 
   @override
-  String get food_edit_entry => 'Edit Diary Entry';
+  String get food_edit_entry => 'Redigera dagboksinlägg';
 
   @override
-  String get food_delete_entry => 'Delete Entry';
+  String get food_delete_entry => 'Ta bort post';
 
   @override
   String food_grams_short(Object grams) {
-    return '${grams}g';
+    return '$grams g';
   }
 
   @override
@@ -1219,55 +1221,55 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String water_progress(Object current, Object target) {
-    return '$current of $target ml';
+    return '$current av $target ml';
   }
 
   @override
-  String get water_intake_history => 'Today\'s Water Logs';
+  String get water_intake_history => 'Dagens vattenloggar';
 
   @override
   String get water_no_logs_today =>
-      'No water logged yet today. Hydrate and tap a quick add button!';
+      'Inget vatten loggat ännu idag. Fukta och tryck på en snabbläggsknapp!';
 
   @override
-  String get water_adjust_goal => 'Adjust Daily Goal';
+  String get water_adjust_goal => 'Justera dagligt mål';
 
   @override
-  String get health_connect_banner => 'Connected to Health Connect';
+  String get health_connect_banner => 'Ansluten till Health Connect';
 
   @override
-  String get health_vitals_summary => 'Daily Health Vitals';
+  String get health_vitals_summary => 'Dagliga hälsoviktigheter';
 
   @override
-  String get health_latest_heart_rate => 'Latest Heart Rate';
+  String get health_latest_heart_rate => 'Senaste hjärtfrekvensen';
 
   @override
-  String get health_latest_bp => 'Blood Pressure';
+  String get health_latest_bp => 'Blodtryck';
 
   @override
-  String get health_latest_spo2 => 'Blood Oxygen';
+  String get health_latest_spo2 => 'Blodsyre';
 
   @override
-  String get health_latest_glucose => 'Blood Glucose';
+  String get health_latest_glucose => 'Blodglukos';
 
   @override
-  String get health_latest_weight => 'Weight';
+  String get health_latest_weight => 'Vikt';
 
   @override
-  String get health_latest_sleep => 'Sleep Duration';
+  String get health_latest_sleep => 'Sömnlängd';
 
   @override
-  String get health_add_manual => 'Add Manual Measurement';
+  String get health_add_manual => 'Lägg till manuell mätning';
 
   @override
-  String get health_history_trends => 'Historical Trends';
+  String get health_history_trends => 'Historiska trender';
 
   @override
-  String get health_sync_success => 'Health data synced successfully!';
+  String get health_sync_success => 'Hälsodata har synkroniserats!';
 
   @override
   String health_metric_sleep_hours(Object hours, Object mins) {
-    return '$hours hrs $mins mins';
+    return '$hours timmar $mins min';
   }
 
   @override
@@ -1282,12 +1284,12 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String health_metric_spo2_val(Object pct) {
-    return '$pct%';
+    return '$pct %';
   }
 
   @override
   String health_metric_bp_val(Object diastolic, Object systolic) {
-    return '$systolic/$diastolic mmHg';
+    return '$systolic / $diastolic mmHg';
   }
 
   @override
@@ -1296,234 +1298,233 @@ class AppLocalizationsSv extends AppLocalizations {
   }
 
   @override
-  String get health_devices_title => 'Connected Devices & Wearables';
+  String get health_devices_title => 'Anslutna enheter och wearables';
 
   @override
   String get health_devices_desc =>
-      'Manage paired smartwatches, fitness trackers, and health sensors.';
+      'Hantera parade smartklockor, träningsspårare och hälsosensorer.';
 
   @override
-  String get health_workout_editor_title => 'Edit Workout';
+  String get health_workout_editor_title => 'Redigera träningspass';
 
   @override
-  String get health_workout_name_label => 'Workout Name';
+  String get health_workout_name_label => 'Träningspassets namn';
 
   @override
-  String get health_workout_duration_label => 'Duration (minutes)';
+  String get health_workout_duration_label => 'Varaktighet (minuter)';
 
   @override
-  String get health_workout_calories_label => 'Estimated Calories (kcal)';
+  String get health_workout_calories_label => 'Uppskattade kalorier (kcal)';
 
   @override
-  String get health_workout_date_label => 'Date and Time';
+  String get health_workout_date_label => 'Datum och tid';
 
   @override
-  String get plan_daily_wellness_roadmap => 'Your Personalized Roadmap';
+  String get plan_daily_wellness_roadmap => 'Din personliga färdplan';
 
   @override
-  String get plan_morning_routine => 'Morning Routine';
+  String get plan_morning_routine => 'Morgonrutin';
 
   @override
-  String get plan_afternoon_routine => 'Midday Wellness';
+  String get plan_afternoon_routine => 'Middag Wellness';
 
   @override
-  String get plan_evening_routine => 'Evening Wind-Down';
+  String get plan_evening_routine => 'Kvällsvind';
 
   @override
-  String get plan_coach_badge => 'Bloomi AI Coach';
+  String get plan_coach_badge => 'Bloomi AI-tränare';
 
   @override
-  String get plan_weekly_overview => '7-Day Wellness Focus';
+  String get plan_weekly_overview => '7-dagars hälsofokus';
 
   @override
-  String get plan_targets_title => 'Wellness Targets & Goals';
+  String get plan_targets_title => 'Friskvårdsmål och mål';
 
   @override
-  String get plan_calorie_budget_label => 'Daily Calorie Budget';
+  String get plan_calorie_budget_label => 'Daglig kaloribudget';
 
   @override
-  String get plan_water_budget_label => 'Daily Water Target';
+  String get plan_water_budget_label => 'Dagligt vattenmål';
 
   @override
-  String get plan_step_budget_label => 'Daily Step Goal';
+  String get plan_step_budget_label => 'Dagligt stegmål';
 
   @override
-  String get plan_macro_split_label => 'Macronutrient Ratio';
+  String get plan_macro_split_label => 'Makronäringsförhållande';
 
   @override
-  String get profile_personal_details => 'Personal Details';
+  String get profile_personal_details => 'Personliga detaljer';
 
   @override
-  String get profile_body_stats => 'Body Measurements';
+  String get profile_body_stats => 'Kroppsmått';
 
   @override
-  String get profile_app_preferences => 'Preferences & App Settings';
+  String get profile_app_preferences => 'Inställningar och appinställningar';
 
   @override
-  String get profile_edit_name_hint => 'Your name';
+  String get profile_edit_name_hint => 'Ditt namn';
 
   @override
   String profile_edit_height_hint(Object unit) {
-    return 'Height ($unit)';
+    return 'Höjd ($unit)';
   }
 
   @override
   String profile_edit_weight_hint(Object unit) {
-    return 'Weight ($unit)';
+    return 'Vikt ($unit)';
   }
 
   @override
-  String get profile_edit_age_hint => 'Age';
+  String get profile_edit_age_hint => 'Ålder';
 
   @override
-  String get profile_gender_male => 'Male';
+  String get profile_gender_male => 'Hane';
 
   @override
-  String get profile_gender_female => 'Female';
+  String get profile_gender_female => 'Kvinna';
 
   @override
-  String get profile_gender_other => 'Other / Prefer not to say';
+  String get profile_gender_other => 'Annat / Föredrar att inte säga';
 
   @override
-  String get profile_activity_sedentary => 'Sedentary (Little to no exercise)';
+  String get profile_activity_sedentary =>
+      'Stillasittande (lite eller ingen träning)';
 
   @override
-  String get profile_activity_light => 'Lightly Active (1-3 days/week)';
+  String get profile_activity_light => 'Lätt aktiv (1-3 dagar/vecka)';
 
   @override
-  String get profile_activity_moderate => 'Moderately Active (3-5 days/week)';
+  String get profile_activity_moderate => 'Måttligt aktiv (3-5 dagar/vecka)';
 
   @override
-  String get profile_activity_very => 'Very Active (6-7 days/week)';
+  String get profile_activity_very => 'Mycket aktiv (6-7 dagar/vecka)';
 
   @override
-  String get settings_wear_os_header => 'Wear OS Companion App';
+  String get settings_wear_os_header => 'Bär OS Companion App';
 
   @override
   String get settings_wear_os_desc =>
-      'Install the Bloomi tile and complication on your Wear OS watch to glance at calories, water, and steps.';
+      'Installera Bloomi-plattan och komplikationen på din Wear OS-klocka för att titta på kalorier, vatten och steg.';
 
   @override
-  String get settings_widgets_header => 'Interactive Android Widgets';
+  String get settings_widgets_header => 'Interaktiva Android-widgets';
 
   @override
   String get settings_widgets_desc =>
-      'Pin real-time widgets on your device home screen for instant updates.';
+      'Fäst widgets i realtid på enhetens startskärm för omedelbara uppdateringar.';
 
   @override
-  String get settings_about_header => 'About Bloomi';
+  String get settings_about_header => 'Om Bloomi';
 
   @override
   String get settings_about_version => 'Version';
 
   @override
-  String get settings_about_build => 'Build 100';
+  String get settings_about_build => 'Bygg 100';
 
   @override
   String get settings_about_credits =>
-      'Crafted with care for mindful, healthy living.';
+      'Tillverkad med omsorg för ett medvetet, hälsosamt liv.';
 
   @override
-  String get settings_terms_header => 'Terms and Conditions';
+  String get settings_terms_header => 'Regler och villkor';
 
   @override
-  String get settings_privacy_header => 'Privacy Policy';
+  String get settings_privacy_header => 'Sekretesspolicy';
 
   @override
-  String get settings_delete_header => 'Delete Account & Data';
+  String get settings_delete_header => 'Ta bort konto och data';
 
   @override
   String get settings_delete_warning =>
-      'This action cannot be undone. All your meals, workouts, vitals, and profile will be permanently deleted.';
+      'Denna åtgärd kan inte ångras. Alla dina måltider, träningspass, vitals och profil kommer att raderas permanent.';
 
   @override
-  String get settings_delete_confirm_btn => 'Permanently Delete';
+  String get settings_delete_confirm_btn => 'Ta bort permanent';
 
   @override
-  String get onboard_welcome_headline => 'Welcome to Bloomi ✨';
+  String get onboard_welcome_headline => 'Välkommen till Bloomi ✨';
 
   @override
   String get onboard_welcome_tagline =>
-      'Gentle, mindful wellness tracking designed around your life.';
+      'Mild, medveten hälsospårning designad kring ditt liv.';
 
   @override
-  String get onboard_step_about => 'About You';
+  String get onboard_step_about => 'Om dig';
 
   @override
-  String get onboard_step_goals => 'Your Goals';
+  String get onboard_step_goals => 'Dina mål';
 
   @override
-  String get onboard_step_lifestyle => 'Daily Habits';
+  String get onboard_step_lifestyle => 'Dagliga vanor';
 
   @override
-  String get onboard_step_permissions => 'Permissions';
+  String get onboard_step_permissions => 'Behörigheter';
 
   @override
-  String get onboard_step_plan => 'Ready!';
+  String get onboard_step_plan => 'Klart!';
 
   @override
   String get onboard_health_connect_perm => 'Health Connect Access';
 
   @override
-  String get onboard_step_sensors_perm => 'Step Counter Sensor';
+  String get onboard_step_sensors_perm => 'Stegräknarsensor';
 
   @override
-  String get onboard_notif_perm => 'Mindful Reminders & Notifications';
+  String get onboard_notif_perm => 'Medvetna påminnelser och aviseringar';
 
   @override
-  String get onboard_camera_perm => 'Camera (Barcode & Food Scanner)';
+  String get onboard_camera_perm => 'Kamera (streckkods- och matskanner)';
 
   @override
-  String get onboard_grant_permissions => 'Grant Permissions';
+  String get onboard_grant_permissions => 'Bevilja behörigheter';
 
   @override
-  String get onboard_continue_dashboard => 'Open Dashboard';
+  String get onboard_continue_dashboard => 'Öppna Dashboard';
 
   @override
   String get notif_channel_hydration_name => 'Hydration Nudges';
 
   @override
   String get notif_channel_hydration_desc =>
-      'Gentle water reminders throughout the day';
+      'Milda vattenpåminnelser hela dagen';
 
   @override
-  String get notif_channel_nutrition_name => 'Meal & Nutrition Reminders';
+  String get notif_channel_nutrition_name => 'Måltids- och näringspåminnelser';
 
   @override
   String get notif_channel_nutrition_desc =>
-      'Breakfast, lunch, and dinner reminder alerts';
+      'Påminnelser om frukost, lunch och middag';
 
   @override
-  String get notif_channel_steps_name => 'Step Milestones';
+  String get notif_channel_steps_name => 'Steg Milstolpar';
 
   @override
-  String get notif_channel_steps_desc =>
-      'Celebrations when reaching daily step targets';
+  String get notif_channel_steps_desc => 'Firande när man når dagliga stegmål';
 
   @override
-  String get notif_channel_vitals_name => 'Health & Vitals Checks';
+  String get notif_channel_vitals_name => 'Hälso- och vitalkontroller';
 
   @override
-  String get notif_channel_vitals_desc =>
-      'Weight and bedtime wind-down reminders';
+  String get notif_channel_vitals_desc => 'Påminnelser om vikt och läggdags';
 
   @override
-  String get notif_action_log_water => '💧 Log +250ml';
+  String get notif_action_log_water => '💧 Logg +250ml';
 
   @override
   String get notif_action_snooze => 'Snooze 15m';
 
   @override
-  String get notif_action_log_meal => '🥗 Log Meal';
+  String get notif_action_log_meal => '🥗 Loggmåltid';
 
   @override
-  String get language => 'Language';
+  String get language => 'Språk';
 
   @override
-  String get share => 'Share';
+  String get share => 'Dela';
 
   @override
   String common_days(Object count) {
-    return '${count}d ago';
+    return 'för $count d sedan';
   }
 }
