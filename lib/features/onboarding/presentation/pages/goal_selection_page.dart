@@ -146,6 +146,8 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
             appBar: AppBar(
               backgroundColor: Colors.transparent,
               elevation: 0,
+              primary: widget.isStandalone,
+              toolbarHeight: widget.isStandalone ? kToolbarHeight : 42,
               leading: IconButton(
                 icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
                 onPressed: _handleBack,
@@ -163,6 +165,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
                   : null,
             ),
             body: SafeArea(
+              top: widget.isStandalone,
               child: Column(
                 children: [
                   Expanded(
@@ -170,7 +173,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
                       physics: const BouncingScrollPhysics(),
                       padding: const EdgeInsets.symmetric(
                         horizontal: AppSpacing.screenSide,
-                        vertical: AppSpacing.sm,
+                        vertical: AppSpacing.xs,
                       ),
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(maxWidth: 440),
@@ -178,31 +181,6 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             if (!widget.isStandalone) ...[
-                              Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(bottom: AppSpacing.md),
-                                  child: FloatingIllustration(
-                                    distance: 8,
-                                    child: Container(
-                                      padding: const EdgeInsets.all(16),
-                                      decoration: BoxDecoration(
-                                        color: AppColors.butter.withAlpha(context.isDarkMode ? 60 : 40),
-                                        shape: BoxShape.circle,
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: AppColors.butter.withAlpha(50),
-                                            blurRadius: 16,
-                                          ),
-                                        ],
-                                      ),
-                                      child: const HealthMetricAnimation(
-                                        metricType: 'calories',
-                                        size: 48,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
                               Text(
                                 'STEP 4 OF 6',
                                 style: TextStyle(
@@ -214,26 +192,45 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
                                 ),
                               ),
                               const SizedBox(height: 4),
-                              Text(
-                                'Choose your wellness goal',
-                                style: TextStyle(
-                                  fontFamily: 'Baloo 2',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 28,
-                                  color: context.appInk,
-                                ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Choose your wellness goal',
+                                          style: TextStyle(
+                                            fontFamily: 'Baloo 2',
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 26,
+                                            color: context.appInk,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 2),
+                                        Text(
+                                          'Personalized daily calories calculated scientifically from your body numbers.',
+                                          style: TextStyle(
+                                            fontFamily: 'Nunito',
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 13,
+                                            color: context.appSlate,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  const FloatingIllustration(
+                                    child: HealthMetricAnimation(
+                                      metricType: 'calories',
+                                      size: 38,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              const SizedBox(height: 6),
-                              Text(
-                                'Personalized daily calories calculated scientifically from your height, weight, sex, and age using the Mifflin-St Jeor formula.',
-                                style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 14,
-                                  color: context.appSlate,
-                                ),
-                              ),
-                              const SizedBox(height: AppSpacing.lg),
+                              const SizedBox(height: AppSpacing.sm),
                             ],
 
                             // Goal selection cards with dynamic personalized target calories

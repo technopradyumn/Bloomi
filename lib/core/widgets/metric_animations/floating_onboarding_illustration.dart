@@ -105,7 +105,7 @@ class OnboardingStepIndicator extends StatelessWidget {
     final inactiveColor = isDark ? Colors.white.withAlpha(25) : AppColors.divider;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Row(
         children: List.generate(totalSteps, (index) {
           final isCompleted = index < currentStep;

@@ -430,6 +430,8 @@ class _PermissionsPageState extends State<PermissionsPage>
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
+          primary: widget.isStandalone,
+          toolbarHeight: widget.isStandalone ? kToolbarHeight : 42,
           leading: IconButton(
             icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
             onPressed: _handleBack,
@@ -447,6 +449,7 @@ class _PermissionsPageState extends State<PermissionsPage>
               : null,
         ),
         body: SafeArea(
+          top: widget.isStandalone,
           child: Column(
             children: [
               Expanded(
@@ -454,7 +457,7 @@ class _PermissionsPageState extends State<PermissionsPage>
                   physics: const BouncingScrollPhysics(),
                   padding: const EdgeInsets.symmetric(
                     horizontal: AppSpacing.screenSide,
-                    vertical: AppSpacing.sm,
+                    vertical: AppSpacing.xs,
                   ),
                   child: ConstrainedBox(
                     constraints: const BoxConstraints(maxWidth: 440),
@@ -462,31 +465,6 @@ class _PermissionsPageState extends State<PermissionsPage>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         if (!widget.isStandalone) ...[
-                          Center(
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: AppSpacing.md),
-                              child: FloatingIllustration(
-                                distance: 8,
-                                child: Container(
-                                  padding: const EdgeInsets.all(14),
-                                  decoration: BoxDecoration(
-                                    color: AppColors.sky.withAlpha(context.isDarkMode ? 60 : 40),
-                                    shape: BoxShape.circle,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: AppColors.sky.withAlpha(50),
-                                        blurRadius: 16,
-                                      ),
-                                    ],
-                                  ),
-                                  child: const HealthMetricAnimation(
-                                    metricType: 'heart_rate',
-                                    size: 48,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
                           Text(
                             'STEP 6 OF 6',
                             style: TextStyle(
@@ -498,26 +476,45 @@ class _PermissionsPageState extends State<PermissionsPage>
                             ),
                           ),
                           const SizedBox(height: 4),
-                          Text(
-                            'Permissions & Connect',
-                            style: TextStyle(
-                              fontFamily: 'Baloo 2',
-                              fontWeight: FontWeight.w700,
-                              fontSize: 28,
-                              color: context.appInk,
-                            ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Permissions & Access',
+                                      style: TextStyle(
+                                        fontFamily: 'Baloo 2',
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 26,
+                                        color: context.appInk,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      'To sync your steps and live widgets, Bloomi requires system permissions.',
+                                      style: TextStyle(
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 13,
+                                        color: context.appSlate,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              const FloatingIllustration(
+                                child: HealthMetricAnimation(
+                                  metricType: 'heart_rate',
+                                  size: 38,
+                                ),
+                              ),
+                            ],
                           ),
-                          const SizedBox(height: 6),
-                          Text(
-                            'Enable integrations to unlock live tracking, gentle reminders, meal scanning, and local air quality.',
-                            style: TextStyle(
-                              fontFamily: 'Nunito',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14,
-                              color: context.appSlate,
-                            ),
-                          ),
-                          const SizedBox(height: AppSpacing.lg),
+                          const SizedBox(height: AppSpacing.sm),
                         ] else ...[
                           Container(
                             padding: const EdgeInsets.all(AppSpacing.md),

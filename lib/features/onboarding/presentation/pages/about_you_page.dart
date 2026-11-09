@@ -177,6 +177,8 @@ class _AboutYouPageState extends State<AboutYouPage> {
             appBar: AppBar(
               backgroundColor: Colors.transparent,
               elevation: 0,
+              primary: widget.isStandalone,
+              toolbarHeight: widget.isStandalone ? kToolbarHeight : 42,
               leading: IconButton(
                 icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
                 onPressed: _handleBack,
@@ -194,6 +196,7 @@ class _AboutYouPageState extends State<AboutYouPage> {
                   : null,
             ),
             body: SafeArea(
+              top: widget.isStandalone,
               child: Column(
                 children: [
                   Expanded(
@@ -201,7 +204,7 @@ class _AboutYouPageState extends State<AboutYouPage> {
                       physics: const BouncingScrollPhysics(),
                       padding: const EdgeInsets.symmetric(
                         horizontal: AppSpacing.screenSide,
-                        vertical: AppSpacing.sm,
+                        vertical: AppSpacing.xs,
                       ),
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(maxWidth: 440),

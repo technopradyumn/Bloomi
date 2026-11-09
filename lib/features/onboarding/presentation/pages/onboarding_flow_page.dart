@@ -122,15 +122,22 @@ class _OnboardingFlowPageState extends State<OnboardingFlowPage> {
           backgroundColor: context.appBackground,
           body: Column(
             children: [
-              SafeArea(
-                bottom: false,
-                child: OnboardingStepIndicator(
-                  currentStep: _currentIndex,
-                  totalSteps: _maxPageCount,
+              if (_currentIndex > 0 && _currentIndex < _maxPageCount - 1)
+                SafeArea(
+                  bottom: false,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+                    child: OnboardingStepIndicator(
+                      currentStep: _currentIndex - 1,
+                      totalSteps: widget.isReinstall ? 2 : 6,
+                    ),
+                  ),
                 ),
-              ),
               Expanded(
-                child: PageView(
+                child: MediaQuery.removePadding(
+                  context: context,
+                  removeTop: _currentIndex > 0,
+                  child: PageView(
                   controller: _pageController,
                   // Prevent accidental swiping across steps; user advances with explicit buttons
                   physics: const NeverScrollableScrollPhysics(),
@@ -207,7 +214,8 @@ class _OnboardingFlowPageState extends State<OnboardingFlowPage> {
                   ],
                 ),
               ),
-            ],
+            ),
+            ]
           ),
         ),
       ),
