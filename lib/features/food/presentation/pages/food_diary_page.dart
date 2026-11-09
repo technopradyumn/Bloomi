@@ -263,7 +263,7 @@ class FoodDiaryPage extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         color: Color.alphaBlend(
-                          AppColors.mint.withOpacity(0.20),
+                          AppColors.mint.withAlpha(51),
                           context.appSurface,
                         ),
                         borderRadius: BorderRadius.circular(
@@ -572,7 +572,7 @@ class _DiaryMealSuggestionsSectionState
                     padding: const EdgeInsets.all(6),
                     decoration: BoxDecoration(
                       color: Color.alphaBlend(
-                        AppColors.mint.withOpacity(0.20),
+                        AppColors.mint.withAlpha(51),
                         context.appSurface,
                       ),
                       shape: BoxShape.circle,
@@ -604,7 +604,7 @@ class _DiaryMealSuggestionsSectionState
                         ),
                         decoration: BoxDecoration(
                           color: Color.alphaBlend(
-                            AppColors.lilac.withOpacity(0.20),
+                            AppColors.lilac.withAlpha(51),
                             context.appSurface,
                           ),
                           borderRadius: BorderRadius.circular(12),
@@ -681,7 +681,7 @@ class _DiaryMealSuggestionsSectionState
                   height: 40,
                   decoration: BoxDecoration(
                     color: Color.alphaBlend(
-                      AppColors.peach.withOpacity(0.25),
+                      AppColors.peach.withAlpha(64),
                       context.appSurface,
                     ),
                     borderRadius: BorderRadius.circular(10),
@@ -837,7 +837,7 @@ class _FoodDiaryPlatePainter extends CustomPainter {
 
     // Animated rising steam wisps
     final steamPaint = Paint()
-      ..color = color.withOpacity(0.85)
+      ..color = color.withAlpha(217)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.6
       ..strokeCap = StrokeCap.round;
@@ -854,7 +854,7 @@ class _FoodDiaryPlatePainter extends CustomPainter {
         w * 0.42,
         h * 0.24 - (p1 * h * 0.22),
       );
-    steamPaint.color = color.withOpacity((1.0 - p1).clamp(0.1, 0.9));
+    steamPaint.color = color.withAlpha(((1.0 - p1).clamp(0.1, 0.9) * 255).round());
     canvas.drawPath(wisp1, steamPaint);
 
     // Wisp 2
@@ -866,7 +866,7 @@ class _FoodDiaryPlatePainter extends CustomPainter {
         w * 0.58,
         h * 0.24 - (p2 * h * 0.22),
       );
-    steamPaint.color = color.withOpacity((1.0 - p2).clamp(0.1, 0.9));
+    steamPaint.color = color.withAlpha(((1.0 - p2).clamp(0.1, 0.9) * 255).round());
     canvas.drawPath(wisp2, steamPaint);
 
     // Center fresh leafy sprout inside the bowl

@@ -546,7 +546,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                   Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
-                      color: Color.alphaBlend(accentColor.withOpacity(0.18), context.appSurface),
+                      color: Color.alphaBlend(accentColor.withAlpha(46), context.appSurface),
                       shape: BoxShape.circle,
                     ),
                     child: HealthMetricAnimation(
@@ -592,7 +592,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                               decoration: BoxDecoration(
-                                color: Color.alphaBlend(accentColor.withOpacity(0.20), context.appSurface),
+                                color: Color.alphaBlend(accentColor.withAlpha(51), context.appSurface),
                                 borderRadius: BorderRadius.circular(6),
                               ),
                               child: Text(
@@ -685,7 +685,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                   Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
-                      color: Color.alphaBlend(AppColors.peach.withOpacity(0.20), context.appSurface),
+                      color: Color.alphaBlend(AppColors.peach.withAlpha(51), context.appSurface),
                       shape: BoxShape.circle,
                     ),
                     child: Text(
@@ -730,7 +730,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                               decoration: BoxDecoration(
-                                color: Color.alphaBlend(context.appMint.withOpacity(0.20), context.appSurface),
+                                color: Color.alphaBlend(context.appMint.withAlpha(51), context.appSurface),
                                 borderRadius: BorderRadius.circular(6),
                               ),
                               child: Text(

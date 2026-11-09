@@ -174,5 +174,11 @@ class FoodRepositoryImpl implements FoodRepository {
   @override
   Future<List<ScannedFoodItemEntity>> scanFoodPhoto(String imagePath) =>
       _remoteDataSource.scanFoodPhoto(imagePath);
+
+  @override
+  Stream<List<CustomFood>> watchCustomFoods() => _localDataSource.watchCustomFoods();
+
+  @override
+  Future<List<CustomFood>> getCustomFoods() => _localDataSource.getCustomFoods();
 }
 

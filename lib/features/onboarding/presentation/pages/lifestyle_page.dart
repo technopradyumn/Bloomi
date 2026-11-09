@@ -147,7 +147,7 @@ class _LifestylePageState extends State<LifestylePage> {
                                 ),
                               ),
                               Text(
-                                'STEP 4 OF 5',
+                                'STEP 5 OF 6',
                                 style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontWeight: FontWeight.w700,

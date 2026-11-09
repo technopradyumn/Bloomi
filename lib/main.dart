@@ -6,9 +6,13 @@ import 'package:bloomi/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:bloomi/features/food/domain/repositories/food_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await initializeDateFormatting(null, null);
+  } catch (_) {}
 
   // Global Flutter error handling to catch unhandled framework errors and prevent silent freezes
   FlutterError.onError = (FlutterErrorDetails details) {

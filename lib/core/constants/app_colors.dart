@@ -76,7 +76,7 @@ extension AppThemeContext on BuildContext {
     }
     if (isDarkMode) {
       // Solid opaque tinted surface for dark mode - no translucency or glassmorphism
-      return Color.alphaBlend(inputColor.withOpacity(0.18), appSurface);
+      return Color.alphaBlend(inputColor.withAlpha(46), appSurface);
     }
     return inputColor;
   }
@@ -85,12 +85,12 @@ extension AppThemeContext on BuildContext {
   Color adaptiveAccentColor(Color lightAccent, Color darkAccent) => isDarkMode ? darkAccent : lightAccent;
   Color adaptiveTextColor(Color lightText, Color darkText) => isDarkMode ? darkText : lightText;
   Color adaptiveContainerBg(Color lightBg, [int darkAlpha = 50]) =>
-      isDarkMode ? Color.alphaBlend(lightBg.withOpacity(0.20), appSurface) : lightBg;
+      isDarkMode ? Color.alphaBlend(lightBg.withAlpha(51), appSurface) : lightBg;
   Color adaptiveColor(Color lightColor, Color darkColor) => isDarkMode ? darkColor : lightColor;
   Color adaptiveAlpha(Color color, int lightAlpha, int darkAlpha) =>
-      Color.alphaBlend(color.withOpacity(isDarkMode ? darkAlpha / 255.0 : lightAlpha / 255.0), appSurface);
+      Color.alphaBlend(color.withAlpha(isDarkMode ? darkAlpha : lightAlpha), appSurface);
 
   Color adaptiveSolidTint(Color tintColor, [double strength = 0.12]) =>
-      Color.alphaBlend(tintColor.withOpacity(strength), isDarkMode ? appSurface : AppColors.surface);
+      Color.alphaBlend(tintColor.withAlpha((strength * 255).round()), isDarkMode ? appSurface : AppColors.surface);
 }
 

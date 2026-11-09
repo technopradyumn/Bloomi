@@ -141,7 +141,7 @@ class _AboutYouPageState extends State<AboutYouPage> {
     if (widget.onBack != null) {
       widget.onBack!();
     } else {
-      context.go('/onboarding/intro');
+      context.go('/onboarding/language');
     }
   }
 
@@ -210,7 +210,7 @@ class _AboutYouPageState extends State<AboutYouPage> {
                           children: [
                             if (!widget.isStandalone) ...[
                               Text(
-                                'STEP 1 OF 5',
+                                'STEP 2 OF 6',
                                 style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontWeight: FontWeight.w700,

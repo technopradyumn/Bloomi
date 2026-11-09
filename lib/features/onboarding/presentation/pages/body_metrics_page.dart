@@ -282,7 +282,7 @@ class _BodyMetricsPageState extends State<BodyMetricsPage> {
                                 ),
                               ),
                               Text(
-                                'STEP 2 OF 5',
+                                'STEP 3 OF 6',
                                 style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontWeight: FontWeight.w700,

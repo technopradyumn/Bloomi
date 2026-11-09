@@ -35,6 +35,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
   final TextEditingController _searchCtrl = TextEditingController();
   List<FoodSearchResultEntity> _searchResults = [];
   bool _isLoading = true;
+  String _selectedCategory = 'All';
   late final TabController _tabController;
   int _activeTabIndex = 0;
   bool _isPremium = false;
@@ -107,7 +108,13 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
   Future<void> _doSearch(String query) async {
     if (!mounted) return;
     setState(() => _isLoading = true);
-    final results = await sl<FoodRepository>().searchFoods(query, limit: 50);
+    final results = await sl<FoodRepository>().searchFoods(
+      query,
+      category: _selectedCategory == 'All'
+          ? null
+          : (_selectedCategory == 'Custom Foods' ? 'Custom' : _selectedCategory),
+      limit: 50,
+    );
     if (mounted) {
       setState(() {
         _searchResults = results;
@@ -306,6 +313,49 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                 ),
               ),
             ],
+          ),
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: 2),
+          child: Row(
+            children: [
+              'All',
+              'Custom Foods',
+              'Breakfast',
+              'Curry',
+              'Bread',
+              'Snacks',
+              'Desserts',
+            ].map((cat) {
+              final isSelected = _selectedCategory == cat;
+              return Padding(
+                padding: const EdgeInsets.only(right: 6),
+                child: FilterChip(
+                  label: Text(
+                    cat == 'Custom Foods' ? '⭐ Custom Foods' : cat,
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
+                      color: isSelected ? Colors.white : context.appInk,
+                    ),
+                  ),
+                  selected: isSelected,
+                  selectedColor: cat == 'Custom Foods' ? AppColors.softOrange : AppColors.mintDark,
+                  backgroundColor: context.isDarkMode ? AppColors.darkSurface : const Color(0xFFE2E8F0),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  side: BorderSide(
+                    color: isSelected
+                        ? (cat == 'Custom Foods' ? AppColors.softOrange : AppColors.mintDark)
+                        : context.appBorderColor,
+                  ),
+                  onSelected: (_) {
+                    setState(() => _selectedCategory = cat);
+                    _doSearch(_searchCtrl.text);
+                  },
+                ),
+              );
+            }).toList(),
           ),
         ),
         Expanded(
@@ -614,9 +664,13 @@ class _RecentAndFavsView extends StatefulWidget {
   State<_RecentAndFavsView> createState() => _RecentAndFavsViewState();
 }
 
-class _RecentAndFavsViewState extends State<_RecentAndFavsView> {
+class _RecentAndFavsViewState extends State<_RecentAndFavsView>
+    with AutomaticKeepAliveClientMixin {
   late final Stream<List<FavouriteFoodEntity>> _favouritesStream;
   late final Stream<List<MealLog>> _recentFoodsStream;
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {
@@ -627,6 +681,7 @@ class _RecentAndFavsViewState extends State<_RecentAndFavsView> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return StreamBuilder<List<FavouriteFoodEntity>>(
       stream: _favouritesStream,
       builder: (context, favSnapshot) {

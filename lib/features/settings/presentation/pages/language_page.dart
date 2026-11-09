@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:bloomi/core/services/country_detection_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/localization/app_languages.dart';
@@ -33,10 +34,34 @@ class _LanguagePageState extends State<LanguagePage> {
     'Americas',
   ];
 
+  late DetectedCountry _detectedCountry;
+  List<AppLanguage> _countryLanguages = [];
+
   @override
   void initState() {
     super.initState();
+    _detectedCountry = CountryDetectionService.getCachedOrInitialCountry();
+    _countryLanguages = AppLanguage.getLanguagesForCountry(
+      _detectedCountry.name,
+      _detectedCountry.code,
+    );
+    _detectCountryAsync();
     context.read<SettingsBloc>().add(const LoadSettingsEvent());
+  }
+
+  Future<void> _detectCountryAsync() async {
+    try {
+      final country = await CountryDetectionService.detectCountry();
+      if (mounted) {
+        setState(() {
+          _detectedCountry = country;
+          _countryLanguages = AppLanguage.getLanguagesForCountry(
+            country.name,
+            country.code,
+          );
+        });
+      }
+    } catch (_) {}
   }
 
   @override
@@ -325,129 +350,238 @@ class _LanguagePageState extends State<LanguagePage> {
                           ],
                         ),
                       )
-                    : ListView.separated(
+                    : ListView(
                         padding: const EdgeInsets.all(AppSpacing.md),
-                        itemCount: filteredLanguages.length,
-                        separatorBuilder: (context, index) => const SizedBox(height: 8),
-                        itemBuilder: (context, index) {
-                          final lang = filteredLanguages[index];
-                          final isSelected = currentLangCode.toLowerCase() == lang.code.toLowerCase();
-                          final badgeColor = _badgeColorForIndex(index);
-
-                          return InkWell(
-                            onTap: () => _saveLanguage(lang),
-                            borderRadius: BorderRadius.circular(16),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-                              decoration: BoxDecoration(
-                                color: context.appSurface,
-                                borderRadius: BorderRadius.circular(16),
-                                border: Border.all(
-                                  color: isSelected
-                                      ? (context.isDarkMode ? AppColors.darkMint : AppColors.mintDark)
-                                      : context.appBorderColor,
-                                  width: isSelected ? 2 : 1,
+                        children: [
+                          if (_searchQuery.isEmpty && _selectedFilter == 'All') ...[
+                            _buildDetectedCountryCard(currentLangCode),
+                            const SizedBox(height: 8),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 4),
+                              child: Text(
+                                '${context.tr('all_languages')} (${filteredLanguages.length})',
+                                style: TextStyle(
+                                  fontFamily: 'Baloo 2',
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16,
+                                  color: context.appInk,
                                 ),
                               ),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 44,
-                                    height: 44,
-                                    decoration: BoxDecoration(
-                                      color: badgeColor.withAlpha(context.isDarkMode ? 70 : 45),
-                                      shape: BoxShape.circle,
-                                      border: Border.all(color: badgeColor.withAlpha(100)),
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        lang.badge,
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w800,
-                                          fontSize: 12,
-                                          color: context.appInk,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(width: 12),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Flexible(
-                                              child: Text(
-                                                lang.nativeName,
-                                                overflow: TextOverflow.ellipsis,
-                                                style: TextStyle(
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.w800,
-                                                  color: context.appInk,
-                                                ),
-                                              ),
-                                            ),
-                                            const SizedBox(width: 6),
-                                            Text(
-                                              '(${lang.name})',
-                                              overflow: TextOverflow.ellipsis,
-                                              style: TextStyle(
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w600,
-                                                color: context.appSlate,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(height: 2),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              lang.region,
-                                              style: TextStyle(fontSize: 11, color: context.appSlate),
-                                            ),
-                                            if (lang.isRTL) ...[
-                                              const SizedBox(width: 6),
-                                              Container(
-                                                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
-                                                decoration: BoxDecoration(
-                                                  color: AppColors.softOrange.withAlpha(40),
-                                                  borderRadius: BorderRadius.circular(4),
-                                                ),
-                                                child: const Text(
-                                                  'RTL',
-                                                  style: TextStyle(
-                                                    fontSize: 9,
-                                                    fontWeight: FontWeight.w800,
-                                                    color: AppColors.softOrange,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  const SizedBox(width: 8),
-                                  Icon(
-                                    isSelected ? CupertinoIcons.checkmark_circle_fill : CupertinoIcons.circle,
-                                    color: isSelected
-                                        ? (context.isDarkMode ? AppColors.darkMint : AppColors.mintDark)
-                                        : context.appSlate.withAlpha(90),
-                                    size: 24,
-                                  ),
-                                ],
-                              ),
                             ),
-                          );
-                        },
+                          ],
+                          ...filteredLanguages.map((lang) {
+                            final isSelected = currentLangCode.toLowerCase() == lang.code.toLowerCase();
+                            return Padding(
+                              padding: const EdgeInsets.only(bottom: 8),
+                              child: _buildLanguageItemTile(lang, isSelected, filteredLanguages.indexOf(lang)),
+                            );
+                          }),
+                        ],
                       ),
               ),
             ],
           );
         },
+      ),
+    );
+  }
+
+  Widget _buildDetectedCountryCard(String currentLangCode) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.all(AppSpacing.md),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: context.isDarkMode
+              ? [const Color(0xFF1B2A26), const Color(0xFF13201C)]
+              : [const Color(0xFFE8F7F0), const Color(0xFFDEF3EA)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+        border: Border.all(
+          color: AppColors.mint.withAlpha(context.isDarkMode ? 80 : 120),
+          width: 1.5,
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text(_detectedCountry.flag, style: const TextStyle(fontSize: 24)),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '${context.tr('detected_country')}: ${_detectedCountry.name} (${_detectedCountry.code})',
+                      style: TextStyle(
+                        fontFamily: 'Nunito',
+                        fontSize: 13,
+                        fontWeight: FontWeight.w800,
+                        color: context.appInk,
+                      ),
+                    ),
+                    Text(
+                      context.tr('suggested_for_country', {'country': _detectedCountry.name}),
+                      style: TextStyle(
+                        fontFamily: 'Nunito',
+                        fontSize: 11,
+                        fontWeight: FontWeight.w600,
+                        color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                decoration: BoxDecoration(
+                  color: AppColors.mint.withAlpha(context.isDarkMode ? 60 : 40),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(CupertinoIcons.location_solid, size: 10, color: AppColors.mintDark),
+                    const SizedBox(width: 3),
+                    Text(
+                      context.tr('auto_detected'),
+                      style: const TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.mintDark,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          ..._countryLanguages.take(5).map((l) {
+            final isSel = currentLangCode.toLowerCase() == l.code.toLowerCase();
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: _buildLanguageItemTile(l, isSel, _countryLanguages.indexOf(l)),
+            );
+          }),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildLanguageItemTile(AppLanguage lang, bool isSelected, int index) {
+    final badgeColor = _badgeColorForIndex(index);
+
+    return InkWell(
+      onTap: () => _saveLanguage(lang),
+      borderRadius: BorderRadius.circular(16),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+        decoration: BoxDecoration(
+          color: context.appSurface,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: isSelected
+                ? (context.isDarkMode ? AppColors.darkMint : AppColors.mintDark)
+                : context.appBorderColor,
+            width: isSelected ? 2 : 1,
+          ),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 44,
+              height: 44,
+              decoration: BoxDecoration(
+                color: badgeColor.withAlpha(context.isDarkMode ? 70 : 45),
+                shape: BoxShape.circle,
+                border: Border.all(color: badgeColor.withAlpha(100)),
+              ),
+              child: Center(
+                child: Text(
+                  lang.badge,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 12,
+                    color: context.appInk,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Flexible(
+                        child: Text(
+                          lang.nativeName,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w800,
+                            color: context.appInk,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      Text(
+                        '(${lang.name})',
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: context.appSlate,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 2),
+                  Row(
+                    children: [
+                      Text(
+                        lang.region,
+                        style: TextStyle(fontSize: 11, color: context.appSlate),
+                      ),
+                      if (lang.isRTL) ...[
+                        const SizedBox(width: 6),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+                          decoration: BoxDecoration(
+                            color: AppColors.softOrange.withAlpha(40),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: const Text(
+                            'RTL',
+                            style: TextStyle(
+                              fontSize: 9,
+                              fontWeight: FontWeight.w800,
+                              color: AppColors.softOrange,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 8),
+            Icon(
+              isSelected ? CupertinoIcons.checkmark_circle_fill : CupertinoIcons.circle,
+              color: isSelected
+                  ? (context.isDarkMode ? AppColors.darkMint : AppColors.mintDark)
+                  : context.appSlate.withAlpha(90),
+              size: 24,
+            ),
+          ],
+        ),
       ),
     );
   }

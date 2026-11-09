@@ -1,11 +1,15 @@
 import 'package:bloomi/core/constants/app_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
+import 'package:bloomi/core/localization/app_languages.dart';
+import 'package:bloomi/core/services/country_detection_service.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_widget.dart';
 import 'package:bloomi/core/widgets/metric_animations/floating_onboarding_illustration.dart';
 import 'package:bloomi/core/widgets/pill_button.dart';
 import 'package:bloomi/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:bloomi/features/onboarding/presentation/pages/onboarding_language_page.dart';
+import 'package:bloomi/features/settings/presentation/bloc/settings_bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -110,6 +114,61 @@ class _IntroSlidesPageState extends State<IntroSlidesPage> {
             onPressed: _handleBack,
           ),
           actions: [
+            BlocBuilder<SettingsBloc, SettingsState>(
+              builder: (context, state) {
+                final langCode = state is SettingsLoaded ? state.language : 'en';
+                final detectedCountry = CountryDetectionService.getCachedOrInitialCountry();
+                final lang = AppLanguage.supportedLanguages.firstWhere(
+                  (l) => l.code.toLowerCase() == langCode.toLowerCase(),
+                  orElse: () => AppLanguage(
+                    code: langCode,
+                    name: langCode,
+                    nativeName: langCode,
+                    region: '',
+                    badge: langCode.toUpperCase(),
+                  ),
+                );
+
+                return Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 6),
+                    child: Material(
+                      color: context.appSurface,
+                      borderRadius: BorderRadius.circular(20),
+                      child: InkWell(
+                        onTap: () => OnboardingLanguagePage.showLanguageSheet(context),
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: context.appBorderColor),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(detectedCountry.flag, style: const TextStyle(fontSize: 14)),
+                              const SizedBox(width: 4),
+                              Text(
+                                lang.badge,
+                                style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 12,
+                                  color: context.appInk,
+                                ),
+                              ),
+                              const SizedBox(width: 2),
+                              Icon(CupertinoIcons.chevron_down, size: 12, color: context.appSlate),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
             TextButton(
               onPressed: () {
                 if (widget.onNext != null) {

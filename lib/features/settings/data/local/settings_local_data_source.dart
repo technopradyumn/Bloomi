@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:bloomi/core/database/app_database.dart';
 import 'package:bloomi/core/localization/app_languages.dart';
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/features/auth/domain/repositories/auth_repository.dart';
 import 'package:bloomi/services/billing/billing_service.dart';
 import 'package:bloomi/services/notifications/notification_service.dart';
@@ -245,7 +246,7 @@ class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
     }
 
     try {
-      Intl.defaultLocale = language;
+      BloomiLocalizations.applySafeIntlLocale(language);
     } catch (_) {}
 
     return {
@@ -276,7 +277,7 @@ class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
   Future<void> updateLanguage(String language) async {
     await _prefs?.setString('selected_language_code', language);
     try {
-      Intl.defaultLocale = language;
+      BloomiLocalizations.applySafeIntlLocale(language);
     } catch (_) {}
 
     final profiles = await (_db.select(_db.userProfiles)

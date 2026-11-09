@@ -1176,7 +1176,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Color.alphaBlend(AppColors.softOrange.withOpacity(0.15), context.appSurface),
+                    color: Color.alphaBlend(AppColors.softOrange.withAlpha(38), context.appSurface),
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(CupertinoIcons.lock_fill, color: AppColors.softOrange, size: 20),

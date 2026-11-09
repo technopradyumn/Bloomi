@@ -48,5 +48,7 @@ abstract class FoodRepository {
   Future<int> ensureSeeded();
   Future<BarcodeProductEntity?> lookupBarcode(String barcode);
   Future<List<ScannedFoodItemEntity>> scanFoodPhoto(String imagePath);
+  Stream<List<CustomFood>> watchCustomFoods();
+  Future<List<CustomFood>> getCustomFoods();
 }
 

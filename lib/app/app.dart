@@ -69,11 +69,15 @@ class _BloomiAppState extends State<BloomiApp> with WidgetsBindingObserver {
   }
 
   Locale _resolveLocale(String langCode) {
-    if (langCode.contains('-')) {
-      final parts = langCode.split('-');
+    if (langCode.toLowerCase() == 'hinglish') {
+      return const Locale('en', 'IN');
+    }
+    final clean = langCode.replaceAll('_', '-');
+    if (clean.contains('-')) {
+      final parts = clean.split('-');
       return Locale(parts[0], parts.length > 1 ? parts[1] : null);
     }
-    return Locale(langCode);
+    return Locale(clean);
   }
 
   @override

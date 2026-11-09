@@ -227,7 +227,7 @@ class SettingsPage extends StatelessWidget {
         leading: Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: Color.alphaBlend(color.withOpacity(0.20), context.appSurface),
+            color: Color.alphaBlend(color.withAlpha(51), context.appSurface),
             shape: BoxShape.circle,
           ),
           child: Icon(icon, color: primaryTextColor, size: 20),

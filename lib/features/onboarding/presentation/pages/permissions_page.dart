@@ -488,7 +488,7 @@ class _PermissionsPageState extends State<PermissionsPage>
                             ),
                           ),
                           Text(
-                            'STEP 5 OF 5',
+                            'STEP 6 OF 6',
                             style: TextStyle(
                               fontFamily: 'Nunito',
                               fontWeight: FontWeight.w700,

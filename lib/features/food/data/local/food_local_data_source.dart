@@ -7,6 +7,7 @@ import 'package:bloomi/features/food/domain/entities/food_search_result_entity.d
 import 'package:bloomi/features/food/domain/entities/nutrient_snapshot_entity.dart';
 import 'package:bloomi/services/widget/widget_sync_service.dart';
 import 'package:drift/drift.dart';
+import 'package:drift/drift.dart' as drift;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
@@ -48,6 +49,8 @@ abstract class FoodLocalDataSource {
     required double fibre,
     List<Map<String, dynamic>>? ingredients,
   });
+  Stream<List<CustomFood>> watchCustomFoods();
+  Future<List<CustomFood>> getCustomFoods();
   Future<int> ensureSeeded();
 }
 
@@ -254,8 +257,12 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
           .get();
     }
 
+    final isCustomCategoryOnly = category == 'Custom' || category == 'Custom Foods';
+
     final customFoods = await (_db.select(_db.customFoods)
-          ..where((t) => t.userId.equals(_currentUserId) & t.deleted.equals(false)))
+          ..where((t) =>
+              (t.userId.equals(_currentUserId) | t.userId.equals('default_user')) &
+              t.deleted.equals(false)))
         .get();
 
     final List<String> searchTerms = [cleanQuery];
@@ -267,153 +274,160 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
 
     final List<FoodSearchResultEntity> results = [];
 
-    int getScore(String name, String? hindiName, String cat) {
-      if (cleanQuery.isEmpty) return 1;
+    int getScore(String name, String? hindiName, String cat, {bool isCustom = false}) {
+      if (cleanQuery.isEmpty) return isCustom ? 10 : 1;
 
       final n = name.toLowerCase();
       final h = (hindiName ?? '').toLowerCase();
       final c = cat.toLowerCase();
 
-      if (n == cleanQuery || h == cleanQuery) return 100;
-      if (n.startsWith(cleanQuery)) return 80;
-      if (n.contains(cleanQuery) || h.contains(cleanQuery)) return 60;
+      final bonus = isCustom ? 15 : 0;
+
+      if (n == cleanQuery || h == cleanQuery) return 100 + bonus;
+      if (n.startsWith(cleanQuery)) return 80 + bonus;
+      if (n.contains(cleanQuery) || h.contains(cleanQuery)) return 60 + bonus;
 
       for (final term in searchTerms) {
-        if (n.contains(term) || h.contains(term)) return 40;
+        if (n.contains(term) || h.contains(term)) return 40 + bonus;
       }
 
-      if (c.contains(cleanQuery)) return 20;
+      if (c.contains(cleanQuery)) return 20 + bonus;
 
       return 0;
     }
 
-    for (final food in foods) {
-      if (category != null && category != 'All' && food.category != category) {
-        continue;
-      }
-
-      // Dietary filter: If user is vegetarian/vegan/jain, NEVER show non-vegetarian food!
-      final dietTags = (food.dietTags ?? '').toLowerCase();
-      final nLower = food.name.toLowerCase();
-      final catLower = food.category.toLowerCase();
-
-      final isNonVeg = dietTags.contains('non-veg') ||
-          catLower.contains('non-veg') ||
-          catLower.contains('meat') ||
-          catLower.contains('poultry') ||
-          catLower.contains('fish') ||
-          catLower.contains('seafood') ||
-          nLower.contains('chicken') ||
-          nLower.contains('fish') ||
-          nLower.contains('mutton') ||
-          nLower.contains('prawn') ||
-          nLower.contains('shrimp') ||
-          nLower.contains('pork') ||
-          nLower.contains('beef');
-
-      final isEgg = dietTags.contains('egg') ||
-          catLower.contains('egg') ||
-          nLower.contains('egg') ||
-          nLower.contains('omelette') ||
-          nLower.contains('bhurji');
-
-      if (userDiet.contains('veg') && !userDiet.contains('non')) {
-        if (isNonVeg) continue;
-        if (!userDiet.contains('egg') && isEgg) continue;
-      }
-      if (userDiet.contains('jain')) {
-        if (isNonVeg || isEgg) continue;
-        if (nLower.contains('onion') ||
-            nLower.contains('garlic') ||
-            nLower.contains('potato') ||
-            nLower.contains('aloo')) {
+    if (!isCustomCategoryOnly) {
+      for (final food in foods) {
+        if (category != null && category != 'All' &&
+            food.category != category) {
           continue;
         }
-      }
-      if (userDiet.contains('vegan')) {
-        if (isNonVeg || isEgg) continue;
-        if (catLower.contains('dairy') ||
-            nLower.contains('milk') ||
-            nLower.contains('paneer') ||
-            nLower.contains('curd') ||
-            nLower.contains('dahi') ||
-            nLower.contains('ghee') ||
-            nLower.contains('butter') ||
-            nLower.contains('cheese')) {
-          continue;
-        }
-      }
 
-      // Allergen filter:
-      if (userAllergies.contains('dairy') || userAllergies.contains('lactose')) {
-        if (catLower.contains('dairy') ||
-            nLower.contains('milk') ||
-            nLower.contains('paneer') ||
-            nLower.contains('cheese') ||
-            nLower.contains('curd') ||
-            nLower.contains('dahi') ||
-            nLower.contains('ghee') ||
-            nLower.contains('butter')) {
-          continue;
-        }
-      }
-      if (userAllergies.contains('gluten')) {
-        if (catLower.contains('bread') ||
-            catLower.contains('grain') ||
-            nLower.contains('wheat') ||
-            nLower.contains('roti') ||
-            nLower.contains('naan') ||
-            nLower.contains('paratha') ||
-            nLower.contains('puri')) {
-          continue;
-        }
-      }
-      if (userAllergies.contains('nut')) {
-        if (nLower.contains('nut') ||
-            nLower.contains('peanut') ||
-            nLower.contains('almond') ||
-            nLower.contains('cashew') ||
-            nLower.contains('kaju') ||
-            nLower.contains('badam')) {
-          continue;
-        }
-      }
-      if (userAllergies.contains('egg') && isEgg) {
-        continue;
-      }
-      if (userAllergies.contains('seafood') || userAllergies.contains('fish')) {
-        if (catLower.contains('seafood') ||
+        // Dietary filter: If user is vegetarian/vegan/jain, NEVER show non-vegetarian food!
+        final dietTags = (food.dietTags ?? '').toLowerCase();
+        final nLower = food.name.toLowerCase();
+        final catLower = food.category.toLowerCase();
+
+        final isNonVeg = dietTags.contains('non-veg') ||
+            catLower.contains('non-veg') ||
+            catLower.contains('meat') ||
+            catLower.contains('poultry') ||
             catLower.contains('fish') ||
+            catLower.contains('seafood') ||
+            nLower.contains('chicken') ||
             nLower.contains('fish') ||
+            nLower.contains('mutton') ||
             nLower.contains('prawn') ||
-            nLower.contains('shrimp')) {
+            nLower.contains('shrimp') ||
+            nLower.contains('pork') ||
+            nLower.contains('beef');
+
+        final isEgg = dietTags.contains('egg') ||
+            catLower.contains('egg') ||
+            nLower.contains('egg') ||
+            nLower.contains('omelette') ||
+            nLower.contains('bhurji');
+
+        if (userDiet.contains('veg') && !userDiet.contains('non')) {
+          if (isNonVeg) continue;
+          if (!userDiet.contains('egg') && isEgg) continue;
+        }
+        if (userDiet.contains('jain')) {
+          if (isNonVeg || isEgg) continue;
+          if (nLower.contains('onion') ||
+              nLower.contains('garlic') ||
+              nLower.contains('potato') ||
+              nLower.contains('aloo')) {
+            continue;
+          }
+        }
+        if (userDiet.contains('vegan')) {
+          if (isNonVeg || isEgg) continue;
+          if (catLower.contains('dairy') ||
+              nLower.contains('milk') ||
+              nLower.contains('paneer') ||
+              nLower.contains('curd') ||
+              nLower.contains('dahi') ||
+              nLower.contains('ghee') ||
+              nLower.contains('butter') ||
+              nLower.contains('cheese')) {
+            continue;
+          }
+        }
+
+        // Allergen filter:
+        if (userAllergies.contains('dairy') ||
+            userAllergies.contains('lactose')) {
+          if (catLower.contains('dairy') ||
+              nLower.contains('milk') ||
+              nLower.contains('paneer') ||
+              nLower.contains('cheese') ||
+              nLower.contains('curd') ||
+              nLower.contains('dahi') ||
+              nLower.contains('ghee') ||
+              nLower.contains('butter')) {
+            continue;
+          }
+        }
+        if (userAllergies.contains('gluten')) {
+          if (catLower.contains('bread') ||
+              catLower.contains('grain') ||
+              nLower.contains('wheat') ||
+              nLower.contains('roti') ||
+              nLower.contains('naan') ||
+              nLower.contains('paratha') ||
+              nLower.contains('puri')) {
+            continue;
+          }
+        }
+        if (userAllergies.contains('nut')) {
+          if (nLower.contains('nut') ||
+              nLower.contains('peanut') ||
+              nLower.contains('almond') ||
+              nLower.contains('cashew') ||
+              nLower.contains('kaju') ||
+              nLower.contains('badam')) {
+            continue;
+          }
+        }
+        if (userAllergies.contains('egg') && isEgg) {
           continue;
         }
-      }
+        if (userAllergies.contains('seafood') ||
+            userAllergies.contains('fish')) {
+          if (catLower.contains('seafood') ||
+              catLower.contains('fish') ||
+              nLower.contains('fish') ||
+              nLower.contains('prawn') ||
+              nLower.contains('shrimp')) {
+            continue;
+          }
+        }
 
-      final score = getScore(food.name, food.hindiName, food.category);
-      if (score > 0) {
-        results.add(FoodSearchResultEntity(
-          id: food.id,
-          name: food.name,
-          hindiName: food.hindiName,
-          category: food.category,
-          kcalPer100g: food.kcalPer100g,
-          proteinPer100g: food.proteinPer100g,
-          carbsPer100g: food.carbsPer100g,
-          fatPer100g: food.fatPer100g,
-          fibrePer100g: food.fibrePer100g,
-          sugarPer100g: food.sugarPer100g,
-          sodiumPer100g: food.sodiumPer100g,
-          source: food.source,
-          defaultServingName: 'katori / serving',
-          defaultServingGrams: 100.0,
-        ));
+        final score = getScore(food.name, food.hindiName, food.category);
+        if (score > 0) {
+          results.add(FoodSearchResultEntity(
+            id: food.id,
+            name: food.name,
+            hindiName: food.hindiName,
+            category: food.category,
+            kcalPer100g: food.kcalPer100g,
+            proteinPer100g: food.proteinPer100g,
+            carbsPer100g: food.carbsPer100g,
+            fatPer100g: food.fatPer100g,
+            fibrePer100g: food.fibrePer100g,
+            sugarPer100g: food.sugarPer100g,
+            sodiumPer100g: food.sodiumPer100g,
+            source: food.source,
+            defaultServingName: 'katori / serving',
+            defaultServingGrams: 100.0,
+          ));
+        }
       }
     }
 
     for (final custom in customFoods) {
-      final score = getScore(custom.name, null, 'Custom');
+      final score = getScore(custom.name, null, 'Custom', isCustom: true);
       if (score > 0) {
         final servingG = custom.servingSizeGrams > 0 ? custom.servingSizeGrams : 100.0;
         final per100Factor = 100.0 / servingG;
@@ -435,8 +449,8 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
     }
 
     results.sort((a, b) {
-      final scoreA = getScore(a.name, a.hindiName, a.category);
-      final scoreB = getScore(b.name, b.hindiName, b.category);
+      final scoreA = getScore(a.name, a.hindiName, a.category, isCustom: a.isCustom);
+      final scoreB = getScore(b.name, b.hindiName, b.category, isCustom: b.isCustom);
       return scoreB.compareTo(scoreA);
     });
 
@@ -444,6 +458,26 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
       return results.sublist(0, limit);
     }
     return results;
+  }
+
+  @override
+  Stream<List<CustomFood>> watchCustomFoods() {
+    return (_db.select(_db.customFoods)
+          ..where((t) =>
+              (t.userId.equals(_currentUserId) | t.userId.equals('default_user')) &
+              t.deleted.equals(false))
+          ..orderBy([(t) => drift.OrderingTerm.desc(t.createdAt)]))
+        .watch();
+  }
+
+  @override
+  Future<List<CustomFood>> getCustomFoods() {
+    return (_db.select(_db.customFoods)
+          ..where((t) =>
+              (t.userId.equals(_currentUserId) | t.userId.equals('default_user')) &
+              t.deleted.equals(false))
+          ..orderBy([(t) => drift.OrderingTerm.desc(t.createdAt)]))
+        .get();
   }
 
   @override

@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart' hide TextDirection;
 
 /// Top-level parser for off-UI-thread JSON parsing via compute()
@@ -285,6 +286,13 @@ class BloomiLocalizations {
     'partially_translated': 'Partially translated',
     'complete_translation': 'Complete',
     'language_changed_toast': 'Language set to {name} ({nativeName})',
+    'detected_country': 'Detected Country',
+    'suggested_for_country': 'Suggested for {country}',
+    'all_languages': 'All Languages',
+    'choose_language': 'Choose App Language',
+    'choose_language_desc': 'Select your preferred language. Bloomi supports 150+ languages with country auto-detection.',
+    'continue_to_about_you': 'Continue to About You',
+    'auto_detected': 'Auto-detected',
     'surroundings_title': 'Surroundings & Environment',
     'surroundings_aqi': 'Air Quality Index',
     'surroundings_uv': 'UV Index',
@@ -530,7 +538,7 @@ class BloomiLocalizations {
 
     // 1. Check in-memory cache
     if (_cache.containsKey(cleanCode)) {
-      _applyIntlLocale(cleanCode);
+      applySafeIntlLocale(cleanCode);
       return SynchronousFuture<BloomiLocalizations>(
         BloomiLocalizations(locale, cleanCode, _cache[cleanCode]!),
       );
@@ -556,15 +564,33 @@ class BloomiLocalizations {
 
     loadedMap ??= _fallbackEnglish;
     _cache[cleanCode] = loadedMap;
-    _applyIntlLocale(cleanCode);
+    applySafeIntlLocale(cleanCode);
 
     return BloomiLocalizations(locale, cleanCode, loadedMap);
   }
 
-  static void _applyIntlLocale(String code) {
+  /// Safely sets Intl.defaultLocale without ever throwing ArgumentError: Invalid argument (locale)
+  /// or LocaleDataException. Strictly verifies formatting capability before setting; falls back safely to 'en'.
+  static void applySafeIntlLocale(String code) {
     try {
-      Intl.defaultLocale = code;
-    } catch (_) {}
+      final clean = code.replaceAll('-', '_');
+      try {
+        DateFormat.d(clean).format(DateTime.now());
+        Intl.defaultLocale = clean;
+        return;
+      } catch (_) {}
+
+      final base = clean.split('_').first;
+      try {
+        DateFormat.d(base).format(DateTime.now());
+        Intl.defaultLocale = base;
+        return;
+      } catch (_) {}
+
+      Intl.defaultLocale = 'en';
+    } catch (_) {
+      Intl.defaultLocale = 'en';
+    }
   }
 
   /// Translates a key, evaluates ICU plurals if present, and interpolates placeholders
@@ -775,20 +801,34 @@ extension LocalizationExtension on BuildContext {
   Locale get currentLocale => BloomiLocalizations.of(this).locale;
 
   String formatDate(DateTime date, [String pattern = 'd MMM']) {
-    final loc = BloomiLocalizations.of(this).languageCode;
     try {
-      return DateFormat(pattern, loc).format(date);
+      final loc = BloomiLocalizations.of(this).languageCode.replaceAll('-', '_');
+      final safeLoc = dateTimeSymbolMap().containsKey(loc)
+          ? loc
+          : (dateTimeSymbolMap().containsKey(loc.split('_').first) ? loc.split('_').first : 'en');
+      return DateFormat(pattern, safeLoc).format(date);
     } catch (_) {
-      return DateFormat(pattern).format(date);
+      try {
+        return DateFormat(pattern, 'en').format(date);
+      } catch (_) {
+        return '${date.day}/${date.month}/${date.year}';
+      }
     }
   }
 
   String formatTime(DateTime time, [String pattern = 'h:mm a']) {
-    final loc = BloomiLocalizations.of(this).languageCode;
     try {
-      return DateFormat(pattern, loc).format(time);
+      final loc = BloomiLocalizations.of(this).languageCode.replaceAll('-', '_');
+      final safeLoc = dateTimeSymbolMap().containsKey(loc)
+          ? loc
+          : (dateTimeSymbolMap().containsKey(loc.split('_').first) ? loc.split('_').first : 'en');
+      return DateFormat(pattern, safeLoc).format(time);
     } catch (_) {
-      return DateFormat(pattern).format(time);
+      try {
+        return DateFormat(pattern, 'en').format(time);
+      } catch (_) {
+        return '${time.hour}:${time.minute.toString().padLeft(2, '0')}';
+      }
     }
   }
 }

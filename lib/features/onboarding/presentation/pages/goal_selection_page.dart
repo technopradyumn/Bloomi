@@ -204,7 +204,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
                                 ),
                               ),
                               Text(
-                                'STEP 3 OF 5',
+                                'STEP 4 OF 6',
                                 style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontWeight: FontWeight.w700,

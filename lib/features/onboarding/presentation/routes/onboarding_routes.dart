@@ -17,27 +17,31 @@ final List<RouteBase> onboardingRoutes = [
     ),
   ),
   GoRoute(
-    path: '/onboarding/about-you',
+    path: '/onboarding/language',
     builder: (context, state) => const OnboardingFlowPage(initialStep: 1),
   ),
   GoRoute(
-    path: '/onboarding/body',
+    path: '/onboarding/about-you',
     builder: (context, state) => const OnboardingFlowPage(initialStep: 2),
   ),
   GoRoute(
-    path: '/onboarding/goal',
+    path: '/onboarding/body',
     builder: (context, state) => const OnboardingFlowPage(initialStep: 3),
   ),
   GoRoute(
-    path: '/onboarding/lifestyle',
+    path: '/onboarding/goal',
     builder: (context, state) => const OnboardingFlowPage(initialStep: 4),
   ),
   GoRoute(
-    path: '/onboarding/permissions',
+    path: '/onboarding/lifestyle',
     builder: (context, state) => const OnboardingFlowPage(initialStep: 5),
   ),
   GoRoute(
-    path: '/onboarding/plan-ready',
+    path: '/onboarding/permissions',
     builder: (context, state) => const OnboardingFlowPage(initialStep: 6),
+  ),
+  GoRoute(
+    path: '/onboarding/plan-ready',
+    builder: (context, state) => const OnboardingFlowPage(initialStep: 7),
   ),
 ];

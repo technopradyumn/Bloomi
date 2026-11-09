@@ -544,7 +544,7 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
                 margin: const EdgeInsets.only(bottom: AppSpacing.md),
                 padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
                 decoration: BoxDecoration(
-                  color: Color.alphaBlend(AppColors.mint.withOpacity(0.18), context.appSurface),
+                  color: Color.alphaBlend(AppColors.mint.withAlpha(46), context.appSurface),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: AppColors.mint, width: 1.5),
                 ),
@@ -584,7 +584,7 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                         decoration: BoxDecoration(
-                          color: Color.alphaBlend(AppColors.mint.withOpacity(0.18), context.appSurface),
+                          color: Color.alphaBlend(AppColors.mint.withAlpha(46), context.appSurface),
                           borderRadius: BorderRadius.circular(AppSpacing.chipRadius),
                         ),
                         child: Text(
@@ -599,7 +599,7 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
-                          color: Color.alphaBlend(AppColors.butter.withOpacity(0.35), context.appSurface),
+                          color: Color.alphaBlend(AppColors.butter.withAlpha(89), context.appSurface),
                           borderRadius: BorderRadius.circular(AppSpacing.chipRadius),
                         ),
                         child: Text(

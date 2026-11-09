@@ -8,6 +8,7 @@ import 'package:bloomi/features/onboarding/presentation/pages/body_metrics_page.
 import 'package:bloomi/features/onboarding/presentation/pages/goal_selection_page.dart';
 import 'package:bloomi/features/onboarding/presentation/pages/intro_slides_page.dart';
 import 'package:bloomi/features/onboarding/presentation/pages/lifestyle_page.dart';
+import 'package:bloomi/features/onboarding/presentation/pages/onboarding_language_page.dart';
 import 'package:bloomi/features/onboarding/presentation/pages/permissions_page.dart';
 import 'package:bloomi/features/onboarding/presentation/pages/plan_ready_page.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class _OnboardingFlowPageState extends State<OnboardingFlowPage> {
   late final PageController _pageController;
   late int _currentIndex;
 
-  int get _maxPageCount => widget.isReinstall ? 2 : 7;
+  int get _maxPageCount => widget.isReinstall ? 3 : 8;
 
   @override
   void initState() {
@@ -61,26 +62,27 @@ class _OnboardingFlowPageState extends State<OnboardingFlowPage> {
   void _next() {
     if (widget.isReinstall) {
       if (_currentIndex == 0) {
-        // Reinstall flow: Intro slides -> jump directly to Permissions screen!
         _goToPage(1);
         return;
+      } else if (_currentIndex == 1) {
+        _goToPage(2);
+        return;
       } else {
-        // Reinstall flow: After permissions screen -> go directly to Home!
         context.read<AuthBloc>().add(const AuthSetOnboardingCompletedRequested(true));
         context.go('/home');
         return;
       }
     }
 
-    if (_currentIndex < 6) {
+    if (_currentIndex < _maxPageCount - 1) {
       _goToPage(_currentIndex + 1);
     }
   }
 
   void _back() {
     if (widget.isReinstall) {
-      if (_currentIndex == 1) {
-        _goToPage(0);
+      if (_currentIndex > 0) {
+        _goToPage(_currentIndex - 1);
         return;
       } else {
         context.read<AuthBloc>().add(const AuthSignOutRequested());
@@ -143,7 +145,13 @@ class _OnboardingFlowPageState extends State<OnboardingFlowPage> {
                       onBack: _back,
                     ),
 
-                    // 1: Permissions & Health Connect (Only permissions in reinstall flow)
+                    // 1: App Language Choose
+                    OnboardingLanguagePage(
+                      onNext: _next,
+                      onBack: _back,
+                    ),
+
+                    // 2: Permissions & Health Connect
                     PermissionsPage(
                       onNext: _next,
                       onBack: _back,
@@ -156,37 +164,43 @@ class _OnboardingFlowPageState extends State<OnboardingFlowPage> {
                       onBack: _back,
                     ),
 
-                    // 1: About You
+                    // 1: App Language Choose
+                    OnboardingLanguagePage(
+                      onNext: _next,
+                      onBack: _back,
+                    ),
+
+                    // 2: About You
                     AboutYouPage(
                       onNext: _next,
                       onBack: _back,
                     ),
 
-                    // 2: Body Metrics
+                    // 3: Body Metrics
                     BodyMetricsPage(
                       onNext: _next,
                       onBack: _back,
                     ),
 
-                    // 3: Goal Selection
+                    // 4: Goal Selection
                     GoalSelectionPage(
                       onNext: _next,
                       onBack: _back,
                     ),
 
-                    // 4: Lifestyle & Food Habits
+                    // 5: Lifestyle & Food Habits
                     LifestylePage(
                       onNext: _next,
                       onBack: _back,
                     ),
 
-                    // 5: Permissions & Health Connect
+                    // 6: Permissions & Health Connect
                     PermissionsPage(
                       onNext: _next,
                       onBack: _back,
                     ),
 
-                    // 6: Plan Ready
+                    // 7: Plan Ready
                     PlanReadyPage(
                       onBack: _back,
                     ),

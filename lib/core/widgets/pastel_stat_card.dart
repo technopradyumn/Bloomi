@@ -71,12 +71,12 @@ class _PastelStatCardState extends State<PastelStatCard> {
     final cardBg = (widget.backgroundColor == AppColors.surface || widget.backgroundColor == Colors.white)
         ? context.appSurface
         : (isDark
-            ? Color.alphaBlend(widget.backgroundColor.withOpacity(0.18), context.appSurface)
+            ? Color.alphaBlend(widget.backgroundColor.withAlpha(46), context.appSurface)
             : widget.backgroundColor);
 
     final iconCircleBg = isDark
-        ? Color.alphaBlend(primaryTextColor.withOpacity(0.12), context.appSurface)
-        : Color.alphaBlend(Colors.black.withOpacity(0.06), cardBg);
+        ? Color.alphaBlend(primaryTextColor.withAlpha(31), context.appSurface)
+        : Color.alphaBlend(Colors.black.withAlpha(15), cardBg);
 
     // Determine card background animation type based on content/metric
     AnimatedCardBackgroundType? bgAnimType;

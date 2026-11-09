@@ -111,7 +111,7 @@ class _CardBackgroundPainter extends CustomPainter {
 
   void _drawWaves(Canvas canvas, Size size, Paint paint) {
     final waveAlpha = isDark ? 0.08 : 0.07;
-    paint.color = color.withOpacity(waveAlpha);
+    paint.color = color.withAlpha((waveAlpha * 255).round());
     paint.style = PaintingStyle.fill;
 
     final path1 = Path();
@@ -129,7 +129,7 @@ class _CardBackgroundPainter extends CustomPainter {
     canvas.drawPath(path1, paint);
 
     // Second overlapping crest
-    paint.color = color.withOpacity(waveAlpha * 0.7);
+    paint.color = color.withAlpha(((waveAlpha * 0.7) * 255).round());
     final path2 = Path();
     final h2 = size.height * 0.82;
     path2.moveTo(0, size.height);
@@ -158,8 +158,8 @@ class _CardBackgroundPainter extends CustomPainter {
       center: Alignment(shift * 0.4 + 0.3, -0.4),
       radius: 0.9,
       colors: [
-        color.withOpacity(alpha),
-        color.withOpacity(alpha * 0.3),
+        color.withAlpha((alpha * 255).round()),
+        color.withAlpha(((alpha * 0.3) * 255).round()),
         Colors.transparent,
       ],
       stops: const [0.0, 0.55, 1.0],
@@ -171,7 +171,7 @@ class _CardBackgroundPainter extends CustomPainter {
   void _drawFloatingShapes(Canvas canvas, Size size, Paint paint) {
     final alpha = isDark ? 0.09 : 0.07;
     paint.style = PaintingStyle.fill;
-    paint.color = color.withOpacity(alpha);
+    paint.color = color.withAlpha((alpha * 255).round());
 
     // 3 subtle floating circles with staggered sinusoidal offsets
     final p1 = (progress) % 1.0;
@@ -203,7 +203,7 @@ class _CardBackgroundPainter extends CustomPainter {
     final center = Offset(size.width * 0.85, size.height * 0.25);
     paint.shader = RadialGradient(
       colors: [
-        color.withOpacity(alpha),
+        color.withAlpha((alpha * 255).round()),
         Colors.transparent,
       ],
       stops: const [0.0, 1.0],

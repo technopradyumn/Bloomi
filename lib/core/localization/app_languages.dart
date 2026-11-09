@@ -22,6 +22,155 @@ class AppLanguage {
     return rtlCodes.contains(code.toLowerCase());
   }
 
+  /// Get languages associated with a given country code or name,
+  /// placing the most relevant local languages first, followed by English.
+  static List<AppLanguage> getLanguagesForCountry(String countryName, String countryCode) {
+    final code = countryCode.toUpperCase();
+    final name = countryName.toLowerCase();
+
+    // 1. India
+    if (code == 'IN' || name.contains('india')) {
+      return supportedLanguages.where((l) {
+        return l.region.toLowerCase().contains('india') || l.code == 'en';
+      }).toList();
+    }
+
+    // 2. United States
+    if (code == 'US' || name.contains('united states') || name.contains('usa')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'en' || l.code == 'es' || l.code == 'nv' || l.code == 'chr';
+      }).toList();
+    }
+
+    // 3. United Kingdom
+    if (code == 'GB' || name.contains('united kingdom') || name.contains('britain')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'en' || l.code == 'cy' || l.code == 'gd' || l.code == 'ga';
+      }).toList();
+    }
+
+    // 4. Canada
+    if (code == 'CA' || name.contains('canada')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'en' || l.code == 'fr' || l.code == 'iu' || l.code == 'oj' || l.code == 'cr';
+      }).toList();
+    }
+
+    // 5. Germany & Austria
+    if (code == 'DE' || code == 'AT' || name.contains('germany') || name.contains('austria')) {
+      return supportedLanguages.where((l) => l.code == 'de' || l.code == 'en').toList();
+    }
+
+    // 6. France
+    if (code == 'FR' || name.contains('france')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'fr' || l.code == 'br' || l.code == 'oc' || l.code == 'co' || l.code == 'en';
+      }).toList();
+    }
+
+    // 7. Spain
+    if (code == 'ES' || name.contains('spain')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'es' || l.code == 'ca' || l.code == 'eu' || l.code == 'gl' || l.code == 'en';
+      }).toList();
+    }
+
+    // 8. Italy
+    if (code == 'IT' || name.contains('italy')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'it' || l.code == 'sc' || l.code == 'fur' || l.code == 'lij' || l.code == 'vec' || l.code == 'en';
+      }).toList();
+    }
+
+    // 9. Brazil & Portugal
+    if (code == 'BR' || code == 'PT' || name.contains('brazil') || name.contains('portugal')) {
+      return supportedLanguages.where((l) => l.code == 'pt' || l.code == 'en').toList();
+    }
+
+    // 10. Japan
+    if (code == 'JP' || name.contains('japan')) {
+      return supportedLanguages.where((l) => l.code == 'ja' || l.code == 'en').toList();
+    }
+
+    // 11. China & Taiwan
+    if (code == 'CN' || code == 'TW' || code == 'HK' || name.contains('china') || name.contains('taiwan')) {
+      return supportedLanguages.where((l) => l.code.startsWith('zh') || l.code == 'bo' || l.code == 'ug' || l.code == 'en').toList();
+    }
+
+    // 12. Indonesia
+    if (code == 'ID' || name.contains('indonesia')) {
+      return supportedLanguages.where((l) => l.code == 'id' || l.code == 'jv' || l.code == 'su' || l.code == 'en').toList();
+    }
+
+    // 13. Pakistan
+    if (code == 'PK' || name.contains('pakistan')) {
+      return supportedLanguages.where((l) => l.code == 'ur' || l.code == 'pa' || l.code == 'sd' || l.code == 'ps' || l.code == 'en').toList();
+    }
+
+    // 14. Bangladesh
+    if (code == 'BD' || name.contains('bangladesh')) {
+      return supportedLanguages.where((l) => l.code == 'bn' || l.code == 'en').toList();
+    }
+
+    // 15. Philippines
+    if (code == 'PH' || name.contains('philippines')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'fil' || l.code == 'ceb' || l.code == 'ilo' || l.code == 'war' ||
+               l.code == 'pam' || l.code == 'bcl' || l.code == 'hil' || l.code == 'pag' || l.code == 'en';
+      }).toList();
+    }
+
+    // 16. Nigeria
+    if (code == 'NG' || name.contains('nigeria')) {
+      return supportedLanguages.where((l) => l.code == 'yo' || l.code == 'ig' || l.code == 'ha' || l.code == 'en').toList();
+    }
+
+    // 17. South Africa
+    if (code == 'ZA' || name.contains('south africa')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'zu' || l.code == 'xh' || l.code == 'af' || l.code == 'st' ||
+               l.code == 'ts' || l.code == 'tn' || l.code == 've' || l.code == 'ss' || l.code == 'nr' || l.code == 'en';
+      }).toList();
+    }
+
+    // 18. Russia
+    if (code == 'RU' || name.contains('russia')) {
+      return supportedLanguages.where((l) {
+        return l.code == 'ru' || l.code == 'tt' || l.code == 'ba' || l.code == 'cv' ||
+               l.code == 'sah' || l.code == 'tyv' || l.code == 'bua' || l.code == 'ce' || l.code == 'av' || l.code == 'os' || l.code == 'en';
+      }).toList();
+    }
+
+    // 19. Arab World / Middle East
+    const arabCodes = {'SA', 'AE', 'EG', 'IQ', 'JO', 'LB', 'KW', 'QA', 'OM', 'BH', 'YE'};
+    if (arabCodes.contains(code) || name.contains('arab') || name.contains('emirates') || name.contains('egypt')) {
+      return supportedLanguages.where((l) => l.code == 'ar' || l.code == 'en').toList();
+    }
+
+    // 20. Generic fallback matching region string
+    final matches = supportedLanguages.where((l) {
+      return l.region.toLowerCase().contains(name);
+    }).toList();
+
+    if (matches.isNotEmpty) {
+      if (!matches.any((l) => l.code == 'en')) {
+        final en = supportedLanguages.firstWhere((l) => l.code == 'en');
+        matches.insert(0, en);
+      }
+      return matches;
+    }
+
+    // Default global top languages if unmapped
+    return [
+      supportedLanguages.firstWhere((l) => l.code == 'en'),
+      supportedLanguages.firstWhere((l) => l.code == 'hi'),
+      supportedLanguages.firstWhere((l) => l.code == 'es'),
+      supportedLanguages.firstWhere((l) => l.code == 'fr'),
+      supportedLanguages.firstWhere((l) => l.code == 'ar'),
+      supportedLanguages.firstWhere((l) => l.code == 'zh-CN'),
+    ];
+  }
+
   /// Complete list of 150+ supported languages including:
   /// - All 22 Scheduled Indian languages
   /// - Hinglish (Conversational Hindi in Latin script)

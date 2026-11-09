@@ -218,7 +218,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   Container(
                                     padding: const EdgeInsets.all(6),
                                     decoration: BoxDecoration(
-                                      color: Color.alphaBlend(AppColors.mint.withOpacity(0.25), context.appSurface),
+                                      color: Color.alphaBlend(AppColors.mint.withAlpha(64), context.appSurface),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     child: const Icon(CupertinoIcons.heart_fill, size: 16, color: AppColors.mintDark),
@@ -408,7 +408,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   Container(
                                     padding: const EdgeInsets.all(6),
                                     decoration: BoxDecoration(
-                                      color: Color.alphaBlend(AppColors.sky.withOpacity(0.25), context.appSurface),
+                                      color: Color.alphaBlend(AppColors.sky.withAlpha(64), context.appSurface),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     child: const Icon(CupertinoIcons.clock_fill, size: 16, color: Colors.blue),
@@ -536,7 +536,7 @@ class _ProfilePageState extends State<ProfilePage> {
             children: [
               CircleAvatar(
                 radius: 34,
-                backgroundColor: Color.alphaBlend(AppColors.mint.withOpacity(0.25), context.appSurface),
+                backgroundColor: Color.alphaBlend(AppColors.mint.withAlpha(64), context.appSurface),
                 child: const MascotWidget(
                   state: MascotState.happy,
                   size: 52,
@@ -566,7 +566,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
-                        color: Color.alphaBlend(AppColors.mint.withOpacity(0.20), context.appSurface),
+                        color: Color.alphaBlend(AppColors.mint.withAlpha(51), context.appSurface),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
@@ -585,7 +585,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 icon: Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Color.alphaBlend(AppColors.mint.withOpacity(0.20), context.appSurface),
+                    color: Color.alphaBlend(AppColors.mint.withAlpha(51), context.appSurface),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(CupertinoIcons.pencil, color: context.appInk, size: 18),
@@ -602,7 +602,7 @@ class _ProfilePageState extends State<ProfilePage> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             decoration: BoxDecoration(
-              color: Color.alphaBlend(context.appBorderColor.withOpacity(0.4), context.appSurface),
+              color: Color.alphaBlend(context.appBorderColor.withAlpha(102), context.appSurface),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
@@ -636,7 +636,7 @@ class _ProfilePageState extends State<ProfilePage> {
     Color? badgeColor,
     required VoidCallback onTap,
   }) {
-    final solidBg = Color.alphaBlend(color.withOpacity(0.18), context.appSurface);
+    final solidBg = Color.alphaBlend(color.withAlpha(46), context.appSurface);
 
     return InkWell(
       onTap: onTap,
@@ -733,7 +733,7 @@ class _ProfilePageState extends State<ProfilePage> {
           width: 44,
           height: 44,
           decoration: BoxDecoration(
-            color: Color.alphaBlend(color.withOpacity(0.20), context.appSurface),
+            color: Color.alphaBlend(color.withAlpha(51), context.appSurface),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Icon(icon, color: context.appInk, size: 22),
@@ -756,7 +756,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: Color.alphaBlend(color.withOpacity(0.18), context.appSurface),
+                color: Color.alphaBlend(color.withAlpha(46), context.appSurface),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Text(
@@ -787,7 +787,7 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Container(
         padding: const EdgeInsets.all(AppSpacing.md),
         decoration: BoxDecoration(
-          color: Color.alphaBlend(AppColors.butter.withOpacity(0.35), context.appSurface),
+          color: Color.alphaBlend(AppColors.butter.withAlpha(89), context.appSurface),
           borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
           border: Border.all(color: AppColors.butter, width: 1.5),
         ),
