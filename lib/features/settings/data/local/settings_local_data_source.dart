@@ -8,7 +8,6 @@ import 'package:bloomi/services/notifications/notification_service.dart';
 import 'package:bloomi/services/widgets/widget_bridge_service.dart';
 import 'package:drift/drift.dart' as drift;
 import 'package:flutter/widgets.dart';
-import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
