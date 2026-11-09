@@ -736,7 +736,7 @@ class _DiaryMealSuggestionsSectionState
                   },
                   child: Text(
                     context.tr('home_details'),
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12),
+                    style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12),
                   ),
                 ),
               );

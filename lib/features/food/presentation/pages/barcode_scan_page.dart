@@ -279,7 +279,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                                         onPressed: () => _scannerController.start(),
                                         icon: const Icon(CupertinoIcons.arrow_clockwise, size: 16),
                                         label: Text(context.tr('retry'),
-                                            style: TextStyle(color: Colors.white70)),
+                                            style: const TextStyle(color: Colors.white70)),
                                       ),
                                     ],
                                   ),

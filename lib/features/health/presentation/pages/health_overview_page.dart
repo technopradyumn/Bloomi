@@ -601,7 +601,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                           ),
                           TextButton(
                             onPressed: () => context.push('/health/workout'),
-                            child: Text(context.tr('home_view_all'), style: TextStyle(fontWeight: FontWeight.w700)),
+                            child: Text(context.tr('home_view_all'), style: const TextStyle(fontWeight: FontWeight.w700)),
                           ),
                         ],
                       ),

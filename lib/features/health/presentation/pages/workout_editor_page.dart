@@ -218,7 +218,7 @@ class _WorkoutEditorPageState extends State<WorkoutEditorPage> {
                     ),
                     CupertinoButton(
                       padding: EdgeInsets.zero,
-                      child: Text(context.tr('done'), style: TextStyle(fontWeight: FontWeight.w700)),
+                      child: Text(context.tr('done'), style: const TextStyle(fontWeight: FontWeight.w700)),
                       onPressed: () => Navigator.pop(ctx),
                     ),
                   ],
