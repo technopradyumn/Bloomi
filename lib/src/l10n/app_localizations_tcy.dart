@@ -1,0 +1,1541 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Tulu (`tcy`).
+class AppLocalizationsTcy extends AppLocalizations {
+  AppLocalizationsTcy([String locale = 'tcy']) : super(locale);
+
+  @override
+  String get app_name => 'ಬ್ಲೂಮಿ';
+
+  @override
+  String get nav_home => 'ಇಲ್ಲ್';
+
+  @override
+  String get nav_today => 'ಇನಿ';
+
+  @override
+  String get nav_plan => 'ಯೋಜನೆ';
+
+  @override
+  String get nav_food => 'ಆಹಾರ';
+
+  @override
+  String get nav_food_diary => 'ಫುಡ್ ಡೈರಿ';
+
+  @override
+  String get nav_workout => 'ವರ್ಕ್ ಔಟ್ ಲಾಗ್';
+
+  @override
+  String get nav_health => 'ಆರೋಗ್ಯ';
+
+  @override
+  String get nav_profile => 'ಪ್ರೊಫೈಲ್';
+
+  @override
+  String get save => 'ಉಳಿತಾಯ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get cancel => 'ರದ್ದು ಮಲ್ಪುಲೆ';
+
+  @override
+  String get delete => 'ಅಳಿಸೊಡು';
+
+  @override
+  String get edit => 'ಸಂಪಾದನೆ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get done => 'ಮುಗಿಂಡ್';
+
+  @override
+  String get close => 'ಮುಚ್ಚ';
+
+  @override
+  String get back => 'ಪಿರ';
+
+  @override
+  String get next => 'ದುಂಬುದ';
+
+  @override
+  String get continue_btn => 'ಮುಂದುವರಿಸಲೆ';
+
+  @override
+  String get confirm => 'ಖಚಿತ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get search => 'ಸರ್ಚ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get filter => 'ಫಿಲ್ಟರ್';
+
+  @override
+  String get all => 'ಮಾತಾ';
+
+  @override
+  String get active => 'ಕ್ರಿಯಾಶೀಲ';
+
+  @override
+  String get today => 'ಇನಿ';
+
+  @override
+  String get yesterday => 'ನಿನ್ನೆ';
+
+  @override
+  String get tomorrow => 'ನಾಳೆ';
+
+  @override
+  String get add => 'ಸೇರಾಲೆ';
+
+  @override
+  String get remove => 'ದೆತ್ತ್ ಪಾಡ್ಲೆ';
+
+  @override
+  String get refresh => 'ರಿಫ್ರೆಶ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get retry => 'ಪುನರ್ ಪ್ರಯತ್ನ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get error => 'ದೋಷ';
+
+  @override
+  String get success => 'ಯಶಸ್ಸು';
+
+  @override
+  String get loading => 'ಲೋಡ್ ಆವೊಂದುಂಡು...';
+
+  @override
+  String get no_data => 'ಡೇಟಾ ಲಭ್ಯ ಇಜ್ಜಿ';
+
+  @override
+  String get offline => 'ಆಫ್ಲೈನ್ ಮೋಡ್';
+
+  @override
+  String get offline_sub =>
+      'ಒಂಜಿ ಸರ್ತಿ ಮರುಸಂಪರ್ಕ ಮಲ್ತ್ ಂಡ ಬದಲಾವಣೆಲು ಸಿಂಕ್ ಆಪುಂಡು';
+
+  @override
+  String get undo => 'ರದ್ದು ಮಲ್ಪುಲೆ';
+
+  @override
+  String get portion => 'ಭಾಗ';
+
+  @override
+  String get quantity => 'ಪ್ರಮಾಣ';
+
+  @override
+  String get unit => 'ಘಟಕ';
+
+  @override
+  String get clear => 'ತೆರಿಪಾಲೆ';
+
+  @override
+  String get select => 'ಆಯ್ಕೆ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get apply => 'ಅರ್ಜಿ ಪಾಡ್ಲೆ';
+
+  @override
+  String get reset => 'ರೀಸೆಟ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get ok => 'ಸರಿ';
+
+  @override
+  String get yes => 'ಒವು';
+
+  @override
+  String get no => 'ಇಜ್ಜಿ';
+
+  @override
+  String get optional => 'ಐಚ್ಛಿಕ';
+
+  @override
+  String get calories => 'ಕ್ಯಾಲೊರಿಲು';
+
+  @override
+  String get protein => 'ಪ್ರೋಟೀನ್';
+
+  @override
+  String get carbs => 'ಕಾರ್ಬ್ಸ್';
+
+  @override
+  String get fat => 'ಕೊಬ್ಬು';
+
+  @override
+  String get fiber => 'ಫೈಬರ್';
+
+  @override
+  String get water => 'ನೀರ್';
+
+  @override
+  String get steps => 'ಕ್ರಮೊಕುಲು';
+
+  @override
+  String get kcal => 'ಕೆ.ಸಿ.ಎಲ್.';
+
+  @override
+  String get grams => 'ಜಿ';
+
+  @override
+  String get milliliters => 'ಮಿಲಿ';
+
+  @override
+  String get kilograms => 'ಕೆಜಿ';
+
+  @override
+  String get pounds => 'ಪೌಂಡ್';
+
+  @override
+  String get centimeters => 'cm';
+
+  @override
+  String get inches => 'ಡ್';
+
+  @override
+  String get bpm => 'ಬಿಪಿಎಂ';
+
+  @override
+  String get hours => 'ಗಂಟೆ';
+
+  @override
+  String get minutes => 'ನಿಮಿಷ';
+
+  @override
+  String get serving => 'ಸೇವೆ ಮಲ್ಪುನ';
+
+  @override
+  String get servings => 'ಸರ್ವಿಂಗ್ಸ್';
+
+  @override
+  String get serving_size => 'ಸರ್ವಿಂಗ್ ಸೈಜ್';
+
+  @override
+  String get per_100g => 'ಪ್ರತಿ 100 ಗ್ರಾಂ ಗ್';
+
+  @override
+  String get india => 'ಭಾರತ';
+
+  @override
+  String get asia => 'ಏಷ್ಯಾ';
+
+  @override
+  String get europe => 'ಯುರೋಪ್';
+
+  @override
+  String get middle_east => 'ಮಧ್ಯಪ್ರಾಚ್ಯ';
+
+  @override
+  String get africa => 'ಆಫ್ರಿಕಾ';
+
+  @override
+  String get americas => 'ಅಮೆರಿಕ';
+
+  @override
+  String get home_title => 'ಇಲ್ಲ್';
+
+  @override
+  String get home_greeting_morning => 'ಶುಭೋದಯ';
+
+  @override
+  String get home_greeting_afternoon => 'ಶುಭ ಮಧ್ಯಾಹ್ನ';
+
+  @override
+  String get home_greeting_evening => 'ಶುಭ ಸಾಯಂಕಾಲ';
+
+  @override
+  String get home_streak_title => 'ಬ್ಲಾಸಮ್ ಸ್ಟ್ರೀಕ್';
+
+  @override
+  String home_streak_days(num count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ದಿನೊಕುಲೆನ ಸರಣಿ',
+      one: '1 ದಿನೊತ ಸರಣಿ',
+      zero: '0 ದಿನೊತ ಸರಣಿ',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get home_calories_burned => 'ಸುಟ್ಟುಂಡು';
+
+  @override
+  String get home_calories_budget => 'ಕ್ಯಾಲೊರಿ ಬಜೆಟ್';
+
+  @override
+  String home_calories_remaining(Object kcal) {
+    return '$kcal ಕೆ.ಕ್ಯಾಲೊರಿ ಉಳಿದ';
+  }
+
+  @override
+  String get home_water_title => 'ದೈನಂದಿನ ಜಲಸಂಚಯನ';
+
+  @override
+  String home_water_goal(Object current, Object target) {
+    return '__ಪಿಎಚ್_0__ / __ಪಿಎಚ್_1__ ಮಿಲಿ';
+  }
+
+  @override
+  String get home_steps_title => 'ನಡತೊಂದು ಪೋಯಿನ ಮೆಟ್ಟಿಲುಲು';
+
+  @override
+  String get home_quick_actions => 'ತ್ವರಿತ ಕ್ರಮೊಕುಲು';
+
+  @override
+  String get home_log_meal => 'ಲಾಗ್ ಮೀಲ್';
+
+  @override
+  String get home_log_water => 'ಲಾಗ್ ನೀರ್';
+
+  @override
+  String get home_log_workout => 'ಲಾಗ್ ವರ್ಕ್ ಔಟ್';
+
+  @override
+  String get home_log_weight => 'ಲಾಗ್ ತೂಕ';
+
+  @override
+  String get home_insights_title => 'ಇತ್ತೆದ ಒಳನೋಟೊಲು';
+
+  @override
+  String get home_quote =>
+      'ಎಲ್ಯ ಆರೋಗ್ಯಕರ ಆಯ್ಕೆಲು ಬುಲೆಯಿನ ರೂಪಾಂತರೊಲೆನ್ ಸೃಷ್ಟಿ ಮಲ್ಪುಂಡು.';
+
+  @override
+  String get home_ai_coach_tip => 'ಬ್ಲೂಮಿ ಎಐ ಕೋಚ್';
+
+  @override
+  String get home_surroundings => 'ಸುತ್ತಮುತ್ತಲ ಬೊಕ್ಕ ಗಾಳಿ';
+
+  @override
+  String get home_notifications => 'ಅಧಿಸೂಚನೆಲು';
+
+  @override
+  String get home_daily_score => 'ದೈನಂದಿನ ಸ್ವಾಸ್ಥ್ಯದ ಅಂಕ';
+
+  @override
+  String get home_view_all => 'ಮಾತ ತೂಲೆ';
+
+  @override
+  String get food_diary_title => 'ಫುಡ್ ಡೈರಿ';
+
+  @override
+  String get food_breakfast => 'ಉಪಾಹಾರ';
+
+  @override
+  String get food_lunch => 'ಊಟ';
+
+  @override
+  String get food_dinner => 'ರಾತ್ರಿದ ಊಟ';
+
+  @override
+  String get food_snacks => 'ಊಟೊಲು';
+
+  @override
+  String get food_add_food => 'ತಿನ್ಪಿನವು ಸೇರಾಲೆ';
+
+  @override
+  String get food_edit_food => 'ಆಹಾರೊನು ಸಂಪಾದನೆ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get food_add_breakfast => 'ಉಪಾಹಾರ ಸೇರಾಲೆ';
+
+  @override
+  String get food_add_lunch => 'ಊಟ ಸೇರಾಲೆ';
+
+  @override
+  String get food_add_dinner => 'ರಾತ್ರಿದ ಊಟೊನು ಸೇರಾಲೆ';
+
+  @override
+  String get food_add_snack => 'ಸ್ನ್ಯಾಕ್ ಪಾಡ್ಲೆ';
+
+  @override
+  String get food_total_calories => 'ಒಟ್ಟು ಕ್ಯಾಲೊರಿಲು';
+
+  @override
+  String get food_empty_meal => 'ಈ ಊಟೊಗು ಇತ್ತೆಲಾ ಒವ್ವೆ ಆಹಾರ ಲಾಗ್ ಆಯಿಜಿ';
+
+  @override
+  String get food_empty_diary => 'ಈ ದಿನೊಕ್ಲೆಗ್ ಒವ್ವೆ ಊಟ ಲಾಗ್ ಆಯಿಜಿ';
+
+  @override
+  String get food_log_first_meal =>
+      'ನಿಕ್ಲೆನ ಸುರುತ ರುಚಿಯಾದ್ ಉಪ್ಪುನ ಊಟೊನು ಲಾಗ್ ಮಲ್ಪರೆ + ನ್ ಒತ್ತುಲೆ';
+
+  @override
+  String get food_quick_add => 'ತ್ವರಿತ ಸೇರ್ಪಡೆ';
+
+  @override
+  String get food_search_hint =>
+      'ಖಾದ್ಯ, ಫಲವಸ್ತುಲು, ದಾಲ್, ರೊಟ್ಟಿ ಸರ್ಚ್ ಮಲ್ಪುಲೆ...';
+
+  @override
+  String get food_custom_recipe => 'ಕಸ್ಟಮ್ ಫುಡ್ ಬೊಕ್ಕ ರೆಸಿಪಿ';
+
+  @override
+  String get food_scan_barcode => 'ಬಾರ್ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get food_camera_scan => 'ಎಐ ಫುಡ್ ಸ್ಕ್ಯಾನರ್';
+
+  @override
+  String get food_recent => 'ಇತ್ತೆದ ಆಹಾರೊಲು';
+
+  @override
+  String get food_favourites => 'ಮೆಚ್ಚಿನವುಲು';
+
+  @override
+  String get food_macro_summary => 'ಮ್ಯಾಕ್ರೊನ್ಯೂಟ್ರಿಯೆಂಟ್ ಬ್ರೇಕ್ ಡೌನ್';
+
+  @override
+  String get food_delete_meal_confirm =>
+      'ಈ ಐಟಂನ್ ದೆತ್ತ್ ಪಾಡೊಡು ಪನ್ಪಿನೆಟ್ ನಿಕುಲು ಖಚಿತ್ ಉಲ್ಲರ್?';
+
+  @override
+  String get food_item_deleted => 'ಆಹಾರ ವಸ್ತುನ್ ದೆತ್ತ್ ಪಾಡ್ದೆರ್';
+
+  @override
+  String get food_remaining => 'ಉಳಿಯಿನವು';
+
+  @override
+  String get food_consumed => 'ಸೇವನೆ ಮಲ್ತೆರ್';
+
+  @override
+  String food_of_target(Object target) {
+    return '$target ಕೆ.ಸಿ.ಎಲ್ ದ';
+  }
+
+  @override
+  String get foodSearch_title => 'ಫುಡ್ಸ್ ನ್ ಸರ್ಚ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get foodSearch_scan_barcode => 'ಬಾರ್ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get foodSearch_take_photo => 'ಸ್ನ್ಯಾಪ್ ಫುಡ್ ಫೋಟೋ';
+
+  @override
+  String get foodSearch_custom_food => 'ಕಸ್ಟಮ್ ಫುಡ್ ನ್ ರಚನೆ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get foodSearch_recent_searches => 'ಇತ್ತೆದ ಸರ್ಚ್ ಲು';
+
+  @override
+  String get foodSearch_popular => 'ಜನಪ್ರಿಯ ಖಾದ್ಯೊಲು';
+
+  @override
+  String get foodSearch_no_results => 'ನಿಕ್ಲೆನ ಸರ್ಚ್ ಗ್ ಸರಿ ಆಪಿನ ಆಹಾರೊಲು ಇಜ್ಜಿ';
+
+  @override
+  String get barcode_title => 'ಬಾರ್ಕೋಡ್ ಸ್ಕ್ಯಾನರ್';
+
+  @override
+  String get barcode_align => 'ಕ್ಯಾಮೆರಾ ಫ್ರೇಮ್ ದ ಒಳಗೆ ಬಾರ್ಕೋಡ್ ನ್ ಜೋಡಾವೊಡು';
+
+  @override
+  String get barcode_not_found => 'ಡೇಟಾಬೇಸ್ ಡ್ ಉತ್ಪನ್ನ ತೋಜಿಜಿ';
+
+  @override
+  String get barcode_premium_feature =>
+      'ಬಾರ್ಕೋಡ್ ಸ್ಕ್ಯಾನಿಂಗ್ ಬ್ಲೂಮಿ ಪ್ರೊ ಡ್ ಲಭ್ಯ ಉಂಡು';
+
+  @override
+  String get camera_title => 'ಎಐ ಫುಡ್ ಸ್ಕ್ಯಾನರ್';
+
+  @override
+  String get camera_tap_hint => 'ನಿಕ್ಲೆನ ಖಾದ್ಯದ ಒಂಜಿ ಸ್ಪಷ್ಟ ಫೋಟೋ ದೆತೊನ್ಲೆ';
+
+  @override
+  String get camera_analysing => 'ಫುಡ್ ಪ್ಲೇಟ್ ನ್ ವಿಶ್ಲೇಷಣೆ ಮಲ್ಪುನಗ...';
+
+  @override
+  String get camera_detected => 'ಕಂಡು ಬತ್ತಿನ ವಸ್ತುಲು';
+
+  @override
+  String get camera_flash => 'ಫ್ಲ್ಯಾಶ್ ನ್ ಟಾಗಲ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get camera_retake => 'ಫೋಟೋನ್ ಪುನರ್ ದೆತೊನ್ಲೆ';
+
+  @override
+  String get camera_confirm_food => 'ಐಟಂಲೆನ್ ಖಚಿತ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get customFood_title => 'ಕಸ್ಟಮ್ ಫುಡ್ ಬೊಕ್ಕ ರೆಸಿಪಿ';
+
+  @override
+  String get customFood_name_hint => 'ಖಾದ್ಯ ಅತ್ತಂಡ ಪದಾರ್ಥೊಲೆನ ಪುದರ್';
+
+  @override
+  String get customFood_calories_hint => 'ಕ್ಯಾಲೊರಿಲು (ಕೆ.ಸಿ.ಎಲ್.)';
+
+  @override
+  String get customFood_protein_hint => 'ಪ್ರೋಟೀನ್ (ಜಿ)';
+
+  @override
+  String get customFood_carbs_hint => 'ಕಾರ್ಬ್ಸ್ (ಜಿ)';
+
+  @override
+  String get customFood_fat_hint => 'ಕೊಬ್ಬು (ಜಿ)';
+
+  @override
+  String get customFood_save => 'ರೆಸಿಪಿನ್ ಉಳಿತಾಯ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get water_tracker_title => 'ವಾಟರ್ ಟ್ರ್ಯಾಕರ್';
+
+  @override
+  String get water_daily_target => 'ದೈನಂದಿನ ಜಲಸಂಚಯನ ಗುರಿ';
+
+  @override
+  String get water_logged_today => 'ಇನಿ ಲಾಗ್ ಆತ್ಂಡ್';
+
+  @override
+  String get water_add_glass => '+250 ಮಿಲಿ ಗ್ಲಾಸ್';
+
+  @override
+  String get water_add_bottle => '+500 ಮಿಲಿ ಬಾಟಲ್';
+
+  @override
+  String get water_custom_amount => 'ಕಸ್ಟಮ್ ಮೊತ್ತ';
+
+  @override
+  String get water_reminder_tip =>
+      'ಸ್ಥಿರ ಶಕ್ತಿಗಾತ್ರ ದಿನೊಟು ನಿಯಮಿತವಾದ್ ನೀರ್ ಪರ್ಲೆ.';
+
+  @override
+  String water_logged_toast(Object amount) {
+    return 'ಲಾಗ್ ಆತ್ಂಡ್ $amount ಮಿಲಿ ನೀರ್ 💧';
+  }
+
+  @override
+  String get workout_title => 'ವರ್ಕ್ ಔಟ್ ಲಾಗ್';
+
+  @override
+  String get workout_add_exercise => 'ವರ್ಕ್ ಔಟ್ ನ್ ಸೇರಾಲೆ';
+
+  @override
+  String get workout_cardio => 'ಕಾರ್ಡಿಯೋ';
+
+  @override
+  String get workout_strength => 'ಶಕ್ತಿ';
+
+  @override
+  String get workout_yoga => 'ಯೋಗ ಬೊಕ್ಕ ನಮ್ಯತೆ';
+
+  @override
+  String get workout_duration => 'ಅವಧಿ';
+
+  @override
+  String get workout_intensity => 'ತೀವ್ರತೆ';
+
+  @override
+  String get workout_calories_burned => 'ಸುಟ್ಟುನ ಕ್ಯಾಲೊರಿಲು';
+
+  @override
+  String get workout_empty => 'ಇನಿ ಒವ್ವೆ ವರ್ಕ್ ಔಟ್ ಲಾಗ್ ಆಯಿಜಿ';
+
+  @override
+  String get workout_save_success => 'ವರ್ಕ್ ಔಟ್ ಯಶಸ್ವಿಯಾದ್ ಉಳಿತಾಯ ಆತ್ಂಡ್!';
+
+  @override
+  String get workout_type => 'ವರ್ಕ್ ಔಟ್ ದ ಬಗೆ';
+
+  @override
+  String get workout_notes => 'ಟಿಪ್ಪಣಿಲು ಬೊಕ್ಕ ಪ್ರತಿಬಿಂಬೊಲು';
+
+  @override
+  String get health_overview_title => 'ಆರೋಗ್ಯ ಬೊಕ್ಕ ಜೀವನೊಲು';
+
+  @override
+  String get health_heart_rate => 'ಹೃದಯ ಬಡಿತ';
+
+  @override
+  String get health_blood_oxygen => 'ರಕ್ತದ ಆಮ್ಲಜನಕ (SpO2)';
+
+  @override
+  String get health_blood_pressure => 'ರಕ್ತದೊತ್ತಡ';
+
+  @override
+  String get health_blood_glucose => 'ರಕ್ತ ಗ್ಲುಕೋಸ್';
+
+  @override
+  String get health_body_temperature => 'ದೇಹದ ಉಷ್ಣಾಂಶ';
+
+  @override
+  String get health_sleep_tracking => 'ನಿದ್ರೆದ ಟ್ರ್ಯಾಕಿಂಗ್';
+
+  @override
+  String get health_weight_tracking => 'ತೂಕ ಬೊಕ್ಕ ದೇಹದ ಸಂಯೋಜನೆ';
+
+  @override
+  String get health_waist_hip => 'ಸೊಂಟೊಡ್ದ್ ಸೊಂಟೊಗು ಅನುಪಾತ';
+
+  @override
+  String get health_devices_hub => 'ಸಾಧನೊಲು ಬೊಕ್ಕ ಸ್ಮಾರ್ಟ್ ವಾಚ್ ಹಬ್';
+
+  @override
+  String get health_sync_now => 'ಆರೋಗ್ಯ ಡೇಟಾನ್ ಸಿಂಕ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String health_last_synced(Object time) {
+    return 'ಕಡೆತ ಸಿಂಕ್: $time';
+  }
+
+  @override
+  String get health_manual_entry => 'ಕೈಯಿಡ್ ಮಲ್ಪುನ ಆರೋಗ್ಯ ಪ್ರವೇಶ';
+
+  @override
+  String get health_metric_detail => 'ಮೆಟ್ರಿಕ್ ವಿವರೊಲು';
+
+  @override
+  String get health_connected_sensors => 'ಸಂಪರ್ಕೊಡುಪ್ಪುನ ಆರೋಗ್ಯ ಸಂವೇದಕೊಲು';
+
+  @override
+  String get plan_title => 'ದಿನೊತ ಯೋಜನೆ';
+
+  @override
+  String get plan_weekly_title => 'ವಾರೊಡ್ ಒಂಜಿ ಸರ್ತಿ ಯೋಗಕ್ಷೇಮ ಯೋಜನೆ';
+
+  @override
+  String get plan_calorie_target => 'ಕ್ಯಾಲೊರಿ ಗುರಿ';
+
+  @override
+  String get plan_water_target => 'ಜಲಸಂಚಯನ ಗುರಿ';
+
+  @override
+  String get plan_step_target => 'ಹೆಜ್ಜೆದ ಗುರಿ';
+
+  @override
+  String get plan_sleep_target => 'ನಿದ್ರೆದ ಗುರಿ';
+
+  @override
+  String get plan_meal_suggestions => 'ಊಟದ ಸಲಹೆಲು';
+
+  @override
+  String get plan_healthy_habits => 'ಆರೋಗ್ಯಕರ ಅಭ್ಯಾಸೊಲು ಬೊಕ್ಕ ಸಲಹೆಲು';
+
+  @override
+  String get plan_coach_advice => 'ಬ್ಲೂಮಿ ಎಐ ಕೋಚ್ ಶಿಫಾರಸುಲು';
+
+  @override
+  String get plan_generated_title => 'ವೈಯಕ್ತಿಕ ದೈನಂದಿನ ವೇಳಾಪಟ್ಟಿ';
+
+  @override
+  String get profile_title => 'ಪ್ರೊಫೈಲ್';
+
+  @override
+  String get profile_edit => 'ಪ್ರೊಫೈಲ್ ನ್ ಎಡಿಟ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get profile_name => 'ಪುದರ್';
+
+  @override
+  String get profile_age => 'ವಯಸ್ಸು';
+
+  @override
+  String get profile_gender => 'ಲಿಂಗ';
+
+  @override
+  String get profile_height => 'ಎತ್ತರ';
+
+  @override
+  String get profile_weight => 'ತೂಕ';
+
+  @override
+  String get profile_goal => 'ಪ್ರಾಥಮಿಕ ಗುರಿ';
+
+  @override
+  String get profile_activity_level => 'ಚಟುವಟಿಕೆದ ಮಟ್ಟ';
+
+  @override
+  String get profile_stats => 'ಎನ್ನ ಸ್ವಾಸ್ಥ್ಯದ ಅಂಕಿ ಅಂಶೊಲು';
+
+  @override
+  String get profile_saved => 'ಪ್ರೊಫೈಲ್ ನ್ ಯಶಸ್ವಿಯಾದ್ ಅಪ್ ಡೇಟ್ ಮಲ್ತೆರ್';
+
+  @override
+  String get profile_bmi => 'ದೇಹ ದ್ರವ್ಯರಾಶಿ ಸೂಚ್ಯಂಕ (ಬಿಎಂಐ)';
+
+  @override
+  String get profile_membership => 'ಸದಸ್ಯತ್ವ';
+
+  @override
+  String get settings => 'ಸೆಟ್ಟಿಂಗ್ಸ್';
+
+  @override
+  String get preferences_habits => 'ಆದ್ಯತೆಲು ಬೊಕ್ಕ ಅಭ್ಯಾಸೊಲು';
+
+  @override
+  String get appearance_theme => 'ತೋಜುನ ರೂಪ ಬೊಕ್ಕ ವಿಷಯ';
+
+  @override
+  String get appearance_theme_sub =>
+      'ಕಪ್ಪು, ಬೊಲ್ಪು, ಸಿಸ್ಟಮ್ ಮೋಡ್ ಬೊಕ್ಕ ಅಪ್ಲಿಕೇಶನ್ ಹಿನ್ನೆಲೆ ಆಯ್ಕೆಲು';
+
+  @override
+  String get permissions => 'ಅನುಮತಿಲು ಬೊಕ್ಕ ಸಿಸ್ಟಮ್ ಪ್ರವೇಶ';
+
+  @override
+  String get permissions_sub =>
+      'ಆರೋಗ್ಯ ಸಂಪರ್ಕ, ಸ್ಟೆಪ್ ಸೆನ್ಸರ್ಸ್, ಜಿಪಿಎಸ್, ಅಧಿಸೂಚನೆಲು ಬೊಕ್ಕ ಕ್ಯಾಮೆರಾ';
+
+  @override
+  String get reminders_notifications => 'ನೆನಪುಲು ಬೊಕ್ಕ ಅಧಿಸೂಚನೆಲು';
+
+  @override
+  String get reminders_sub =>
+      'ಊಟದ ಸಮಯ, ನೀರ್, ತೂಕ ತಪಾಸಣೆ & ನಿದ್ರೆದ ಸಮಯದ ನೆನಪುಲು';
+
+  @override
+  String get units_of_measurement => 'ಅಳತೆದ ಘಟಕೊಲು';
+
+  @override
+  String get units_sub =>
+      'ಮೆಟ್ರಿಕ್ (ಕೆಜಿ, ಸೆಂ, ಮಿಲಿ, ಕಿ.ಮೀ) ಅತ್ತಂದೆ ಇಂಪೀರಿಯಲ್ (ಪೌಂಡ್ಸ್, ಅಡಿ/ಇನ್, ಫ್ಲೋ ಔನ್ಸ್)';
+
+  @override
+  String get app_language => 'ಅಪ್ಲಿಕೇಶನ್ ಭಾಷೆ';
+
+  @override
+  String get language_sub =>
+      'ಇಂಗ್ಲಿಷ್, ಹಿन्दी (ಹಿಂದಿ), ಹಿಂಗ್ಲಿಷ್ ಬೊಕ್ಕ 195+ ಜಾಗತಿಕ ಭಾಷೆಲು';
+
+  @override
+  String get home_screen_widgets => 'ಮುಖ್ಯ ಪರದೆದ ವಿಜೆಟ್ ಲು';
+
+  @override
+  String get widgets_sub =>
+      'ಲೈವ್ ಆಂಡ್ರಾಯ್ಡ್ ವಿಜೆಟ್ ಲು: ಹಬ್, ಸ್ಟೆಪ್ಸ್, ವಾಟರ್, ನ್ಯೂಟ್ರಿಷನ್ & ಮ್ಯಾಸ್ಕಾಟ್';
+
+  @override
+  String get wear_os_watch_app => 'ಓಎಸ್ ವಾಚ್ ಅಪ್ಲಿಕೇಶನ್ ನ್ ಪಾಡ್ಲೆ';
+
+  @override
+  String get wear_os_sub =>
+      'ಸ್ಮಾರ್ಟ್ ವಾಚ್ ಕಂಪ್ಯಾನಿಯನ್, ಟೈಲ್ಸ್, ಕಾಂಪ್ಲಿಕೇಶನ್ಸ್ & ಲೈವ್ ವಿಟಲ್ಸ್';
+
+  @override
+  String get goals_wellness => 'ಗುರಿಲು ಬೊಕ್ಕ ಯೋಗಕ್ಷೇಮದ ಒಳನೋಟೊಲು';
+
+  @override
+  String get nutrition_targets => 'ಪೌಷ್ಟಿಕಾಂಶದ ಗುರಿಲು ಬೊಕ್ಕ ಮ್ಯಾಕ್ರೊ ಸ್ಪ್ಲಿಟ್';
+
+  @override
+  String get nutrition_targets_sub =>
+      'ಕ್ಯಾಲೊರಿ ಗುರಿ, ಪ್ರೋಟೀನ್, ಕಾರ್ಬ್ಸ್, ಕೊಬ್ಬು ಬೊಕ್ಕ ನೀರ್ದ ಗುರಿ';
+
+  @override
+  String get weekly_recap => 'ವಾರೊಡ್ ಒಂಜಿ ಸಲ ವೆಲ್ನೆಸ್ ರಿಕ್ಯಾಪ್';
+
+  @override
+  String get weekly_recap_sub =>
+      '7-ದಿನೊತ ಕ್ಯಾಲೊರಿ ಸರಾಸರಿ, ಮ್ಯಾಕ್ರೊ ಅನುಪಾತ & ಎಡ್ಡೆ ದಿನ';
+
+  @override
+  String get streaks_milestones => 'ಸ್ಟ್ರೀಕ್ಸ್ ಬೊಕ್ಕ ಮೈಲ್ಸ್ಟೋನ್ಸ್';
+
+  @override
+  String get streaks_sub =>
+      'ಕ್ರಿಯಾತ್ಮಕ ಪುಷ್ಪ ಗೀರುಲು, ಬ್ಯಾಡ್ಜ್ ಲು ಬೊಕ್ಕ ಸಾಧನೆಲು';
+
+  @override
+  String get connected_devices => 'ಸಂಪರ್ಕೊಡುಪ್ಪುನ ಸಾಧನೊಲು ಬೊಕ್ಕ ಪರಿಸರ ವ್ಯವಸ್ಥೆ';
+
+  @override
+  String get devices_hub => 'ಸಾಧನೊಲು ಬೊಕ್ಕ ಸ್ಮಾರ್ಟ್ ವಾಚ್ ಹಬ್';
+
+  @override
+  String get devices_hub_sub =>
+      'ಹೆಲ್ತ್ ಕನೆಕ್ಟ್, ಗ್ಯಾಲಕ್ಸಿ ವಾಚ್, ಪಿಕ್ಸೆಲ್ ವಾಚ್, ಗಾರ್ಮಿನ್';
+
+  @override
+  String get surroundings_weather => 'ಸುತ್ತಮುತ್ತಲ ಬೊಕ್ಕ ಹವಾಮಾನ';
+
+  @override
+  String get surroundings_sub =>
+      'ಗಾಳಿದ ಗುಣಮಟ್ಟ (ಎಕ್ಯುಐ), ಯುವಿ ಸೂಚ್ಯಂಕ ಬೊಕ್ಕ ಹವಾಮಾನ ಜಲಸಂಚಯನ ಸಲಹೆಲು';
+
+  @override
+  String get bloomi_pro => 'ಬ್ಲೂಮಿ ಪ್ರೊ ಚಂದಾದಾರಿಕೆ';
+
+  @override
+  String get bloomi_pro_sub =>
+      'ಎಐ ಪ್ಲಾನ್ ಕೋಚ್, 5 ಹೋಮ್ ಸ್ಕ್ರೀನ್ ವಿಜೆಟ್ಸ್ & ವೈಟಲ್ಸ್ ಟ್ರ್ಯಾಕಿಂಗ್';
+
+  @override
+  String get about_security => 'ಬಗ್ಗೆ ಬೊಕ್ಕ ಸುರಕ್ಷತೆ';
+
+  @override
+  String get about_bloomi => 'ಬ್ಲೂಮಿ ಬಗ್ಗೆ';
+
+  @override
+  String get about_bloomi_sub => 'ಬಿಲ್ಡ್ ಸ್ಪೆಸಿಫಿಕೇಶನ್ಸ್, ಆವೃತ್ತಿ, ಗುಣಲಕ್ಷಣೊಲು';
+
+  @override
+  String get privacy_policy => 'ಗೌಪ್ಯತಾ ನೀತಿ';
+
+  @override
+  String get privacy_policy_sub =>
+      'ಆಫ್ಲೈನ್-ಫಸ್ಟ್, ಆನ್-ಡಿವೈಸ್ ಡಾಟಾ ಆರ್ಕಿಟೆಕ್ಚರ್';
+
+  @override
+  String get terms_conditions => 'ನಿಯಮ ಬೊಕ್ಕ ಷರತ್ತುಲು';
+
+  @override
+  String get terms_conditions_sub =>
+      'ಸೇವೆದ ನಿಯಮೊಲು ಬೊಕ್ಕ ಸ್ವಾಸ್ಥ್ಯದ ಮಾರ್ಗಸೂಚಿಲು';
+
+  @override
+  String get delete_account => 'ಖಾತೆ ಬೊಕ್ಕ ಡೇಟಾನ್ ಅಳಿಸೊಡು';
+
+  @override
+  String get delete_account_sub =>
+      'ಸ್ಥಳೀಯ ಎಸ್ ಕ್ಯೂಲೈಟ್ ಡೇಟಾ ಬೊಕ್ಕ ಮೋಡದ ಬ್ಯಾಕಪ್ ಲೆನ್ ಬದಲಾವಣೆ ಆವಂದಿನ ರೀತಿಡ್ ಅಳಿಸೊಡು';
+
+  @override
+  String get healthy_habits =>
+      'ಸೌಮ್ಯ, ಶಾಶ್ವತ ಸ್ವಾಸ್ಥ್ಯದ ಅಭ್ಯಾಸೊಲೆನ್ ನಿರ್ಮಾಣ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get all_logs => 'ಎನ್ನ ಟ್ರ್ಯಾಕ್ ಮಲ್ತಿನ ಡೇಟಾ ಬೊಕ್ಕ ಲಾಗ್ ಲು';
+
+  @override
+  String get search_language => 'ಬಾಸೆ ಅತ್ತಂಡ ಮೂಲ ಲಿಪಿಟ್ ಸರ್ಚ್ ಮಲ್ಪುಲೆ...';
+
+  @override
+  String get languages_available => 'ಭಾಷೆಲು ಲಭ್ಯ ಉಂಡು';
+
+  @override
+  String get no_matching_languages => 'ಒವ್ವೆ ಒಂಜಿ ಸರಿಹೊಂದುನ ಬಾಸೆಲು ತೋಜಿಜಿ';
+
+  @override
+  String get try_searching =>
+      'ಸ್ಥಳೀಯ ಲಿಪಿ ಅತ್ತ್ಂಡ ಇಂಗ್ಲಿಷ್ ಕಾಗುಣಿತೊಡು ಸರ್ಚ್ ಮಲ್ಪೆರೆ ಪ್ರಯತ್ನ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get partially_translated => 'ಭಾಗಶಃ ಅನುವಾದ ಆತ್ಂಡ್';
+
+  @override
+  String get complete_translation => 'ಪೂರ್ಣ';
+
+  @override
+  String language_changed_toast(Object name, Object nativeName) {
+    return 'ಭಾಷೆನ್ $name ( $nativeName ) ಗ್ ಸೆಟ್ ಮಲ್ಪುಲೆ';
+  }
+
+  @override
+  String get surroundings_title => 'ಸುತ್ತಮುತ್ತಲ ಬೊಕ್ಕ ಪರಿಸರ';
+
+  @override
+  String get surroundings_aqi => 'ಗಾಳಿದ ಗುಣಮಟ್ಟದ ಸೂಚ್ಯಂಕ';
+
+  @override
+  String get surroundings_uv => 'ಯುವಿ ಸೂಚ್ಯಂಕ';
+
+  @override
+  String get surroundings_temp => 'ಉಷ್ಣಾಂಶ';
+
+  @override
+  String get surroundings_humidity => 'ಆರ್ದ್ರತೆ';
+
+  @override
+  String get surroundings_hydration_advice =>
+      'ಇತ್ತೆದ ಹವಾಮಾನೊಡು ಎಡ್ಡೆ ಜಲಸಂಚಯನೊಡು ಉಪ್ಪುಲೆ.';
+
+  @override
+  String get surroundings_refresh => 'Update Environmental Data';
+
+  @override
+  String get food_quick_search => 'ಆಹಾರೊನು ತೂಲೆ';
+
+  @override
+  String get food_quick_barcode => 'ಬಾರ್ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಲ್ಪುಲೆ 👑';
+
+  @override
+  String get food_quick_water => 'ನೀರ್ ಪಾಡ್ಲೆ';
+
+  @override
+  String get food_quick_custom => 'ಕಸ್ಟಮ್ ಫುಡ್';
+
+  @override
+  String get surroundings_good => 'ಎಡ್ಡೆ';
+
+  @override
+  String get surroundings_moderate => 'ಮಧ್ಯಮ';
+
+  @override
+  String get surroundings_unhealthy => 'ಅನಾರೋಗ್ಯಕರ';
+
+  @override
+  String get notifications_title => 'ಅಧಿಸೂಚನೆಲು ಬೊಕ್ಕ ಎಚ್ಚರಿಕೆಲು';
+
+  @override
+  String get notifications_empty => 'ಪೊಸ ಅಧಿಸೂಚನೆಲು ಇಜ್ಜಿ';
+
+  @override
+  String get notifications_mark_read => 'ಓದುದು ಪಂಡ್ದ್ ಗುರುತು ಮಲ್ಪುಲೆ';
+
+  @override
+  String get notifications_clear => 'ಮಾತ ತೆರಿಪಾಲೆ';
+
+  @override
+  String get reminders => 'ನೆಂಪು ಮಲ್ಪುನ ಸೆಟ್ಟಿಂಗ್ ಲು';
+
+  @override
+  String get notifications => 'ಅಧಿಸೂಚನೆಲು';
+
+  @override
+  String get reminders_breakfast_title => 'ಉಪಾಹಾರದ ನೆನಪು 🍳';
+
+  @override
+  String reminders_breakfast_body(Object time) {
+    return 'ಶುಭೋದಯ! $time ಡ್ ಒಂಜಿ ಪೌಷ್ಟಿಕ ಉಪಾಹಾರದ ಸಮಯ.';
+  }
+
+  @override
+  String get reminders_lunch_title => 'ಮಧ್ಯಾಹ್ನದ ನೆನಪು 🥗';
+
+  @override
+  String reminders_lunch_body(Object time) {
+    return '$time ಡ್ ಒಂಜಿ ಸಮತೋಲಿತ, ಮನಸ್ಸ್ ದ ಲಂಚ್ ನ್ ನಿಲೆ ಮಲ್ಪುಲೆ ಬೊಕ್ಕ ಆನಂದಿಸಲೆ.';
+  }
+
+  @override
+  String get reminders_dinner_title => 'ರಾತ್ರಿದ ಊಟದ ನೆನಪು 🍲';
+
+  @override
+  String reminders_dinner_body(Object time) {
+    return '$time ಡ್ ಒಂಜಿ ಲೈಟ್, ತೃಪ್ತಿದಾಯಕ ರಾತ್ರಿದ ಊಟದ ಸಮಯ.';
+  }
+
+  @override
+  String get reminders_water_title => 'ಹೈಡ್ರೇಶನ್ ನಡ್ಜ್ 💧';
+
+  @override
+  String reminders_water_body(Object time) {
+    return 'ಒಂಜಿ ಗ್ಲಾಸ್ ನೀರ್ ಪರ್ಪಿನ ಪೊರ್ತು! ( $time )';
+  }
+
+  @override
+  String get reminders_weight_title => 'ವಾರೊಡ್ ಒಂಜಿ ಸರ್ತಿ ತೂಕ ⚖️';
+
+  @override
+  String reminders_weight_body(Object time) {
+    return 'ಬ್ಲೂಮಿಡ್ ನಿಕ್ಲೆನ ವಾರೊಡ್ ಒಂಜಿ ಬಾಡಿ ಮೆಟ್ರಿಕ್ಸ್ ನ್ ಟ್ರ್ಯಾಕ್ ಮಲ್ಪುಲೆ ( $time ).';
+  }
+
+  @override
+  String get reminders_sleep_title => 'ನಿದ್ರೆದ ಸಮಯದ ಗಾಳಿ-ಡೌನ್ 🌙';
+
+  @override
+  String reminders_sleep_body(Object time) {
+    return 'ನಿದ್ರೆಗ್ ರಿಲಾಕ್ಸ್ ಆದ್ ತಯಾರಾದ್ ಉಪ್ಪುಲೆ ( $time ).';
+  }
+
+  @override
+  String get onboard_welcome => 'ಬ್ಲೂಮಿಗ್ ಸ್ವಾಗತ';
+
+  @override
+  String get onboard_sub =>
+      'ನಿಕ್ಲೆನ ಸ್ನೇಹಿ, ಆಫ್ಲೈನ್-ಪ್ರಥಮ ಆರೋಗ್ಯ ಬೊಕ್ಕ ಪೌಷ್ಟಿಕಾಂಶದ ಜೊತೆಗಾರ.';
+
+  @override
+  String get onboard_get_started => 'ಸುರು ಮಲ್ಪುಲೆ';
+
+  @override
+  String get onboard_sign_in => 'ಸೈನ್ ಇನ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get onboard_skip => 'ಬುಡ್ಲೆ';
+
+  @override
+  String get onboard_choose_goal => 'ನಿಕ್ಲೆನ ಪ್ರಾಥಮಿಕ ಆರೋಗ್ಯ ಗುರಿ ದಾದ?';
+
+  @override
+  String get onboard_goal_weight_loss => 'ಸೌಮ್ಯವಾದ್ ತೂಕ ಕಮ್ಮಿ';
+
+  @override
+  String get onboard_goal_muscle => 'ಸ್ನಾಯು ಲಾಭ ಬೊಕ್ಕ ಶಕ್ತಿ';
+
+  @override
+  String get onboard_goal_energy => 'ದೈನಂದಿನ ಶಕ್ತಿ ಬೊಕ್ಕ ಜೀವಂತಿಕೆ';
+
+  @override
+  String get onboard_goal_habits => 'ಆರೋಗ್ಯಕರ ಮನಸ್ಸ್ ದ ಆಹಾರ';
+
+  @override
+  String get onboard_about_you => 'ನಿಕ್ಲೆನ ಬಗ್ಗೆ ಎಂಕ್ಲೆಗ್ ಪನ್ಲೆ';
+
+  @override
+  String get onboard_lifestyle => 'ನಿಕ್ಲೆನ ದಿನಚರಿ';
+
+  @override
+  String get onboard_permissions_title => 'ಅನುಮತಿಲು ಬೊಕ್ಕ ಸಿಸ್ಟಮ್ ಪ್ರವೇಶ';
+
+  @override
+  String get onboard_permissions_sub =>
+      'ಸಿಂಕ್ ಸ್ಟೆಪ್ಸ್, ವರ್ಕ್ ಔಟ್ಸ್ ಬೊಕ್ಕ ರಿಮೈಂಡರ್ಸ್ ಗ್ ಪ್ರವೇಶ ಕೊರ್ಲೆ.';
+
+  @override
+  String get onboard_plan_ready_title => 'ನಿಕ್ಲೆನ ಕಸ್ಟಮ್ ಪ್ಲಾನ್ ರೆಡಿ ಆತ್ಂಡ್!';
+
+  @override
+  String get onboard_plan_ready_sub =>
+      'ನಿಕ್ಲೆಗ್ ಮಾತ್ರ ಒಂಜಿ ಸೌಮ್ಯ, ವೈಯಕ್ತಿಕ ಪೌಷ್ಟಿಕಾಂಶ ಬೊಕ್ಕ ಸ್ವಾಸ್ಥ್ಯದ ಮಾರ್ಗಸೂಚಿನ್ ನಮ ರಚನೆ ಮಲ್ತ.';
+
+  @override
+  String get onboard_enter_bloomi => 'ಬ್ಲೂಮಿನ್ ನಮೂದು ಮಲ್ಪುಲೆ';
+
+  @override
+  String get insights_weekly_report => 'ವಾರೊಡ್ ಒಂಜಿ ಸಲ ವೆಲ್ನೆಸ್ ರಿಕ್ಯಾಪ್';
+
+  @override
+  String insights_best_day(Object day) {
+    return 'ಎಡ್ಡೆ ಸ್ಥಿರತೆದ ದಿನ: $day';
+  }
+
+  @override
+  String get insights_streaks_badges => 'ಸ್ಟ್ರೀಕ್ಸ್ ಬೊಕ್ಕ ಮೈಲ್ಸ್ಟೋನ್ಸ್';
+
+  @override
+  String insights_unlocked_on(Object date) {
+    return '$date ಡ್ ಅನ್ಲಾಕ್ ಆತ್ಂಡ್';
+  }
+
+  @override
+  String get insights_keep_going => 'ಅದ್ಭುತ ಪ್ರಗತಿನ್ ಮುಂದುವರಿಸಲೆ!';
+
+  @override
+  String get widgets_title => 'ಮುಖ್ಯ ಪರದೆದ ವಿಜೆಟ್ ಲು';
+
+  @override
+  String widgets_active_count(Object count) {
+    return 'ಸಕ್ರಿಯ ವಿಜೆಟ್ ಲು: $count';
+  }
+
+  @override
+  String get widgets_hub_title => 'ಬ್ಲೂಮಿ ವೆಲ್ನೆಸ್ ಹಬ್';
+
+  @override
+  String get widgets_steps_title => 'ಮೆಟ್ಟಿಲುಲು ಬೊಕ್ಕ ಕ್ರಿಯಾತ್ಮಕ ಉಂಗುರ';
+
+  @override
+  String get widgets_water_title => 'ಜಲಸಂಚಯನ ತ್ವರಿತ ಲಾಗ್';
+
+  @override
+  String get widgets_mascot_title => 'ಬ್ಲೂಮಿ ಮ್ಯಾಸ್ಕಾಟ್ ಕಂಪ್ಯಾನಿಯನ್';
+
+  @override
+  String get wear_os_title => 'ಓಎಸ್ ಸ್ಮಾರ್ಟ್ ವಾಚ್ ಪಾಡ್ಲೆ';
+
+  @override
+  String get wear_os_connected => 'ವಾಚ್ ಗ್ ಸಂಪರ್ಕ ಉಂಡು';
+
+  @override
+  String get wear_os_sync => 'ವಾಚ್ ಡೇಟಾನ್ ಸಿಂಕ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get theme_title => 'ತೋಜುನ ರೂಪ ಬೊಕ್ಕ ವಿಷಯ';
+
+  @override
+  String get theme_mode => 'ಥೀಮ್ ಮೋಡ್';
+
+  @override
+  String get theme_light => 'ಬೊಲ್ಪು';
+
+  @override
+  String get theme_dark => 'ಕಪ್ಪು';
+
+  @override
+  String get theme_system => 'ಸಿಸ್ಟಮ್ ಡಿಫಾಲ್ಟ್';
+
+  @override
+  String get theme_background_palette => 'ಹಿನ್ನೆಲೆ ಪ್ಯಾಲೆಟ್';
+
+  @override
+  String get units_title => 'ಅಳತೆದ ಘಟಕೊಲು';
+
+  @override
+  String get units_metric => 'ಮೆಟ್ರಿಕ್ (ಕೆಜಿ, ಸೆಂ, ಮಿಲಿ)';
+
+  @override
+  String get units_imperial => 'ಇಂಪೀರಿಯಲ್ (ಪೌಂಡ್ಸ್, ಇನ್, ಫ್ಲೋ ಔನ್ಸ್)';
+
+  @override
+  String get home_unable_load => 'ಡ್ಯಾಶ್ ಬೋರ್ಡ್ ನ್ ಲೋಡ್ ಮಲ್ಪೆರೆ ಸಾಧ್ಯ ಆಯಿಜಿ';
+
+  @override
+  String get home_health_permission_req => 'ಆರೋಗ್ಯ ಸಂಪರ್ಕ ಅನುಮತಿ ಬೋಡು';
+
+  @override
+  String get home_health_permission_desc =>
+      'ರಿಯಲ್ ಸ್ಟೆಪ್ಸ್, ಹಾರ್ಟ್ ರೇಟ್, ಬೊಕ್ಕ ರಿಯಲ್ ಟೈಮ್ ಡ್ ಮೊಬೈಲ್ ಹೋಮ್ ವಿಜೆಟ್ ಲೆನ್ ಸಿಂಕ್ ಮಲ್ಪೆರೆ ಬ್ಲೂಮಿಗ್ ಹೆಲ್ತ್ ಕನೆಕ್ಟ್ ಅನುಮತಿ ಬೋಡಾಪುಂಡು.';
+
+  @override
+  String get home_allow_health => 'ಆರೋಗ್ಯ ಸಂಪರ್ಕೊಗು ಅನುಮತಿ ಕೊರ್ಲೆ';
+
+  @override
+  String get home_ready_mindful_day => 'ಒಂಜಿ ಮನಸ್ಸ್ ದ ದಿನೊಗು ತಯಾರ್ ಉಲ್ಲರ್? ✨';
+
+  @override
+  String get home_quick_add => 'ತ್ವರಿತ ಸೇರ್ಪಡೆ';
+
+  @override
+  String get home_live_gps => 'ಲೈವ್ ಜಿಪಿಎಸ್';
+
+  @override
+  String get home_calories_remaining_label => 'ಉಳಿಯಿನ ಕ್ಯಾಲೊರಿಲು';
+
+  @override
+  String home_eaten_target(Object consumed, Object target) {
+    return 'ತಿನ್ಪಿನವು: $consumed / $target kcal';
+  }
+
+  @override
+  String get home_tap_water_tracker => 'ವಾಟರ್ ಟ್ರ್ಯಾಕರ್ ಗ್ ಟ್ಯಾಪ್ ಮಲ್ಪುಲೆ 💧';
+
+  @override
+  String get home_water_goal_reached => 'ದೈನಂದಿನ ಗುರಿ ಮುಟ್ಟಿದ 🎉 .';
+
+  @override
+  String home_water_to_daily_goal(Object remaining) {
+    return 'ದೈನಂದಿನ ಗುರಿಗ್ $remaining ಮಿಲಿ';
+  }
+
+  @override
+  String get home_details => 'ವಿವರೊಲು';
+
+  @override
+  String get home_upgrade_plan_desc =>
+      'ವೈಯಕ್ತಿಕ ದೈನಂದಿನ ಗುರಿಲೆನ್ ಬೊಕ್ಕ ಎಐ ಯೋಜನೆನ್ ಅನ್ಲಾಕ್ ಮಲ್ಪೆರೆ ಅಪ್ಗ್ರೇಡ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get home_unlock => 'ಅನ್ಲಾಕ್ ಮಲ್ಪುಲೆ 👑';
+
+  @override
+  String get home_quick_log_hint =>
+      'ಒಂಜಿ ವೆಲ್ನೆಸ್ ಎಂಟ್ರಿನ್ ತ್ವರಿತವಾದ್ ರೆಕಾರ್ಡ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get food_serving_size => 'ಸರ್ವಿಂಗ್ ಸೈಜ್';
+
+  @override
+  String get food_serving_grams => 'ಸೇವೆ ಮಲ್ಪುನವು (ಜಿ)';
+
+  @override
+  String get food_number_servings => 'ಸರ್ವಿಂಗ್ ಲೆನ ಸಂಖ್ಯೆ';
+
+  @override
+  String get food_calories_per_serving => 'ಒಂಜಿ ಸರ್ವಿಂಗ್ ಗ್ ಕ್ಯಾಲೊರಿಲು';
+
+  @override
+  String get food_recipe_ingredients => 'ಸಾಮಗ್ರಿಲು';
+
+  @override
+  String get food_recipe_add_ingredient => 'ಸಾಮಗ್ರಿನ್ ಸೇರಾಲೆ';
+
+  @override
+  String get food_recipe_directions => 'ಸೂಚನೆಲು ಬೊಕ್ಕ ಟಿಪ್ಪಣಿಲು';
+
+  @override
+  String get food_recipe_total => 'ಒಟ್ಟು ಪಾಕವಿಧಾನ ಪೌಷ್ಟಿಕಾಂಶ';
+
+  @override
+  String get food_recipe_per_serving => 'ಪ್ರತಿ ಸರ್ವಿಂಗ್ ನ್ಯೂಟ್ರಿಷನ್';
+
+  @override
+  String get food_recipe_saved_toast => 'ಕಸ್ಟಮ್ ಫುಡ್ ಯಶಸ್ವಿಯಾದ್ ಉಳಿತಾಯ ಆಂಡ್!';
+
+  @override
+  String get food_barcode_found => 'ಉತ್ಪನ್ನ ಕಂಡು!';
+
+  @override
+  String get food_barcode_not_found_desc =>
+      'ಓಪನ್ ಡೇಟಾಬೇಸ್ ಡ್ ಈ ಬಾರ್ಕೋಡ್ ನ್ ಎಂಕ್ಲೆಗ್ ತೂಯೆರೆ ಸಾಧ್ಯ ಆಯಿಜಿ. ಈರ್ ಉಂದೆನ್ ಒಂಜಿ ಕಸ್ಟಮ್ ಫುಡ್ ಆದ್ ಸೇರಾವೊಲಿ.';
+
+  @override
+  String get food_add_custom_btn => 'ಕಸ್ಟಮ್ ಫುಡ್ ಪಾಡ್ಲೆ';
+
+  @override
+  String get food_scan_again => 'ಮತ್ತೆ ಸ್ಕ್ಯಾನ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get food_review_items => 'ಕಂಡುಬತ್ತಿನ ಆಹಾರೊಲೆನ್ ಪರಿಶೀಲಿಸಲೆ';
+
+  @override
+  String get food_review_hint =>
+      'ಪ್ರಮಾಣೊಲೆನ್ ಸರಿ ಮಲ್ಪುಲೆ ಅತ್ತಂದೆ ಗುರುತಿಸಂದಿನ ವಸ್ತುಲೆನ್ ತೆಗೆತ್ ಪಾಡ್ಲೆ';
+
+  @override
+  String get food_log_selected => 'ಆಯ್ಕೆ ಮಲ್ತಿನ ಆಹಾರೊಲೆನ್ ಲಾಗ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get food_favourites_title => 'ಮೆಚ್ಚಿನ ಆಹಾರೊಲು';
+
+  @override
+  String get food_recent_title => 'ಇತ್ತೆದ ಆಹಾರೊಲು';
+
+  @override
+  String get food_no_favourites =>
+      'ಇತ್ತೆ ನೆಚ್ಚಿನ ಆಹಾರೊಲು ಇಜ್ಜಿ. ಮುಲ್ಪ ಉಳಿತಾಯ ಮಲ್ಪೆರೆ ಏತ್ ಆಹಾರೊಗುಲಾ ಹೃದಯೊನು ಟ್ಯಾಪ್ ಮಲ್ಪುಲೆ.';
+
+  @override
+  String get food_no_recents => 'ಇತ್ತೆ ಲಾಗ್ ಮಲ್ತಿನ ಆಹಾರೊಲು ಇಜ್ಜಿ.';
+
+  @override
+  String get food_nutrition_details_title => 'ದೈನಂದಿನ ಪೌಷ್ಟಿಕಾಂಶದ ವಿವರೊಲು';
+
+  @override
+  String get food_macro_protein_label => 'ಪ್ರೋಟೀನ್ ಬ್ರೇಕ್ ಡೌನ್';
+
+  @override
+  String get food_macro_carbs_label => 'ಕಾರ್ಬ್ಸ್ ಬ್ರೇಕ್ಡೌನ್';
+
+  @override
+  String get food_macro_fat_label => 'ಕೊಬ್ಬುದ ಮುರಿತ';
+
+  @override
+  String get food_macro_fiber_label => 'ಫೈಬರ್ ಬ್ರೇಕ್ ಡೌನ್';
+
+  @override
+  String get food_daily_target_comparison => 'ಗುರಿ ಹೋಲಿಕೆ';
+
+  @override
+  String food_target_label(Object target) {
+    return 'ಗುರಿ: $target';
+  }
+
+  @override
+  String get food_edit_entry => 'ಡೈರಿ ಪ್ರವೇಶೊನು ಸಂಪಾದಿಸಲೆ';
+
+  @override
+  String get food_delete_entry => 'ನಮೂನೆನ್ ಅಳಿಸೊಡು';
+
+  @override
+  String food_grams_short(Object grams) {
+    return '$grams g';
+  }
+
+  @override
+  String food_kcal_short(Object kcal) {
+    return '__ಪಿಎಚ್_0__ ಕೆ.ಸಿ.ಎಲ್.';
+  }
+
+  @override
+  String water_progress(Object current, Object target) {
+    return '__ಪಿಎಚ್_0__ ದ __ಪಿಎಚ್_1__ ಮಿಲಿ';
+  }
+
+  @override
+  String get water_intake_history => 'ಇತ್ತೆದ ನೀರ್ ದ ಲಾಗ್ ಲು';
+
+  @override
+  String get water_no_logs_today =>
+      'ಇನಿಲಾ ನೀರ್ ಲಾಗ್ ಆಯಿಜಿ. ಜಲಸಂಚಯನ ಮಲ್ಪುಲೆ ಬೊಕ್ಕ ಒಂಜಿ ತ್ವರಿತ ಸೇರ್ಪಡೆ ಬಟನ್ ನ್ ಒತ್ತುಲೆ!';
+
+  @override
+  String get water_adjust_goal => 'ದೈನಂದಿನ ಗುರಿನ್ ಸರಿ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get health_connect_banner => 'ಆರೋಗ್ಯ ಸಂಪರ್ಕೊಗು ಸಂಪರ್ಕ ಉಂಡು';
+
+  @override
+  String get health_vitals_summary => 'ದೈನಂದಿನ ಆರೋಗ್ಯ ಜೀವನ';
+
+  @override
+  String get health_latest_heart_rate => 'ಇತ್ತೆದ ಹೃದಯ ಬಡಿತ';
+
+  @override
+  String get health_latest_bp => 'ರಕ್ತದೊತ್ತಡ';
+
+  @override
+  String get health_latest_spo2 => 'ರಕ್ತ ಆಮ್ಲಜನಕ';
+
+  @override
+  String get health_latest_glucose => 'ರಕ್ತ ಗ್ಲುಕೋಸ್';
+
+  @override
+  String get health_latest_weight => 'ತೂಕ';
+
+  @override
+  String get health_latest_sleep => 'ನಿದ್ರೆದ ಅವಧಿ';
+
+  @override
+  String get health_add_manual => 'ಕೈಟ್ ಮಲ್ಪುನ ಅಳತೆನ್ ಸೇರಾಲೆ';
+
+  @override
+  String get health_history_trends => 'ಐತಿಹಾಸಿಕ ಪ್ರವೃತ್ತಿಲು';
+
+  @override
+  String get health_sync_success => 'ಆರೋಗ್ಯ ಡೇಟಾ ಯಶಸ್ವಿಯಾದ್ ಸಿಂಕ್ ಆತ್ಂಡ್!';
+
+  @override
+  String health_metric_sleep_hours(Object hours, Object mins) {
+    return '__ಪಿಎಚ್_0__ ಗಂಟೆ __ಪಿಎಚ್_1__ ನಿಮಿಷ';
+  }
+
+  @override
+  String health_metric_weight_val(Object val) {
+    return '$val ಕೆಜಿ';
+  }
+
+  @override
+  String health_metric_hr_val(Object bpm) {
+    return '__ಪಿಎಚ್_0__ ಬಿಪಿಎಂ';
+  }
+
+  @override
+  String health_metric_spo2_val(Object pct) {
+    return '$pct %';
+  }
+
+  @override
+  String health_metric_bp_val(Object diastolic, Object systolic) {
+    return '__ಪಿಎಚ್_0__ / __ಪಿಎಚ್_1__ ಎಂಎಂಎಚ್ಜಿ';
+  }
+
+  @override
+  String health_metric_glucose_val(Object val) {
+    return '__ಪಿಎಚ್_0__ ಮಿಗ್ರಾಂ/ಡಿಎಲ್';
+  }
+
+  @override
+  String get health_devices_title => 'ಸಂಪರ್ಕೊಡುಪ್ಪುನ ಸಾಧನೊಲು ಬೊಕ್ಕ ಧರಿಪುನವು';
+
+  @override
+  String get health_devices_desc =>
+      'ಜೋಡಿ ಆಯಿನ ಸ್ಮಾರ್ಟ್ ವಾಚ್ ಲೆನ್, ಫಿಟ್ನೆಸ್ ಟ್ರ್ಯಾಕರ್ ಲೆನ್ ಬೊಕ್ಕ ಆರೋಗ್ಯ ಸಂವೇದಕೊಲೆನ್ ನಿರ್ವಹಿಸಲೆ.';
+
+  @override
+  String get health_workout_editor_title => 'ವರ್ಕ್ ಔಟ್ ನ್ ಎಡಿಟ್ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get health_workout_name_label => 'ವರ್ಕ್ ಔಟ್ ಪುದರ್';
+
+  @override
+  String get health_workout_duration_label => 'ಅವಧಿ (ನಿಮಿಷೊಲು)';
+
+  @override
+  String get health_workout_calories_label => 'ಅಂದಾಜಿ ಕ್ಯಾಲೊರಿಲು (kcal)';
+
+  @override
+  String get health_workout_date_label => 'ದಿನಾಂಕ ಬೊಕ್ಕ ಸಮಯ';
+
+  @override
+  String get plan_daily_wellness_roadmap => 'ನಿಕ್ಲೆನ ವೈಯಕ್ತಿಕ ರಸ್ತೆ ನಕ್ಷೆ';
+
+  @override
+  String get plan_morning_routine => 'ಬೆಳಗ್ಗಿನ ದಿನಚರಿ';
+
+  @override
+  String get plan_afternoon_routine => 'ಮಧ್ಯಾಹ್ನದ ಸ್ವಾಸ್ಥ್ಯ';
+
+  @override
+  String get plan_evening_routine => 'ಸಂಜೆದ ಗಾಳಿ-ಡೌನ್';
+
+  @override
+  String get plan_coach_badge => 'ಬ್ಲೂಮಿ ಎಐ ಕೋಚ್';
+
+  @override
+  String get plan_weekly_overview => '7-ದಿನೊತ ವೆಲ್ನೆಸ್ ಫೋಕಸ್';
+
+  @override
+  String get plan_targets_title => 'ಸ್ವಾಸ್ಥ್ಯದ ಗುರಿ ಬೊಕ್ಕ ಗುರಿಲು';
+
+  @override
+  String get plan_calorie_budget_label => 'ದೈನಂದಿನ ಕ್ಯಾಲೊರಿ ಬಜೆಟ್';
+
+  @override
+  String get plan_water_budget_label => 'ದೈನಂದಿನ ನೀರ್ ಗುರಿ';
+
+  @override
+  String get plan_step_budget_label => 'ದೈನಂದಿನ ಹೆಜ್ಜೆದ ಗುರಿ';
+
+  @override
+  String get plan_macro_split_label => 'ಮ್ಯಾಕ್ರೊನ್ಯೂಟ್ರಿಯೆಂಟ್ ಅನುಪಾತ';
+
+  @override
+  String get profile_personal_details => 'ವೈಯಕ್ತಿಕ ವಿವರೊಲು';
+
+  @override
+  String get profile_body_stats => 'ದೇಹದ ಅಳತೆಲು';
+
+  @override
+  String get profile_app_preferences =>
+      'ಆದ್ಯತೆಲು ಬೊಕ್ಕ ಅಪ್ಲಿಕೇಶನ್ ಸೆಟ್ಟಿಂಗ್ ಲು';
+
+  @override
+  String get profile_edit_name_hint => 'ನಿಕ್ಲೆನ ಪುದರ್';
+
+  @override
+  String profile_edit_height_hint(Object unit) {
+    return 'ಎತ್ತರ ( $unit )';
+  }
+
+  @override
+  String profile_edit_weight_hint(Object unit) {
+    return 'ತೂಕ ( $unit )';
+  }
+
+  @override
+  String get profile_edit_age_hint => 'ವಯಸ್ಸು';
+
+  @override
+  String get profile_gender_male => 'ಪುರುಷ';
+
+  @override
+  String get profile_gender_female => 'ಪೊಣ್ಣು';
+
+  @override
+  String get profile_gender_other => 'ಬೇತೆ / ಪನ್ರೆ ಬಯಕುಜಿ';
+
+  @override
+  String get profile_activity_sedentary =>
+      'ಕುಲ್ಲುನ (ವ್ಯಾಯಾಮ ಕಮ್ಮಿ ಅತ್ತ್ಂಡ ಇಜ್ಜಿ)';
+
+  @override
+  String get profile_activity_light => 'ಲೈಟ್ಲಿ ಆಕ್ಟಿವ್ (1-3 ದಿನ/ವಾರ)';
+
+  @override
+  String get profile_activity_moderate =>
+      'ಮಧ್ಯಮ ಕ್ರಿಯಾಶೀಲತೆ (3-5 ದಿನೊಕುಲು/ವಾರ)';
+
+  @override
+  String get profile_activity_very => 'ಮಸ್ತ್ ಕ್ರಿಯಾಶೀಲ (6-7 ದಿನೊಕುಲು/ವಾರ)';
+
+  @override
+  String get settings_wear_os_header => 'ವೇರ್ ಓಎಸ್ ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್';
+
+  @override
+  String get settings_wear_os_desc =>
+      'ಕ್ಯಾಲೊರಿ, ನೀರ್ ಬೊಕ್ಕ ಸ್ಟೆಪ್ಸ್ ನ್ ತೂಯೆರೆ ನಿಕ್ಲೆನ ವೇರ್ ಓಎಸ್ ವಾಚ್ ಡ್ ಬ್ಲೂಮಿ ಟೈಲ್ ಬೊಕ್ಕ ಕಾಂಪ್ಲಿಕೇಶನ್ ನ್ ಇನ್ಸ್ಟಾಲ್ ಮಲ್ಪುಲೆ.';
+
+  @override
+  String get settings_widgets_header =>
+      'ಪರಸ್ಪರ ಕ್ರಿಯೆ ಮಲ್ಪುನ ಆಂಡ್ರಾಯ್ಡ್ ವಿಜೆಟ್ ಲು';
+
+  @override
+  String get settings_widgets_desc =>
+      'ತತ್ ಕ್ಷಣದ ಅಪ್ ಡೇಟ್ ಲೆಗ್ ನಿಕ್ಲೆನ ಸಾಧನದ ಮುಖ್ಯ ಪರದೆಡ್ ನೈಜ ಸಮಯದ ವಿಜೆಟ್ ಲೆನ್ ಪಿನ್ ಮಲ್ಪುಲೆ.';
+
+  @override
+  String get settings_about_header => 'ಬ್ಲೂಮಿ ಬಗ್ಗೆ';
+
+  @override
+  String get settings_about_version => 'ಆವೃತ್ತಿ ೧.೦.೦';
+
+  @override
+  String get settings_about_build => '100 ನ್ ನಿರ್ಮಾಣ ಮಲ್ಪುಲೆ';
+
+  @override
+  String get settings_about_credits =>
+      'ಮನಸ್ಸಾಕ್ಷಿ, ಆರೋಗ್ಯವಂತ ಜೀವನೊಗು ಕಾಳಜಿಡ್ ತಯಾರ್ ಮಲ್ತೆರ್.';
+
+  @override
+  String get settings_terms_header => 'ನಿಯಮ ಬೊಕ್ಕ ಷರತ್ತುಲು';
+
+  @override
+  String get settings_privacy_header => 'ಗೌಪ್ಯತಾ ನೀತಿ';
+
+  @override
+  String get settings_delete_header => 'ಖಾತೆ ಬೊಕ್ಕ ಡೇಟಾನ್ ಅಳಿಸೊಡು';
+
+  @override
+  String get settings_delete_warning =>
+      'ಈ ಕ್ರಮೊನು ರದ್ದು ಮಲ್ಪೆರೆ ಸಾಧ್ಯ ಇಜ್ಜಿ. ನಿಕ್ಲೆನ ಮಾತಾ ಊಟೊಲು, ವರ್ಕ್ ಔಟ್ ಲು, ಜೀವನೊಲು, ಬೊಕ್ಕ ಪ್ರೊಫೈಲ್ ಶಾಶ್ವತವಾದ್ ಅಳಿಸಲ್ಪಡುಂಡು.';
+
+  @override
+  String get settings_delete_confirm_btn => 'ಶಾಶ್ವತವಾದ್ ಅಳಿಸೊಡು';
+
+  @override
+  String get onboard_welcome_headline => 'ಬ್ಲೂಮಿಗ್ ಸ್ವಾಗತ ✨';
+
+  @override
+  String get onboard_welcome_tagline =>
+      'ನಿಕ್ಲೆನ ಜೀವನೊದ ಸುತ್ತಲ ವಿನ್ಯಾಸಗೊಳಿಸಾಯಿನ ಸೌಮ್ಯ, ಮನಸ್ಸ್ ದ ಸ್ವಾಸ್ಥ್ಯ ಟ್ರ್ಯಾಕಿಂಗ್.';
+
+  @override
+  String get onboard_step_about => 'ನಿಕ್ಲೆನ ಬಗ್ಗೆ';
+
+  @override
+  String get onboard_step_goals => 'ನಿಕ್ಲೆನ ಗುರಿಲು';
+
+  @override
+  String get onboard_step_lifestyle => 'ದೈನಂದಿನ ಅಭ್ಯಾಸೊಲು';
+
+  @override
+  String get onboard_step_permissions => 'ಅನುಮತಿಲು';
+
+  @override
+  String get onboard_step_plan => 'ತಯಾರ್!';
+
+  @override
+  String get onboard_health_connect_perm => 'ಆರೋಗ್ಯ ಸಂಪರ್ಕ ಪ್ರವೇಶ';
+
+  @override
+  String get onboard_step_sensors_perm => 'ಸ್ಟೆಪ್ ಕೌಂಟರ್ ಸೆನ್ಸರ್';
+
+  @override
+  String get onboard_notif_perm => 'ಮನಸ್ಸ್ ದ ನೆನಪುಲು ಬೊಕ್ಕ ಅಧಿಸೂಚನೆಲು';
+
+  @override
+  String get onboard_camera_perm => 'ಕ್ಯಾಮೆರಾ (ಬಾರ್ಕೋಡ್ ಬೊಕ್ಕ ಫುಡ್ ಸ್ಕ್ಯಾನರ್)';
+
+  @override
+  String get onboard_grant_permissions => 'ಅನುಮತಿಲೆನ್ ಕೊರ್ಲೆ';
+
+  @override
+  String get onboard_continue_dashboard => 'ಡ್ಯಾಶ್ ಬೋರ್ಡ್ ನ್ ತೆರೆಲೆ';
+
+  @override
+  String get notif_channel_hydration_name => 'ಜಲಸಂಚಯನ ನಡ್ಜ್ಸ್';
+
+  @override
+  String get notif_channel_hydration_desc => 'ದಿನೊಟು ಸೌಮ್ಯವಾದ್ ನೀರ್ ದ ನೆನಪುಲು';
+
+  @override
+  String get notif_channel_nutrition_name => 'ಊಟ ಬೊಕ್ಕ ಪೌಷ್ಟಿಕಾಂಶದ ನೆನಪುಲು';
+
+  @override
+  String get notif_channel_nutrition_desc =>
+      'ಉಪಾಹಾರ, ಮಧ್ಯಾಹ್ನ, ಬೊಕ್ಕ ರಾತ್ರಿದ ಊಟದ ನೆಂಪು ಎಚ್ಚರಿಕೆಲು';
+
+  @override
+  String get notif_channel_steps_name => 'ಹೆಜ್ಜೆದ ಮೈಲಿಗಲ್ಲುಲು';
+
+  @override
+  String get notif_channel_steps_desc =>
+      'ದೈನಂದಿನ ಹೆಜ್ಜೆ ಗುರಿಲೆನ್ ತಲುಪುನಗ ಆಚರಣೆಲು';
+
+  @override
+  String get notif_channel_vitals_name => 'ಆರೋಗ್ಯ ಬೊಕ್ಕ ಜೀವನ ತಪಾಸಣೆಲು';
+
+  @override
+  String get notif_channel_vitals_desc =>
+      'ತೂಕ ಬೊಕ್ಕ ನಿದ್ರೆದ ಸಮಯದ ಗಾಳಿ-ಡೌನ್ ನೆನಪುಲು';
+
+  @override
+  String get notif_action_log_water => '💧 ಲಾಗ್ +250ml';
+
+  @override
+  String get notif_action_snooze => 'ಸ್ನೂಜ್ 15m';
+
+  @override
+  String get notif_action_log_meal => '🥗 ಲಾಗ್ ಮೀಲ್';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get share => 'Share';
+
+  @override
+  String common_days(Object count) {
+    return '${count}d ago';
+  }
+}

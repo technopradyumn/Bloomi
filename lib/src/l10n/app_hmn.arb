@@ -467,5 +467,8 @@
   "food_quick_search": "Nrhiav zaub mov",
   "food_quick_barcode": "Scan Barcode 👑",
   "food_quick_water": "Ntxiv Dej",
-  "food_quick_custom": "Khoom noj khoom haus"
+  "food_quick_custom": "Khoom noj khoom haus",
+  "language": "Lus",
+  "share": "Qhia",
+  "common_days": "{count} d dhau los"
 }

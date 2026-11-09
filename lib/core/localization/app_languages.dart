@@ -32,7 +32,7 @@ class AppLanguage {
     // POPULAR & HIGHLIGHTED INDIAN & CONVERSATIONAL
     // ----------------------------------------------------
     AppLanguage(code: 'en', name: 'English', nativeName: 'English (Global)', region: 'International', badge: 'EN'),
-    AppLanguage(code: 'hinglish', name: 'Hinglish', nativeName: 'Conversational Mix (Latin script)', region: 'India', badge: 'MIX'),
+    AppLanguage(code: 'en_IN', name: 'Hinglish', nativeName: 'Conversational Mix (Latin script)', region: 'India', badge: 'MIX'),
     AppLanguage(code: 'hi', name: 'Hindi', nativeName: 'हिन्दी', region: 'India', badge: 'HI'),
     AppLanguage(code: 'bn', name: 'Bengali', nativeName: 'বাংলা', region: 'India & Bangladesh', badge: 'BN'),
     AppLanguage(code: 'te', name: 'Telugu', nativeName: 'తెలుగు', region: 'India (Andhra & Telangana)', badge: 'TE'),

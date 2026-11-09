@@ -467,5 +467,8 @@
   "food_quick_search": "Xwarinê bigerin",
   "food_quick_barcode": "Barkodê 👑 Scan bike",
   "food_quick_water": "Avê zêde bikin",
-  "food_quick_custom": "Xwarina Custom"
+  "food_quick_custom": "Xwarina Custom",
+  "language": "Ziman",
+  "share": "Parvekirin",
+  "common_days": "{count} roj berê"
 }
