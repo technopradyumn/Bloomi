@@ -1,214 +1,111 @@
-<div align="center">
+# 🌸 Bloomi – Friendly Health & Nutrition Tracker
 
-# 🌸 Bloomi
-### Mindful Health, Nutrition & Wellness Companion
+<p align="center">
+  <img src="assets/images/mascot.png" alt="Bloomi Mascot" width="120" />
+</p>
 
-*A delightfully cute, animated, and offline-first health tracking application engineered with Flutter, Clean Architecture, and pure BLoC state management.*
+<p align="center">
+  <b>Bloomi</b> is a friendly, offline-first health, nutrition, and wellness tracking app designed to help you build healthy daily habits effortlessly. Featuring a warm, pastel-themed UI, an encouraging companion mascot, and robust privacy protections, Bloomi puts your health data entirely in your hands.
+</p>
 
-[![Flutter](https://img.shields.io/badge/Flutter-3.24+-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-3.5+-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
-[![Architecture](https://img.shields.io/badge/Architecture-Clean%20%2B%20BLoC-blueviolet?style=for-the-badge)](https://bloclibrary.dev)
-[![Database](https://img.shields.io/badge/Database-Drift%20%28SQLite%29-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://drift.simonbinder.eu)
-[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
-[![Tests](https://img.shields.io/badge/Tests-63%2F63%20Passing-brightgreen?style=for-the-badge&logo=checkmarx&logoColor=white)]()
-[![Code Quality](https://img.shields.io/badge/Analyze-0%20Issues-success?style=for-the-badge)]()
-
-</div>
-
----
-
-## 🌟 Key Highlights
-
-- **📶 100% Offline-First**: Reactive Drift (SQLite) database acts as the single source of truth. All metrics, logs, and food entries function seamlessly with zero internet connectivity.
-- **🎨 13 Custom 60 FPS Health Metric Animations**: Hardware-accelerated Canvas & `CustomPainter` loops with battery-saving lifecycle hooks and accessibility **Reduce Motion** support.
-- **🔔 Real System Notifications & Unique Sounds**: Dedicated Android notification channels for each metric type with custom audio tones (`res/raw`), interactive action buttons ("Log 250ml", "Snooze"), and timezone-aware exact scheduling.
-- **↩️ Smart Notification & Milestone Center**: Staged 4.5s dismissals with instant single-item and "Clear All" **Undo** capabilities that preserve database integrity.
-- **📱 Native Android Home-Screen Widget**: Live desktop widget synced via `AppWidgetProvider` with light/dark adaptive theme support and real-time step/hydration updates.
-- **🥗 Nutrition & Food Diary**: Barcode scanning, custom recipe builder, dynamic macro-nutrient distribution, and daily meal planning.
-- **🌦️ Environmental Surroundings**: Live hyper-local weather, UV index, and air quality metrics powered by Open-Meteo.
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.bloomi.app"><img src="https://img.shields.io/badge/Google%20Play-Get%20it%20on-blue?style=for-the-badge&logo=google-play" alt="Get it on Google Play"></a>
+  <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android" alt="Platform">
+  <img src="https://img.shields.io/badge/Framework-Flutter-blue?style=for-the-badge&logo=flutter" alt="Flutter">
+  <img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge" alt="License">
+</p>
 
 ---
 
-## 🎭 Animated Health Metrics
+## ✨ Key Features
 
-Bloomi includes dedicated 60 FPS interactive animations for all vital metrics:
-
-| Metric | Visual Animation |
-|---|---|
-| **💧 Hydration** | Dual sinusoidal flowing wave with interactive dynamic liquid fill level |
-| **👣 Steps** | Alternating walking footsteps along an active path |
-| **❤️ Heart Rate** | Pulsing cardiac rhythm with synchronized EKG electrocardiogram wave line |
-| **💤 Sleep** | Floating and fading typography drifting across moonlit clouds |
-| **🔥 Active Calories** | Animated rising calorie flame with floating thermal particles |
-| **🫁 Blood Oxygen ($SpO_2$)** | Orbiting oxygen bubbles with radiant saturation glow |
-| **⚡ Burned Calories** | Dynamic fiery flare indicator |
-| **⚖️ Weight** | Oscillating analog scale needle settling on the precise measurement |
-| **🩺 Blood Pressure** | Rhythmic arterial gauge pulsing with systolic/diastolic waves |
-| **🥑 Nutrition** | Macro distribution bars animating protein, carb, and healthy fat ratios |
-| **🏃 Distance** | Animated pathway with dynamic runner silhouette |
-| **📐 BMI** | Smooth multi-zone classification gauge needle (Underweight → Obese) |
-| **🌱 Plant-Based** | Organically unfolding growing leaf with gentle sway |
-
-> [!NOTE]
-> All animators automatically pause when the app enters background states (`AppLifecycleState.paused`), respect system-level Reduce Motion accessibility toggles, and adapt seamlessly to Light and Dark themes.
+- **🥗 Nutrition & Calorie Tracking**: Log meals, track daily macronutrients (protein, carbs, fats), and monitor calorie intake with an extensive food diary.
+- **💧 Hydration Management**: Easily log daily water intake and keep track of your hydration goals.
+- **📊 Health & Body Overview**: Monitor your fitness progress, body metrics, and sync health data securely.
+- **🌸 Friendly Companion & Milestones**: Stay motivated with your personal wellness mascot and celebrate daily streaks and milestones.
+- **🔒 100% Offline-First & Private**: Your health data is stored securely on your device using local SQLite (Drift). No cloud account required, ensuring absolute data privacy.
+- **🌙 Adaptive Light & Dark Mode**: Beautiful, custom-tailored themes designed for comfortable viewing at any time of day.
+- **🔔 Smart Reminders & Notifications**: Gentle daily check-ins and habit reminders to keep you on track.
 
 ---
 
-## 🏗️ Architecture & Project Structure
+## 🛠️ Tech Stack & Architecture
 
-Bloomi adheres to strict **Clean Architecture** with the **Repository Pattern**, structured **feature-first**:
+Bloomi is built using modern, production-grade Flutter best practices:
+
+- **Framework**: [Flutter](https://flutter.dev) (Dart)
+- **State Management**: [Flutter BLoC (`flutter_bloc`)](https://pub.dev/packages/flutter_bloc) for predictable, testable state handling.
+- **Local Database**: [Drift (`drift`)](https://pub.dev/packages/drift) (reactive SQLite wrapper for robust offline storage).
+- **Routing**: [GoRouter (`go_router`)](https://pub.dev/packages/go_router) for declarative routing and deep linking.
+- **Charts & Visualization**: [FL Chart (`fl_chart`)](https://pub.dev/packages/fl_chart) for smooth health statistics and progress graphs.
+- **Health Integration**: [Health (`health`)](https://pub.dev/packages/health) for reading device health and fitness metrics.
+- **Localization**: Multi-language support via Flutter `arb` localization.
+
+---
+
+## 📁 Project Structure
 
 ```text
 lib/
-├── main.dart                          # Application entry point
-├── app/                               # GoRouter routing, GetIt DI service locator
-├── core/
-│   ├── constants/                     # Design tokens, color palette, dimensions
-│   ├── database/                      # Drift (SQLite) database, migrations & DAOs
-│   ├── errors/                        # Typed domain failures & exceptions
-│   ├── network/                       # Dio HTTP client & offline retry policies
-│   ├── theme/                         # Light/Dark Material 3 typography & themes
-│   ├── utils/                         # Calculators (BMR, TDEE, macros, BMI)
-│   └── widgets/
-│       ├── metric_animations/         # 13 CustomPainter animators & onboarding loops
-│       ├── bloomi_overlays.dart       # Responsive dialogs & overflow-safe sheets
-│       └── step_target_sheet.dart     # Adaptive target configuration sheets
-├── services/
-│   └── notifications/                 # FlutterLocalNotifications, channels & alarms
-└── features/
-    ├── auth/                          # Google & Apple biometric / OAuth sign-in
-    ├── food/                          # Food diary, barcode scanning, water tracker
-    ├── health/                        # Vitals, Health Connect, sleep & weight logs
-    ├── home/                          # Dashboard, milestone feed & quick actions
-    ├── insights/                      # Weekly trends, analytics & achievement badges
-    ├── onboarding/                    # Animated profile setup & goal selection
-    ├── plan/                          # Daily meal & workout plans
-    ├── profile/                       # User profile & demographic preferences
-    ├── settings/                      # Reminders, sound toggles, Drive backup
-    └── surroundings/                  # Weather, UV index & air quality monitoring
+├── core/                # Constants, themes, design system, and shared utilities
+├── features/            # Feature-based modular architecture
+│   ├── auth/            # Authentication & onboarding flow
+│   ├── food/            # Food diary, database, and detailed nutrient tracking
+│   ├── health/          # Health metrics, workouts, and body overview
+│   ├── home/            # Dashboard, streak counters, and notifications
+│   ├── plan/            # Daily wellness and nutrition targets
+│   ├── profile/         # User profile and achievements
+│   └── settings/        # App settings, theme selection, and data management
+└── main.dart            # App entry point
 ```
-
-### Architectural Principles
-- **Dependency Flow**: `Presentation → Domain ← Data`. Domain entities and use cases have zero dependencies on Flutter UI, third-party plugins, or Drift.
-- **State Management**: Pure BLoC (`flutter_bloc` + `equatable`) with unidirectional data flow.
-- **Persistence**: Drift (SQLite) reactive streams (`watch()`) serve as the single source of truth across all features.
-
----
-
-## 🛠️ Tech Stack & Libraries
-
-- **Framework**: [Flutter](https://flutter.dev) (Dart 3.5+)
-- **State Management**: [`flutter_bloc`](https://pub.dev/packages/flutter_bloc) & [`equatable`](https://pub.dev/packages/equatable)
-- **Routing**: [`go_router`](https://pub.dev/packages/go_router) with custom slide & fade transitions
-- **Local Database**: [`drift`](https://pub.dev/packages/drift) with [`sqlite3_flutter_libs`](https://pub.dev/packages/sqlite3_flutter_libs)
-- **Dependency Injection**: [`get_it`](https://pub.dev/packages/get_it)
-- **System Notifications**: [`flutter_local_notifications`](https://pub.dev/packages/flutter_local_notifications) & [`timezone`](https://pub.dev/packages/timezone)
-- **Sensors & Hardware**: Health Connect client, pedometer, native camera barcode scanner
-- **Networking**: [`dio`](https://pub.dev/packages/dio) with Open-Meteo REST APIs
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [Flutter SDK](https://flutter.dev/docs/get-started/install) (`3.24+` stable)
-- [Android Studio](https://developer.android.com/studio) / [VS Code](https://code.visualstudio.com)
-- Java 17+ (JDK 17)
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (v3.11.0 or higher)
+- Android SDK / Xcode (for iOS development)
+- A connected physical Android device or emulator.
 
-### Installation
+### Installation & Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/technopradyumn/Bloomi.git
+   git clone https://github.com/your-username/bloomi.git
    cd Bloomi
    ```
 
-2. **Install Flutter packages:**
+2. **Install dependencies:**
    ```bash
    flutter pub get
    ```
 
-3. **Run code generation (Drift database & models):**
+3. **Generate localization and database code (if needed):**
    ```bash
-   dart run build_runner build --delete-conflicting-outputs
+   flutter pub run build_runner build --delete-conflicting-outputs
    ```
 
-4. **Verify static analysis:**
-   ```bash
-   flutter analyze
-   ```
-
-5. **Run test suite:**
-   ```bash
-   flutter test
-   ```
-
-6. **Launch on connected device or emulator:**
+4. **Run the app:**
    ```bash
    flutter run
    ```
 
 ---
 
-## 📦 Building for Production
+## 📱 Publishing & Release
 
-### 1. Google Play Store Release (Android App Bundle)
-To build the signed `.aab` file for Google Play Console submission:
+To build a release Android App Bundle (`.aab`) for Google Play Store upload:
+
 ```bash
 flutter build appbundle --release
 ```
-- **Output:** `build/app/outputs/bundle/release/app-release.aab`
 
-### 2. Standalone Signed APK
-To build a signed release APK for direct sideloading or internal distribution:
-```bash
-flutter build apk --release
-```
-- **Output:** `build/app/outputs/flutter-apk/app-release.apk`
-
-*(Optional) Split APKs per ABI for smaller download footprints:*
-```bash
-flutter build apk --split-per-abi --release
-```
-
----
-
-## 🔒 Security & Keystore Configuration
-
-Release builds are configured via [`android/key.properties`](file:///c:/Users/techn/Desktop/Bloomi/android/key.properties) pointing to [`android/app/upload-keystore.jks`](file:///c:/Users/techn/Desktop/Bloomi/android/app/upload-keystore.jks):
-
-```properties
-storePassword=YOUR_STORE_PASSWORD
-keyPassword=YOUR_KEY_PASSWORD
-keyAlias=YOUR_KEY_ALIAS
-storeFile=upload-keystore.jks
-```
-
-> [!CAUTION]
-> Sensitive keystores (`*.jks`, `*.keystore`) and credentials (`key.properties`) are strictly ignored in [`.gitignore`](file:///c:/Users/techn/Desktop/Bloomi/.gitignore) to protect keys from ever being leaked to version control.
-
----
-
-## 🧪 Testing
-
-Bloomi maintains high quality standards with a complete suite of unit, domain, and widget tests:
-
-```bash
-# Run all tests
-flutter test
-
-# Run tests with coverage output
-flutter test --coverage
-```
-- **Analysis Status**: Clean (`0` errors, `0` warnings)
-- **Test Suite**: `63/63` passing unit & widget test scenarios
+The output bundle will be located at:
+`build/app/outputs/bundle/release/app-release.aab`
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
-<div align="center">
-  <sub>Crafted with 💖 by the Bloomi Team</sub>
-</div>
+This project is licensed under the [MIT License](LICENSE).
