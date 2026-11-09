@@ -5,6 +5,8 @@ abstract class ProfileRepository {
   Future<UserProfile?> getProfile();
   Stream<Target?> watchTargets();
   Stream<BodyEntry?> watchLatestWeight();
+  Stream<BodyEntry?> watchLatestWaist();
+  Stream<BodyEntry?> watchLatestHip();
   Future<void> updateProfile({
     required String name,
     required String gender,

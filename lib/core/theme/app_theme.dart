@@ -7,6 +7,16 @@ import 'package:flutter/services.dart';
 abstract final class AppTheme {
   static const String headingFont = 'Baloo 2';
   static const String bodyFont = 'Nunito';
+  static const List<String> fallbackFonts = [
+    'Noto Sans',
+    'Roboto',
+    'Arial',
+    'system-ui',
+    'Segoe UI',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Apple Color Emoji',
+  ];
 
   static ThemeData get lightTheme => getLightTheme(AppBackgroundOption.pure);
   static ThemeData get darkTheme => getDarkTheme(AppBackgroundOption.pure);
@@ -66,6 +76,7 @@ abstract final class AppTheme {
       splashColor: primaryAccent.withAlpha(35),
       highlightColor: primaryAccent.withAlpha(18),
       fontFamily: bodyFont,
+      fontFamilyFallback: fallbackFonts,
       textTheme: const TextTheme(
         displayLarge: TextStyle(
           fontFamily: headingFont,
@@ -433,6 +444,7 @@ abstract final class AppTheme {
       splashColor: primaryAccent.withAlpha(50),
       highlightColor: primaryAccent.withAlpha(30),
       fontFamily: bodyFont,
+      fontFamilyFallback: fallbackFonts,
       textTheme: const TextTheme(
         displayLarge: TextStyle(
           fontFamily: headingFont,

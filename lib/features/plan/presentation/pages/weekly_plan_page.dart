@@ -1,9 +1,8 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
-import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/pill_button.dart';
-import 'package:bloomi/features/food/domain/repositories/food_repository.dart';
 import 'package:bloomi/features/plan/domain/entities/daily_plan_entity.dart';
 import 'package:bloomi/features/plan/domain/repositories/plan_repository.dart';
 import 'package:flutter/material.dart';
@@ -144,7 +143,7 @@ class _WeeklyPlanPageState extends State<WeeklyPlanPage> {
                         color: AppColors.butter.withValues(alpha: 0.4),
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(Icons.calendar_month_rounded, color: context.appInk),
+                      child: Icon(CupertinoIcons.calendar, color: context.appInk),
                     ),
                     const SizedBox(width: AppSpacing.md),
                     Expanded(
@@ -173,77 +172,11 @@ class _WeeklyPlanPageState extends State<WeeklyPlanPage> {
               ),
               const SizedBox(height: AppSpacing.lg),
 
-              Text(
-                'SUGGESTED DISHES',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.2,
-                  color: context.appSlate,
-                ),
-              ),
-              const SizedBox(height: AppSpacing.sm),
-
-              ...planData.mealSuggestions.map((meal) {
-                return Container(
-                  margin: const EdgeInsets.only(bottom: AppSpacing.sm),
-                  decoration: BoxDecoration(
-                    color: context.appSurface,
-                    borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
-                    boxShadow: context.appCardShadow,
-                  ),
-                  child: ListTile(
-                    contentPadding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.md, vertical: 6),
-                    leading: Container(
-                      width: 44,
-                      height: 44,
-                      decoration: BoxDecoration(
-                        color: AppColors.mint.withValues(alpha: 0.2),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Center(
-                        child: Icon(Icons.restaurant_menu_rounded, color: context.appInk),
-                      ),
-                    ),
-                    title: Text(
-                      meal.foodName,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                        color: context.appInk,
-                      ),
-                    ),
-                    subtitle: Text(
-                      '${meal.mealType} • ${meal.portionQuantity} ${meal.portionUnit} • ${meal.nutrients.calories.toInt()} kcal',
-                      style: TextStyle(fontSize: 13, color: context.appSlate),
-                    ),
-                    trailing: Icon(Icons.chevron_right_rounded, color: context.appSlate),
-                    onTap: () {
-                      context.push('/plan/suggestion-detail', extra: meal);
-                    },
-                  ),
-                );
-              }),
-              const SizedBox(height: AppSpacing.md),
-
               PillButton(
-                label: 'Log Today\'s Plan to Diary',
-                icon: Icons.check_circle_outline_rounded,
-                onPressed: () async {
-                  for (final meal in planData.mealSuggestions) {
-                    await sl<FoodRepository>().logMeal(
-                      mealType: meal.mealType,
-                      foodName: meal.foodName,
-                      foodReference: meal.foodId,
-                      quantity: meal.portionQuantity,
-                      unit: meal.portionUnit,
-                      totalGrams: meal.portionGrams,
-                      nutrients: meal.nutrients,
-                    );
-                  }
-                  if (!mounted) return;
-                  BloomiToast.show(this.context, message: 'Day meals logged to Diary! 🌿');
+                label: 'Open Food Diary',
+                icon: CupertinoIcons.book,
+                onPressed: () {
+                  context.push('/food');
                 },
               ),
             ],

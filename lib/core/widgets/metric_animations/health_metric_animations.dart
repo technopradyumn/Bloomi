@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 import 'dart:math' as math;
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -248,7 +249,7 @@ class _AnimatedStepsFootstepsMetricState extends State<AnimatedStepsFootstepsMet
                 child: Opacity(
                   opacity: leftAlpha,
                   child: Icon(
-                    Icons.directions_walk_rounded,
+                    CupertinoIcons.compass,
                     size: widget.size * 0.55,
                     color: stepColor,
                   ),
@@ -263,7 +264,7 @@ class _AnimatedStepsFootstepsMetricState extends State<AnimatedStepsFootstepsMet
                   child: Transform.flip(
                     flipX: true,
                     child: Icon(
-                      Icons.directions_walk_rounded,
+                      CupertinoIcons.compass,
                       size: widget.size * 0.55,
                       color: stepColor,
                     ),
@@ -345,7 +346,7 @@ class _AnimatedHeartPulseMetricState extends State<AnimatedHeartPulseMetric>
                 alignment: Alignment.center,
                 children: [
                   Icon(
-                    Icons.favorite_rounded,
+                    CupertinoIcons.heart_fill,
                     size: widget.size * 0.82,
                     color: heartColor,
                   ),
@@ -354,7 +355,7 @@ class _AnimatedHeartPulseMetricState extends State<AnimatedHeartPulseMetric>
                     Opacity(
                       opacity: (_scaleAnimation.value - 1.0).clamp(0.0, 0.45),
                       child: Icon(
-                        Icons.favorite_border_rounded,
+                        CupertinoIcons.heart,
                         size: widget.size * 0.98,
                         color: heartColor,
                       ),
@@ -425,7 +426,7 @@ class _AnimatedSleepZzzMetricState extends State<AnimatedSleepZzzMetric>
               Align(
                 alignment: Alignment.bottomLeft,
                 child: Icon(
-                  Icons.nightlight_round,
+                  CupertinoIcons.moon_fill,
                   size: widget.size * 0.65,
                   color: sleepColor,
                 ),
@@ -549,7 +550,7 @@ class _AnimatedCaloriesFlameMetricState extends State<AnimatedCaloriesFlameMetri
                 alignment: Alignment.center,
                 children: [
                   Icon(
-                    Icons.local_fire_department_rounded,
+                    CupertinoIcons.flame_fill,
                     size: widget.size * 0.85,
                     color: flameColor,
                   ),
@@ -559,7 +560,7 @@ class _AnimatedCaloriesFlameMetricState extends State<AnimatedCaloriesFlameMetri
                     child: Opacity(
                       opacity: (0.4 + t * 0.6).clamp(0.0, 1.0),
                       child: Icon(
-                        Icons.local_fire_department_rounded,
+                        CupertinoIcons.flame_fill,
                         size: widget.size * 0.45,
                         color: Colors.white.withAlpha(200),
                       ),
@@ -756,7 +757,7 @@ class _AnimatedBurnedFireMetricState extends State<AnimatedBurnedFireMetric>
               child: Transform.scale(
                 scale: scale,
                 child: Icon(
-                  Icons.whatshot_rounded,
+                  CupertinoIcons.flame_fill,
                   size: widget.size * 0.85,
                   color: fireColor,
                 ),
@@ -956,7 +957,7 @@ class _AnimatedBloodPressureMetricState extends State<AnimatedBloodPressureMetri
                 ),
               ),
               Icon(
-                Icons.speed_rounded,
+                CupertinoIcons.waveform_path_ecg,
                 size: widget.size * 0.75,
                 color: bpColor,
               ),
@@ -1103,7 +1104,7 @@ class _AnimatedDistanceMetricState extends State<AnimatedDistanceMetric>
             alignment: Alignment.center,
             children: [
               Icon(
-                Icons.place_rounded,
+                CupertinoIcons.location_solid,
                 size: widget.size * 0.8,
                 color: distColor,
               ),
@@ -1189,7 +1190,7 @@ class _AnimatedBmiGaugeMetricState extends State<AnimatedBmiGaugeMetric>
             children: [
               // Gauge arch
               Icon(
-                Icons.tune_rounded,
+                CupertinoIcons.slider_horizontal_3,
                 size: widget.size * 0.8,
                 color: gaugeColor,
               ),
@@ -1271,7 +1272,7 @@ class _AnimatedVegetarianLeafMetricState extends State<AnimatedVegetarianLeafMet
               child: Transform.scale(
                 scale: scale,
                 child: Icon(
-                  Icons.eco_rounded,
+                  CupertinoIcons.leaf_arrow_circlepath,
                   size: widget.size * 0.85,
                   color: leafColor,
                 ),

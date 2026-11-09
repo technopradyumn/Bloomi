@@ -1,10 +1,13 @@
 import 'dart:convert';
 import 'package:bloomi/core/database/app_database.dart';
+import 'package:bloomi/core/localization/app_languages.dart';
 import 'package:bloomi/features/auth/domain/repositories/auth_repository.dart';
 import 'package:bloomi/services/billing/billing_service.dart';
 import 'package:bloomi/services/notifications/notification_service.dart';
 import 'package:bloomi/services/widgets/widget_bridge_service.dart';
 import 'package:drift/drift.dart' as drift;
+import 'package:flutter/widgets.dart';
+import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
@@ -32,6 +35,7 @@ class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
   final BillingService? _billingService;
   final AuthRepository? _authRepository;
   final String Function()? _userIdProvider;
+  final SharedPreferences? _prefs;
 
   SettingsLocalDataSourceImpl({
     required AppDatabase db,
@@ -40,12 +44,14 @@ class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
     BillingService? billingService,
     AuthRepository? authRepository,
     String Function()? userIdProvider,
+    SharedPreferences? prefs,
   })  : _db = db,
         _notificationService = notificationService,
         _widgetBridgeService = widgetBridgeService,
         _billingService = billingService,
         _authRepository = authRepository,
-        _userIdProvider = userIdProvider;
+        _userIdProvider = userIdProvider,
+        _prefs = prefs;
 
   String get _currentUserId =>
       _userIdProvider?.call() ?? _authRepository?.currentUserId ?? 'default_user';
@@ -215,21 +221,42 @@ class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
 
   @override
   Future<Map<String, String>> getUnitsAndLanguage() async {
+    final savedLang = _prefs?.getString('selected_language_code');
+    final savedUnits = _prefs?.getString('selected_units');
+
     final profiles = await (_db.select(_db.userProfiles)
           ..where((t) => t.userId.equals(_currentUserId) & t.deleted.equals(false))
           ..limit(1))
         .get();
-    if (profiles.isNotEmpty) {
-      return {
-        'units': profiles.first.units,
-        'language': profiles.first.language,
-      };
+
+    final String units = savedUnits ?? (profiles.isNotEmpty ? profiles.first.units : 'metric');
+    String language;
+
+    if (savedLang != null && savedLang.isNotEmpty) {
+      language = savedLang;
+    } else if (profiles.isNotEmpty && profiles.first.language.isNotEmpty) {
+      language = profiles.first.language;
+    } else {
+      // Default to device language if supported, otherwise English
+      final deviceLocale = WidgetsBinding.instance.platformDispatcher.locale;
+      final devCode = deviceLocale.languageCode.toLowerCase();
+      final hasMatch = AppLanguage.supportedLanguages.any((l) => l.code.toLowerCase() == devCode);
+      language = hasMatch ? devCode : 'en';
     }
-    return {'units': 'metric', 'language': 'en'};
+
+    try {
+      Intl.defaultLocale = language;
+    } catch (_) {}
+
+    return {
+      'units': units,
+      'language': language,
+    };
   }
 
   @override
   Future<void> updateUnits(String units) async {
+    await _prefs?.setString('selected_units', units);
     final profiles = await (_db.select(_db.userProfiles)
           ..where((t) => t.userId.equals(_currentUserId) & t.deleted.equals(false))
           ..limit(1))
@@ -247,6 +274,11 @@ class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
 
   @override
   Future<void> updateLanguage(String language) async {
+    await _prefs?.setString('selected_language_code', language);
+    try {
+      Intl.defaultLocale = language;
+    } catch (_) {}
+
     final profiles = await (_db.select(_db.userProfiles)
           ..where((t) => t.userId.equals(_currentUserId) & t.deleted.equals(false))
           ..limit(1))

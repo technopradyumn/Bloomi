@@ -1,5 +1,7 @@
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
+import 'package:bloomi/core/localization/app_localizations.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,9 +14,18 @@ class SettingsPage extends StatelessWidget {
     final secondaryTextColor = context.appSlate;
 
     return Scaffold(
+      backgroundColor: context.appBackground,
       appBar: AppBar(
+        backgroundColor: context.appSurface,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
+          onPressed: () {
+            if (context.canPop()) context.pop();
+          },
+        ),
         title: Text(
-          'Settings',
+          context.tr('settings'),
           style: TextStyle(
             fontFamily: 'Baloo 2',
             fontWeight: FontWeight.w700,
@@ -26,102 +37,148 @@ class SettingsPage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(AppSpacing.md),
         children: [
-          _buildSectionHeader('Preferences & Mindful Habits', secondaryTextColor),
+          // 1. Preferences & App Appearance
+          _buildSectionHeader(context.tr('preferences_habits'), secondaryTextColor),
           _buildSettingsTile(
             context: context,
-            icon: Icons.palette_rounded,
-            title: 'Appearance & Theme',
-            subtitle: 'Dark, Light, System Mode & App Background Options',
+            icon: CupertinoIcons.paintbrush_fill,
+            title: context.tr('appearance_theme'),
+            subtitle: context.tr('appearance_theme_sub'),
             color: AppColors.mint,
             onTap: () => context.push('/settings/theme'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.shield_outlined,
-            title: 'Permissions & System Access',
-            subtitle: 'Health Connect, Step Sensors, GPS, Notifications & Camera',
+            icon: CupertinoIcons.shield,
+            title: context.tr('permissions'),
+            subtitle: context.tr('permissions_sub'),
             color: AppColors.mint,
             onTap: () => context.push('/settings/permissions'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.alarm_rounded,
-            title: 'Reminders & Notifications',
-            subtitle: 'Meal times, water, weight check-in & bedtime',
+            icon: CupertinoIcons.alarm,
+            title: context.tr('reminders_notifications'),
+            subtitle: context.tr('reminders_sub'),
             color: AppColors.lilac,
             onTap: () => context.push('/settings/reminders'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.straighten_rounded,
-            title: 'Units of Measurement',
-            subtitle: 'Metric (kg, cm, ml, km) or Imperial (lbs, ft/in, fl oz)',
+            icon: CupertinoIcons.chart_bar,
+            title: context.tr('units_of_measurement'),
+            subtitle: context.tr('units_sub'),
             color: AppColors.peach,
             onTap: () => context.push('/settings/units'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.translate_rounded,
-            title: 'App Language',
-            subtitle: 'English, हिन्दी (Hindi), or Hinglish',
+            icon: CupertinoIcons.globe,
+            title: context.tr('app_language'),
+            subtitle: context.tr('language_sub'),
             color: AppColors.sky,
             onTap: () => context.push('/settings/language'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.widgets_rounded,
-            title: 'Home Screen Widgets',
-            subtitle: 'Auto-updating light, dark & system widgets with live data',
+            icon: CupertinoIcons.square_grid_2x2_fill,
+            title: context.tr('home_screen_widgets'),
+            subtitle: context.tr('widgets_sub'),
             color: AppColors.butter,
             onTap: () => context.push('/settings/widgets'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.watch_rounded,
-            title: 'Wear OS Watch App',
-            subtitle: 'Smartwatch companion, tiles, complications & live vitals',
+            icon: CupertinoIcons.radiowaves_right,
+            title: context.tr('wear_os_watch_app'),
+            subtitle: context.tr('wear_os_sub'),
             color: AppColors.lilac,
             onTap: () => context.push('/settings/wear-os'),
           ),
+
+          const SizedBox(height: AppSpacing.md),
+
+          // 2. Goals, Wellness & Insights (Moved from Profile)
+          _buildSectionHeader(context.tr('goals_wellness'), secondaryTextColor),
           _buildSettingsTile(
             context: context,
-            icon: Icons.devices_other_rounded,
-            title: 'Devices & Smartwatch',
-            subtitle: 'Health Connect, Galaxy Watch, Pixel Watch, Garmin',
+            icon: CupertinoIcons.scope,
+            title: context.tr('nutrition_targets'),
+            subtitle: context.tr('nutrition_targets_sub'),
             color: AppColors.mint,
+            onTap: () => context.push('/plan/goals'),
+          ),
+          _buildSettingsTile(
+            context: context,
+            icon: CupertinoIcons.calendar,
+            title: context.tr('weekly_recap'),
+            subtitle: context.tr('weekly_recap_sub'),
+            color: AppColors.sky,
+            onTap: () => context.push('/insights/weekly-report'),
+          ),
+          _buildSettingsTile(
+            context: context,
+            icon: CupertinoIcons.rosette,
+            title: context.tr('streaks_milestones'),
+            subtitle: context.tr('streaks_sub'),
+            color: AppColors.butter,
+            onTap: () => context.push('/insights/streaks'),
+          ),
+
+          const SizedBox(height: AppSpacing.md),
+
+          // 3. Connected Devices & Ecosystem
+          _buildSectionHeader(context.tr('connected_devices'), secondaryTextColor),
+          _buildSettingsTile(
+            context: context,
+            icon: CupertinoIcons.device_desktop,
+            title: context.tr('devices_hub'),
+            subtitle: context.tr('devices_hub_sub'),
+            color: AppColors.lilac,
             onTap: () => context.push('/health/devices'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.wb_sunny_rounded,
-            title: 'Surroundings & Weather',
-            subtitle: 'Air quality, UV index, and weather hydration tips',
+            icon: CupertinoIcons.sun_max_fill,
+            title: context.tr('surroundings_weather'),
+            subtitle: context.tr('surroundings_sub'),
             color: AppColors.sky,
             onTap: () => context.push('/surroundings'),
           ),
-          const SizedBox(height: AppSpacing.md),
-          _buildSectionHeader('About & Legal', secondaryTextColor),
           _buildSettingsTile(
             context: context,
-            icon: Icons.info_outline_rounded,
-            title: 'About Bloomi',
-            subtitle: 'Build specifications, version, attributions',
+            icon: CupertinoIcons.star_fill,
+            title: context.tr('bloomi_pro'),
+            subtitle: context.tr('bloomi_pro_sub'),
+            color: AppColors.softOrange,
+            onTap: () => context.push('/settings/premium'),
+          ),
+
+          const SizedBox(height: AppSpacing.md),
+
+          // 4. About & Legal
+          _buildSectionHeader(context.tr('about_security'), secondaryTextColor),
+          _buildSettingsTile(
+            context: context,
+            icon: CupertinoIcons.info_circle,
+            title: context.tr('about_bloomi'),
+            subtitle: context.tr('about_bloomi_sub'),
             color: AppColors.lilac,
             onTap: () => context.push('/settings/about'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.privacy_tip_rounded,
-            title: 'Privacy Policy',
-            subtitle: 'Offline-first, on-device data architecture',
+            icon: CupertinoIcons.shield_slash_fill,
+            title: context.tr('privacy_policy'),
+            subtitle: context.tr('privacy_policy_sub'),
             color: AppColors.mint,
             onTap: () => context.push('/settings/privacy-policy'),
           ),
           _buildSettingsTile(
             context: context,
-            icon: Icons.gavel_rounded,
-            title: 'Terms & Conditions',
-            subtitle: 'Terms of service and wellness guidelines',
+            icon: CupertinoIcons.hammer_fill,
+            title: context.tr('terms_conditions'),
+            subtitle: context.tr('terms_conditions_sub'),
             color: AppColors.sky,
             onTap: () => context.push('/settings/terms'),
           ),
@@ -140,7 +197,7 @@ class SettingsPage extends StatelessWidget {
           fontSize: 12,
           fontWeight: FontWeight.w800,
           color: textColor,
-          letterSpacing: 0.5,
+          letterSpacing: 0.6,
         ),
       ),
     );
@@ -163,12 +220,14 @@ class SettingsPage extends StatelessWidget {
       decoration: BoxDecoration(
         color: tileBg,
         borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+        boxShadow: context.appCardShadow,
+        border: Border.all(color: context.appBorderColor),
       ),
       child: ListTile(
         leading: Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: color.withAlpha(50),
+            color: Color.alphaBlend(color.withOpacity(0.20), context.appSurface),
             shape: BoxShape.circle,
           ),
           child: Icon(icon, color: primaryTextColor, size: 20),
@@ -176,14 +235,16 @@ class SettingsPage extends StatelessWidget {
         title: Text(
           title,
           style: TextStyle(
-              fontWeight: FontWeight.w700, fontSize: 15, color: primaryTextColor),
+            fontWeight: FontWeight.w700,
+            fontSize: 15,
+            color: primaryTextColor,
+          ),
         ),
         subtitle: Text(
           subtitle,
-          style: TextStyle(fontSize: 12, color: secondaryTextColor),
+          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: secondaryTextColor),
         ),
-        trailing:
-            Icon(Icons.chevron_right_rounded, color: secondaryTextColor),
+        trailing: Icon(CupertinoIcons.chevron_right, color: secondaryTextColor),
         onTap: onTap,
       ),
     );

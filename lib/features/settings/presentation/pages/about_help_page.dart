@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_widget.dart';
@@ -118,35 +119,35 @@ class _AboutHelpPageState extends State<AboutHelpPage> {
                   children: [
                     _buildDetailRow(
                       context: context,
-                      icon: Icons.tag_rounded,
+                      icon: CupertinoIcons.number,
                       label: 'App Version',
                       value: 'v$version',
                     ),
                     const Divider(height: 16),
                     _buildDetailRow(
                       context: context,
-                      icon: Icons.numbers_rounded,
+                      icon: CupertinoIcons.number,
                       label: 'Build Number',
                       value: buildNumber,
                     ),
                     const Divider(height: 16),
                     _buildDetailRow(
                       context: context,
-                      icon: Icons.fingerprint_rounded,
+                      icon: CupertinoIcons.lock_shield,
                       label: 'Package ID',
                       value: packageName,
                     ),
                     const Divider(height: 16),
                     _buildDetailRow(
                       context: context,
-                      icon: Icons.storage_rounded,
+                      icon: CupertinoIcons.cube_box_fill,
                       label: 'Database Schema',
                       value: 'Drift SQLite v4 (Per-User Scoped)',
                     ),
                     const Divider(height: 16),
                     _buildDetailRow(
                       context: context,
-                      icon: Icons.health_and_safety_rounded,
+                      icon: CupertinoIcons.shield_fill,
                       label: 'Health Engine',
                       value: 'Android Health Connect API',
                     ),
@@ -170,7 +171,7 @@ class _AboutHelpPageState extends State<AboutHelpPage> {
                   children: [
                     Row(
                       children: [
-                        const Icon(Icons.shield_outlined, color: AppColors.mint, size: 20),
+                        const Icon(CupertinoIcons.shield, color: AppColors.mint, size: 20),
                         const SizedBox(width: 8),
                         Expanded(
                           child: Text(
@@ -211,7 +212,7 @@ class _AboutHelpPageState extends State<AboutHelpPage> {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: const Icon(Icons.menu_book_rounded, color: AppColors.mint),
+                      leading: const Icon(CupertinoIcons.book_fill, color: AppColors.mint),
                       title: Text(
                         'IFCT 2017',
                         style: TextStyle(fontWeight: FontWeight.bold, color: context.appInk),
@@ -220,7 +221,7 @@ class _AboutHelpPageState extends State<AboutHelpPage> {
                     ),
                     const Divider(height: 1, indent: 56),
                     ListTile(
-                      leading: const Icon(Icons.restaurant_rounded, color: AppColors.butter),
+                      leading: const Icon(CupertinoIcons.cart_fill, color: AppColors.butter),
                       title: Text(
                         'USDA FoodData Central',
                         style: TextStyle(fontWeight: FontWeight.bold, color: context.appInk),
@@ -229,7 +230,7 @@ class _AboutHelpPageState extends State<AboutHelpPage> {
                     ),
                     const Divider(height: 1, indent: 56),
                     ListTile(
-                      leading: const Icon(Icons.cloud_outlined, color: AppColors.sky),
+                      leading: const Icon(CupertinoIcons.cloud, color: AppColors.sky),
                       title: Text(
                         'Open-Meteo',
                         style: TextStyle(fontWeight: FontWeight.bold, color: context.appInk),
@@ -253,24 +254,24 @@ class _AboutHelpPageState extends State<AboutHelpPage> {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: const Icon(Icons.privacy_tip_outlined, color: AppColors.mint),
+                      leading: const Icon(CupertinoIcons.shield_slash, color: AppColors.mint),
                       title: Text(
                         'Privacy Policy',
                         style: TextStyle(fontWeight: FontWeight.w600, color: context.appInk),
                       ),
                       subtitle: const Text('Offline-first privacy and on-device data storage'),
-                      trailing: Icon(Icons.chevron_right_rounded, color: context.appSlate),
+                      trailing: Icon(CupertinoIcons.chevron_right, color: context.appSlate),
                       onTap: () => context.push('/settings/privacy-policy'),
                     ),
                     const Divider(height: 1, indent: 56),
                     ListTile(
-                      leading: const Icon(Icons.gavel_outlined, color: AppColors.sky),
+                      leading: const Icon(CupertinoIcons.hammer, color: AppColors.sky),
                       title: Text(
                         'Terms & Conditions',
                         style: TextStyle(fontWeight: FontWeight.w600, color: context.appInk),
                       ),
                       subtitle: const Text('Terms of service and non-medical disclaimers'),
-                      trailing: Icon(Icons.chevron_right_rounded, color: context.appSlate),
+                      trailing: Icon(CupertinoIcons.chevron_right, color: context.appSlate),
                       onTap: () => context.push('/settings/terms'),
                     ),
                   ],

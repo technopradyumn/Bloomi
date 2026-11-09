@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,7 @@ class OfflineBanner extends StatelessWidget {
         child: Row(
           children: [
             Icon(
-              Icons.cloud_off_rounded,
+              CupertinoIcons.wifi_slash,
               size: 20,
               color: ink,
             ),

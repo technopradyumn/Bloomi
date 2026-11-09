@@ -1,6 +1,8 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
+import 'package:bloomi/core/widgets/bloomi_cupertino_picker.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_widget.dart';
@@ -93,19 +95,19 @@ class _RemindersSettingsPageState extends State<RemindersSettingsPage> {
   IconData _getTypeIcon(String type) {
     switch (type.toLowerCase()) {
       case 'breakfast':
-        return Icons.free_breakfast_rounded;
+        return CupertinoIcons.sunrise_fill;
       case 'lunch':
-        return Icons.lunch_dining_rounded;
+        return CupertinoIcons.bag_fill;
       case 'dinner':
-        return Icons.dinner_dining_rounded;
+        return CupertinoIcons.cart_fill;
       case 'water':
-        return Icons.water_drop_rounded;
+        return CupertinoIcons.drop_fill;
       case 'weight':
-        return Icons.monitor_weight_rounded;
+        return CupertinoIcons.gauge;
       case 'sleep':
-        return Icons.bedtime_rounded;
+        return CupertinoIcons.moon_fill;
       default:
-        return Icons.alarm_rounded;
+        return CupertinoIcons.alarm;
     }
   }
 
@@ -226,9 +228,10 @@ class _RemindersSettingsPageState extends State<RemindersSettingsPage> {
       }
     } catch (_) {}
 
-    final picked = await showTimePicker(
-      context: context,
+    final picked = await BloomiCupertinoPicker.showTimePicker(
+      context,
       initialTime: initial,
+      title: 'Reminder Time',
     );
 
     if (picked != null && mounted) {
@@ -421,7 +424,7 @@ class _RemindersSettingsPageState extends State<RemindersSettingsPage> {
                       color: AppColors.mint.withAlpha(89),
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(Icons.volume_up_rounded, color: context.appInk, size: 22),
+                    child: Icon(CupertinoIcons.volume_up, color: context.appInk, size: 22),
                   ),
                   title: Text(
                     'Notification Sounds',

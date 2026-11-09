@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
@@ -9,7 +11,6 @@ import 'package:bloomi/features/food/domain/entities/nutrient_snapshot_entity.da
 import 'package:bloomi/features/food/domain/repositories/food_repository.dart';
 import 'package:bloomi/services/billing/billing_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
@@ -191,7 +192,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.qr_code_scanner_rounded, color: AppColors.mint, size: 48),
+            Icon(CupertinoIcons.qrcode_viewfinder, color: AppColors.mint, size: 48),
             SizedBox(height: 10),
             Text(
               'Barcode Scanner Standby',
@@ -241,7 +242,6 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                                 code != _lastScannedBarcode) {
                               _lastScannedBarcode = code;
                               _barcodeCtrl.text = code;
-                              HapticFeedback.mediumImpact();
                               _searchBarcode(code);
                               break;
                             }
@@ -255,7 +255,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Icon(Icons.videocam_off_rounded,
+                                  const Icon(CupertinoIcons.videocam_fill,
                                       color: Colors.white38, size: 40),
                                   const SizedBox(height: 8),
                                   const Text(
@@ -270,15 +270,15 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                                     children: [
                                       TextButton.icon(
                                         onPressed: () => context.push('/settings/permissions'),
-                                        icon: const Icon(Icons.shield_outlined, size: 16),
+                                        icon: const Icon(CupertinoIcons.shield, size: 16),
                                         label: const Text('Manage Permissions',
                                             style: TextStyle(color: AppColors.mint)),
                                       ),
                                       const SizedBox(width: 8),
                                       TextButton.icon(
                                         onPressed: () => _scannerController.start(),
-                                        icon: const Icon(Icons.refresh_rounded, size: 16),
-                                        label: const Text('Retry',
+                                        icon: const Icon(CupertinoIcons.arrow_clockwise, size: 16),
+                                        label: Text(context.tr('retry'),
                                             style: TextStyle(color: Colors.white70)),
                                       ),
                                     ],
@@ -316,8 +316,8 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                         child: IconButton(
                           icon: Icon(
                             _isFlashOn
-                                ? Icons.flash_on_rounded
-                                : Icons.flash_off_rounded,
+                                ? CupertinoIcons.bolt_fill
+                                : CupertinoIcons.bolt_slash,
                             color: _isFlashOn ? AppColors.butter : Colors.white,
                             size: 20,
                           ),
@@ -346,7 +346,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                           child: const Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Icon(Icons.qr_code_scanner_rounded,
+                              Icon(CupertinoIcons.qrcode_viewfinder,
                                   color: AppColors.mint, size: 14),
                               SizedBox(width: 6),
                               Text(
@@ -378,7 +378,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
           ),
           child: Row(
             children: [
-              Icon(Icons.search_rounded, color: context.appSlate),
+              Icon(CupertinoIcons.search, color: context.appSlate),
               const SizedBox(width: 8),
               Expanded(
                 child: TextField(
@@ -402,7 +402,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                 )
               else
                 IconButton(
-                  icon: const Icon(Icons.arrow_forward_rounded,
+                  icon: const Icon(CupertinoIcons.arrow_right,
                       color: AppColors.mint),
                   onPressed: () => _searchBarcode(_barcodeCtrl.text),
                 ),
@@ -424,7 +424,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.info_outline_rounded,
+                    Icon(CupertinoIcons.info_circle,
                         color: context.appInk, size: 20),
                     const SizedBox(width: 8),
                     Text(
@@ -440,7 +440,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                 const SizedBox(height: 12),
                 PillButton(
                   label: 'Create Custom Food',
-                  icon: Icons.add_rounded,
+                  icon: CupertinoIcons.add,
                   onPressed: () => context.push('/food/custom'),
                 ),
               ],
@@ -493,7 +493,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                       children: [
                         IconButton(
                           icon: Icon(
-                              Icons.remove_circle_outline_rounded,
+                              CupertinoIcons.minus_circle,
                               color: context.appSlate),
                           onPressed: () {
                             if (_servings > 0.5) {
@@ -508,7 +508,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                         ),
                         IconButton(
                           icon: const Icon(
-                              Icons.add_circle_outline_rounded,
+                              CupertinoIcons.add_circled,
                               color: AppColors.mint),
                           onPressed: () {
                             setState(() => _servings += 0.5);
@@ -553,7 +553,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
 
                 PillButton(
                   label: 'Log to Food Diary',
-                  icon: Icons.check_circle_rounded,
+                  icon: CupertinoIcons.checkmark_circle_fill,
                   onPressed: _logProductToDiary,
                 ),
               ],
@@ -618,7 +618,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                   ),
                 ),
                 child: Icon(
-                  Icons.qr_code_scanner_rounded,
+                  CupertinoIcons.qrcode_viewfinder,
                   color: context.appSoftOrange,
                   size: 40,
                 ),
@@ -627,7 +627,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.workspace_premium_rounded, color: context.appSoftOrange, size: 20),
+                  Icon(CupertinoIcons.star_circle_fill, color: context.appSoftOrange, size: 20),
                   const SizedBox(width: 6),
                   Text(
                     'Bloomi Premium Feature',
@@ -670,11 +670,11 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
                 ),
                 child: const Column(
                   children: [
-                    _FeatureBenefitRow(icon: Icons.flash_on_rounded, text: 'Instant 1-second grocery barcode scanning'),
+                    _FeatureBenefitRow(icon: CupertinoIcons.bolt_fill, text: 'Instant 1-second grocery barcode scanning'),
                     SizedBox(height: 6),
-                    _FeatureBenefitRow(icon: Icons.pie_chart_rounded, text: 'Automatic calorie & macro calculation'),
+                    _FeatureBenefitRow(icon: CupertinoIcons.chart_pie_fill, text: 'Automatic calorie & macro calculation'),
                     SizedBox(height: 6),
-                    _FeatureBenefitRow(icon: Icons.inventory_2_rounded, text: '1M+ verified food products database'),
+                    _FeatureBenefitRow(icon: CupertinoIcons.archivebox_fill, text: '1M+ verified food products database'),
                   ],
                 ),
               ),
@@ -727,7 +727,7 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
       backgroundColor: context.appBackground,
       appBar: AppBar(
         title: Text(
-          'Barcode Scanner',
+          context.tr('barcode_title'),
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontFamily: 'Baloo 2',

@@ -1,17 +1,15 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'dart:async';
-import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
-import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_widget.dart';
 import 'package:bloomi/core/widgets/pill_button.dart';
 import 'package:bloomi/core/widgets/step_target_sheet.dart';
-import 'package:bloomi/features/food/domain/repositories/food_repository.dart';
 import 'package:bloomi/features/plan/domain/entities/daily_plan_entity.dart';
-import 'package:bloomi/features/plan/domain/entities/meal_suggestion_entity.dart';
 import 'package:bloomi/features/plan/domain/repositories/plan_repository.dart';
 import 'package:bloomi/services/billing/billing_service.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +27,6 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
   bool _isLoading = true;
   bool _isPremium = false;
   String? _error;
-  final Set<String> _dismissedMealIds = {};
   final ScrollController _scrollController = ScrollController();
   StreamSubscription<DailyPlanBundleEntity>? _planSub;
   StreamSubscription<bool>? _premiumSub;
@@ -90,27 +87,6 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
     }
   }
 
-  Future<void> _onSwapMeal(String mealType) async {
-    sl<PlanRepository>().cycleSwap(mealType);
-    await _loadPlan(silent: true);
-  }
-
-  Future<void> _onLogMeal(MealSuggestionEntity suggestion) async {
-    await sl<FoodRepository>().logMeal(
-      mealType: suggestion.mealType,
-      foodName: suggestion.foodName,
-      foodReference: suggestion.foodId,
-      quantity: suggestion.portionQuantity,
-      unit: suggestion.portionUnit,
-      totalGrams: suggestion.portionGrams,
-      nutrients: suggestion.nutrients,
-    );
-    if (mounted) {
-      BloomiToast.show(context, message: 'Logged ${suggestion.foodName}! ✨');
-      await _loadPlan(silent: true);
-    }
-  }
-
   Future<void> _toggleChecklist(String key) async {
     await sl<PlanRepository>().toggleChecklistItem(
       itemKey: key,
@@ -136,7 +112,7 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
       backgroundColor: context.appBackground,
       appBar: AppBar(
         title: Text(
-          'Daily Plan',
+          context.tr('plan_title'),
           style: TextStyle(
             fontFamily: 'Baloo 2',
             fontWeight: FontWeight.w700,
@@ -148,8 +124,8 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
         elevation: 0,
         actions: [
           IconButton(
-            icon: Icon(Icons.tune_rounded, color: context.appInk),
-            tooltip: 'Plan Goals & Targets',
+            icon: Icon(CupertinoIcons.slider_horizontal_3, color: context.appInk),
+            tooltip: context.tr('plan_targets_title'),
             onPressed: () async {
               await context.push('/plan/goals');
               await _loadPlan(silent: true);
@@ -164,7 +140,7 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.error_outline_rounded, size: 48, color: context.appSlate),
+                      Icon(CupertinoIcons.exclamationmark_circle, size: 48, color: context.appSlate),
                       const SizedBox(height: AppSpacing.sm),
                       Text('Could not load plan: $_error', style: TextStyle(fontWeight: FontWeight.w700, color: context.appInk)),
                       const SizedBox(height: AppSpacing.md),
@@ -178,62 +154,51 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
                 )
               : _isPremium
                   ? _buildPlanContent(_bundle!)
-                  : Stack(
+                  : ListView(
+                      padding: const EdgeInsets.all(AppSpacing.md),
                       children: [
-                        ImageFiltered(
-                          imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-                          child: _buildPlanContent(_bundle!),
-                        ),
-                        Positioned.fill(
-                          child: Container(
-                            color: context.isDarkMode ? context.appSurface.withAlpha(210) : context.appSurface.withAlpha(190),
-                            child: Center(
-                              child: Container(
-                                margin: const EdgeInsets.all(AppSpacing.lg),
-                                padding: const EdgeInsets.all(AppSpacing.lg),
+                        Container(
+                          padding: const EdgeInsets.all(AppSpacing.lg),
+                          decoration: BoxDecoration(
+                            color: context.appSurface,
+                            borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+                            boxShadow: context.appCardShadow,
+                            border: Border.all(color: AppColors.softOrange, width: 1.5),
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
-                                  color: context.appSurface,
-                                  borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
-                                  boxShadow: context.appCardShadow,
-                                  border: Border.all(color: AppColors.softOrange.withAlpha(90)),
+                                  color: Color.alphaBlend(AppColors.softOrange.withOpacity(0.15), context.appSurface),
+                                  shape: BoxShape.circle,
                                 ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.all(12),
-                                      decoration: BoxDecoration(
-                                        color: AppColors.softOrange.withAlpha(40),
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: const Icon(Icons.lock_rounded, color: AppColors.softOrange, size: 28),
-                                    ),
-                                    const SizedBox(height: AppSpacing.sm),
-                                    Text(
-                                      'Daily Target Plan 🔒',
-                                      style: TextStyle(
-                                        fontFamily: 'Baloo 2',
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w700,
-                                        color: context.appInk,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 6),
-                                    Text(
-                                      'Personalized calorie target, macro distribution, and daily meal plans are exclusively available on Bloomi Premium.',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(fontSize: 13, color: context.appSlate),
-                                    ),
-                                    const SizedBox(height: AppSpacing.md),
-                                    PillButton(
-                                      label: 'Unlock with Premium 👑',
-                                      variant: PillButtonVariant.primary,
-                                      onPressed: () => context.push('/settings/premium'),
-                                    ),
-                                  ],
+                                child: const Icon(CupertinoIcons.lock_fill, color: AppColors.softOrange, size: 28),
+                              ),
+                              const SizedBox(height: AppSpacing.sm),
+                              Text(
+                                'Daily Target Plan 🔒',
+                                style: TextStyle(
+                                  fontFamily: 'Baloo 2',
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                  color: context.appInk,
                                 ),
                               ),
-                            ),
+                              const SizedBox(height: 6),
+                              Text(
+                                'Personalized calorie targets, macro distribution, and daily guidance are exclusively available on Bloomi Premium.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(fontSize: 13, color: context.appSlate, height: 1.4),
+                              ),
+                              const SizedBox(height: AppSpacing.md),
+                              PillButton(
+                                label: 'Unlock with Premium 👑',
+                                variant: PillButtonVariant.primary,
+                                onPressed: () => context.push('/settings/premium'),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -245,10 +210,6 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
     final progress = bundle.totalCaloriesTarget > 0
         ? (bundle.consumedCalories / bundle.totalCaloriesTarget).clamp(0.0, 1.0)
         : 0.0;
-
-    final visibleMeals = bundle.mealSuggestions
-        .where((m) => !_dismissedMealIds.contains(m.foodId))
-        .toList();
 
     return ListView(
       key: const PageStorageKey('daily_plan_list_view'),
@@ -332,59 +293,6 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
         _buildActivePlanCard(bundle),
         const SizedBox(height: AppSpacing.md),
 
-        // Meal Suggestions Header
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Meal Suggestions',
-              style: TextStyle(
-                fontFamily: 'Baloo 2',
-                fontWeight: FontWeight.w700,
-                fontSize: 18,
-                color: context.appInk,
-              ),
-            ),
-            Text(
-              'Tap food for details',
-              style: TextStyle(fontSize: 11, color: context.appSlate.withAlpha(200)),
-            ),
-          ],
-        ),
-        const SizedBox(height: AppSpacing.xs),
-
-        if (visibleMeals.isEmpty)
-          Container(
-            padding: const EdgeInsets.all(AppSpacing.md),
-            margin: const EdgeInsets.only(bottom: AppSpacing.sm),
-            decoration: BoxDecoration(
-              color: context.appSurface,
-              borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
-            ),
-            child: Row(
-              children: [
-                Icon(Icons.restaurant_rounded, color: context.appSlate, size: 24),
-                const SizedBox(width: AppSpacing.sm),
-                Expanded(
-                  child: Text(
-                    'No active suggestions. You can log meals from the Add Food screen.',
-                    style: TextStyle(fontSize: 13, color: context.appSlate),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    setState(() => _dismissedMealIds.clear());
-                  },
-                  child: const Text('Reset'),
-                ),
-              ],
-            ),
-          )
-        else
-          ...visibleMeals.map((meal) => _buildMealCard(meal)),
-
-        const SizedBox(height: AppSpacing.md),
-
         // Activity Targets Card
         Container(
           padding: const EdgeInsets.all(AppSpacing.md),
@@ -410,7 +318,7 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
                 children: [
                   Expanded(
                     child: _buildActivityItem(
-                      icon: Icons.directions_walk_rounded,
+                      icon: CupertinoIcons.compass,
                       label: 'Daily Steps',
                       value: '${bundle.stepsRecorded} / ${bundle.targets.steps}',
                       color: AppColors.mint,
@@ -419,7 +327,7 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
                   const SizedBox(width: AppSpacing.sm),
                   Expanded(
                     child: _buildActivityItem(
-                      icon: Icons.timer_outlined,
+                      icon: CupertinoIcons.timer,
                       label: 'Workout Mins',
                       value: '${bundle.workoutMinutesRecorded} / 30 mins',
                       color: AppColors.lilac,
@@ -465,7 +373,7 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.lightbulb_outline_rounded, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 22),
+          Icon(CupertinoIcons.lightbulb, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 22),
           const SizedBox(width: AppSpacing.sm),
           Expanded(
             child: Column(
@@ -629,7 +537,7 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
             subtitle: '${bundle.stepsRecorded} / ${bundle.targets.steps} steps taken',
             isDone: stepsDone,
             trailing: IconButton(
-              icon: Icon(Icons.edit_outlined, size: 18, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E)),
+              icon: Icon(CupertinoIcons.pencil, size: 18, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E)),
               tooltip: 'Change Step Target',
               onPressed: () => _openStepTargetModal(context, bundle.targets.steps),
             ),
@@ -731,7 +639,7 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
         ),
         child: Row(
           children: [
-            Icon(Icons.calendar_month_rounded, color: context.appInk, size: 28),
+            Icon(CupertinoIcons.calendar, color: context.appInk, size: 28),
             const SizedBox(width: AppSpacing.md),
             Expanded(
               child: Column(
@@ -753,162 +661,9 @@ class _DailyPlanPageState extends State<DailyPlanPage> {
                 ],
               ),
             ),
-            Icon(Icons.arrow_forward_ios_rounded, size: 16, color: context.appInk),
+            Icon(CupertinoIcons.chevron_forward, size: 16, color: context.appInk),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _buildMealCard(MealSuggestionEntity meal) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: AppSpacing.sm),
-      decoration: BoxDecoration(
-        color: context.appSurface,
-        borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-        border: meal.isLogged ? Border.all(color: AppColors.mint.withAlpha(120), width: 1.5) : null,
-        boxShadow: context.appCardShadow,
-      ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-          onTap: () {
-            // Open food detail screen on tap
-            context.push(
-              '/food/detail/${meal.foodId}?mealType=${meal.mealType}&name=${Uri.encodeComponent(meal.foodName)}&kcal=${meal.nutrients.calories}&p=${meal.nutrients.protein}&c=${meal.nutrients.carbs}&f=${meal.nutrients.fat}&fib=${meal.nutrients.fibre}&servingGrams=${meal.portionGrams}',
-            );
-          },
-          child: Padding(
-            padding: const EdgeInsets.all(AppSpacing.md),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      meal.mealType.toUpperCase(),
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.5,
-                        color: context.appSlate,
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        if (meal.isLogged) ...[
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                            decoration: const BoxDecoration(
-                              color: AppColors.mint,
-                              borderRadius: BorderRadius.all(Radius.circular(12)),
-                            ),
-                            child: Text(
-                              'Logged ✨',
-                              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: context.appInk),
-                            ),
-                          ),
-                          const SizedBox(width: 6),
-                        ],
-                        // Remove / Dismiss button
-                        IconButton(
-                          icon: Icon(Icons.close_rounded, size: 18, color: context.appSlate),
-                          tooltip: 'Remove suggestion',
-                          padding: EdgeInsets.zero,
-                          constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
-                          onPressed: () {
-                            setState(() => _dismissedMealIds.add(meal.foodId));
-                            BloomiToast.show(context, message: 'Removed "${meal.foodName}" suggestion');
-                          },
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 6),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            meal.foodName,
-                            style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16, color: context.appInk),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            'Portion: ${meal.portionGrams.toInt()}g (${meal.portionQuantity.toInt()} ${meal.portionUnit}) · Tap for details',
-                            style: TextStyle(fontSize: 12, color: context.appSlate),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Text(
-                      '${meal.nutrients.calories.toInt()} kcal',
-                      style: TextStyle(
-                        fontFamily: 'Baloo 2',
-                        fontWeight: FontWeight.w800,
-                        fontSize: 18,
-                        color: context.appInk,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: AppSpacing.sm),
-
-                // Macros preview
-                Row(
-                  children: [
-                    _buildMacroChip('P: ${meal.nutrients.protein.toInt()}g', AppColors.lilac),
-                    const SizedBox(width: 6),
-                    _buildMacroChip('C: ${meal.nutrients.carbs.toInt()}g', AppColors.butter),
-                    const SizedBox(width: 6),
-                    _buildMacroChip('F: ${meal.nutrients.fat.toInt()}g', AppColors.sky),
-                    const Spacer(),
-
-                    // Swap Button
-                    if (!meal.isLogged) ...[
-                      IconButton(
-                        icon: Icon(Icons.swap_horiz_rounded, size: 20, color: context.appSlate),
-                        tooltip: 'Swap Suggestion',
-                        onPressed: () => _onSwapMeal(meal.mealType),
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.mint,
-                          foregroundColor: context.appInk,
-                          elevation: 0,
-                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-                          shape: const StadiumBorder(),
-                        ),
-                        onPressed: () => _onLogMeal(meal),
-                        child: const Text('Log', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
-                      ),
-                    ],
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildMacroChip(String text, Color color) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-      decoration: BoxDecoration(
-        color: color.withAlpha(50),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Text(
-        text,
-        style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: context.appInk),
       ),
     );
   }

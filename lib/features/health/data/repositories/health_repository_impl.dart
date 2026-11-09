@@ -96,6 +96,14 @@ class HealthRepositoryImpl implements HealthRepository {
       _localDataSource.watchBodyEntries(type: type);
 
   @override
+  Stream<BodyEntry?> watchLatestBodyEntry(String type) =>
+      _localDataSource.watchLatestBodyEntry(type);
+
+  @override
+  Future<BodyEntry?> getLatestBodyEntry(String type) =>
+      _localDataSource.getLatestBodyEntry(type);
+
+  @override
   Future<void> logBodyEntry({
     required String type,
     required double value,
@@ -109,6 +117,20 @@ class HealthRepositoryImpl implements HealthRepository {
         unit: unit,
         measuredAt: measuredAt,
         source: source,
+      );
+
+  @override
+  Future<void> updateBodyEntry({
+    required String id,
+    required double value,
+    required String unit,
+    DateTime? measuredAt,
+  }) =>
+      _localDataSource.updateBodyEntry(
+        id: id,
+        value: value,
+        unit: unit,
+        measuredAt: measuredAt,
       );
 
   @override
@@ -149,12 +171,14 @@ class HealthRepositoryImpl implements HealthRepository {
     required String type,
     required int durationMinutes,
     required double calories,
+    DateTime? recordedAt,
   }) =>
       _localDataSource.updateWorkoutLog(
         id: id,
         type: type,
         durationMinutes: durationMinutes,
         calories: calories,
+        recordedAt: recordedAt,
       );
 
   @override

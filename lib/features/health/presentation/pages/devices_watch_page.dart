@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -156,21 +157,21 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                       if (_status == HealthConnectAvailabilityStatus.notInstalled)
                         PillButton(
                           label: 'Install Health Connect',
-                          icon: Icons.download_rounded,
+                          icon: CupertinoIcons.arrow_down_to_line,
                           variant: PillButtonVariant.primary,
                           onPressed: () => sl<HealthRepository>().installHealthConnect(),
                         )
                       else if (!_hasPermissions)
                         PillButton(
                           label: 'Grant Health Permissions',
-                          icon: Icons.lock_open_rounded,
+                          icon: CupertinoIcons.lock_open_fill,
                           variant: PillButtonVariant.primary,
                           onPressed: _requestPermissions,
                         )
                       else
                         PillButton(
                           label: 'Permissions Active',
-                          icon: Icons.check_circle_rounded,
+                          icon: CupertinoIcons.checkmark_circle_fill,
                           variant: PillButtonVariant.secondary,
                           onPressed: _requestPermissions,
                         ),
@@ -192,7 +193,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.tune_rounded, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E), size: 22),
+                          Icon(CupertinoIcons.slider_horizontal_3, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E), size: 22),
                           const SizedBox(width: 8),
                           Text(
                             'Preferred Data Source',
@@ -215,21 +216,21 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                         id: 'auto',
                         title: 'Auto (Recommended)',
                         subtitle: 'Prioritizes smartwatch for each time window; falls back to phone when off-wrist. Never double-counts.',
-                        icon: Icons.auto_mode_rounded,
+                        icon: CupertinoIcons.arrow_2_circlepath,
                       ),
                       const SizedBox(height: AppSpacing.xs),
                       _buildSourceOption(
                         id: 'watch',
                         title: 'Watch Only',
                         subtitle: 'Only records activity from your paired smartwatch or fitness tracker.',
-                        icon: Icons.watch_rounded,
+                        icon: CupertinoIcons.radiowaves_right,
                       ),
                       const SizedBox(height: AppSpacing.xs),
                       _buildSourceOption(
                         id: 'phone',
                         title: 'Phone Only',
                         subtitle: 'Only records steps and activities tracked directly by phone sensors.',
-                        icon: Icons.smartphone_rounded,
+                        icon: CupertinoIcons.device_phone_portrait,
                       ),
                       const SizedBox(height: AppSpacing.md),
                       InkWell(
@@ -244,7 +245,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                           ),
                           child: Row(
                             children: [
-                              Icon(Icons.open_in_new_rounded, size: 18, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E)),
+                              Icon(CupertinoIcons.arrow_up_right_square, size: 18, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E)),
                               const SizedBox(width: 8),
                               Expanded(
                                 child: Text(
@@ -256,7 +257,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                                   ),
                                 ),
                               ),
-                              Icon(Icons.chevron_right_rounded, size: 18, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E)),
+                              Icon(CupertinoIcons.chevron_right, size: 18, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E)),
                             ],
                           ),
                         ),
@@ -325,7 +326,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                       '3. Tap "Health Connect".\n'
                       '4. Enable "Allow all" or toggle Steps, Heart Rate, and Sleep.\n'
                       '5. Samsung Health will now sync seamlessly with Bloomi.',
-                  Icons.watch_rounded,
+                  CupertinoIcons.radiowaves_right,
                   AppColors.mint,
                 ),
                 _buildBrandAccordion(
@@ -335,7 +336,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                       '3. Under Settings, select "Health Connect".\n'
                       '4. Turn on "Sync with Health Connect".\n'
                       '5. Bloomi automatically receives your latest watch stats.',
-                  Icons.watch_outlined,
+                  CupertinoIcons.radiowaves_right,
                   AppColors.peach,
                 ),
                 _buildBrandAccordion(
@@ -344,7 +345,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                       '2. Open the side menu -> Settings -> Connected Apps.\n'
                       '3. Tap "Health Connect".\n'
                       '4. Turn on all permissions for activities and metrics.',
-                  Icons.sports_score_rounded,
+                  CupertinoIcons.rosette,
                   AppColors.sky,
                 ),
                 _buildBrandAccordion(
@@ -352,7 +353,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                   '1. Open the Zepp app on your phone.\n'
                       '2. Go to Profile -> Add Accounts.\n'
                       '3. Tap "Health Connect" and toggle the sync switch on.',
-                  Icons.circle_outlined,
+                  CupertinoIcons.circle,
                   AppColors.butter,
                 ),
                 _buildBrandAccordion(
@@ -360,7 +361,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                   '1. Open OHealth app on your phone.\n'
                       '2. Go to Profile -> Manage Data -> Health Connect.\n'
                       '3. Enable data sharing to read steps, sleep, and workouts.',
-                  Icons.watch_rounded,
+                  CupertinoIcons.radiowaves_right,
                   AppColors.lilac,
                 ),
                 const SizedBox(height: AppSpacing.md),
@@ -375,7 +376,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.shield_outlined, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E), size: 24),
+                      Icon(CupertinoIcons.shield, color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E), size: 24),
                       const SizedBox(width: 10),
                       Expanded(
                         child: Text(
@@ -440,13 +441,13 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
   IconData _getStatusIcon() {
     switch (_status) {
       case HealthConnectAvailabilityStatus.available:
-        return Icons.health_and_safety_rounded;
+        return CupertinoIcons.shield_fill;
       case HealthConnectAvailabilityStatus.updateRequired:
-        return Icons.system_update_rounded;
+        return CupertinoIcons.arrow_down_circle_fill;
       case HealthConnectAvailabilityStatus.notInstalled:
-        return Icons.download_rounded;
+        return CupertinoIcons.arrow_down_to_line;
       case HealthConnectAvailabilityStatus.unsupportedPlatform:
-        return Icons.sensors_rounded;
+        return CupertinoIcons.radiowaves_right;
     }
   }
 
@@ -538,7 +539,7 @@ class _DevicesWatchPageState extends State<DevicesWatchPage> {
             ),
             const SizedBox(width: 8),
             Icon(
-              isSelected ? Icons.radio_button_checked_rounded : Icons.radio_button_off_rounded,
+              isSelected ? CupertinoIcons.circle_filled : CupertinoIcons.circle,
               color: isSelected
                   ? (context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E))
                   : context.appSlate.withAlpha(120),

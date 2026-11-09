@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
@@ -122,7 +124,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
         backgroundColor: context.appSurface,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.close_rounded, color: context.appInk),
+          icon: Icon(CupertinoIcons.clear, color: context.appInk),
           onPressed: () {
             if (context.canPop()) {
               context.pop();
@@ -144,17 +146,17 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
           // Meal type switcher dropdown
           PopupMenuButton<String>(
             initialValue: _selectedMealType,
-            icon: Icon(Icons.restaurant_rounded, color: context.appInk),
+            icon: Icon(CupertinoIcons.cart_fill, color: context.appInk),
             tooltip: 'Switch meal type',
             color: context.appSurface,
             onSelected: (val) {
               setState(() => _selectedMealType = val);
             },
-            itemBuilder: (context) => const [
-              PopupMenuItem(value: 'breakfast', child: Text('Breakfast')),
-              PopupMenuItem(value: 'lunch', child: Text('Lunch')),
-              PopupMenuItem(value: 'snack', child: Text('Snacks')),
-              PopupMenuItem(value: 'dinner', child: Text('Dinner')),
+            itemBuilder: (context) => [
+              PopupMenuItem(value: 'breakfast', child: Text(context.tr('food_breakfast'))),
+              PopupMenuItem(value: 'lunch', child: Text(context.tr('food_lunch'))),
+              PopupMenuItem(value: 'snack', child: Text(context.tr('food_snacks'))),
+              PopupMenuItem(value: 'dinner', child: Text(context.tr('food_dinner'))),
             ],
           ),
         ],
@@ -172,7 +174,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text('Barcode Scanner'),
+                  Text(context.tr('barcode_title')),
                   const SizedBox(width: 5),
                   if (!_isPremium)
                     Container(
@@ -184,7 +186,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.workspace_premium_rounded, size: 12, color: context.appBackground),
+                          Icon(CupertinoIcons.star_circle_fill, size: 12, color: context.appBackground),
                           const SizedBox(width: 2),
                           Text('PRO', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w800, color: context.appBackground)),
                         ],
@@ -250,7 +252,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                       prefixIcon: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Icon(
-                          Icons.search_rounded,
+                          CupertinoIcons.search,
                           color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark,
                           size: 22,
                         ),
@@ -261,7 +263,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                       ),
                       suffixIcon: _searchCtrl.text.isNotEmpty
                           ? IconButton(
-                              icon: Icon(Icons.clear_rounded,
+                              icon: Icon(CupertinoIcons.clear_thick,
                                   color: context.appSlate, size: 18),
                               onPressed: () {
                                 _searchCtrl.clear();
@@ -317,7 +319,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.search_off_rounded,
+                            Icon(CupertinoIcons.search_circle,
                                 size: 48, color: context.appSlate),
                             const SizedBox(height: AppSpacing.sm),
                             Text(
@@ -348,7 +350,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                                   foregroundColor: Theme.of(context).colorScheme.onPrimary,
                                   shape: const StadiumBorder(),
                                 ),
-                                icon: const Icon(Icons.refresh_rounded),
+                                icon: const Icon(CupertinoIcons.arrow_clockwise),
                                 label: const Text('Reload Food Database'),
                                 onPressed: () async {
                                   setState(() => _isLoading = true);
@@ -365,8 +367,8 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                                 shape: const StadiumBorder(),
                                 side: _searchCtrl.text.isEmpty ? BorderSide(color: context.appBorderColor) : null,
                               ),
-                              icon: const Icon(Icons.add_rounded),
-                              label: const Text('Create Custom Food'),
+                              icon: const Icon(CupertinoIcons.add),
+                              label: Text(context.tr('foodSearch_custom_food')),
                               onPressed: () => context.push('/food/custom'),
                             ),
                           ],
@@ -454,7 +456,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                                 ),
                               ),
                               const SizedBox(width: 4),
-                              Icon(Icons.chevron_right_rounded,
+                              Icon(CupertinoIcons.chevron_right,
                                   color: context.appSlate, size: 20),
                             ],
                           ),
@@ -500,7 +502,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                   ),
                 ),
                 child: Icon(
-                  Icons.qr_code_scanner_rounded,
+                  CupertinoIcons.qrcode_viewfinder,
                   color: context.appSoftOrange,
                   size: 40,
                 ),
@@ -509,7 +511,7 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.workspace_premium_rounded, color: context.appSoftOrange, size: 20),
+                  Icon(CupertinoIcons.star_circle_fill, color: context.appSoftOrange, size: 20),
                   const SizedBox(width: 6),
                   Text(
                     'Bloomi Premium Feature',
@@ -552,11 +554,11 @@ class _AddFoodHubPageState extends State<AddFoodHubPage>
                 ),
                 child: const Column(
                   children: [
-                    _BenefitItem(icon: Icons.flash_on_rounded, text: 'Instant 1-second grocery barcode scanning'),
+                    _BenefitItem(icon: CupertinoIcons.bolt_fill, text: 'Instant 1-second grocery barcode scanning'),
                     SizedBox(height: 6),
-                    _BenefitItem(icon: Icons.pie_chart_rounded, text: 'Automatic calorie & macro calculation'),
+                    _BenefitItem(icon: CupertinoIcons.chart_pie_fill, text: 'Automatic calorie & macro calculation'),
                     SizedBox(height: 6),
-                    _BenefitItem(icon: Icons.inventory_2_rounded, text: '1M+ verified food products database'),
+                    _BenefitItem(icon: CupertinoIcons.archivebox_fill, text: '1M+ verified food products database'),
                   ],
                 ),
               ),
@@ -663,7 +665,7 @@ class _RecentAndFavsViewState extends State<_RecentAndFavsView> {
                     padding: const EdgeInsets.only(left: 8, bottom: 8, top: 4),
                     child: Row(
                       children: [
-                        const Icon(Icons.favorite_rounded,
+                        const Icon(CupertinoIcons.heart_fill,
                             size: 16, color: AppColors.softOrange),
                         const SizedBox(width: 6),
                         Text(
@@ -688,7 +690,7 @@ class _RecentAndFavsViewState extends State<_RecentAndFavsView> {
                     padding: const EdgeInsets.only(left: 8, bottom: 8, top: 4),
                     child: Row(
                       children: [
-                        Icon(Icons.history_rounded,
+                        Icon(CupertinoIcons.clock_fill,
                             size: 16, color: context.appSlate),
                         const SizedBox(width: 6),
                         Text(
@@ -778,7 +780,7 @@ class _RecentAndFavsViewState extends State<_RecentAndFavsView> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           shape: const StadiumBorder(),
         ),
-        icon: const Icon(Icons.add_rounded, size: 16),
+        icon: const Icon(CupertinoIcons.add, size: 16),
         label: const Text(
           'Log',
           style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
@@ -852,7 +854,7 @@ class _RecentAndFavsViewState extends State<_RecentAndFavsView> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           shape: const StadiumBorder(),
         ),
-        icon: const Icon(Icons.add_rounded, size: 16),
+        icon: const Icon(CupertinoIcons.add, size: 16),
         label: const Text(
           'Log',
           style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13),

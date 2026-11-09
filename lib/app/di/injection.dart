@@ -236,6 +236,7 @@ Future<void> setupServiceLocator() async {
             billingService: sl(),
             authRepository: sl(),
             userIdProvider: () => sl<AuthRepository>().currentUserId,
+            prefs: sl<SharedPreferences>(),
           ));
   sl.registerLazySingleton<SettingsRepository>(
       () => SettingsRepositoryImpl(localDataSource: sl()));

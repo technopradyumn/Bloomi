@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/theme/app_background_option.dart';
 import 'package:bloomi/core/theme/app_theme_mode.dart';
@@ -13,9 +15,9 @@ class ThemeSettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Appearance & Theme',
-          style: TextStyle(
+        title: Text(
+          context.tr('appearance_theme'),
+          style: const TextStyle(
             fontFamily: 'Baloo 2',
             fontWeight: FontWeight.w700,
             fontSize: 22,
@@ -52,7 +54,7 @@ class ThemeSettingsPage extends StatelessWidget {
                         shape: BoxShape.circle,
                       ),
                       child: Icon(
-                        Icons.palette_rounded,
+                        CupertinoIcons.paintbrush_fill,
                         color: themeState.backgroundOption.primaryAccent,
                         size: 26,
                       ),
@@ -164,7 +166,7 @@ class ThemeSettingsPage extends StatelessWidget {
                           ),
                           if (isSelected)
                             Icon(
-                              Icons.check_circle_rounded,
+                              CupertinoIcons.checkmark_circle_fill,
                               color: themeState.backgroundOption.primaryAccent,
                               size: 24,
                             ),
@@ -260,7 +262,7 @@ class ThemeSettingsPage extends StatelessWidget {
                           ),
                           if (isSelected)
                             Icon(
-                              Icons.check_circle_rounded,
+                              CupertinoIcons.checkmark_circle_fill,
                               color: bg.primaryAccent,
                               size: 22,
                             ),

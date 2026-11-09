@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/chip_selector.dart';
@@ -132,7 +133,7 @@ class _ComponentGalleryPageState extends State<ComponentGalleryPage> {
                     children: [
                       PastelStatCard(
                         backgroundColor: AppColors.mint,
-                        icon: Icons.restaurant_rounded,
+                        icon: CupertinoIcons.cart_fill,
                         label: 'Calories',
                         value: '1,420',
                         unit: 'kcal',
@@ -141,7 +142,7 @@ class _ComponentGalleryPageState extends State<ComponentGalleryPage> {
                       ),
                       PastelStatCard(
                         backgroundColor: AppColors.sky,
-                        icon: Icons.water_drop_rounded,
+                        icon: CupertinoIcons.drop_fill,
                         label: 'Water',
                         value: '2.1',
                         unit: 'L',
@@ -150,7 +151,7 @@ class _ComponentGalleryPageState extends State<ComponentGalleryPage> {
                       ),
                       PastelStatCard(
                         backgroundColor: AppColors.butter,
-                        icon: Icons.directions_walk_rounded,
+                        icon: CupertinoIcons.compass,
                         label: 'Steps',
                         value: '8,450',
                         trend: '+850',
@@ -158,7 +159,7 @@ class _ComponentGalleryPageState extends State<ComponentGalleryPage> {
                       ),
                       PastelStatCard(
                         backgroundColor: AppColors.peach,
-                        icon: Icons.favorite_rounded,
+                        icon: CupertinoIcons.heart_fill,
                         label: 'Heart Rate',
                         value: '72',
                         unit: 'bpm',
@@ -166,7 +167,7 @@ class _ComponentGalleryPageState extends State<ComponentGalleryPage> {
                       ),
                       PastelStatCard(
                         backgroundColor: AppColors.lilac,
-                        icon: Icons.bedtime_rounded,
+                        icon: CupertinoIcons.moon_fill,
                         label: 'Sleep',
                         value: '7.5',
                         unit: 'hrs',
@@ -261,7 +262,7 @@ class _ComponentGalleryPageState extends State<ComponentGalleryPage> {
                 children: [
                   PillButton(
                     label: 'Primary Button',
-                    icon: Icons.check_circle_rounded,
+                    icon: CupertinoIcons.checkmark_circle_fill,
                     onPressed: () {},
                   ),
                   PillButton(
@@ -349,7 +350,7 @@ class _ComponentGalleryPageState extends State<ComponentGalleryPage> {
                   padding: const EdgeInsets.all(AppSpacing.md),
                   child: MealSectionHeader(
                     title: 'Breakfast',
-                    icon: Icons.wb_sunny_rounded,
+                    icon: CupertinoIcons.sun_max_fill,
                     caloriesKcal: 420,
                     onAddPressed: () {},
                   ),
@@ -431,7 +432,7 @@ class _ComponentGalleryPageState extends State<ComponentGalleryPage> {
                         context,
                         message:
                             'Meal saved! Bloo is happy with your choice.',
-                        icon: Icons.check_circle_rounded,
+                        icon: CupertinoIcons.checkmark_circle_fill,
                       );
                     },
                   ),

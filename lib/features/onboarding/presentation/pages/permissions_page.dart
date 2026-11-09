@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
@@ -156,7 +157,7 @@ class _PermissionsPageState extends State<PermissionsPage>
       BloomiToast.show(
         context,
         message: 'Google Health Connect permission is mandatory to continue onboarding.',
-        icon: Icons.lock_rounded,
+        icon: CupertinoIcons.lock_fill,
       );
       await _toggleHealthConnect(true);
       return;
@@ -178,7 +179,7 @@ class _PermissionsPageState extends State<PermissionsPage>
       BloomiToast.show(
         context,
         message: 'Google Health Connect is mandatory to track real health data and sync widgets.',
-        icon: Icons.lock_rounded,
+        icon: CupertinoIcons.lock_fill,
       );
       return;
     }
@@ -430,7 +431,7 @@ class _PermissionsPageState extends State<PermissionsPage>
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+            icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
             onPressed: _handleBack,
           ),
           title: widget.isStandalone
@@ -528,7 +529,7 @@ class _PermissionsPageState extends State<PermissionsPage>
                             child: Row(
                               children: [
                                 Icon(
-                                  Icons.shield_rounded,
+                                  CupertinoIcons.shield_fill,
                                   color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E),
                                   size: 22,
                                 ),
@@ -593,7 +594,7 @@ class _PermissionsPageState extends State<PermissionsPage>
                                         height: 14,
                                         child: CircularProgressIndicator(strokeWidth: 2, color: context.appInk),
                                       )
-                                    : Icon(Icons.done_all_rounded, size: 16, color: context.appInk),
+                                    : Icon(CupertinoIcons.checkmark_seal_fill, size: 16, color: context.appInk),
                                 label: Text(
                                   _grantedCount == 7 ? 'All Set' : 'Allow All',
                                   style: TextStyle(
@@ -617,7 +618,7 @@ class _PermissionsPageState extends State<PermissionsPage>
 
                         // 1. Health Connect Card (Mandatory)
                         _buildPermissionCard(
-                          icon: Icons.health_and_safety_rounded,
+                          icon: CupertinoIcons.shield_fill,
                           color: AppColors.mint,
                           title: 'Google Health Connect (Mandatory)',
                           subtitle: _healthAvailability ==
@@ -638,7 +639,7 @@ class _PermissionsPageState extends State<PermissionsPage>
 
                         // 2. Camera & Food Scanner
                         _buildPermissionCard(
-                          icon: Icons.camera_alt_rounded,
+                          icon: CupertinoIcons.camera_fill,
                           color: AppColors.peach,
                           title: 'Camera & Food Scanner',
                           subtitle:
@@ -651,7 +652,7 @@ class _PermissionsPageState extends State<PermissionsPage>
 
                         // 3. Live Location & Surroundings
                         _buildPermissionCard(
-                          icon: Icons.location_on_rounded,
+                          icon: CupertinoIcons.location_solid,
                           color: AppColors.sky,
                           title: 'Live Location & Weather',
                           subtitle:
@@ -665,7 +666,7 @@ class _PermissionsPageState extends State<PermissionsPage>
 
                         // 4. Microphone & Voice Logging
                         _buildPermissionCard(
-                          icon: Icons.mic_rounded,
+                          icon: CupertinoIcons.mic_fill,
                           color: AppColors.butter,
                           title: 'Microphone & Voice Input',
                           subtitle:
@@ -678,7 +679,7 @@ class _PermissionsPageState extends State<PermissionsPage>
 
                         // 5. Notifications Card
                         _buildPermissionCard(
-                          icon: Icons.notifications_active_rounded,
+                          icon: CupertinoIcons.bell_fill,
                           color: AppColors.peach,
                           title: 'Gentle Reminders',
                           subtitle:
@@ -692,7 +693,7 @@ class _PermissionsPageState extends State<PermissionsPage>
 
                         // 6. Physical Activity & Hardware Step Counter
                         _buildPermissionCard(
-                          icon: Icons.directions_walk_rounded,
+                          icon: CupertinoIcons.compass,
                           color: AppColors.mint,
                           title: 'Physical Activity & Step Counter',
                           subtitle:
@@ -729,8 +730,8 @@ class _PermissionsPageState extends State<PermissionsPage>
                         ? 'Done'
                         : 'Continue to Your Plan',
                     icon: widget.isStandalone
-                        ? Icons.check_rounded
-                        : Icons.arrow_forward_rounded,
+                        ? CupertinoIcons.checkmark
+                        : CupertinoIcons.arrow_right,
                     fullWidth: true,
                     height: 52,
                     onPressed: _handleContinue,

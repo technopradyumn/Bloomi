@@ -7,21 +7,21 @@ abstract final class AppColors {
   static const Color butter = Color(0xFFFFE9A8);
   static const Color peach = Color(0xFFFFC9B5);
   static const Color lilac = Color(0xFFD9CCFF);
-  static const Color ink = Color(0xFF1F2A37);
-  static const Color slate = Color(0xFF6B7785);
+  static const Color ink = Color(0xFF111827); // Deep ink for high contrast
+  static const Color slate = Color(0xFF374151); // Dark charcoal slate for WCAG AA text contrast
   static const Color background = Color(0xFFF6F7FB);
   static const Color surface = Color(0xFFFFFFFF);
-  static const Color softOrange = Color(0xFFFFA94D);
+  static const Color softOrange = Color(0xFFE8590C);
   static const Color divider = Color(0xFFE5E7EB);
   static const Color mintLight = Color(0xFFD1FAE5);
-  static const Color mintDark = Color(0xFF065F46);
+  static const Color mintDark = Color(0xFF047857);
 
   // Dark Theme Base Colors
-  static const Color darkBackground = Color(0xFF121824);
-  static const Color darkSurface = Color(0xFF1E2638);
-  static const Color darkInk = Color(0xFFF8FAFC);
-  static const Color darkSlate = Color(0xFF94A3B8);
-  static const Color darkDivider = Color(0xFF334155);
+  static const Color darkBackground = Color(0xFF111827);
+  static const Color darkSurface = Color(0xFF1F2937);
+  static const Color darkInk = Color(0xFFF9FAFB);
+  static const Color darkSlate = Color(0xFFE2E8F0); // Crisp light slate for WCAG AA text contrast in dark theme
+  static const Color darkDivider = Color(0xFF374151);
   static const Color darkMint = Color(0xFF10B981);
   static const Color darkMintSurface = Color(0xFF064E3B);
 
@@ -75,7 +75,8 @@ extension AppThemeContext on BuildContext {
       return appSurface;
     }
     if (isDarkMode) {
-      return inputColor.withAlpha(55);
+      // Solid opaque tinted surface for dark mode - no translucency or glassmorphism
+      return Color.alphaBlend(inputColor.withOpacity(0.18), appSurface);
     }
     return inputColor;
   }
@@ -84,9 +85,12 @@ extension AppThemeContext on BuildContext {
   Color adaptiveAccentColor(Color lightAccent, Color darkAccent) => isDarkMode ? darkAccent : lightAccent;
   Color adaptiveTextColor(Color lightText, Color darkText) => isDarkMode ? darkText : lightText;
   Color adaptiveContainerBg(Color lightBg, [int darkAlpha = 50]) =>
-      isDarkMode ? lightBg.withAlpha(darkAlpha) : lightBg;
+      isDarkMode ? Color.alphaBlend(lightBg.withOpacity(0.20), appSurface) : lightBg;
   Color adaptiveColor(Color lightColor, Color darkColor) => isDarkMode ? darkColor : lightColor;
   Color adaptiveAlpha(Color color, int lightAlpha, int darkAlpha) =>
-      color.withAlpha(isDarkMode ? darkAlpha : lightAlpha);
+      Color.alphaBlend(color.withOpacity(isDarkMode ? darkAlpha / 255.0 : lightAlpha / 255.0), appSurface);
+
+  Color adaptiveSolidTint(Color tintColor, [double strength = 0.12]) =>
+      Color.alphaBlend(tintColor.withOpacity(strength), isDarkMode ? appSurface : AppColors.surface);
 }
 

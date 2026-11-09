@@ -1,9 +1,14 @@
 import 'dart:async';
+import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/app/shell/app_shell.dart';
 import 'package:bloomi/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:bloomi/features/auth/presentation/routes/auth_routes.dart';
 import 'package:bloomi/features/dev/presentation/routes/dev_routes.dart';
 import 'package:bloomi/features/food/presentation/routes/food_routes.dart';
+import 'package:bloomi/features/health/presentation/bloc/health_bloc.dart';
+import 'package:bloomi/core/database/app_database.dart';
+import 'package:bloomi/features/health/presentation/pages/workout_editor_page.dart';
+import 'package:bloomi/features/health/presentation/pages/workout_log_page.dart';
 import 'package:bloomi/features/health/presentation/routes/health_routes.dart';
 import 'package:bloomi/features/home/presentation/routes/home_routes.dart';
 import 'package:bloomi/features/insights/presentation/routes/insights_routes.dart';
@@ -14,6 +19,7 @@ import 'package:bloomi/features/settings/presentation/routes/settings_routes.dar
 import 'package:bloomi/features/splash/presentation/routes/splash_routes.dart';
 import 'package:bloomi/features/surroundings/presentation/routes/surroundings_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 final GlobalKey<NavigatorState> rootNavigatorKey =
@@ -109,6 +115,8 @@ GoRouter createRouter(AuthBloc authBloc) {
       ...splashRoutes,
       ...authRoutes,
       ...onboardingRoutes,
+      ...planRoutes,
+      ...insightsRoutes,
 
       // 5-Tab Shell Navigation
       StatefulShellRoute.indexedStack(
@@ -116,13 +124,41 @@ GoRouter createRouter(AuthBloc authBloc) {
           return AppShell(navigationShell: navigationShell);
         },
         branches: [
-          // Tab 1: Home
+          // Tab 0: Home (Mint)
           StatefulShellBranch(routes: homeRoutes),
 
-          // Tab 2: Food
+          // Tab 1: Food Diary (Sky)
           StatefulShellBranch(routes: foodRoutes),
 
-          // Tab 3: Health & Surroundings
+          // Tab 2: Workout Log (Orange)
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/workout',
+                builder: (context, state) => BlocProvider<HealthBloc>(
+                  create: (_) => sl<HealthBloc>(),
+                  child: const WorkoutLogPage(),
+                ),
+                routes: [
+                  GoRoute(
+                    path: 'add',
+                    parentNavigatorKey: rootNavigatorKey,
+                    builder: (context, state) => const WorkoutEditorPage(),
+                  ),
+                  GoRoute(
+                    path: 'edit',
+                    parentNavigatorKey: rootNavigatorKey,
+                    builder: (context, state) {
+                      final workout = state.extra as WorkoutLog?;
+                      return WorkoutEditorPage(existingWorkout: workout);
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
+
+          // Tab 3: Health & Surroundings (Peach / Rose)
           StatefulShellBranch(
             routes: [
               ...healthRoutes,
@@ -130,15 +166,7 @@ GoRouter createRouter(AuthBloc authBloc) {
             ],
           ),
 
-          // Tab 4: Plan & Insights
-          StatefulShellBranch(
-            routes: [
-              ...planRoutes,
-              ...insightsRoutes,
-            ],
-          ),
-
-          // Tab 5: Me (Profile & Settings)
+          // Tab 4: Me (Profile & Settings - Lilac)
           StatefulShellBranch(
             routes: [
               ...profileRoutes,

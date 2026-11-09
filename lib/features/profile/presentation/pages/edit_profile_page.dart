@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -130,7 +131,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+          icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
           onPressed: () => context.pop(),
         ),
       ),
@@ -154,7 +155,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.person_pin_rounded, color: AppColors.mint, size: 22),
+                            const Icon(CupertinoIcons.person_crop_circle_fill, color: AppColors.mint, size: 22),
                             const SizedBox(width: 8),
                             Text(
                               'Quick Profile Details',
@@ -269,7 +270,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.restaurant_rounded, color: AppColors.butter, size: 22),
+                            const Icon(CupertinoIcons.cart_fill, color: AppColors.butter, size: 22),
                             const SizedBox(width: 8),
                             Text(
                               'Diet & Allergies',
@@ -346,7 +347,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           color: AppColors.lilac.withAlpha(60),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: Icon(Icons.tune_rounded, size: 18, color: context.appInk),
+                        child: Icon(CupertinoIcons.slider_horizontal_3, size: 18, color: context.appInk),
                       ),
                       const SizedBox(width: 8),
                       Expanded(
@@ -375,7 +376,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
 
                   _buildStepCard(
                     stepNumber: '1',
-                    icon: Icons.person_rounded,
+                    icon: CupertinoIcons.person_fill,
                     color: AppColors.sky,
                     title: 'Step 1: About You',
                     subtitle: 'Name, biological sex, age, language & personal profile',
@@ -383,7 +384,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   _buildStepCard(
                     stepNumber: '2',
-                    icon: Icons.monitor_weight_rounded,
+                    icon: CupertinoIcons.gauge,
                     color: AppColors.mint,
                     title: 'Step 2: Body Numbers',
                     subtitle: 'Height, current weight, target weight & live BMI',
@@ -391,7 +392,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   _buildStepCard(
                     stepNumber: '3',
-                    icon: Icons.flag_rounded,
+                    icon: CupertinoIcons.flag_fill,
                     color: AppColors.peach,
                     title: 'Step 3: Main Goal & Calories',
                     subtitle: 'Weight loss, maintain, gain & Mifflin-St Jeor target',
@@ -399,7 +400,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   _buildStepCard(
                     stepNumber: '4',
-                    icon: Icons.restaurant_menu_rounded,
+                    icon: CupertinoIcons.bag_fill,
                     color: AppColors.butter,
                     title: 'Step 4: Lifestyle & Food Habits',
                     subtitle: 'Activity level, diet style (Veg/Non-veg) & allergies',
@@ -407,7 +408,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   _buildStepCard(
                     stepNumber: '5',
-                    icon: Icons.favorite_rounded,
+                    icon: CupertinoIcons.heart_fill,
                     color: AppColors.lilac,
                     title: 'Step 5: Health Connect & Permissions',
                     subtitle: 'Real-time sync for steps, sleep & vitals permissions',
@@ -440,7 +441,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 constraints: const BoxConstraints(maxWidth: 440),
                 child: PillButton(
                   label: 'Save Quick Details',
-                  icon: Icons.check_rounded,
+                  icon: CupertinoIcons.checkmark,
                   isLoading: _isSaving,
                   fullWidth: true,
                   height: 52,
@@ -495,7 +496,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             color: context.appBackground,
             shape: BoxShape.circle,
           ),
-          child: Icon(Icons.arrow_forward_ios_rounded, color: context.appSlate, size: 12),
+          child: Icon(CupertinoIcons.chevron_forward, color: context.appSlate, size: 12),
         ),
         onTap: onTap,
       ),

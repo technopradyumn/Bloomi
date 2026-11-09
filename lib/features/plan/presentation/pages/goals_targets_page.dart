@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -159,7 +160,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
           ),
           child: Row(
             children: [
-              const Icon(Icons.shield_outlined, color: AppColors.mint, size: 24),
+              const Icon(CupertinoIcons.shield, color: AppColors.mint, size: 24),
               const SizedBox(width: AppSpacing.sm),
               Expanded(
                 child: Text(
@@ -192,7 +193,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                 label: 'Daily Calories',
                 controller: _caloriesCtrl,
                 suffix: 'kcal',
-                icon: Icons.local_fire_department_rounded,
+                icon: CupertinoIcons.flame_fill,
                 color: AppColors.peach,
                 onChanged: (_) {
                   if (_calorieFloorError != null) setState(() => _calorieFloorError = null);
@@ -217,7 +218,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                       label: 'Protein',
                       controller: _proteinCtrl,
                       suffix: 'g',
-                      icon: Icons.fitness_center_rounded,
+                      icon: CupertinoIcons.bolt_fill,
                       color: AppColors.lilac,
                     ),
                   ),
@@ -227,7 +228,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                       label: 'Carbs',
                       controller: _carbsCtrl,
                       suffix: 'g',
-                      icon: Icons.grain_rounded,
+                      icon: CupertinoIcons.sparkles,
                       color: AppColors.butter,
                     ),
                   ),
@@ -241,7 +242,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                       label: 'Fat',
                       controller: _fatCtrl,
                       suffix: 'g',
-                      icon: Icons.opacity_rounded,
+                      icon: CupertinoIcons.drop_fill,
                       color: AppColors.sky,
                     ),
                   ),
@@ -251,7 +252,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                       label: 'Fibre',
                       controller: _fibreCtrl,
                       suffix: 'g',
-                      icon: Icons.eco_rounded,
+                      icon: CupertinoIcons.leaf_arrow_circlepath,
                       color: AppColors.mint,
                     ),
                   ),
@@ -282,7 +283,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                 label: 'Daily Water Target',
                 controller: _waterCtrl,
                 suffix: 'ml',
-                icon: Icons.water_drop_rounded,
+                icon: CupertinoIcons.drop_fill,
                 color: AppColors.sky,
               ),
               const SizedBox(height: AppSpacing.sm),
@@ -290,7 +291,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                 label: 'Daily Steps Goal',
                 controller: _stepsCtrl,
                 suffix: 'steps',
-                icon: Icons.directions_walk_rounded,
+                icon: CupertinoIcons.compass,
                 color: AppColors.mint,
               ),
               const SizedBox(height: AppSpacing.sm),
@@ -301,7 +302,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                       label: 'Sleep Target',
                       controller: _sleepCtrl,
                       suffix: 'hours',
-                      icon: Icons.bedtime_rounded,
+                      icon: CupertinoIcons.moon_fill,
                       color: AppColors.lilac,
                     ),
                   ),
@@ -311,7 +312,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
                       label: 'Target Weight',
                       controller: _weightCtrl,
                       suffix: 'kg',
-                      icon: Icons.scale_rounded,
+                      icon: CupertinoIcons.gauge,
                       color: AppColors.peach,
                     ),
                   ),
@@ -324,7 +325,7 @@ class _GoalsTargetsPageState extends State<GoalsTargetsPage> {
 
         PillButton(
           label: 'Save Goals & Targets',
-          icon: Icons.check_circle_rounded,
+          icon: CupertinoIcons.checkmark_circle_fill,
           variant: PillButtonVariant.primary,
           onPressed: _saveTargets,
         ),

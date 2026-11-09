@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/utils/health_calculators.dart';
@@ -201,7 +202,7 @@ class _BodyMetricsPageState extends State<BodyMetricsPage> {
               backgroundColor: Colors.transparent,
               elevation: 0,
               leading: IconButton(
-                icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+                icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
                 onPressed: _handleBack,
               ),
               title: widget.isStandalone
@@ -451,8 +452,8 @@ class _BodyMetricsPageState extends State<BodyMetricsPage> {
                                 ? 'Save Changes'
                                 : 'Continue to Goals',
                             icon: widget.isStandalone
-                                ? Icons.check_rounded
-                                : Icons.arrow_forward_rounded,
+                                ? CupertinoIcons.checkmark
+                                : CupertinoIcons.arrow_right,
                             isLoading: _isSavingStandalone,
                             fullWidth: true,
                             height: 52,
@@ -531,7 +532,7 @@ class _BodyMetricsPageState extends State<BodyMetricsPage> {
               // Minus Button
               IconButton.filledTonal(
                 onPressed: () => onStepperChanged((currentValue - step).clamp(min, max)),
-                icon: const Icon(Icons.remove_rounded, size: 22),
+                icon: const Icon(CupertinoIcons.minus, size: 22),
                 style: IconButton.styleFrom(
                   backgroundColor: context.appBackground,
                   foregroundColor: context.appInk,
@@ -602,7 +603,7 @@ class _BodyMetricsPageState extends State<BodyMetricsPage> {
               // Plus Button
               IconButton.filledTonal(
                 onPressed: () => onStepperChanged((currentValue + step).clamp(min, max)),
-                icon: const Icon(Icons.add_rounded, size: 22),
+                icon: const Icon(CupertinoIcons.add, size: 22),
                 style: IconButton.styleFrom(
                   backgroundColor: context.appBackground,
                   foregroundColor: context.appInk,

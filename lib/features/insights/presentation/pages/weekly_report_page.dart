@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
@@ -128,7 +129,7 @@ class _WeeklyReportPageState extends State<WeeklyReportPage> {
                 'Avg Daily Calories',
                 '${report.averageCalories.toInt()} kcal',
                 'Target: ${report.targetCalories.toInt()}',
-                Icons.local_fire_department_rounded,
+                CupertinoIcons.flame_fill,
                 AppColors.butter,
               ),
             ),
@@ -139,7 +140,7 @@ class _WeeklyReportPageState extends State<WeeklyReportPage> {
                 'Avg Daily Water',
                 '${report.averageWaterMl} ml',
                 'Target: ${report.targetWaterMl} ml',
-                Icons.water_drop_rounded,
+                CupertinoIcons.drop_fill,
                 AppColors.sky,
               ),
             ),
@@ -154,7 +155,7 @@ class _WeeklyReportPageState extends State<WeeklyReportPage> {
                 'Average Steps',
                 '${report.averageSteps}',
                 'Target: ${report.targetSteps}',
-                Icons.directions_walk_rounded,
+                CupertinoIcons.compass,
                 AppColors.mint,
               ),
             ),
@@ -165,7 +166,7 @@ class _WeeklyReportPageState extends State<WeeklyReportPage> {
                 'Best Day',
                 report.bestDay,
                 'Most balanced energy',
-                Icons.star_rounded,
+                CupertinoIcons.star_fill,
                 AppColors.peach,
               ),
             ),
@@ -215,7 +216,7 @@ class _WeeklyReportPageState extends State<WeeklyReportPage> {
                   style: TextStyle(fontSize: 12, color: context.appSlate),
                 ),
                 trailing: Icon(
-                  day.isTargetMet ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                  day.isTargetMet ? CupertinoIcons.checkmark_circle_fill : CupertinoIcons.circle,
                   color: day.isTargetMet ? AppColors.mint : context.appSlate,
                   size: 20,
                 ),

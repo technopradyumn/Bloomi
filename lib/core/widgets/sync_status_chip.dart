@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:flutter/material.dart';
 
@@ -31,19 +32,19 @@ class SyncStatusChip extends StatelessWidget {
 
     switch (status) {
       case SyncStateStatus.synced:
-        icon = Icons.cloud_done_rounded;
+        icon = CupertinoIcons.cloud_upload_fill;
         label = lastSyncTime != null ? 'Synced $lastSyncTime' : 'Synced with Drive';
         bg = isDark ? AppColors.darkMint.withAlpha(80) : AppColors.mint.withAlpha(120);
       case SyncStateStatus.syncing:
-        icon = Icons.sync_rounded;
+        icon = CupertinoIcons.arrow_2_circlepath;
         label = 'Syncing...';
         bg = isDark ? AppColors.sky.withAlpha(80) : AppColors.sky.withAlpha(160);
       case SyncStateStatus.offline:
-        icon = Icons.cloud_off_rounded;
+        icon = CupertinoIcons.wifi_slash;
         label = 'Offline';
         bg = isDark ? AppColors.butter.withAlpha(80) : AppColors.butter.withAlpha(160);
       case SyncStateStatus.error:
-        icon = Icons.sync_problem_rounded;
+        icon = CupertinoIcons.exclamationmark_circle_fill;
         label = 'Sync paused';
         bg = isDark ? AppColors.softOrange.withAlpha(80) : AppColors.softOrange.withAlpha(160);
     }

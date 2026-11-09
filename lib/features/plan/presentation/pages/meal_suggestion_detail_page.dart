@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -234,7 +235,7 @@ class _MealSuggestionDetailPageState
             ),
             child: Row(
               children: [
-                const Icon(Icons.spa_rounded, color: AppColors.mint, size: 24),
+                const Icon(CupertinoIcons.sparkles, color: AppColors.mint, size: 24),
                 const SizedBox(width: AppSpacing.sm),
                 Expanded(
                   child: Text(
@@ -250,14 +251,14 @@ class _MealSuggestionDetailPageState
           // Action Buttons
           PillButton(
             label: 'Log in One Tap',
-            icon: Icons.check_circle_rounded,
+            icon: CupertinoIcons.checkmark_circle_fill,
             variant: PillButtonVariant.primary,
             onPressed: _logMeal,
           ),
           const SizedBox(height: AppSpacing.sm),
           PillButton(
             label: 'Swap for Another Option',
-            icon: Icons.swap_horiz_rounded,
+            icon: CupertinoIcons.arrow_right_arrow_left,
             variant: PillButtonVariant.secondary,
             onPressed: _swapMeal,
           ),

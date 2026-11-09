@@ -1,7 +1,6 @@
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 enum PillButtonVariant {
   primary,
@@ -168,12 +167,7 @@ class _PillButtonState extends State<PillButton> {
             onTapDown: _onTapDown,
             onTapUp: _onTapUp,
             onTapCancel: _onTapCancel,
-            onTap: isInteractive
-                ? () {
-                    HapticFeedback.lightImpact();
-                    widget.onPressed?.call();
-                  }
-                : null,
+            onTap: isInteractive ? widget.onPressed : null,
             borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.pillRadius)),
             splashColor: widget.variant == PillButtonVariant.text
                 ? AppColors.mint.withAlpha(40)

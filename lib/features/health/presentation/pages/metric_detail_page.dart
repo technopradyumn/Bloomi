@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/metric_animations/health_metric_animations.dart';
@@ -27,6 +28,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
   HealthDataBundleEntity? _bundle;
   bool _isLoading = true;
   int _stepTarget = 10000;
+  double _workoutCalories = 0.0;
 
   @override
   void initState() {
@@ -39,10 +41,15 @@ class _MetricDetailPageState extends State<MetricDetailPage>
     try {
       final b = await sl<HealthRepository>().getLatestBundle();
       final target = await sl<HealthRepository>().getStepTarget();
+      final workouts = await sl<HealthRepository>().getWorkoutLogsForDate(DateTime.now());
+      final workoutKcal = workouts
+          .where((w) => !w.source.toLowerCase().contains('health connect'))
+          .fold<double>(0.0, (acc, w) => acc + w.calories);
       if (mounted) {
         setState(() {
           _bundle = b;
           _stepTarget = target;
+          _workoutCalories = workoutKcal;
           _isLoading = false;
         });
       }
@@ -95,7 +102,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
           'title': 'Heart Rate',
           'unit': 'BPM',
           'color': AppColors.peach,
-          'icon': Icons.favorite_rounded,
+          'icon': CupertinoIcons.heart_fill,
           'isCumulative': false,
           'min': minHr,
           'avg': avgHr,
@@ -112,7 +119,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
           'title': 'Blood Oxygen (SpO2)',
           'unit': '%',
           'color': AppColors.sky,
-          'icon': Icons.air_rounded,
+          'icon': CupertinoIcons.wind,
           'isCumulative': false,
           'min': spo2,
           'avg': spo2,
@@ -124,21 +131,22 @@ class _MetricDetailPageState extends State<MetricDetailPage>
               'Pulse oximetry estimates the percentage of oxygen-carrying hemoglobin in your blood. Typical healthy readings are between 95% and 100%.',
         };
       case 'calories':
-        final kcal = b?.activeCalories ?? 0.0;
+        final activeKcal = b?.activeCalories ?? 0.0;
+        final totalKcal = activeKcal + _workoutCalories;
         return {
           'title': 'Active Calories',
           'unit': 'kcal',
           'color': AppColors.butter,
-          'icon': Icons.local_fire_department_rounded,
+          'icon': CupertinoIcons.flame_fill,
           'isCumulative': true,
           'min': 0.0,
-          'avg': kcal,
-          'max': kcal,
-          'today': kcal,
-          'total': kcal,
+          'avg': totalKcal,
+          'max': totalKcal,
+          'today': totalKcal,
+          'total': totalKcal,
           'chartType': 'bar',
           'description':
-              'Active calories reflect the energy burned during movement and workouts above your baseline resting metabolic rate.',
+              'Active calories reflect total energy burned during daily movement, steps ($activeKcal kcal) and logged workouts ($_workoutCalories kcal).',
         };
       case 'distance':
         final double distMeters = (b != null && b.distanceMeters > 0)
@@ -151,7 +159,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
           'title': 'Distance Walked',
           'unit': unitStr,
           'color': AppColors.sky,
-          'icon': Icons.place_rounded,
+          'icon': CupertinoIcons.location_solid,
           'isCumulative': true,
           'min': 0.0,
           'avg': distVal,
@@ -169,7 +177,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
           'title': 'Blood Pressure',
           'unit': 'mmHg',
           'color': AppColors.peach,
-          'icon': Icons.speed_rounded,
+          'icon': CupertinoIcons.waveform_path_ecg,
           'isCumulative': false,
           'min': dia,
           'avg': sys,
@@ -187,7 +195,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
           'title': 'Daily Steps',
           'unit': 'steps',
           'color': AppColors.mint,
-          'icon': Icons.directions_walk_rounded,
+          'icon': CupertinoIcons.compass,
           'isCumulative': true,
           'min': 0.0,
           'avg': steps,
@@ -280,7 +288,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
                       color: AppColors.mint.withAlpha(120),
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(Icons.flag_rounded, color: context.appInk, size: 20),
+                    child: Icon(CupertinoIcons.flag_fill, color: context.appInk, size: 20),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -319,7 +327,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.edit_outlined, size: 14, color: context.appInk),
+                          Icon(CupertinoIcons.pencil, size: 14, color: context.appInk),
                           const SizedBox(width: 4),
                           Text(
                             'Change Goal',
@@ -393,7 +401,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Icon(
-                            Icons.sensors_rounded,
+                            CupertinoIcons.radiowaves_right,
                             size: 14,
                             color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E),
                           ),
@@ -484,7 +492,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
             child: Row(
               children: [
                 Icon(
-                  Icons.devices_other_rounded,
+                  CupertinoIcons.device_desktop,
                   size: 22,
                   color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E),
                 ),
@@ -530,7 +538,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
               children: [
                 Row(
                   children: [
-                    Icon(Icons.lightbulb_outline_rounded, size: 18, color: context.appSlate),
+                    Icon(CupertinoIcons.lightbulb, size: 18, color: context.appSlate),
                     const SizedBox(width: 6),
                     Text(
                       'About this metric',
@@ -588,7 +596,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.directions_walk_rounded, size: 36, color: color.withAlpha(160)),
+            Icon(CupertinoIcons.compass, size: 36, color: color.withAlpha(160)),
             const SizedBox(height: 8),
             Text(
               'No activity points recorded today yet.',
@@ -670,7 +678,7 @@ class _MetricDetailPageState extends State<MetricDetailPage>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.monitor_heart_outlined, size: 36, color: color.withAlpha(160)),
+            Icon(CupertinoIcons.waveform_path_ecg, size: 36, color: color.withAlpha(160)),
             const SizedBox(height: 8),
             Text(
               'No vitals data recorded today yet.',

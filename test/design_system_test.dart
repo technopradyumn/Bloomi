@@ -13,6 +13,7 @@ import 'package:bloomi/core/widgets/quantity_picker.dart';
 import 'package:bloomi/core/widgets/skeleton_loader.dart';
 import 'package:bloomi/core/widgets/sync_status_chip.dart';
 import 'package:bloomi/features/dev/presentation/pages/component_gallery_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -53,7 +54,7 @@ void main() {
       wrapWidget(
         const PastelStatCard(
           backgroundColor: AppColors.mint,
-          icon: Icons.restaurant_rounded,
+          icon: CupertinoIcons.cart_fill,
           label: 'Calories',
           value: '1,500',
           unit: 'kcal',
@@ -119,7 +120,7 @@ void main() {
     );
 
     expect(find.text('2 katori'), findsOneWidget);
-    await tester.tap(find.byIcon(Icons.add_rounded));
+    await tester.tap(find.byIcon(CupertinoIcons.add));
     await tester.pump();
     expect(find.text('3 katori'), findsOneWidget);
 
@@ -258,7 +259,7 @@ void main() {
                   children: [
                     Text('450 kcal', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14)),
                     SizedBox(width: 4),
-                    Icon(Icons.chevron_right_rounded, size: 20),
+                    Icon(CupertinoIcons.chevron_right, size: 20),
                   ],
                 ),
               ),

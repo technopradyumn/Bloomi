@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,7 @@ class PrivacyPolicyPage extends StatelessWidget {
         actions: [
           IconButton(
             tooltip: 'Copy Policy Link',
-            icon: Icon(Icons.link_rounded, color: context.appInk),
+            icon: Icon(CupertinoIcons.link, color: context.appInk),
             onPressed: () {
               Clipboard.setData(ClipboardData(text: policyUrl));
               BloomiToast.show(
@@ -64,7 +65,7 @@ class PrivacyPolicyPage extends StatelessWidget {
                     color: AppColors.mint.withAlpha(40),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.public_rounded,
+                  child: const Icon(CupertinoIcons.globe,
                       color: AppColors.mint, size: 20),
                 ),
                 const SizedBox(width: 12),
@@ -94,7 +95,7 @@ class PrivacyPolicyPage extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.copy_rounded,
+                  icon: Icon(CupertinoIcons.doc_on_clipboard,
                       size: 18, color: context.appSlate),
                   onPressed: () {
                     Clipboard.setData(ClipboardData(text: policyUrl));
@@ -119,7 +120,7 @@ class PrivacyPolicyPage extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    const Icon(Icons.verified_user_rounded,
+                    const Icon(CupertinoIcons.checkmark_shield_fill,
                         color: AppColors.mint, size: 22),
                     const SizedBox(width: 8),
                     Text(
@@ -160,7 +161,7 @@ class PrivacyPolicyPage extends StatelessWidget {
           _buildPolicyCard(
             context: context,
             sectionNumber: '1',
-            icon: Icons.phone_android_rounded,
+            icon: CupertinoIcons.device_phone_portrait,
             title: '100% On-Device Local Data Storage',
             body:
                 '• Standalone Database: All meal logs, custom recipes, water intake, body weight entries, workout records, and personal targets are saved strictly on your local device in an encrypted SQLite database.\n\n'
@@ -172,7 +173,7 @@ class PrivacyPolicyPage extends StatelessWidget {
           _buildPolicyCard(
             context: context,
             sectionNumber: '2',
-            icon: Icons.shopping_bag_outlined,
+            icon: CupertinoIcons.bag,
             title: 'In-App Purchases & Play Store Billing',
             body:
                 '• Direct Store Processing: All premium subscriptions and purchases are processed directly through Google Play Store Billing (or Apple App Store).\n\n'
@@ -184,7 +185,7 @@ class PrivacyPolicyPage extends StatelessWidget {
           _buildPolicyCard(
             context: context,
             sectionNumber: '3',
-            icon: Icons.health_and_safety_rounded,
+            icon: CupertinoIcons.shield_fill,
             title: 'Health Connect & Device Sensors',
             body:
                 '• Local Data Reading: Bloomi integrates with Android Health Connect to read daily steps, distance, active calories, sleep duration, and heart rate.\n\n'
@@ -197,7 +198,7 @@ class PrivacyPolicyPage extends StatelessWidget {
           _buildPolicyCard(
             context: context,
             sectionNumber: '4',
-            icon: Icons.wb_sunny_rounded,
+            icon: CupertinoIcons.sun_max_fill,
             title: 'Location & Weather Data',
             body:
                 '• Ephemeral Lookup: When you open Surroundings, your approximate location coordinates are used strictly to query public weather and Air Quality Index (AQI) data via Open-Meteo.\n\n'
@@ -209,7 +210,7 @@ class PrivacyPolicyPage extends StatelessWidget {
           _buildPolicyCard(
             context: context,
             sectionNumber: '5',
-            icon: Icons.do_not_disturb_on_rounded,
+            icon: CupertinoIcons.minus_circle,
             title: 'Zero Third-Party Trackers & Zero Ads',
             body:
                 '• No Advertising SDKs: Bloomi contains zero advertising networks, marketing trackers, or cross-site profiling scripts.\n\n'
@@ -221,7 +222,7 @@ class PrivacyPolicyPage extends StatelessWidget {
           _buildPolicyCard(
             context: context,
             sectionNumber: '6',
-            icon: Icons.file_download_outlined,
+            icon: CupertinoIcons.arrow_down_to_line,
             title: 'Data Control & Export',
             body:
                 '• Data Export: You can export your entire nutritional and activity records as a structured JSON file at any time from Settings.\n\n'
@@ -233,7 +234,7 @@ class PrivacyPolicyPage extends StatelessWidget {
           _buildPolicyCard(
             context: context,
             sectionNumber: '7',
-            icon: Icons.mail_outline_rounded,
+            icon: CupertinoIcons.mail,
             title: 'Contact Information',
             body:
                 'If you have any questions or feedback regarding this Privacy Policy or data security, please contact us at:\n\n'

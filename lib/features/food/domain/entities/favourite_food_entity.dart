@@ -49,18 +49,33 @@ class FavouriteFoodEntity extends Equatable {
 
   factory FavouriteFoodEntity.fromJson(Map<String, dynamic> json) =>
       FavouriteFoodEntity(
-        foodId: json['foodId'] as String? ?? '',
+        foodId: (json['foodId'] ?? json['id']) as String? ?? '',
         name: json['name'] as String? ?? '',
         hindiName: json['hindiName'] as String?,
         category: json['category'] as String? ?? 'General',
-        kcalPer100g: (json['kcalPer100g'] as num?)?.toDouble() ?? 0.0,
-        proteinPer100g: (json['proteinPer100g'] as num?)?.toDouble() ?? 0.0,
-        carbsPer100g: (json['carbsPer100g'] as num?)?.toDouble() ?? 0.0,
-        fatPer100g: (json['fatPer100g'] as num?)?.toDouble() ?? 0.0,
-        fibrePer100g: (json['fibrePer100g'] as num?)?.toDouble() ?? 0.0,
-        defaultUnit: json['defaultUnit'] as String? ?? 'serving',
+        kcalPer100g: ((json['kcalPer100g'] ??
+                json['kcal'] ??
+                json['caloriesPer100g'] ??
+                json['calories']) as num?)
+            ?.toDouble() ??
+            0.0,
+        proteinPer100g: ((json['proteinPer100g'] ?? json['protein']) as num?)
+                ?.toDouble() ??
+            0.0,
+        carbsPer100g:
+            ((json['carbsPer100g'] ?? json['carbs']) as num?)?.toDouble() ??
+                0.0,
+        fatPer100g:
+            ((json['fatPer100g'] ?? json['fat']) as num?)?.toDouble() ?? 0.0,
+        fibrePer100g:
+            ((json['fibrePer100g'] ?? json['fibre']) as num?)?.toDouble() ??
+                0.0,
+        defaultUnit:
+            (json['defaultUnit'] ?? json['unit']) as String? ?? 'serving',
         defaultServingGrams:
-            (json['defaultServingGrams'] as num?)?.toDouble() ?? 100.0,
+            ((json['defaultServingGrams'] ?? json['servingGrams']) as num?)
+                ?.toDouble() ??
+                100.0,
         isCustom: json['isCustom'] as bool? ?? false,
         createdAt: json['createdAt'] != null
             ? DateTime.tryParse(json['createdAt'] as String) ?? DateTime.now()

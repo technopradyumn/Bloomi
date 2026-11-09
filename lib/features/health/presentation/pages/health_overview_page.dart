@@ -1,6 +1,9 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
+import 'package:bloomi/core/database/app_database.dart';
+import 'package:drift/drift.dart' as drift;
 import 'package:bloomi/core/utils/health_calculators.dart';
 import 'package:bloomi/core/widgets/empty_state_widget.dart';
 import 'package:bloomi/core/widgets/pastel_stat_card.dart';
@@ -8,8 +11,10 @@ import 'package:bloomi/core/widgets/pill_button.dart';
 import 'package:bloomi/core/widgets/step_target_sheet.dart';
 import 'package:bloomi/features/health/domain/entities/health_overview_entity.dart';
 import 'package:bloomi/features/health/domain/repositories/health_repository.dart';
-import 'package:bloomi/features/health/presentation/widgets/workout_editor_dialog.dart';
+import 'package:bloomi/features/health/presentation/pages/workout_editor_page.dart';
+import 'package:bloomi/features/health/presentation/widgets/calories_in_out_card.dart';
 import 'package:bloomi/services/health/health_service.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
@@ -109,13 +114,13 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
         elevation: 0,
         actions: [
           IconButton(
-            icon: Icon(Icons.watch_rounded, color: context.appInk),
-            tooltip: 'Devices & Health Connect',
+            icon: Icon(CupertinoIcons.device_laptop, color: context.appInk),
+            tooltip: context.tr('health_devices_hub'),
             onPressed: () => context.push('/health/devices'),
           ),
           IconButton(
-            icon: Icon(Icons.add_circle_outline_rounded, color: context.appInk),
-            tooltip: 'Log Body Metric',
+            icon: Icon(CupertinoIcons.plus_circle, color: context.appInk),
+            tooltip: context.tr('health_add_manual'),
             onPressed: () => context.push('/health/manual-body'),
           ),
         ],
@@ -148,6 +153,33 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
               : (bundle.steps * 0.762);
           final distComponents = HealthCalculators.getDistanceComponents(effectiveDistMeters);
 
+          // Calculate burned calories combining health sensors and manual logged workouts
+          final workoutBurned = data.todayWorkouts.fold<double>(0.0, (acc, w) => acc + w.calories);
+          final manualWorkoutBurned = data.todayWorkouts
+              .where((w) => !w.source.toLowerCase().contains('health connect'))
+              .fold<double>(0.0, (acc, w) => acc + w.calories);
+          final activityBurned = bundle.activeCalories;
+          final totalBurned = activityBurned + manualWorkoutBurned;
+
+          String burnedTrend;
+          if (totalBurned > 0) {
+            if (workoutBurned > 0 && activityBurned > 0) {
+              burnedTrend = '${workoutBurned.toInt()}w + ${activityBurned.toInt()}a';
+            } else if (workoutBurned > 0) {
+              burnedTrend = '${workoutBurned.toInt()} kcal wkt';
+            } else {
+              burnedTrend = 'Active';
+            }
+          } else {
+            burnedTrend = 'No activity';
+          }
+
+          // Extract latest body metrics
+          final glucoseEntry = data.recentBodyEntries.where((e) => e.type == 'blood_glucose').firstOrNull;
+          final tempEntry = data.recentBodyEntries.where((e) => e.type == 'temperature').firstOrNull;
+          final waistEntry = data.recentBodyEntries.where((e) => e.type == 'waist').firstOrNull;
+          final hipEntry = data.recentBodyEntries.where((e) => e.type == 'hip').firstOrNull;
+
           return RefreshIndicator(
             color: AppColors.mint,
             onRefresh: () async {
@@ -168,7 +200,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                   child: Row(
                     children: [
                       Icon(
-                        Icons.info_outline_rounded,
+                        CupertinoIcons.info,
                         size: 20,
                         color: context.isDarkMode ? const Color(0xFFFBBF24) : const Color(0xFF8A6D05),
                       ),
@@ -205,7 +237,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                         Row(
                           children: [
                             Icon(
-                              Icons.warning_amber_rounded,
+                              CupertinoIcons.exclamationmark_triangle,
                               color: context.isDarkMode ? const Color(0xFFF59E0B) : const Color(0xFFD97706),
                               size: 22,
                             ),
@@ -236,7 +268,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                           children: [
                             PillButton(
                               label: 'Manage Permissions',
-                              icon: Icons.shield_outlined,
+                              icon: CupertinoIcons.shield,
                               height: 38,
                               variant: PillButtonVariant.primary,
                               onPressed: () => context.push('/settings/permissions'),
@@ -258,7 +290,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                     child: Row(
                       children: [
                         Icon(
-                          Icons.directions_walk_rounded,
+                          CupertinoIcons.compass,
                           color: context.isDarkMode ? const Color(0xFF38BDF8) : const Color(0xFF0284C7),
                           size: 18,
                         ),
@@ -293,7 +325,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                     child: Row(
                       children: [
                         Icon(
-                          Icons.sync_rounded,
+                          CupertinoIcons.arrow_2_circlepath,
                           size: 18,
                           color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E),
                         ),
@@ -305,7 +337,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
-                        Icon(Icons.chevron_right_rounded, size: 20, color: context.appSlate),
+                        Icon(CupertinoIcons.chevron_right, size: 20, color: context.appSlate),
                       ],
                     ),
                   ),
@@ -340,7 +372,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(
-                              Icons.edit_outlined,
+                              CupertinoIcons.pencil,
                               size: 14,
                               color: context.isDarkMode ? const Color(0xFF14B8A6) : const Color(0xFF0F766E),
                             ),
@@ -368,14 +400,14 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                   physics: const NeverScrollableScrollPhysics(),
                   crossAxisSpacing: AppSpacing.sm,
                   mainAxisSpacing: AppSpacing.sm,
-                  childAspectRatio: 1.15,
+                  childAspectRatio: 1.05,
                   children: [
                     // 1. Steps
                     PastelStatCard(
                       label: 'Steps',
                       value: bundle.steps.toString(),
                       unit: '/ ${_formatNumber(data.stepGoal)}',
-                      icon: Icons.directions_walk_rounded,
+                      icon: CupertinoIcons.flame_fill,
                       animationMetricType: 'steps',
                       backgroundColor: AppColors.mint,
                       trend: HealthCalculators.formatDistance(effectiveDistMeters),
@@ -399,7 +431,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                       label: 'Heart Rate',
                       value: bundle.heartRate > 0 ? bundle.heartRate.toInt().toString() : '--',
                       unit: 'BPM',
-                      icon: Icons.favorite_rounded,
+                      icon: CupertinoIcons.heart_fill,
                       animationMetricType: 'heart_rate',
                       backgroundColor: AppColors.peach,
                       trend: bundle.minHeartRate > 0
@@ -415,7 +447,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                           ? '${bundle.sleepDuration.inHours}h ${bundle.sleepDuration.inMinutes % 60}m'
                           : '--',
                       unit: '',
-                      icon: Icons.bedtime_rounded,
+                      icon: CupertinoIcons.moon_fill,
                       animationMetricType: 'sleep',
                       backgroundColor: AppColors.lilac,
                       trend: bundle.sleepDuration.inMinutes > 0 ? 'Recorded' : 'No data yet',
@@ -427,22 +459,22 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                       label: 'Blood Oxygen',
                       value: bundle.spo2Percentage > 0 ? '${bundle.spo2Percentage.toStringAsFixed(0)}%' : '--',
                       unit: '',
-                      icon: Icons.air_rounded,
+                      icon: CupertinoIcons.wind,
                       animationMetricType: 'spo2',
                       backgroundColor: AppColors.sky,
                       trend: bundle.spo2Percentage > 0 ? 'Healthy Range' : 'No reading',
                       onTap: () => context.push('/health/metric-detail?type=spo2'),
                     ),
 
-                    // 5. Active Calories
+                    // 5. Active & Workout Burned Calories
                     PastelStatCard(
                       label: 'Burned',
-                      value: bundle.activeCalories > 0 ? bundle.activeCalories.toInt().toString() : '--',
-                      unit: bundle.activeCalories > 0 ? 'kcal' : '',
-                      icon: Icons.local_fire_department_rounded,
+                      value: totalBurned > 0 ? totalBurned.toInt().toString() : '--',
+                      unit: totalBurned > 0 ? 'kcal' : '',
+                      icon: CupertinoIcons.flame_fill,
                       animationMetricType: 'burned',
                       backgroundColor: AppColors.butter,
-                      trend: bundle.activeCalories > 0 ? 'Active energy' : 'No activity',
+                      trend: burnedTrend,
                       onTap: () => context.push('/health/metric-detail?type=calories'),
                     ),
 
@@ -451,7 +483,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                       label: 'Weight',
                       value: data.latestWeightKg > 0 ? data.latestWeightKg.toStringAsFixed(1) : '--',
                       unit: data.latestWeightKg > 0 ? 'kg' : '',
-                      icon: Icons.scale_rounded,
+                      icon: CupertinoIcons.gauge,
                       animationMetricType: 'weight',
                       backgroundColor: AppColors.mint,
                       trend: data.latestWeightKg > 0 ? 'Recorded' : 'Tap to log',
@@ -465,7 +497,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                           ? '${data.latestSystolicBp!.toInt()}/${data.latestDiastolicBp!.toInt()}'
                           : '--/--',
                       unit: data.latestSystolicBp != null ? 'mmHg' : '',
-                      icon: Icons.speed_rounded,
+                      icon: CupertinoIcons.waveform_path_ecg,
                       animationMetricType: 'blood_pressure',
                       backgroundColor: AppColors.peach,
                       trend: data.latestSystolicBp != null ? 'Recorded' : 'Tap to log',
@@ -477,65 +509,64 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                       label: 'Distance',
                       value: distComponents.value,
                       unit: distComponents.unit,
-                      icon: Icons.place_rounded,
+                      icon: CupertinoIcons.location_solid,
                       animationMetricType: 'distance',
                       backgroundColor: AppColors.sky,
                       trend: 'Total movement',
                       onTap: () => context.push('/health/metric-detail?type=distance'),
                     ),
+
+                    // 9. Blood Glucose
+                    PastelStatCard(
+                      label: 'Blood Glucose',
+                      value: glucoseEntry != null ? glucoseEntry.value.toStringAsFixed(0) : '--',
+                      unit: glucoseEntry != null ? glucoseEntry.unit : '',
+                      icon: CupertinoIcons.drop_fill,
+                      animationMetricType: 'blood_pressure',
+                      backgroundColor: AppColors.mint,
+                      trend: glucoseEntry != null
+                          ? DateFormat('MMM d, h:mm a').format(glucoseEntry.measuredAt)
+                          : 'Tap to log',
+                      onTap: () => context.push('/health/manual-body?type=sugar'),
+                    ),
+
+                    // 10. Temperature
+                    PastelStatCard(
+                      label: 'Temperature',
+                      value: tempEntry != null ? tempEntry.value.toStringAsFixed(1) : '--',
+                      unit: tempEntry != null ? tempEntry.unit : '',
+                      icon: CupertinoIcons.thermometer,
+                      animationMetricType: 'sleep',
+                      backgroundColor: AppColors.peach,
+                      trend: tempEntry != null
+                          ? DateFormat('MMM d, h:mm a').format(tempEntry.measuredAt)
+                          : 'Tap to log',
+                      onTap: () => context.push('/health/manual-body?type=temp'),
+                    ),
+
+                    // 11. Waist & Hip
+                    PastelStatCard(
+                      label: 'Waist / Hip',
+                      value: (waistEntry != null || hipEntry != null)
+                          ? '${waistEntry?.value.toInt() ?? '--'}/${hipEntry?.value.toInt() ?? '--'}'
+                          : '--/--',
+                      unit: 'cm',
+                      icon: CupertinoIcons.chart_bar_alt_fill,
+                      animationMetricType: 'weight',
+                      backgroundColor: AppColors.butter,
+                      trend: waistEntry != null
+                          ? DateFormat('MMM d, h:mm a').format(waistEntry.measuredAt)
+                          : 'Tap to log',
+                      onTap: () => context.push('/health/manual-body?type=circumference'),
+                    ),
                   ],
                 ),
                 const SizedBox(height: AppSpacing.md),
 
-                // Dedicated "Log Workout Activity" Card
-                Container(
-                  padding: const EdgeInsets.all(AppSpacing.md),
-                  decoration: BoxDecoration(
-                    color: context.appSurface,
-                    borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-                    boxShadow: context.appCardShadow,
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: AppColors.mint.withAlpha(50),
-                          shape: BoxShape.circle,
-                        ),
-                        child: Icon(Icons.fitness_center_rounded, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 24),
-                      ),
-                      const SizedBox(width: AppSpacing.md),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Log Workout Activity',
-                              style: TextStyle(
-                                fontFamily: 'Baloo 2',
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16,
-                                color: context.appInk,
-                              ),
-                            ),
-                            const SizedBox(height: 2),
-                            Text(
-                              'Record walking, gym, yoga, running or custom activity',
-                              style: TextStyle(fontSize: 12, color: context.appSlate),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      PillButton(
-                        label: '+ Log',
-                        variant: PillButtonVariant.primary,
-                        height: 38,
-                        onPressed: () => showWorkoutEditorDialog(context, onSaved: _refresh),
-                      ),
-                    ],
-                  ),
+                // Calories In vs Out - Daily Insights & 7-Day Trend
+                CaloriesInOutCard(
+                  onBurnedTap: () => context.push('/health/metric-detail?type=calories'),
+                  onIntakeTap: () => context.push('/food'),
                 ),
                 const SizedBox(height: AppSpacing.md),
 
@@ -555,7 +586,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.history_rounded, color: context.appInk, size: 20),
+                              Icon(CupertinoIcons.clock_fill, color: context.appInk, size: 20),
                               const SizedBox(width: 8),
                               Text(
                                 "Today's Workouts",
@@ -570,7 +601,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                           ),
                           TextButton(
                             onPressed: () => context.push('/health/workout'),
-                            child: const Text('View All', style: TextStyle(fontWeight: FontWeight.w700)),
+                            child: Text(context.tr('home_view_all'), style: TextStyle(fontWeight: FontWeight.w700)),
                           ),
                         ],
                       ),
@@ -578,7 +609,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: AppSpacing.sm),
                           child: Text(
-                            'No workouts logged today yet. Use the card above to log your exercise.',
+                            'No workouts logged today yet.',
                             style: TextStyle(color: context.appSlate, fontSize: 13),
                           ),
                         )
@@ -592,7 +623,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                                 color: AppColors.lilac.withAlpha(context.isDarkMode ? 80 : 255),
                                 shape: BoxShape.circle,
                               ),
-                              child: Icon(Icons.directions_run_rounded, color: context.appInk, size: 20),
+                              child: Icon(CupertinoIcons.bolt_fill, color: context.appInk, size: 20),
                             ),
                             title: Text(w.type, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: context.appInk)),
                             subtitle: Text('${w.durationMinutes} mins · ${w.calories.toInt()} kcal burned · ${w.source}', style: TextStyle(color: context.appSlate)),
@@ -600,18 +631,80 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 IconButton(
-                                  icon: Icon(Icons.edit_outlined, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 18),
-                                  tooltip: 'Edit Workout',
-                                  onPressed: () => showWorkoutEditorDialog(context, workout: w, onSaved: _refresh),
+                                  icon: Icon(CupertinoIcons.pencil, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 18),
+                                  tooltip: context.tr('edit'),
+                                  onPressed: () {
+                                    Navigator.of(context).push<void>(
+                                      CupertinoPageRoute<void>(
+                                        builder: (_) => WorkoutEditorPage(
+                                          existingWorkout: w,
+                                          onSaved: _refresh,
+                                        ),
+                                      ),
+                                    );
+                                  },
                                 ),
                                 IconButton(
-                                  icon: Icon(Icons.delete_outline_rounded, color: context.appSlate, size: 18),
-                                  tooltip: 'Delete Workout',
-                                  onPressed: () => confirmAndDeleteWorkout(context, workout: w, onDeleted: _refresh),
+                                  icon: Icon(CupertinoIcons.trash, color: context.appSlate, size: 18),
+                                  tooltip: context.tr('delete'),
+                                  onPressed: () async {
+                                    final confirmed = await showCupertinoDialog<bool>(
+                                      context: context,
+                                      builder: (ctx) => CupertinoAlertDialog(
+                                        title: Text('${context.tr('delete')}?'),
+                                        content: Text('Are you sure you want to delete "${w.type}" (${w.durationMinutes} mins)?'),
+                                        actions: [
+                                          CupertinoDialogAction(
+                                            isDefaultAction: true,
+                                            onPressed: () => Navigator.pop(ctx, false),
+                                            child: Text(context.tr('cancel')),
+                                          ),
+                                          CupertinoDialogAction(
+                                            isDestructiveAction: true,
+                                            onPressed: () => Navigator.pop(ctx, true),
+                                            child: Text(context.tr('delete')),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                    if (confirmed == true) {
+                                      await sl<HealthRepository>().softDeleteWorkoutLog(w.id);
+                                      _refresh();
+                                      if (context.mounted) {
+                                        final messenger = ScaffoldMessenger.of(context);
+                                        messenger.hideCurrentSnackBar();
+                                        messenger.showSnackBar(
+                                          SnackBar(
+                                            content: Text('Deleted "${w.type}" workout'),
+                                            duration: const Duration(seconds: 4),
+                                            action: SnackBarAction(
+                                              label: 'Undo',
+                                              textColor: Theme.of(context).colorScheme.primary,
+                                              onPressed: () async {
+                                                final db = sl<AppDatabase>();
+                                                await (db.update(db.workoutLogs)..where((tbl) => tbl.id.equals(w.id)))
+                                                    .write(const WorkoutLogsCompanion(deleted: drift.Value(false)));
+                                                _refresh();
+                                              },
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                    }
+                                  },
                                 ),
                               ],
                             ),
-                            onTap: () => showWorkoutEditorDialog(context, workout: w, onSaved: _refresh),
+                            onTap: () {
+                              Navigator.of(context).push<void>(
+                                CupertinoPageRoute<void>(
+                                  builder: (_) => WorkoutEditorPage(
+                                    existingWorkout: w,
+                                    onSaved: _refresh,
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                         ),
                     ],
@@ -625,7 +718,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                     Expanded(
                       child: PillButton(
                         label: 'Manual Body Entry',
-                        icon: Icons.edit_note_rounded,
+                        icon: CupertinoIcons.square_pencil,
                         variant: PillButtonVariant.secondary,
                         onPressed: () => context.push('/health/manual-body'),
                       ),
@@ -634,7 +727,7 @@ class _HealthOverviewPageState extends State<HealthOverviewPage> with WidgetsBin
                     Expanded(
                       child: PillButton(
                         label: 'Connect Watch',
-                        icon: Icons.watch_outlined,
+                        icon: CupertinoIcons.radiowaves_right,
                         variant: PillButtonVariant.primary,
                         onPressed: () => context.push('/health/devices'),
                       ),

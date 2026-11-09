@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/pill_button.dart';
@@ -41,7 +42,6 @@ class _StepTargetSheetState extends State<StepTargetSheet> {
   }
 
   void _onPresetSelected(int target) {
-    HapticFeedback.lightImpact();
     setState(() {
       _selectedTarget = target;
       _controller.text = target.toString();
@@ -50,7 +50,6 @@ class _StepTargetSheetState extends State<StepTargetSheet> {
   }
 
   void _adjust(int delta) {
-    HapticFeedback.selectionClick();
     final current = int.tryParse(_controller.text) ?? _selectedTarget;
     final updated = (current + delta).clamp(1000, 50000);
     setState(() {
@@ -138,7 +137,7 @@ class _StepTargetSheetState extends State<StepTargetSheet> {
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
-                    Icons.directions_walk_rounded,
+                    CupertinoIcons.compass,
                     color: context.appInk,
                     size: 24,
                   ),
@@ -169,7 +168,7 @@ class _StepTargetSheetState extends State<StepTargetSheet> {
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.close_rounded, color: context.appSlate),
+                  icon: Icon(CupertinoIcons.clear, color: context.appSlate),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
@@ -187,7 +186,7 @@ class _StepTargetSheetState extends State<StepTargetSheet> {
               child: Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.remove_circle_outline_rounded),
+                    icon: const Icon(CupertinoIcons.minus_circle),
                     color: context.appSlate,
                     onPressed: () => _adjust(-500),
                   ),
@@ -224,7 +223,7 @@ class _StepTargetSheetState extends State<StepTargetSheet> {
                     ),
                   ),
                   IconButton(
-                    icon: const Icon(Icons.add_circle_outline_rounded),
+                    icon: const Icon(CupertinoIcons.add_circled),
                     color: AppColors.mint,
                     onPressed: () => _adjust(500),
                   ),
@@ -284,7 +283,7 @@ class _StepTargetSheetState extends State<StepTargetSheet> {
               child: PillButton(
                 label: 'Save Target',
                 isLoading: _isSaving,
-                icon: Icons.check_circle_rounded,
+                icon: CupertinoIcons.checkmark_circle_fill,
                 variant: PillButtonVariant.primary,
                 onPressed: _save,
               ),

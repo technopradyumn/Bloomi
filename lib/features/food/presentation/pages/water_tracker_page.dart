@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
@@ -68,7 +70,7 @@ class _WaterTrackerPageState extends State<WaterTrackerPage>
         backgroundColor: context.appSurface,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+          icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
           onPressed: () {
             if (context.canPop()) {
               context.pop();
@@ -78,7 +80,7 @@ class _WaterTrackerPageState extends State<WaterTrackerPage>
           },
         ),
         title: Text(
-          'Water Tracker',
+          context.tr('water_tracker_title'),
           style: TextStyle(
             fontFamily: 'Baloo 2',
             fontWeight: FontWeight.w700,
@@ -246,7 +248,7 @@ class _WaterTrackerPageState extends State<WaterTrackerPage>
                                         color: AppColors.sky.withAlpha(120),
                                         shape: BoxShape.circle,
                                       ),
-                                      child: Icon(Icons.water_drop_rounded, color: context.isDarkMode ? const Color(0xFF48CAE4) : const Color(0xFF0077B6), size: 18),
+                                      child: Icon(CupertinoIcons.drop_fill, color: context.isDarkMode ? const Color(0xFF48CAE4) : const Color(0xFF0077B6), size: 18),
                                     ),
                                     title: Text(
                                       '${entry.ml} ml',
@@ -254,7 +256,7 @@ class _WaterTrackerPageState extends State<WaterTrackerPage>
                                     ),
                                     subtitle: Text(timeStr, style: TextStyle(color: context.appSlate, fontSize: 12)),
                                     trailing: IconButton(
-                                      icon: Icon(Icons.delete_outline_rounded, color: context.appSlate, size: 20),
+                                      icon: Icon(CupertinoIcons.trash, color: context.appSlate, size: 20),
                                       onPressed: () async {
                                         await (db.update(db.waterLogs)..where((t) => t.id.equals(entry.id))).write(
                                           WaterLogsCompanion(
@@ -325,7 +327,7 @@ class _WaterTrackerPageState extends State<WaterTrackerPage>
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: context.appSurface,
-        title: Text('Add Custom Water', style: TextStyle(fontFamily: 'Baloo 2', fontWeight: FontWeight.w700, color: context.appInk)),
+        title: Text(context.tr('water_custom_amount'), style: TextStyle(fontFamily: 'Baloo 2', fontWeight: FontWeight.w700, color: context.appInk)),
         content: TextField(
           controller: ctrl,
           keyboardType: TextInputType.number,
@@ -334,7 +336,7 @@ class _WaterTrackerPageState extends State<WaterTrackerPage>
           decoration: const InputDecoration(labelText: 'Volume in ml', suffixText: 'ml'),
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(context.tr('cancel'))),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: context.appMint,
@@ -351,7 +353,7 @@ class _WaterTrackerPageState extends State<WaterTrackerPage>
                 }
               }
             },
-            child: const Text('Add'),
+            child: Text(context.tr('add')),
           ),
         ],
       ),
@@ -443,7 +445,7 @@ class _AnimatedWaterBottleState extends State<_AnimatedWaterBottle>
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
-                    Icons.water_drop_rounded,
+                    CupertinoIcons.drop_fill,
                     color: isDark ? const Color(0xFF90E0EF) : const Color(0xFF0077B6),
                     size: 28,
                   ),

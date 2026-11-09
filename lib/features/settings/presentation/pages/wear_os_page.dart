@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
@@ -15,7 +16,6 @@ import 'package:bloomi/features/surroundings/domain/entities/surroundings_entity
 import 'package:bloomi/features/surroundings/domain/repositories/surroundings_repository.dart';
 import 'package:bloomi/services/widget/widget_sync_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 enum WatchDisplayMode {
   watchFaceChrono,
@@ -164,7 +164,6 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
   }
 
   void _handleQuickLogWater() {
-    HapticFeedback.lightImpact();
     setState(() {
       _waterLogged += 250;
     });
@@ -208,7 +207,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(Icons.watch_rounded, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 14),
+                Icon(CupertinoIcons.radiowaves_right, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 14),
                 const SizedBox(width: 4),
                 Text(
                   'Wear DataLayer Auto-Live',
@@ -318,7 +317,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
               children: [
                 Row(
                   children: [
-                    Icon(Icons.bolt_rounded, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 20),
+                    Icon(CupertinoIcons.bolt, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 20),
                     const SizedBox(width: 8),
                     const Text(
                       'Zero-Latency Local DataLayer Sync',
@@ -512,9 +511,9 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildMicroComplication(Icons.directions_walk_rounded, AppColors.mint, '${_distanceKm.toStringAsFixed(1)}k'),
+                _buildMicroComplication(CupertinoIcons.compass, AppColors.mint, '${_distanceKm.toStringAsFixed(1)}k'),
                 const SizedBox(width: 16),
-                _buildMicroComplication(Icons.local_fire_department_rounded, AppColors.peach, '$remainingKcal'),
+                _buildMicroComplication(CupertinoIcons.flame_fill, AppColors.peach, '$remainingKcal'),
               ],
             ),
           ),
@@ -546,9 +545,9 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildMicroComplication(Icons.water_drop_rounded, AppColors.sky, '${_waterLogged}m'),
+                _buildMicroComplication(CupertinoIcons.drop_fill, AppColors.sky, '${_waterLogged}m'),
                 const SizedBox(width: 16),
-                _buildMicroComplication(Icons.favorite_rounded, Colors.redAccent, '$_heartRate'),
+                _buildMicroComplication(CupertinoIcons.heart_fill, Colors.redAccent, '$_heartRate'),
               ],
             ),
           ),
@@ -598,7 +597,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.directions_walk_rounded, color: Colors.white60, size: 14),
+              const Icon(CupertinoIcons.compass, color: Colors.white60, size: 14),
               const SizedBox(width: 4),
               Text('$_steps', style: const TextStyle(color: Colors.white70, fontSize: 11)),
               const SizedBox(width: 8),
@@ -630,7 +629,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.directions_walk_rounded, color: AppColors.mint, size: 24),
+              const Icon(CupertinoIcons.compass, color: AppColors.mint, size: 24),
               Text(
                 '$_steps',
                 style: const TextStyle(
@@ -677,7 +676,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
                   BoxShadow(color: AppColors.sky.withAlpha(100), blurRadius: 16, spreadRadius: 2),
                 ],
               ),
-              child: const Icon(Icons.water_drop_rounded, color: Colors.white, size: 38),
+              child: const Icon(CupertinoIcons.drop_fill, color: Colors.white, size: 38),
             ),
             const SizedBox(height: 8),
             Text(
@@ -702,7 +701,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
         children: [
           ScaleTransition(
             scale: _pulseAnimation,
-            child: const Icon(Icons.favorite_rounded, color: Colors.redAccent, size: 40),
+            child: const Icon(CupertinoIcons.heart_fill, color: Colors.redAccent, size: 40),
           ),
           const SizedBox(height: 6),
           Text(
@@ -778,7 +777,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
                   color: AppColors.mint,
                 ),
               ),
-              const Icon(Icons.bolt_rounded, color: Colors.white, size: 20),
+              const Icon(CupertinoIcons.bolt, color: Colors.white, size: 20),
             ],
           ),
           const SizedBox(height: 6),
@@ -811,7 +810,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
               child: const Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.add_rounded, size: 14, color: Colors.white),
+                  Icon(CupertinoIcons.add, size: 14, color: Colors.white),
                   SizedBox(width: 4),
                   Text('+250 ml', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
                 ],
@@ -834,7 +833,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.favorite_rounded, color: Colors.redAccent, size: 22),
+              const Icon(CupertinoIcons.heart_fill, color: Colors.redAccent, size: 22),
               const SizedBox(width: 6),
               Text('$_heartRate', style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold, fontFamily: 'Baloo 2')),
               const Text(' bpm', style: TextStyle(color: Colors.white70, fontSize: 12)),
@@ -859,7 +858,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.wb_sunny_rounded, color: Color(0xFFF59E0B), size: 24),
+              const Icon(CupertinoIcons.sun_max_fill, color: Color(0xFFF59E0B), size: 24),
               const SizedBox(width: 6),
               Text('$temp°C', style: const TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.bold, fontFamily: 'Baloo 2')),
             ],
@@ -947,7 +946,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Flagship Digital & Analog',
             description: 'Balanced watch face showing time, Mascot, and 4 circular complications for steps, calories, water, and heart rate.',
             mode: WatchDisplayMode.watchFaceChrono,
-            icon: Icons.watch_later_outlined,
+            icon: CupertinoIcons.clock,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -955,7 +954,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Ultra-low Battery <1%/hr',
             description: 'Minimalist high-contrast monochrome ambient mode designed for AMOLED burn-in protection.',
             mode: WatchDisplayMode.watchFaceAmbient,
-            icon: Icons.nightlight_round,
+            icon: CupertinoIcons.moon_fill,
           ),
         ];
 
@@ -966,7 +965,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: '$_steps steps · ${HealthCalculators.formatDistance(_distanceMeters)}',
             description: 'Circular steps gauge showing current progress towards your $_targetSteps goal with pace and cadence.',
             mode: WatchDisplayMode.microWalk,
-            icon: Icons.directions_walk_rounded,
+            icon: CupertinoIcons.compass,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -974,7 +973,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: '$_waterLogged ml logged',
             description: 'Giant thumb-friendly button. Tap directly on your smartwatch screen to log +250ml instantly with haptic feedback.',
             mode: WatchDisplayMode.microWater,
-            icon: Icons.water_drop_rounded,
+            icon: CupertinoIcons.drop_fill,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -982,7 +981,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: '$_heartRate bpm · Resting: $_restingHeartRate',
             description: 'Direct optical photoplethysmography sensor readout with real-time cardio zone color cues.',
             mode: WatchDisplayMode.microPulse,
-            icon: Icons.favorite_rounded,
+            icon: CupertinoIcons.heart_fill,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -990,7 +989,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: '$_streak Days Streak',
             description: 'Congratulatory bloom mascot screen appearing automatically upon reaching your daily wellness goals.',
             mode: WatchDisplayMode.microStreak,
-            icon: Icons.celebration_rounded,
+            icon: CupertinoIcons.sparkles,
           ),
         ];
 
@@ -1001,7 +1000,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Swipe 1',
             description: '3 concentric rings for Calories ($remainingKcal left), Water ($_waterLogged ml), and Steps ($_steps).',
             mode: WatchDisplayMode.tileRings,
-            icon: Icons.donut_large_rounded,
+            icon: CupertinoIcons.circle_grid_hex_fill,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -1009,7 +1008,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Swipe 2',
             description: 'Giant one-touch hydration launcher showing your percentage towards $_targetWater ml.',
             mode: WatchDisplayMode.tileHydration,
-            icon: Icons.water_drop_rounded,
+            icon: CupertinoIcons.drop_fill,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -1017,7 +1016,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Swipe 3',
             description: 'Resting pulse, optical PPG, and weekly cardio rhythm chart.',
             mode: WatchDisplayMode.tileVitals,
-            icon: Icons.favorite_rounded,
+            icon: CupertinoIcons.heart_fill,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -1025,7 +1024,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Swipe 4',
             description: 'Current local weather ($temp°C in $cityName) and AQI $aqi with outdoor run recommendations.',
             mode: WatchDisplayMode.tileWeather,
-            icon: Icons.wb_sunny_rounded,
+            icon: CupertinoIcons.sun_max_fill,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -1033,7 +1032,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Swipe 5',
             description: 'Bloomi Mascot with today\'s mindfulness prompt and streak encouragement.',
             mode: WatchDisplayMode.tileMascot,
-            icon: Icons.eco_rounded,
+            icon: CupertinoIcons.leaf_arrow_circlepath,
           ),
         ];
 
@@ -1044,7 +1043,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Slot 1 & 2',
             description: 'Displays compact metrics like "${HealthCalculators.formatDistance(_distanceMeters)}" or "$remainingKcal kcal" in standard slots.',
             mode: WatchDisplayMode.complications,
-            icon: Icons.text_fields_rounded,
+            icon: CupertinoIcons.textformat,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -1052,7 +1051,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Slot 3',
             description: 'Circular curved arc gauge displaying steps progress towards your $_targetSteps goal.',
             mode: WatchDisplayMode.complications,
-            icon: Icons.donut_large_rounded,
+            icon: CupertinoIcons.circle_grid_hex_fill,
           ),
           const SizedBox(height: 8),
           _buildItemCard(
@@ -1060,7 +1059,7 @@ class _WearOsPageState extends State<WearOsPage> with SingleTickerProviderStateM
             badge: 'Slot 4',
             description: 'Bloomi leaf icon complication that opens the watch app with a single wrist tap.',
             mode: WatchDisplayMode.complications,
-            icon: Icons.spa_rounded,
+            icon: CupertinoIcons.sparkles,
           ),
         ];
     }

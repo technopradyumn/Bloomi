@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
@@ -38,7 +40,7 @@ class _UnitsPageState extends State<UnitsPage> {
       backgroundColor: context.appBackground,
       appBar: AppBar(
         title: Text(
-          'Units of Measurement',
+          context.tr('units_of_measurement'),
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontFamily: 'Baloo 2',
@@ -102,9 +104,9 @@ class _UnitsPageState extends State<UnitsPage> {
               // Metric System Option
               _buildUnitCard(
                 context: context,
-                title: 'Metric System',
+                title: context.tr('units_metric'),
                 subtitle: 'Kilograms (kg), Centimeters (cm), Milliliters (ml), Kilometers (km)',
-                icon: Icons.scale_rounded,
+                icon: CupertinoIcons.gauge,
                 isSelected: units == 'metric',
                 color: AppColors.mint,
                 onTap: () => _saveUnits('metric'),
@@ -114,9 +116,9 @@ class _UnitsPageState extends State<UnitsPage> {
               // Imperial System Option
               _buildUnitCard(
                 context: context,
-                title: 'Imperial System',
+                title: context.tr('units_imperial'),
                 subtitle: 'Pounds (lbs), Feet & Inches (ft/in), Fluid Ounces (fl oz), Miles (mi)',
-                icon: Icons.straighten_rounded,
+                icon: CupertinoIcons.chart_bar,
                 isSelected: units == 'imperial',
                 color: AppColors.peach,
                 onTap: () => _saveUnits('imperial'),
@@ -144,15 +146,15 @@ class _UnitsPageState extends State<UnitsPage> {
                       ),
                     ),
                     const SizedBox(height: AppSpacing.sm),
-                    _buildConversionRow(context, 'Weight', units == 'metric' ? 'Kilograms (kg)' : 'Pounds (lbs)'),
+                    _buildConversionRow(context, context.tr('profile_weight'), units == 'metric' ? 'Kilograms (kg)' : 'Pounds (lbs)'),
                     const Divider(height: 16),
-                    _buildConversionRow(context, 'Height', units == 'metric' ? 'Centimeters (cm)' : 'Feet & Inches (ft/in)'),
+                    _buildConversionRow(context, context.tr('profile_height'), units == 'metric' ? 'Centimeters (cm)' : 'Feet & Inches (ft/in)'),
                     const Divider(height: 16),
-                    _buildConversionRow(context, 'Hydration', units == 'metric' ? 'Milliliters (ml)' : 'Fluid Ounces (fl oz)'),
+                    _buildConversionRow(context, context.tr('water'), units == 'metric' ? 'Milliliters (ml)' : 'Fluid Ounces (fl oz)'),
                     const Divider(height: 16),
                     _buildConversionRow(context, 'Distance', units == 'metric' ? 'Kilometers (km)' : 'Miles (mi)'),
                     const Divider(height: 16),
-                    _buildConversionRow(context, 'Energy', 'Kilocalories (kcal)'),
+                    _buildConversionRow(context, context.tr('calories'), 'Kilocalories (kcal)'),
                   ],
                 ),
               ),
@@ -221,7 +223,7 @@ class _UnitsPageState extends State<UnitsPage> {
             ),
             const SizedBox(width: AppSpacing.sm),
             Icon(
-              isSelected ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+              isSelected ? CupertinoIcons.checkmark_circle_fill : CupertinoIcons.circle,
               color: isSelected ? AppColors.mint : context.appSlate,
               size: 24,
             ),

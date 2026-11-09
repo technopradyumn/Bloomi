@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -18,7 +20,7 @@ class QuickAddSheet extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+          icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
           onPressed: () {
             if (context.canPop()) {
               context.pop();
@@ -26,10 +28,10 @@ class QuickAddSheet extends StatelessWidget {
               context.go('/home');
             }
           },
-          tooltip: 'Back',
+          tooltip: context.tr('back'),
         ),
         title: Text(
-          'Quick Log',
+          context.tr('home_quick_actions'),
           style: TextStyle(
             fontFamily: 'Baloo 2',
             fontSize: 20,
@@ -48,7 +50,7 @@ class QuickAddSheet extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Mindful, instant logging for food, water, and movement.',
+                context.tr('home_quick_log_hint'),
                 style: TextStyle(fontSize: 13, color: context.appSlate),
               ),
               const SizedBox(height: AppSpacing.lg),
@@ -59,9 +61,9 @@ class QuickAddSheet extends StatelessWidget {
                   Expanded(
                     child: _buildActionTile(
                       context: context,
-                      icon: Icons.search_rounded,
+                      icon: CupertinoIcons.search,
                       color: AppColors.mint,
-                      title: 'Search Food',
+                      title: context.tr('food_quick_search'),
                       subtitle: 'Browse 1,000+ foods',
                       onTap: () {
                         if (context.canPop()) context.pop();
@@ -73,9 +75,9 @@ class QuickAddSheet extends StatelessWidget {
                   Expanded(
                     child: _buildActionTile(
                       context: context,
-                      icon: Icons.qr_code_scanner_rounded,
+                      icon: CupertinoIcons.qrcode_viewfinder,
                       color: AppColors.peach,
-                      title: 'Scan Barcode 👑',
+                      title: context.tr('food_quick_barcode'),
                       subtitle: 'Premium package scan',
                       onTap: () {
                         if (context.canPop()) context.pop();
@@ -91,9 +93,9 @@ class QuickAddSheet extends StatelessWidget {
                   Expanded(
                     child: _buildActionTile(
                       context: context,
-                      icon: Icons.water_drop_rounded,
+                      icon: CupertinoIcons.drop_fill,
                       color: AppColors.sky,
-                      title: 'Add Water',
+                      title: context.tr('food_quick_water'),
                       subtitle: '+250 ml glass',
                       onTap: () async {
                         await sl<HomeRepository>().logWater(ml: 250);
@@ -102,7 +104,7 @@ class QuickAddSheet extends StatelessWidget {
                           BloomiToast.show(
                             context,
                             message: 'Logged 250 ml of water! Stay refreshed.',
-                            icon: Icons.water_drop_rounded,
+                            icon: CupertinoIcons.drop_fill,
                           );
                         }
                       },
@@ -112,9 +114,9 @@ class QuickAddSheet extends StatelessWidget {
                   Expanded(
                     child: _buildActionTile(
                       context: context,
-                      icon: Icons.edit_note_rounded,
+                      icon: CupertinoIcons.square_pencil,
                       color: AppColors.butter,
-                      title: 'Custom Food',
+                      title: context.tr('food_quick_custom'),
                       subtitle: 'Add custom recipe',
                       onTap: () {
                         if (context.canPop()) context.pop();

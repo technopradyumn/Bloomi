@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:camera/camera.dart';
@@ -240,7 +241,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (!widget.isActive) ...[
-              const Icon(Icons.camera_alt_rounded, size: 56, color: AppColors.mint),
+              const Icon(CupertinoIcons.camera_fill, size: 56, color: AppColors.mint),
               const SizedBox(height: AppSpacing.md),
               const Text(
                 'AI Meal Camera Standby',
@@ -268,7 +269,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                 style: TextStyle(color: Colors.white70, fontSize: 14),
               ),
             ] else ...[
-              const Icon(Icons.camera_alt_outlined, size: 64, color: Colors.white30),
+              const Icon(CupertinoIcons.camera, size: 64, color: Colors.white30),
               const SizedBox(height: AppSpacing.md),
               Text(
                 _cameraErrorMessage ?? 'Camera preview unavailable',
@@ -288,7 +289,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                       shape: const StadiumBorder(),
                     ),
                     onPressed: _initializeCamera,
-                    icon: const Icon(Icons.refresh_rounded, size: 18),
+                    icon: const Icon(CupertinoIcons.arrow_clockwise, size: 18),
                     label: const Text('Retry Camera'),
                   ),
                   OutlinedButton.icon(
@@ -298,7 +299,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                       shape: const StadiumBorder(),
                     ),
                     onPressed: () => context.push('/settings/permissions'),
-                    icon: const Icon(Icons.shield_outlined, size: 18),
+                    icon: const Icon(CupertinoIcons.shield, size: 18),
                     label: const Text('Manage Permissions'),
                   ),
                   OutlinedButton.icon(
@@ -308,7 +309,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                       shape: const StadiumBorder(),
                     ),
                     onPressed: _pickFromGallery,
-                    icon: const Icon(Icons.photo_library_rounded, size: 18),
+                    icon: const Icon(CupertinoIcons.photo_fill_on_rectangle_fill, size: 18),
                     label: const Text('Use Gallery'),
                   ),
                 ],
@@ -377,7 +378,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                           child: const Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Icon(Icons.restaurant_rounded,
+                              Icon(CupertinoIcons.cart_fill,
                                   color: AppColors.mint, size: 14),
                               SizedBox(width: 6),
                               Text(
@@ -409,7 +410,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                   if (!widget.isEmbedded)
                     IconButton(
                       onPressed: () => context.pop(),
-                      icon: const Icon(Icons.arrow_back_ios_new_rounded,
+                      icon: const Icon(CupertinoIcons.chevron_back,
                           color: Colors.white),
                       style: IconButton.styleFrom(
                         backgroundColor: Colors.black54,
@@ -427,7 +428,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                     child: const Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.auto_awesome_rounded,
+                        Icon(CupertinoIcons.wand_stars,
                             color: AppColors.mint, size: 16),
                         SizedBox(width: 6),
                         Text(
@@ -446,8 +447,8 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                     onPressed: _toggleFlash,
                     icon: Icon(
                       _isFlashOn
-                          ? Icons.flash_on_rounded
-                          : Icons.flash_off_rounded,
+                          ? CupertinoIcons.bolt_fill
+                          : CupertinoIcons.bolt_slash,
                       color: _isFlashOn ? AppColors.butter : Colors.white,
                     ),
                     style: IconButton.styleFrom(
@@ -478,7 +479,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                     child: const Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.tips_and_updates_rounded,
+                        Icon(CupertinoIcons.lightbulb_fill,
                             color: AppColors.butter, size: 15),
                         SizedBox(width: 6),
                         Text(
@@ -497,7 +498,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                       // Gallery Picker
                       IconButton(
                         onPressed: _pickFromGallery,
-                        icon: const Icon(Icons.photo_library_rounded,
+                        icon: const Icon(CupertinoIcons.photo_fill_on_rectangle_fill,
                             color: Colors.white, size: 26),
                         style: IconButton.styleFrom(
                           backgroundColor: Colors.black45,
@@ -535,7 +536,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                                     ),
                                   )
                                 : Icon(
-                                    Icons.camera_alt_rounded,
+                                    CupertinoIcons.camera_fill,
                                     color: Theme.of(context).colorScheme.onPrimary,
                                     size: 34,
                                   ),
@@ -552,7 +553,7 @@ class _CameraCapturePageState extends State<CameraCapturePage>
                                 'Bloomi recognizes multiple foods on one plate: rotis, sabzi, salads & rice!',
                           );
                         },
-                        icon: const Icon(Icons.info_outline_rounded,
+                        icon: const Icon(CupertinoIcons.info_circle,
                             color: Colors.white, size: 26),
                         style: IconButton.styleFrom(
                           backgroundColor: Colors.black45,

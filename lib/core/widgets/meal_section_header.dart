@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/metric_animations/health_metric_animations.dart';
 import 'package:flutter/material.dart';
@@ -68,7 +69,7 @@ class MealSectionHeader extends StatelessWidget {
         if (onAddPressed != null)
           IconButton(
             onPressed: onAddPressed,
-            icon: Icon(Icons.add_circle_outline_rounded, color: primaryTextColor),
+            icon: Icon(CupertinoIcons.add_circled, color: primaryTextColor),
             tooltip: 'Add food to $title',
             constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
           ),

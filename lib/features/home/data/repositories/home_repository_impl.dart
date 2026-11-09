@@ -6,6 +6,7 @@ import 'package:bloomi/core/utils/health_calculators.dart';
 import 'package:bloomi/core/widgets/macro_bars.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/features/food/data/models/nutrient_snapshot_model.dart';
+import 'package:bloomi/features/health/domain/repositories/health_repository.dart';
 import 'package:bloomi/features/home/data/local/home_local_data_source.dart';
 import 'package:bloomi/features/home/domain/entities/home_dashboard_entity.dart';
 import 'package:bloomi/features/home/domain/repositories/home_repository.dart';
@@ -238,12 +239,17 @@ class HomeRepositoryImpl implements HomeRepository {
       emitCurrent();
     });
 
+    final sub6 = sl<HealthRepository>().watchWorkoutLogs().listen((_) {
+      emitCurrent();
+    });
+
     controller.onCancel = () {
       sub1.cancel();
       sub2.cancel();
       sub3.cancel();
       sub4.cancel();
       sub5.cancel();
+      sub6.cancel();
     };
 
     return controller.stream;

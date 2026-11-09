@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 enum AppThemeMode {
   system,
@@ -41,11 +42,11 @@ enum AppThemeMode {
   IconData get icon {
     switch (this) {
       case AppThemeMode.system:
-        return Icons.brightness_auto_rounded;
+        return CupertinoIcons.brightness;
       case AppThemeMode.light:
-        return Icons.wb_sunny_rounded;
+        return CupertinoIcons.sun_max_fill;
       case AppThemeMode.dark:
-        return Icons.nights_stay_rounded;
+        return CupertinoIcons.moon_stars_fill;
     }
   }
 }

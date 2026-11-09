@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/utils/health_calculators.dart';
@@ -97,7 +98,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
             'Gentle Weight Loss',
             'Sustainable ~0.25 kg/wk deficit. Easy to maintain with no hunger pangs.',
             calcTarget(HealthGoal.loseGently),
-            Icons.trending_down_rounded,
+            CupertinoIcons.arrow_down_right,
             AppColors.mint,
           ),
           (
@@ -105,7 +106,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
             'Standard Weight Loss',
             'Evidence-based ~500 kcal deficit (~0.5 kg/wk). Recommended by clinical nutrition research.',
             calcTarget(HealthGoal.loseStandard),
-            Icons.speed_rounded,
+            CupertinoIcons.waveform_path_ecg,
             AppColors.sky,
           ),
           (
@@ -113,7 +114,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
             'Stay Healthy & Maintain',
             'Matches your calculated Total Daily Energy Expenditure (TDEE). Feel energized and vibrant.',
             calcTarget(HealthGoal.maintain),
-            Icons.favorite_rounded,
+            CupertinoIcons.heart_fill,
             AppColors.butter,
           ),
           (
@@ -121,7 +122,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
             'Build Muscle & Strength',
             'Protein-dense slight surplus designed for strength training and muscle protein synthesis.',
             calcTarget(HealthGoal.gainMuscle),
-            Icons.fitness_center_rounded,
+            CupertinoIcons.bolt_fill,
             AppColors.peach,
           ),
           (
@@ -129,7 +130,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
             'Gentle Weight Gain',
             'Nourishing surplus for healthy, steady mass and energy replenishment.',
             calcTarget(HealthGoal.gainGentle),
-            Icons.arrow_upward_rounded,
+            CupertinoIcons.arrow_up,
             AppColors.lilac,
           ),
         ];
@@ -146,7 +147,7 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
               backgroundColor: Colors.transparent,
               elevation: 0,
               leading: IconButton(
-                icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+                icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
                 onPressed: _handleBack,
               ),
               title: widget.isStandalone
@@ -390,8 +391,8 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
                             ? 'Save Changes'
                             : 'Continue to Lifestyle',
                         icon: widget.isStandalone
-                            ? Icons.check_rounded
-                            : Icons.arrow_forward_rounded,
+                            ? CupertinoIcons.checkmark
+                            : CupertinoIcons.arrow_right,
                         isLoading: _isSavingStandalone,
                         fullWidth: true,
                         height: 52,

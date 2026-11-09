@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/macro_bars.dart';
@@ -22,7 +23,7 @@ class DailyNutritionDetailPage extends StatelessWidget {
         backgroundColor: context.appSurface,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+          icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -326,7 +327,7 @@ class DailyNutritionDetailPage extends StatelessWidget {
                         child: Row(
                           children: [
                             Icon(
-                              Icons.info_outline,
+                              CupertinoIcons.info_circle,
                               size: 16,
                               color: context.appInk,
                             ),
@@ -361,7 +362,7 @@ class DailyNutritionDetailPage extends StatelessWidget {
                   child: Row(
                     children: [
                       Icon(
-                        Icons.info_outline_rounded,
+                        CupertinoIcons.info_circle,
                         color: context.appInk,
                         size: 20,
                       ),

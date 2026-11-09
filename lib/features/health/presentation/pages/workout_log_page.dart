@@ -1,10 +1,13 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/database/app_database.dart';
 import 'package:bloomi/core/widgets/pill_button.dart';
 import 'package:bloomi/features/health/domain/repositories/health_repository.dart';
-import 'package:bloomi/features/health/presentation/widgets/workout_editor_dialog.dart';
+import 'package:bloomi/features/health/presentation/pages/workout_editor_page.dart';
+import 'package:drift/drift.dart' as drift;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -16,8 +19,67 @@ class WorkoutLogPage extends StatefulWidget {
 }
 
 class _WorkoutLogPageState extends State<WorkoutLogPage> {
-  void _showAddWorkoutDialog() {
-    showWorkoutEditorDialog(context);
+  void _openAddWorkoutScreen() {
+    Navigator.of(context).push(
+      CupertinoPageRoute<void>(
+        builder: (_) => const WorkoutEditorPage(),
+      ),
+    );
+  }
+
+  void _openEditWorkoutScreen(WorkoutLog workout) {
+    Navigator.of(context).push(
+      CupertinoPageRoute<void>(
+        builder: (_) => WorkoutEditorPage(existingWorkout: workout),
+      ),
+    );
+  }
+
+  Future<void> _confirmAndDelete(WorkoutLog workout) async {
+    final confirmed = await showCupertinoDialog<bool>(
+      context: context,
+      builder: (ctx) => CupertinoAlertDialog(
+        title: Text('${context.tr('delete')}?'),
+        content: Text(
+          'Are you sure you want to delete "${workout.type}" (${workout.durationMinutes} mins)?',
+        ),
+        actions: [
+          CupertinoDialogAction(
+            isDefaultAction: true,
+            onPressed: () => Navigator.pop(ctx, false),
+            child: Text(context.tr('cancel')),
+          ),
+          CupertinoDialogAction(
+            isDestructiveAction: true,
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(context.tr('delete')),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed == true && mounted) {
+      await sl<HealthRepository>().softDeleteWorkoutLog(workout.id);
+      if (mounted) {
+        final messenger = ScaffoldMessenger.of(context);
+        messenger.hideCurrentSnackBar();
+        messenger.showSnackBar(
+          SnackBar(
+            content: Text('Deleted "${workout.type}" workout'),
+            duration: const Duration(seconds: 4),
+            action: SnackBarAction(
+              label: 'Undo',
+              textColor: Theme.of(context).colorScheme.primary,
+              onPressed: () async {
+                final db = sl<AppDatabase>();
+                await (db.update(db.workoutLogs)..where((tbl) => tbl.id.equals(workout.id)))
+                    .write(const WorkoutLogsCompanion(deleted: drift.Value(false)));
+              },
+            ),
+          ),
+        );
+      }
+    }
   }
 
   @override
@@ -28,7 +90,7 @@ class _WorkoutLogPageState extends State<WorkoutLogPage> {
       backgroundColor: context.appBackground,
       appBar: AppBar(
         title: Text(
-          'Workout Log',
+          context.tr('workout_title'),
           style: TextStyle(
             fontFamily: 'Baloo 2',
             fontWeight: FontWeight.w700,
@@ -40,9 +102,9 @@ class _WorkoutLogPageState extends State<WorkoutLogPage> {
         elevation: 0,
         actions: [
           IconButton(
-            icon: Icon(Icons.add_rounded, color: context.appInk),
-            tooltip: 'Log Workout',
-            onPressed: _showAddWorkoutDialog,
+            icon: Icon(CupertinoIcons.add, color: context.appInk),
+            tooltip: context.tr('workout_add_exercise'),
+            onPressed: _openAddWorkoutScreen,
           ),
         ],
       ),
@@ -73,7 +135,7 @@ class _WorkoutLogPageState extends State<WorkoutLogPage> {
                         color: AppColors.lilac.withAlpha(context.isDarkMode ? 80 : 255),
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(Icons.fitness_center_rounded, color: context.appInk, size: 26),
+                      child: Icon(CupertinoIcons.bolt_fill, color: context.appInk, size: 26),
                     ),
                     const SizedBox(width: AppSpacing.md),
                     Expanded(
@@ -116,9 +178,9 @@ class _WorkoutLogPageState extends State<WorkoutLogPage> {
                     ),
                   ),
                   TextButton.icon(
-                    onPressed: _showAddWorkoutDialog,
-                    icon: const Icon(Icons.add_rounded, size: 18),
-                    label: const Text('Add Workout'),
+                    onPressed: _openAddWorkoutScreen,
+                    icon: const Icon(CupertinoIcons.add, size: 18),
+                    label: Text(context.tr('workout_add_exercise')),
                   ),
                 ],
               ),
@@ -134,7 +196,7 @@ class _WorkoutLogPageState extends State<WorkoutLogPage> {
                   child: Center(
                     child: Column(
                       children: [
-                        Icon(Icons.directions_run_rounded, size: 48, color: context.appSlate),
+                        Icon(CupertinoIcons.flame_fill, size: 48, color: context.appSlate),
                         const SizedBox(height: AppSpacing.sm),
                         Text(
                           'No workouts logged yet',
@@ -150,7 +212,7 @@ class _WorkoutLogPageState extends State<WorkoutLogPage> {
                         PillButton(
                           label: '+ Log Workout',
                           variant: PillButtonVariant.primary,
-                          onPressed: _showAddWorkoutDialog,
+                          onPressed: _openAddWorkoutScreen,
                         ),
                       ],
                     ),
@@ -183,18 +245,18 @@ class _WorkoutLogPageState extends State<WorkoutLogPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           IconButton(
-                            icon: Icon(Icons.edit_outlined, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 20),
-                            tooltip: 'Edit Workout',
-                            onPressed: () => showWorkoutEditorDialog(context, workout: w),
+                            icon: Icon(CupertinoIcons.pencil, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 20),
+                            tooltip: context.tr('edit'),
+                            onPressed: () => _openEditWorkoutScreen(w),
                           ),
                           IconButton(
-                            icon: Icon(Icons.delete_outline_rounded, color: context.appSlate, size: 20),
-                            tooltip: 'Delete Workout',
-                            onPressed: () => confirmAndDeleteWorkout(context, workout: w),
+                            icon: Icon(CupertinoIcons.trash, color: context.appSlate, size: 20),
+                            tooltip: context.tr('delete'),
+                            onPressed: () => _confirmAndDelete(w),
                           ),
                         ],
                       ),
-                      onTap: () => showWorkoutEditorDialog(context, workout: w),
+                      onTap: () => _openEditWorkoutScreen(w),
                     ),
                   );
                 }),
@@ -226,17 +288,17 @@ class _WorkoutLogPageState extends State<WorkoutLogPage> {
   IconData _getActivityIcon(String type) {
     switch (type.toLowerCase()) {
       case 'running':
-        return Icons.directions_run_rounded;
+        return CupertinoIcons.flame_fill;
       case 'yoga':
-        return Icons.self_improvement_rounded;
+        return CupertinoIcons.sportscourt_fill;
       case 'cycling':
-        return Icons.directions_bike_rounded;
+        return CupertinoIcons.sportscourt_fill;
       case 'swimming':
-        return Icons.pool_rounded;
+        return CupertinoIcons.sportscourt_fill;
       case 'strength training':
-        return Icons.fitness_center_rounded;
+        return CupertinoIcons.bolt_fill;
       default:
-        return Icons.directions_walk_rounded;
+        return CupertinoIcons.compass;
     }
   }
 }

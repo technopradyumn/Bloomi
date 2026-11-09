@@ -1,7 +1,10 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
+import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/empty_state_widget.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/core/widgets/metric_animations/health_metric_animations.dart';
@@ -10,8 +13,9 @@ import 'package:bloomi/features/insights/domain/repositories/insights_repository
 import 'package:bloomi/features/settings/domain/entities/reminder_entity.dart';
 import 'package:bloomi/features/settings/domain/repositories/settings_repository.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class NotificationsPage extends StatefulWidget {
   const NotificationsPage({super.key});
@@ -24,148 +28,271 @@ class _NotificationsPageState extends State<NotificationsPage> {
   StreamSubscription<List<ReminderEntity>>? _remindersSub;
   StreamSubscription<List<BadgeEntity>>? _badgesSub;
 
-  final Map<String, Timer> _pendingDeletionTimers = {};
+  static const String _deletedPrefKey = 'bloomi_permanent_deleted_notifications';
+  final Set<String> _deletedIds = {};
 
-  List<Map<String, String>> _reminders = [
-    {
-      'id': 'water_default',
-      'title': 'Stay Hydrated 💧',
-      'message': 'Keep your body happy with a mindful glass of water.',
-      'time': 'Scheduled every 2 hrs',
-      'route': '/food/water',
-      'type': 'water',
-    },
-    {
-      'id': 'lunch_default',
-      'title': 'Lunch Check-in 🥗',
-      'message': 'Remember to log your delicious afternoon meal.',
-      'time': 'Daily at 1:00 PM',
-      'route': '/food',
-      'type': 'lunch',
-    },
-    {
-      'id': 'sleep_default',
-      'title': 'Evening Wind-down 🌙',
-      'message': 'Check your daily macro targets before sleep.',
-      'time': 'Daily at 9:00 PM',
-      'route': '/health/sleep',
-      'type': 'sleep',
-    },
-  ];
+  bool _isSelectionMode = false;
+  final Set<String> _selectedIds = {};
 
-  List<Map<String, String>> _milestones = [
-    {
-      'id': 'welcome_milestone',
-      'title': 'Welcome to Bloomi! 🌱',
-      'message': 'Your mindful, offline-first health tracking begins today.',
-      'time': 'Today',
-      'route': '/plan',
-      'icon': '🌱',
-      'actionLabel': 'View Plan',
-    },
-    {
-      'id': 'privacy_milestone',
-      'title': 'Privacy First 🔒',
-      'message': 'Your data stays completely private on your device & Drive.',
-      'time': 'Verified Offline',
-      'route': '/settings/privacy',
-      'icon': '🔒',
-      'actionLabel': 'Privacy Details',
-    },
-  ];
+  List<Map<String, String>> _reminders = [];
+  List<Map<String, String>> _milestones = [];
 
   @override
   void initState() {
     super.initState();
+    _populateDefaultNotifications();
+    _loadDeletedIds();
     _loadLiveNotifications();
   }
 
   @override
   void dispose() {
-    for (final timer in _pendingDeletionTimers.values) {
-      timer.cancel();
-    }
     _remindersSub?.cancel();
     _badgesSub?.cancel();
     super.dispose();
   }
 
+  Future<void> _loadDeletedIds() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final savedList = prefs.getStringList(_deletedPrefKey) ?? [];
+      if (savedList.isNotEmpty && mounted) {
+        setState(() {
+          _deletedIds.addAll(savedList);
+          _reminders.removeWhere((item) => _deletedIds.contains(item['id']));
+          _milestones.removeWhere((item) => _deletedIds.contains(item['id']));
+        });
+      }
+    } catch (_) {}
+  }
+
+  Future<void> _persistDeletedIds() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setStringList(_deletedPrefKey, _deletedIds.toList());
+    } catch (_) {}
+  }
+
+  void _populateDefaultNotifications() {
+    final now = DateTime.now();
+    final todayStr = DateFormat('MMM d').format(now);
+    final tomorrowStr = DateFormat('MMM d').format(now.add(const Duration(days: 1)));
+
+    // Generate upcoming preview occurrences for reminders with date and time
+    final List<Map<String, String>> initial = [
+      {
+        'id': 'water_today_1',
+        'title': 'Stay Hydrated 💧',
+        'message': 'Keep your body happy with a mindful glass of water.',
+        'time': 'Today, $todayStr · 10:00 AM',
+        'route': '/food/water',
+        'type': 'water',
+      },
+      {
+        'id': 'lunch_today',
+        'title': 'Lunch Check-in 🥗',
+        'message': 'Remember to log your delicious afternoon meal.',
+        'time': 'Today, $todayStr · 01:00 PM',
+        'route': '/food',
+        'type': 'lunch',
+      },
+      {
+        'id': 'sleep_today',
+        'title': 'Evening Wind-down 🌙',
+        'message': 'Check your daily macro targets before sleep.',
+        'time': 'Today, $todayStr · 09:00 PM',
+        'route': '/health/sleep',
+        'type': 'sleep',
+      },
+      {
+        'id': 'water_today_2',
+        'title': 'Afternoon Hydration 💧',
+        'message': 'Drink 250ml water for refreshing focus.',
+        'time': 'Today, $todayStr · 03:00 PM',
+        'route': '/food/water',
+        'type': 'water',
+      },
+      {
+        'id': 'dinner_today',
+        'title': 'Dinner Reminder 🍲',
+        'message': 'Mindful evening nourishment: Log your balanced dinner.',
+        'time': 'Today, $todayStr · 08:30 PM',
+        'route': '/food',
+        'type': 'dinner',
+      },
+      {
+        'id': 'water_tomorrow_1',
+        'title': 'Morning Water 💧',
+        'message': 'Start your day with 1 fresh glass of water.',
+        'time': 'Tomorrow, $tomorrowStr · 08:00 AM',
+        'route': '/food/water',
+        'type': 'water',
+      },
+      {
+        'id': 'breakfast_tomorrow',
+        'title': 'Breakfast Check-in 🍳',
+        'message': 'Fuel your day with mindful morning breakfast.',
+        'time': 'Tomorrow, $tomorrowStr · 09:00 AM',
+        'route': '/food',
+        'type': 'breakfast',
+      },
+    ];
+
+    final List<Map<String, String>> initialMilestones = [
+      {
+        'id': 'welcome_milestone',
+        'title': 'Welcome to Bloomi! 🌱',
+        'message': 'Your mindful, offline-first health tracking begins today.',
+        'time': 'Today, $todayStr · Started',
+        'route': '/plan',
+        'icon': '🌱',
+        'actionLabel': 'View Plan',
+      },
+      {
+        'id': 'privacy_milestone',
+        'title': 'Privacy First 🔒',
+        'message': 'Your health data stays 100% private on your device & Drive.',
+        'time': 'Today, $todayStr · Verified Offline',
+        'route': '/settings/privacy',
+        'icon': '🔒',
+        'actionLabel': 'Privacy Details',
+      },
+    ];
+
+    _reminders = initial.where((item) => !_deletedIds.contains(item['id'])).toList();
+    _milestones = initialMilestones.where((item) => !_deletedIds.contains(item['id'])).toList();
+  }
+
   void _loadLiveNotifications() {
-    // 1. Listen for real reminders from SettingsRepository if registered
     if (sl.isRegistered<SettingsRepository>()) {
       try {
         final settingsRepo = sl<SettingsRepository>();
         _remindersSub = settingsRepo.watchReminders().listen((list) {
           if (!mounted) return;
           if (list.isNotEmpty) {
-            final mapped = list.map((r) {
+            final now = DateTime.now();
+            final todayStr = DateFormat('MMM d').format(now);
+            final tomorrowStr = DateFormat('MMM d').format(now.add(const Duration(days: 1)));
+            final dayAfterStr = DateFormat('MMM d').format(now.add(const Duration(days: 2)));
+
+            final expandedItems = <Map<String, String>>[];
+
+            for (final r in list) {
+              if (!r.enabled) continue;
+
               String route = '/settings/reminders';
               String title = 'Wellness Reminder 🌸';
-              String message = 'Mindful wellness check-in at ${r.time}';
+              String msg = 'Mindful wellness check-in';
 
               switch (r.type.toLowerCase()) {
                 case 'water':
                   route = '/food/water';
                   title = 'Stay Hydrated 💧';
-                  message = 'Drink a mindful glass of water (${r.time})';
+                  msg = 'Drink a mindful glass of water';
                   break;
                 case 'breakfast':
                   route = '/food';
                   title = 'Breakfast Check-in 🍳';
-                  message = 'Log your morning nourishment (${r.time})';
+                  msg = 'Log your morning breakfast nourishment';
                   break;
                 case 'lunch':
                   route = '/food';
                   title = 'Lunch Check-in 🥗';
-                  message = 'Log your delicious afternoon meal (${r.time})';
+                  msg = 'Log your delicious afternoon meal';
                   break;
                 case 'dinner':
                   route = '/food';
                   title = 'Dinner Reminder 🍲';
-                  message = 'Log your evening dinner (${r.time})';
+                  msg = 'Log your evening dinner';
                   break;
                 case 'weight':
                   route = '/health/weight';
                   title = 'Weekly Weigh-in ⚖️';
-                  message = 'Track your weekly body metrics on Bloomi (${r.time})';
+                  msg = 'Track your weekly body metrics on Bloomi';
                   break;
                 case 'sleep':
                   route = '/health/sleep';
                   title = 'Evening Wind-down 🌙';
-                  message = 'Unwind and check daily targets (${r.time})';
+                  msg = 'Unwind and check daily targets';
                   break;
               }
 
-              return {
-                'id': r.id,
-                'title': title,
-                'message': message,
-                'time': r.enabled ? 'Active · ${r.time}' : 'Paused · ${r.time}',
-                'route': route,
-                'type': r.type,
-              };
-            }).where((item) => !_pendingDeletionTimers.containsKey(item['id'])).toList();
+              if (r.type.toLowerCase() == 'water') {
+                // Repeating water reminder: expand into scheduled occurrences
+                final times = ['10:00 AM', '12:00 PM', '02:00 PM', '04:00 PM', '06:00 PM'];
+                for (int i = 0; i < times.length; i++) {
+                  final occId = '${r.id}_today_$i';
+                  expandedItems.add({
+                    'id': occId,
+                    'title': title,
+                    'message': '$msg (${times[i]})',
+                    'time': 'Today, $todayStr · ${times[i]}',
+                    'route': route,
+                    'type': r.type,
+                  });
+                }
+                expandedItems.add({
+                  'id': '${r.id}_tomorrow_0',
+                  'title': title,
+                  'message': '$msg (08:00 AM)',
+                  'time': 'Tomorrow, $tomorrowStr · 08:00 AM',
+                  'route': route,
+                  'type': r.type,
+                });
+              } else {
+                // Daily repeating reminder: expand upcoming occurrences
+                expandedItems.add({
+                  'id': '${r.id}_today',
+                  'title': title,
+                  'message': '$msg (${r.time})',
+                  'time': 'Today, $todayStr · ${r.time}',
+                  'route': route,
+                  'type': r.type,
+                });
+                expandedItems.add({
+                  'id': '${r.id}_tomorrow',
+                  'title': title,
+                  'message': '$msg (${r.time})',
+                  'time': 'Tomorrow, $tomorrowStr · ${r.time}',
+                  'route': route,
+                  'type': r.type,
+                });
+                expandedItems.add({
+                  'id': '${r.id}_dayafter',
+                  'title': title,
+                  'message': '$msg (${r.time})',
+                  'time': '$dayAfterStr · ${r.time}',
+                  'route': route,
+                  'type': r.type,
+                });
+              }
+            }
 
-            setState(() {
-              _reminders = mapped;
-            });
+            final filtered = expandedItems.where((item) => !_deletedIds.contains(item['id'])).toList();
+            if (filtered.isNotEmpty) {
+              setState(() {
+                _reminders = filtered;
+              });
+            }
           }
         });
       } catch (_) {}
     }
 
-    // 2. Listen for real unlocked badges from InsightsRepository if registered
     if (sl.isRegistered<InsightsRepository>()) {
       try {
         final insightsRepo = sl<InsightsRepository>();
         _badgesSub = insightsRepo.watchBadges().listen((badges) {
           if (!mounted) return;
+          final now = DateTime.now();
+          final todayStr = DateFormat('MMM d').format(now);
+
           final dynamicMilestones = <Map<String, String>>[
             {
               'id': 'welcome_milestone',
               'title': 'Welcome to Bloomi! 🌱',
               'message': 'Your mindful, offline-first health tracking begins today.',
-              'time': 'Started',
+              'time': 'Today, $todayStr · Started',
               'route': '/plan',
               'icon': '🌱',
               'actionLabel': 'View Plan',
@@ -174,7 +301,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
               'id': 'privacy_milestone',
               'title': 'Privacy First 🔒',
               'message': 'Your data stays completely private on your device & Drive.',
-              'time': 'Verified Offline',
+              'time': 'Today, $todayStr · Verified Offline',
               'route': '/settings/privacy',
               'icon': '🔒',
               'actionLabel': 'Privacy Details',
@@ -183,10 +310,10 @@ class _NotificationsPageState extends State<NotificationsPage> {
 
           for (final b in badges) {
             dynamicMilestones.add({
-              'id': b.id,
+              'id': 'badge_${b.id}',
               'title': '${b.title} ${b.icon}',
               'message': b.description,
-              'time': b.isUnlocked ? 'Unlocked 🎉' : 'In Progress (streak: ${b.streakCounter})',
+              'time': b.isUnlocked ? 'Today, $todayStr · Unlocked 🎉' : 'Today, $todayStr · In Progress (streak: ${b.streakCounter})',
               'route': '/insights/streaks',
               'icon': b.icon,
               'actionLabel': 'View Streaks',
@@ -194,230 +321,75 @@ class _NotificationsPageState extends State<NotificationsPage> {
           }
 
           setState(() {
-            _milestones = dynamicMilestones.where((m) => !_pendingDeletionTimers.containsKey(m['id'])).toList();
+            _milestones = dynamicMilestones.where((m) => !_deletedIds.contains(m['id'])).toList();
           });
         });
       } catch (_) {}
     }
   }
 
-  void _onNotificationTapped(String route) {
-    HapticFeedback.lightImpact();
-    context.push(route);
-  }
-
-  void _permanentlyDeleteReminder(String id) {
-    _pendingDeletionTimers.remove(id);
-    // Work with offline-first local storage without breaking sync
-    if (sl.isRegistered<SettingsRepository>()) {
-      try {
-        sl<SettingsRepository>().toggleReminder(id, false);
-      } catch (_) {}
+  void _onNotificationTapped(String route, String id) {
+    if (_isSelectionMode) {
+      _toggleSelection(id);
+    } else {
+      context.push(route);
     }
   }
 
-  void _dismissReminder(int index) {
-    final item = _reminders[index];
-    final originalIndex = index;
-    final id = item['id'] ?? item['title'] ?? '$index';
+  void _onNotificationLongPress(String id) {
+    setState(() {
+      _isSelectionMode = true;
+      _selectedIds.add(id);
+    });
+  }
+
+  void _toggleSelection(String id) {
+    setState(() {
+      if (_selectedIds.contains(id)) {
+        _selectedIds.remove(id);
+        if (_selectedIds.isEmpty) {
+          _isSelectionMode = false;
+        }
+      } else {
+        _selectedIds.add(id);
+      }
+    });
+  }
+
+  void _selectAll(int tabIndex) {
+    final currentList = tabIndex == 0 ? _reminders : _milestones;
+    setState(() {
+      _selectedIds.addAll(currentList.map((item) => item['id']!));
+    });
+  }
+
+  Future<void> _deleteSelected(int tabIndex) async {
+    if (_selectedIds.isEmpty) return;
+
+    final count = _selectedIds.length;
+    _deletedIds.addAll(_selectedIds);
+    await _persistDeletedIds();
 
     setState(() {
-      _reminders.removeAt(index);
+      _reminders.removeWhere((item) => _selectedIds.contains(item['id']));
+      _milestones.removeWhere((item) => _selectedIds.contains(item['id']));
+      _selectedIds.clear();
+      _isSelectionMode = false;
     });
 
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          '${item['title']} dismissed',
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-        ),
-        duration: const Duration(seconds: 4),
-        behavior: SnackBarBehavior.floating,
-        action: SnackBarAction(
-          label: 'UNDO',
-          textColor: AppColors.mint,
-          onPressed: () {
-            _pendingDeletionTimers[id]?.cancel();
-            _pendingDeletionTimers.remove(id);
-            setState(() {
-              final insertIdx = originalIndex.clamp(0, _reminders.length);
-              _reminders.insert(insertIdx, item);
-            });
-          },
-        ),
-      ),
-    );
-
-    _pendingDeletionTimers[id] = Timer(const Duration(milliseconds: 4500), () {
-      _permanentlyDeleteReminder(id);
-    });
-  }
-
-  void _clearAllReminders() {
-    if (_reminders.isEmpty) return;
-    final backup = List<Map<String, String>>.from(_reminders);
-
-    setState(() {
-      _reminders.clear();
-    });
-
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text('All reminders cleared'),
-        duration: const Duration(seconds: 4),
-        behavior: SnackBarBehavior.floating,
-        action: SnackBarAction(
-          label: 'UNDO',
-          textColor: AppColors.mint,
-          onPressed: () {
-            setState(() {
-              _reminders = backup;
-            });
-          },
-        ),
-      ),
-    );
-  }
-
-  void _dismissMilestone(int index) {
-    final item = _milestones[index];
-    final originalIndex = index;
-
-    setState(() {
-      _milestones.removeAt(index);
-    });
-
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text(
-          'Milestone card dismissed',
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-        ),
-        duration: const Duration(seconds: 4),
-        behavior: SnackBarBehavior.floating,
-        action: SnackBarAction(
-          label: 'UNDO',
-          textColor: AppColors.mint,
-          onPressed: () {
-            setState(() {
-              final insertIdx = originalIndex.clamp(0, _milestones.length);
-              _milestones.insert(insertIdx, item);
-            });
-          },
-        ),
-      ),
-    );
-  }
-
-  void _clearAllMilestones() {
-    if (_milestones.isEmpty) return;
-    final backup = List<Map<String, String>>.from(_milestones);
-
-    setState(() {
-      _milestones.clear();
-    });
-
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text('All milestone cards cleared'),
-        duration: const Duration(seconds: 4),
-        behavior: SnackBarBehavior.floating,
-        action: SnackBarAction(
-          label: 'UNDO',
-          textColor: AppColors.mint,
-          onPressed: () {
-            setState(() {
-              _milestones = backup;
-            });
-          },
-        ),
-      ),
-    );
-  }
-
-  String _getReminderRoute(Map<String, String> item) {
-    if (item['route'] != null && item['route']!.isNotEmpty) {
-      return item['route']!;
+    if (mounted) {
+      BloomiToast.show(context, message: 'Permanently deleted $count notifications 🗑️');
     }
-    final title = (item['title'] ?? '').toLowerCase();
-    final message = (item['message'] ?? '').toLowerCase();
-    if (title.contains('water') || title.contains('hydrat') || message.contains('water')) {
-      return '/food/water';
-    }
-    if (title.contains('lunch') ||
-        title.contains('breakfast') ||
-        title.contains('dinner') ||
-        title.contains('meal') ||
-        message.contains('meal')) {
-      return '/food';
-    }
-    if (title.contains('wind-down') ||
-        title.contains('sleep') ||
-        title.contains('bedtime') ||
-        message.contains('sleep')) {
-      return '/health/sleep';
-    }
-    if (title.contains('weigh') || title.contains('weight') || message.contains('weight')) {
-      return '/health/weight';
-    }
-    if (title.contains('workout') || title.contains('exercise') || title.contains('steps')) {
-      return '/health/workout';
-    }
-    return '/settings/reminders';
-  }
-
-  String _getMilestoneRoute(Map<String, String> item) {
-    if (item['route'] != null && item['route']!.isNotEmpty) {
-      return item['route']!;
-    }
-    final title = (item['title'] ?? '').toLowerCase();
-    if (title.contains('privacy')) {
-      return '/settings/privacy';
-    }
-    if (title.contains('welcome') || title.contains('plan') || title.contains('target')) {
-      return '/plan';
-    }
-    return '/insights/streaks';
-  }
-
-  String _getMilestoneMetricType(Map<String, String> item) {
-    final title = (item['title'] ?? '').toLowerCase();
-    final message = (item['message'] ?? '').toLowerCase();
-    if (title.contains('water') || message.contains('water')) return 'water';
-    if (title.contains('step') || message.contains('step') || message.contains('walk')) return 'steps';
-    if (title.contains('heart') || message.contains('heart') || message.contains('pulse')) return 'heart_rate';
-    if (title.contains('sleep') || message.contains('sleep') || message.contains('night')) return 'sleep';
-    if (title.contains('calor') || message.contains('calor') || title.contains('burn')) return 'calories';
-    if (title.contains('streak') || title.contains('bloom') || title.contains('plant')) return 'vegetarian';
-    return 'milestone';
   }
 
   Color _getReminderColor(String? type, String title, BuildContext context) {
     final t = (type ?? title).toLowerCase();
-    if (t.contains('water') || t.contains('hydrat')) {
-      return AppColors.sky;
-    }
-    if (t.contains('breakfast') || t.contains('morning')) {
-      return AppColors.peach;
-    }
-    if (t.contains('lunch') || t.contains('meal')) {
-      return context.appMint;
-    }
-    if (t.contains('dinner')) {
-      return AppColors.softOrange;
-    }
-    if (t.contains('sleep') || t.contains('wind-down')) {
-      return AppColors.lilac;
-    }
-    if (t.contains('weight')) {
-      return AppColors.butter;
-    }
+    if (t.contains('water') || t.contains('hydrat')) return AppColors.sky;
+    if (t.contains('breakfast') || t.contains('morning')) return AppColors.peach;
+    if (t.contains('lunch') || t.contains('meal')) return context.appMint;
+    if (t.contains('dinner')) return AppColors.softOrange;
+    if (t.contains('sleep') || t.contains('wind-down')) return AppColors.lilac;
+    if (t.contains('weight')) return AppColors.butter;
     return context.appMint;
   }
 
@@ -425,69 +397,98 @@ class _NotificationsPageState extends State<NotificationsPage> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
-      child: Scaffold(
-        backgroundColor: context.appBackground,
-        appBar: AppBar(
-          backgroundColor: context.appSurface,
-          elevation: 0,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
-            onPressed: () {
-              if (context.canPop()) {
-                context.pop();
-              }
-            },
-          ),
-          title: Text(
-            'Notifications',
-            style: TextStyle(
-              fontFamily: 'Baloo 2',
-              fontWeight: FontWeight.w700,
-              fontSize: 22,
-              color: context.appInk,
+      child: Builder(
+        builder: (ctx) {
+          final tabController = DefaultTabController.of(ctx);
+          return Scaffold(
+            backgroundColor: context.appBackground,
+            appBar: AppBar(
+              backgroundColor: context.appSurface,
+              elevation: 0,
+              leading: _isSelectionMode
+                  ? IconButton(
+                      icon: const Icon(CupertinoIcons.clear),
+                      onPressed: () {
+                        setState(() {
+                          _isSelectionMode = false;
+                          _selectedIds.clear();
+                        });
+                      },
+                    )
+                  : IconButton(
+                      icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
+                      onPressed: () {
+                        if (context.canPop()) context.pop();
+                      },
+                    ),
+              title: Text(
+                _isSelectionMode ? '${_selectedIds.length} ${context.tr('select')}' : context.tr('notifications'),
+                style: TextStyle(
+                  fontFamily: 'Baloo 2',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 22,
+                  color: context.appInk,
+                ),
+              ),
+              actions: [
+                if (_isSelectionMode) ...[
+                  TextButton(
+                    onPressed: () => _selectAll(tabController.index),
+                    child: Text(
+                      context.tr('all'),
+                      style: TextStyle(
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w700,
+                        color: context.appInk,
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(CupertinoIcons.trash_fill, color: Theme.of(context).colorScheme.error),
+                    tooltip: context.tr('delete'),
+                    onPressed: () => _deleteSelected(tabController.index),
+                  ),
+                ] else ...[
+                  // Replaced standard settings icon with dedicated Reminder Settings button
+                  TextButton.icon(
+                    style: TextButton.styleFrom(
+                      foregroundColor: context.appInk,
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    ),
+                    icon: const Icon(CupertinoIcons.alarm, size: 18, color: AppColors.mintDark),
+                    label: Text(
+                      context.tr('reminders'),
+                      style: TextStyle(
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 13,
+                        color: context.appInk,
+                      ),
+                    ),
+                    onPressed: () => context.push('/settings/reminders'),
+                  ),
+                ],
+              ],
+              bottom: TabBar(
+                indicatorColor: AppColors.mint,
+                indicatorWeight: 3,
+                labelColor: context.appInk,
+                labelStyle: const TextStyle(fontWeight: FontWeight.w700),
+                unselectedLabelColor: context.appSlate,
+                tabs: const [
+                  Tab(text: 'Reminders'),
+                  Tab(text: 'Milestones'),
+                ],
+              ),
             ),
-          ),
-          actions: [
-            Builder(
-              builder: (ctx) {
-                return IconButton(
-                  tooltip: 'Clear all',
-                  icon: Icon(Icons.delete_sweep_rounded, color: context.appInk),
-                  onPressed: () {
-                    final tabIdx = DefaultTabController.of(ctx).index;
-                    if (tabIdx == 0) {
-                      _clearAllReminders();
-                    } else {
-                      _clearAllMilestones();
-                    }
-                  },
-                );
-              },
+            body: TabBarView(
+              children: [
+                _buildRemindersTab(),
+                _buildMilestonesTab(),
+              ],
             ),
-            IconButton(
-              tooltip: 'Notification Settings',
-              icon: Icon(Icons.settings_outlined, color: context.appInk),
-              onPressed: () => context.push('/settings/reminders'),
-            ),
-          ],
-          bottom: TabBar(
-            indicatorColor: AppColors.mint,
-            indicatorWeight: 3,
-            labelColor: context.appInk,
-            labelStyle: const TextStyle(fontWeight: FontWeight.w700),
-            unselectedLabelColor: context.appSlate,
-            tabs: const [
-              Tab(text: 'Reminders'),
-              Tab(text: 'Milestones'),
-            ],
-          ),
-        ),
-        body: TabBarView(
-          children: [
-            _buildRemindersTab(),
-            _buildMilestonesTab(),
-          ],
-        ),
+          );
+        },
       ),
     );
   }
@@ -508,124 +509,125 @@ class _NotificationsPageState extends State<NotificationsPage> {
       separatorBuilder: (_, index) => const SizedBox(height: AppSpacing.sm),
       itemBuilder: (context, index) {
         final item = _reminders[index];
-        final route = _getReminderRoute(item);
+        final id = item['id']!;
+        final route = item['route'] ?? '/settings/reminders';
         final accentColor = _getReminderColor(item['type'], item['title'] ?? '', context);
         final typeStr = item['type'] ?? item['title'] ?? '';
+        final isSelected = _selectedIds.contains(id);
 
-        return Dismissible(
-          key: ValueKey((item['id'] ?? item['title']!) + index.toString()),
-          direction: DismissDirection.endToStart,
-          background: Container(
-            alignment: Alignment.centerRight,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.error,
-              borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-            ),
-            child: Icon(Icons.delete_outline_rounded, color: Theme.of(context).colorScheme.onError),
-          ),
-          onDismissed: (_) => _dismissReminder(index),
-          child: Material(
-            color: context.appSurface,
+        return Material(
+          color: context.appSurface,
+          borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
+          child: InkWell(
             borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-            child: InkWell(
-              borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-              onTap: () => _onNotificationTapped(route),
-              child: Container(
-                padding: const EdgeInsets.all(AppSpacing.md),
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-                  boxShadow: context.appCardShadow,
-                  border: Border.all(color: context.appDivider.withAlpha(80), width: 1),
+            onTap: () => _onNotificationTapped(route, id),
+            onLongPress: () => _onNotificationLongPress(id),
+            child: Container(
+              padding: const EdgeInsets.all(AppSpacing.md),
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
+                boxShadow: context.appCardShadow,
+                border: Border.all(
+                  color: isSelected ? AppColors.mint : context.appBorderColor,
+                  width: isSelected ? 2.0 : 1.0,
                 ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      decoration: BoxDecoration(
-                        color: accentColor.withAlpha(45),
-                        shape: BoxShape.circle,
-                      ),
-                      child: HealthMetricAnimation(
-                        metricType: typeStr,
-                        size: 24,
-                        color: context.isDarkMode ? AppColors.darkInk : accentColor,
-                      ),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  if (_isSelectionMode) ...[
+                    Checkbox(
+                      value: isSelected,
+                      activeColor: AppColors.mint,
+                      onChanged: (_) => _toggleSelection(id),
                     ),
-                    const SizedBox(width: AppSpacing.md),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            item['title']!,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontFamily: 'Baloo 2',
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16,
-                              color: context.appInk,
-                            ),
+                    const SizedBox(width: 8),
+                  ],
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Color.alphaBlend(accentColor.withOpacity(0.18), context.appSurface),
+                      shape: BoxShape.circle,
+                    ),
+                    child: HealthMetricAnimation(
+                      metricType: typeStr,
+                      size: 24,
+                      color: context.isDarkMode ? AppColors.darkInk : accentColor,
+                    ),
+                  ),
+                  const SizedBox(width: AppSpacing.md),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          item['title']!,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontFamily: 'Baloo 2',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            color: context.appInk,
                           ),
-                          const SizedBox(height: 2),
-                          Text(
-                            item['message']!,
-                            maxLines: 3,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: context.appSlate,
-                              height: 1.3,
-                            ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          item['message']!,
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: context.appSlate,
+                            height: 1.3,
                           ),
-                          const SizedBox(height: 8),
-                          Wrap(
-                            spacing: AppSpacing.sm,
-                            runSpacing: 4,
-                            crossAxisAlignment: WrapCrossAlignment.center,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: accentColor.withAlpha(35),
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                child: Text(
-                                  item['time']!,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w700,
-                                    color: context.isDarkMode ? context.appInk : accentColor,
-                                  ),
-                                ),
+                        ),
+                        const SizedBox(height: 8),
+                        Wrap(
+                          spacing: AppSpacing.sm,
+                          runSpacing: 4,
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                              decoration: BoxDecoration(
+                                color: Color.alphaBlend(accentColor.withOpacity(0.20), context.appSurface),
+                                borderRadius: BorderRadius.circular(6),
                               ),
-                              Text(
-                                'Tap to open',
+                              child: Text(
+                                item['time']!,
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 11,
-                                  fontWeight: FontWeight.w600,
-                                  color: context.appSlate,
+                                  fontWeight: FontWeight.w700,
+                                  color: context.appInk,
                                 ),
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
+                            ),
+                            Text(
+                              _isSelectionMode ? 'Tap to select' : 'Tap to open',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600,
+                                color: context.appSlate,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: AppSpacing.xs),
-                    Icon(
-                      Icons.chevron_right_rounded,
-                      color: context.appSlate,
-                      size: 20,
-                    ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(width: AppSpacing.xs),
+                  Icon(
+                    CupertinoIcons.chevron_right,
+                    color: context.appSlate,
+                    size: 20,
+                  ),
+                ],
               ),
             ),
           ),
@@ -648,122 +650,122 @@ class _NotificationsPageState extends State<NotificationsPage> {
       separatorBuilder: (_, index) => const SizedBox(height: AppSpacing.sm),
       itemBuilder: (context, index) {
         final item = _milestones[index];
-        final route = _getMilestoneRoute(item);
+        final id = item['id']!;
+        final route = item['route'] ?? '/plan';
+        final isSelected = _selectedIds.contains(id);
 
-        return Dismissible(
-          key: ValueKey((item['id'] ?? item['title']!) + index.toString()),
-          direction: DismissDirection.endToStart,
-          background: Container(
-            alignment: Alignment.centerRight,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.error,
-              borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-            ),
-            child: Icon(Icons.delete_outline_rounded, color: Theme.of(context).colorScheme.onError),
-          ),
-          onDismissed: (_) => _dismissMilestone(index),
-          child: Material(
-            color: context.appSurface,
+        return Material(
+          color: context.appSurface,
+          borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
+          child: InkWell(
             borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-            child: InkWell(
-              borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-              onTap: () => _onNotificationTapped(route),
-              child: Container(
-                padding: const EdgeInsets.all(AppSpacing.md),
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-                  boxShadow: context.appCardShadow,
-                  border: Border.all(color: context.appDivider.withAlpha(80), width: 1),
+            onTap: () => _onNotificationTapped(route, id),
+            onLongPress: () => _onNotificationLongPress(id),
+            child: Container(
+              padding: const EdgeInsets.all(AppSpacing.md),
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
+                boxShadow: context.appCardShadow,
+                border: Border.all(
+                  color: isSelected ? AppColors.mint : context.appBorderColor,
+                  width: isSelected ? 2.0 : 1.0,
                 ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      decoration: BoxDecoration(
-                        color: AppColors.peach.withAlpha(60),
-                        shape: BoxShape.circle,
-                      ),
-                      child: HealthMetricAnimation(
-                        metricType: _getMilestoneMetricType(item),
-                        size: 26,
-                        color: context.isDarkMode ? AppColors.darkInk : AppColors.peach,
-                      ),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  if (_isSelectionMode) ...[
+                    Checkbox(
+                      value: isSelected,
+                      activeColor: AppColors.mint,
+                      onChanged: (_) => _toggleSelection(id),
                     ),
-                    const SizedBox(width: AppSpacing.md),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            item['title']!,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontFamily: 'Baloo 2',
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16,
-                              color: context.appInk,
-                            ),
+                    const SizedBox(width: 8),
+                  ],
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Color.alphaBlend(AppColors.peach.withOpacity(0.20), context.appSurface),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Text(
+                      item['icon'] ?? '🌱',
+                      style: const TextStyle(fontSize: 22),
+                    ),
+                  ),
+                  const SizedBox(width: AppSpacing.md),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          item['title']!,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontFamily: 'Baloo 2',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            color: context.appInk,
                           ),
-                          const SizedBox(height: 2),
-                          Text(
-                            item['message']!,
-                            maxLines: 3,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: context.appSlate,
-                              height: 1.3,
-                            ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          item['message']!,
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: context.appSlate,
+                            height: 1.3,
                           ),
-                          const SizedBox(height: 8),
-                          Wrap(
-                            spacing: AppSpacing.sm,
-                            runSpacing: 4,
-                            crossAxisAlignment: WrapCrossAlignment.center,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: context.appMint.withAlpha(35),
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                child: Text(
-                                  item['time']!,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w700,
-                                    color: context.appInk,
-                                  ),
-                                ),
+                        ),
+                        const SizedBox(height: 8),
+                        Wrap(
+                          spacing: AppSpacing.sm,
+                          runSpacing: 4,
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                              decoration: BoxDecoration(
+                                color: Color.alphaBlend(context.appMint.withOpacity(0.20), context.appSurface),
+                                borderRadius: BorderRadius.circular(6),
                               ),
-                              Text(
-                                item['actionLabel'] ?? 'View Milestone',
+                              child: Text(
+                                item['time']!,
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w700,
-                                  color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark,
+                                  color: context.appInk,
                                 ),
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
+                            ),
+                            Text(
+                              item['actionLabel'] ?? 'View Milestone',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w700,
+                                color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: AppSpacing.xs),
-                    Icon(
-                      Icons.chevron_right_rounded,
-                      color: context.appSlate,
-                      size: 20,
-                    ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(width: AppSpacing.xs),
+                  Icon(
+                    CupertinoIcons.chevron_right,
+                    color: context.appSlate,
+                    size: 20,
+                  ),
+                ],
               ),
             ),
           ),

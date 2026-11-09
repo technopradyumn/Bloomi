@@ -5,6 +5,7 @@ import 'package:bloomi/features/health/data/network/health_remote_data_source.da
 import 'package:bloomi/features/health/data/repositories/health_repository_impl.dart';
 import 'package:bloomi/features/health/domain/entities/health_overview_entity.dart';
 import 'package:drift/native.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -138,7 +139,7 @@ void main() {
       );
 
       // Tap '+' button
-      final plusBtn = find.byIcon(Icons.add_circle_outline_rounded);
+      final plusBtn = find.byIcon(CupertinoIcons.add_circled);
       expect(plusBtn, findsOneWidget);
       await tester.tap(plusBtn);
       await tester.pumpAndSettle();

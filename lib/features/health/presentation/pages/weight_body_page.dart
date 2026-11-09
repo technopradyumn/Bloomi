@@ -2,10 +2,12 @@ import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/database/app_database.dart';
+import 'package:drift/drift.dart' as drift;
 import 'package:bloomi/core/widgets/metric_animations/health_metric_animations.dart';
 import 'package:bloomi/core/widgets/pill_button.dart';
 import 'package:bloomi/features/health/domain/repositories/health_repository.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
@@ -33,7 +35,7 @@ class WeightBodyPage extends StatelessWidget {
         elevation: 0,
         actions: [
           IconButton(
-            icon: Icon(Icons.add_rounded, color: context.appInk),
+            icon: Icon(CupertinoIcons.plus, color: context.appInk),
             tooltip: 'Add Measurement',
             onPressed: () => context.push('/health/manual-body'),
           ),
@@ -286,7 +288,7 @@ class WeightBodyPage extends StatelessWidget {
                             waistEntry != null
                                 ? '${waistEntry.value.toInt()} cm'
                                 : '--',
-                            Icons.straighten_rounded,
+                            CupertinoIcons.chart_bar_alt_fill,
                             AppColors.butter,
                           ),
                         ),
@@ -298,7 +300,7 @@ class WeightBodyPage extends StatelessWidget {
                             hipEntry != null
                                 ? '${hipEntry.value.toInt()} cm'
                                 : '--',
-                            Icons.accessibility_new_rounded,
+                            CupertinoIcons.chart_bar_circle,
                             AppColors.sky,
                           ),
                         ),
@@ -310,7 +312,7 @@ class WeightBodyPage extends StatelessWidget {
                             chestEntry != null
                                 ? '${chestEntry.value.toInt()} cm'
                                 : '--',
-                            Icons.fitness_center_rounded,
+                            CupertinoIcons.shield_lefthalf_fill,
                             AppColors.peach,
                           ),
                         ),
@@ -357,7 +359,7 @@ class WeightBodyPage extends StatelessWidget {
                         ),
                       )
                     else
-                      ...entries.take(8).map((e) {
+                      ...entries.take(12).map((e) {
                         final dateStr =
                             DateFormat('MMM d, h:mm a').format(e.measuredAt);
                         return ListTile(
@@ -367,7 +369,7 @@ class WeightBodyPage extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: context.appBackground,
                                 shape: BoxShape.circle),
-                            child: Icon(Icons.scale_rounded,
+                            child: Icon(CupertinoIcons.gauge,
                                 size: 20, color: context.appInk),
                           ),
                           title: Text(
@@ -377,9 +379,30 @@ class WeightBodyPage extends StatelessWidget {
                           ),
                           subtitle: Text('$dateStr · ${e.source}', style: TextStyle(color: context.appSlate)),
                           trailing: IconButton(
-                            icon: Icon(Icons.delete_outline_rounded,
+                            icon: Icon(CupertinoIcons.trash,
                                 color: context.appSlate, size: 18),
-                            onPressed: () => repo.softDeleteBodyEntry(e.id),
+                            onPressed: () async {
+                              await repo.softDeleteBodyEntry(e.id);
+                              if (context.mounted) {
+                                final messenger = ScaffoldMessenger.of(context);
+                                messenger.hideCurrentSnackBar();
+                                messenger.showSnackBar(
+                                  SnackBar(
+                                    content: Text('Deleted ${e.type} measurement'),
+                                    duration: const Duration(seconds: 4),
+                                    action: SnackBarAction(
+                                      label: 'Undo',
+                                      textColor: Theme.of(context).colorScheme.primary,
+                                      onPressed: () async {
+                                        final db = sl<AppDatabase>();
+                                        await (db.update(db.bodyEntries)..where((tbl) => tbl.id.equals(e.id)))
+                                            .write(const BodyEntriesCompanion(deleted: drift.Value(false)));
+                                      },
+                                    ),
+                                  ),
+                                );
+                              }
+                            },
                           ),
                         );
                       }),
@@ -390,7 +413,7 @@ class WeightBodyPage extends StatelessWidget {
 
               PillButton(
                 label: 'Record New Measurement',
-                icon: Icons.add_rounded,
+                icon: CupertinoIcons.plus,
                 variant: PillButtonVariant.primary,
                 onPressed: () => context.push('/health/manual-body'),
               ),

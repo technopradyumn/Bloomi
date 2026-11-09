@@ -1,5 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'dart:async';
-import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
@@ -17,6 +18,7 @@ import 'package:bloomi/core/widgets/skeleton_loader.dart';
 import 'package:bloomi/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:bloomi/features/health/domain/entities/health_overview_entity.dart';
 import 'package:bloomi/features/health/domain/repositories/health_repository.dart';
+import 'package:bloomi/features/health/presentation/widgets/calories_in_out_card.dart';
 import 'package:bloomi/features/home/domain/entities/home_dashboard_entity.dart';
 import 'package:bloomi/features/home/presentation/bloc/home_dashboard_bloc.dart';
 import 'package:bloomi/features/surroundings/domain/entities/surroundings_entity.dart';
@@ -25,7 +27,6 @@ import 'package:bloomi/services/billing/billing_service.dart';
 import 'package:bloomi/services/health/health_service.dart';
 import 'package:bloomi/services/widget/widget_sync_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -128,13 +129,13 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const Icon(
-                        Icons.error_outline_rounded,
+                        CupertinoIcons.exclamationmark_circle,
                         size: 48,
                         color: AppColors.softOrange,
                       ),
                       const SizedBox(height: AppSpacing.md),
                       Text(
-                        'Unable to load dashboard',
+                        context.tr('home_unable_load'),
                         style: Theme.of(context).textTheme.headlineSmall,
                       ),
                       const SizedBox(height: AppSpacing.sm),
@@ -198,15 +199,21 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                       ],
                       const SizedBox(height: AppSpacing.md),
                       _buildStatusRow(context),
-                      _buildSurroundingsCard(context),
-                      const SizedBox(height: AppSpacing.lg),
+                      const SizedBox(height: AppSpacing.md),     
                       _buildHeroCalorieCard(context, data),
                       const SizedBox(height: AppSpacing.lg),
                       _buildWaterSection(context, data),
                       const SizedBox(height: AppSpacing.lg),
                       _buildHealthMetrics(context),
                       const SizedBox(height: AppSpacing.lg),
+                      CaloriesInOutCard(
+                        onBurnedTap: () => context.push('/health/metric-detail?type=calories'),
+                        onIntakeTap: () => context.push('/food'),
+                      ),
+                      const SizedBox(height: AppSpacing.lg),
                       _buildPlanPreviewCard(context, data),
+                      const SizedBox(height: AppSpacing.lg),
+                      _buildSurroundingsCard(context),
                       const SizedBox(height: 80),
                     ],
                   ),
@@ -238,7 +245,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
               shape: BoxShape.circle,
             ),
             child: const Icon(
-              Icons.health_and_safety_rounded,
+              CupertinoIcons.shield_fill,
               color: Color(0xFFEF4444),
               size: 20,
             ),
@@ -249,7 +256,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Health Connect Permission Required',
+                  context.tr('home_health_permission_req'),
                   style: TextStyle(
                     fontFamily: 'Baloo 2',
                     fontWeight: FontWeight.w700,
@@ -259,7 +266,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  'Bloomi requires Health Connect permission to pull real steps, heart rate, and sync mobile home widgets in real time.',
+                  context.tr('home_health_permission_desc'),
                   style: TextStyle(
                     fontSize: 11,
                     color: isDark ? const Color(0xFFFEE2E2) : const Color(0xFF7F1D1D),
@@ -289,7 +296,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                         await AppSettingsHelper.openHealthConnectSettings();
                       }
                     },
-                    child: const Text('Allow Health Connect', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700)),
+                    child: Text(context.tr('home_allow_health'), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700)),
                   ),
                 ),
               ],
@@ -319,7 +326,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
               ),
               const SizedBox(height: 2),
               Text(
-                'Ready for a mindful day? ✨',
+                context.tr('home_ready_mindful_day'),
                 style: TextStyle(fontSize: 13, color: context.appSlate),
               ),
             ],
@@ -335,12 +342,12 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
               boxShadow: context.appCardShadow,
             ),
             child: Icon(
-              Icons.add_rounded,
+              CupertinoIcons.add,
               color: context.appInk,
               size: 22,
             ),
           ),
-          tooltip: 'Quick Add',
+          tooltip: context.tr('home_quick_add'),
         ),
         const SizedBox(width: AppSpacing.xs),
         IconButton(
@@ -353,12 +360,12 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
               boxShadow: context.appCardShadow,
             ),
             child: Icon(
-              Icons.notifications_none_rounded,
+              CupertinoIcons.bell,
               color: context.appInk,
               size: 22,
             ),
           ),
-          tooltip: 'Notifications',
+          tooltip: context.tr('notifications'),
         ),
       ],
     );
@@ -383,10 +390,10 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(Icons.my_location_rounded, size: 14, color: context.appInk),
+                Icon(CupertinoIcons.location_fill, size: 14, color: context.appInk),
                 const SizedBox(width: 5),
                 Text(
-                  'Live GPS',
+                  context.tr('home_live_gps'),
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
@@ -482,7 +489,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                         ),
                         const SizedBox(width: AppSpacing.sm),
                         Icon(
-                          Icons.chevron_right_rounded,
+                          CupertinoIcons.chevron_right,
                           size: 24,
                           color: context.appSlate,
                         ),
@@ -495,12 +502,12 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                       runSpacing: 8,
                       children: [
                         _infoChip(
-                          icon: Icons.thermostat_rounded,
+                          icon: CupertinoIcons.thermometer,
                           text: 'Feels like ${surroundings.feelsLikeC.round()}°C',
                           color: context.appSlate,
                         ),
                         _infoChip(
-                          icon: Icons.location_on_rounded,
+                          icon: CupertinoIcons.location_solid,
                           text: surroundings.coordinatesDisplay,
                           color: context.appSlate,
                         ),
@@ -520,7 +527,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Icon(
-                                Icons.air_rounded,
+                                CupertinoIcons.wind,
                                 size: 14,
                                 color: surroundings.aqiColor,
                               ),
@@ -559,7 +566,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                           const Padding(
                             padding: EdgeInsets.only(top: 1),
                             child: Icon(
-                              Icons.wb_twilight_rounded,
+                              CupertinoIcons.sunrise_fill,
                               size: 18,
                               color: AppColors.sky,
                             ),
@@ -644,7 +651,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                         const HealthMetricAnimation(metricType: 'calories', size: 18),
                         const SizedBox(width: 6),
                         Text(
-                          'CALORIES REMAINING',
+                          context.tr('home_calories_remaining_label'),
                           style: TextStyle(
                             fontFamily: 'Nunito',
                             fontSize: 12,
@@ -683,7 +690,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      'Eaten: ${data.consumedCalories.toInt()} / ${data.targetCalories.toInt()} kcal',
+                      context.tr('home_eaten_target', {'consumed': data.consumedCalories.toInt(), 'target': data.targetCalories.toInt()}),
                       style: TextStyle(
                         fontSize: 12,
                         color: context.appSlate,
@@ -733,7 +740,6 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () {
-          HapticFeedback.lightImpact();
           context.push('/food/water');
         },
         borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
@@ -770,7 +776,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Hydration',
+                          context.tr('water'),
                           style: TextStyle(
                             fontFamily: 'Baloo 2',
                             fontSize: 18,
@@ -779,7 +785,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                           ),
                         ),
                         Text(
-                          'Tap for Water Tracker 💧',
+                          context.tr('home_tap_water_tracker'),
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w600,
@@ -806,7 +812,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                   ),
                   const SizedBox(width: 4),
                   Icon(
-                    Icons.chevron_right_rounded,
+                    CupertinoIcons.chevron_right,
                     size: 20,
                     color: context.appSlate,
                   ),
@@ -853,9 +859,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
 
               const SizedBox(height: AppSpacing.sm),
               Text(
-                goalReached
-                    ? 'Daily goal reached 🎉'
-                    : '$remainingMl ml to daily goal',
+                goalReached ? context.tr('home_water_goal_reached') : context.tr('home_water_to_daily_goal', {'remaining': remainingMl}),
                 softWrap: true,
                 style: TextStyle(
                   fontSize: 13,
@@ -923,18 +927,12 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
   }
 
   Widget _buildHealthMetrics(BuildContext context) {
-    return FutureBuilder<List<dynamic>>(
-      future: Future.wait([
-        sl<HealthRepository>().getLatestBundle(),
-        sl<HealthRepository>().getStepTarget(),
-      ]),
+    return StreamBuilder<HealthOverviewEntity>(
+      stream: sl<HealthRepository>().watchHealthOverview(),
       builder: (context, snapshot) {
-        final bundle = (snapshot.data != null && snapshot.data!.isNotEmpty)
-            ? snapshot.data![0] as HealthDataBundleEntity
-            : null;
-        final targetSteps = (snapshot.data != null && snapshot.data!.length > 1)
-            ? snapshot.data![1] as int
-            : 10000;
+        final overview = snapshot.data;
+        final bundle = overview?.bundle;
+        final targetSteps = overview?.stepGoal ?? 10000;
         final stepsStr = (bundle != null && bundle.steps > 0)
             ? '${bundle.steps}'
             : '--';
@@ -945,11 +943,22 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
             ? HealthCalculators.formatDistance(distanceMeters)
             : 'Tap to sync';
 
+        final workoutBurned = overview?.todayWorkouts.fold<double>(0.0, (acc, w) => acc + w.calories) ?? 0.0;
+        final manualWorkoutBurned = overview?.todayWorkouts
+            .where((w) => !w.source.toLowerCase().contains('health connect'))
+            .fold<double>(0.0, (acc, w) => acc + w.calories) ?? 0.0;
+        final activityBurned = bundle?.activeCalories ?? 0.0;
+        final totalBurned = activityBurned + manualWorkoutBurned;
+        final burnedStr = totalBurned > 0 ? '${totalBurned.toInt()}' : '--';
+        final burnedTrend = totalBurned > 0
+            ? (workoutBurned > 0 ? '${workoutBurned.toInt()} kcal wkt' : 'Active energy')
+            : 'No activity';
+
         final hrStr = (bundle != null && bundle.heartRate > 0)
             ? '${bundle.heartRate.toInt()}'
             : '--';
         final hrTrend = (bundle != null && bundle.heartRate > 0)
-            ? 'Resting: ${bundle.restingHeartRate > 0 ? bundle.restingHeartRate.toInt() : bundle.heartRate.toInt()} bpm'
+            ? '${bundle.restingHeartRate > 0 ? bundle.restingHeartRate.toInt() : bundle.heartRate.toInt()} bpm rest'
             : 'Tap to measure';
 
         final sleepHours =
@@ -958,8 +967,8 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
             : '--';
         final sleepTrend =
             (bundle != null && bundle.sleepDuration.inMinutes > 0)
-            ? 'Tracked last night'
-            : 'Connect watch or Health Connect';
+            ? 'Tracked'
+            : 'No data';
 
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -968,7 +977,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Activity & Vitals',
+                  context.tr('health_overview_title'),
                   style: TextStyle(
                     fontFamily: 'Baloo 2',
                     fontSize: 18,
@@ -984,14 +993,14 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                     minimumSize: const Size(50, 30),
                     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        'Details',
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        context.tr('home_details'),
+                        style: const TextStyle(fontWeight: FontWeight.w600),
                       ),
-                      Icon(Icons.chevron_right_rounded, size: 18),
+                      const Icon(CupertinoIcons.chevron_right, size: 18),
                     ],
                   ),
                 ),
@@ -1003,7 +1012,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                 Expanded(
                   child: PastelStatCard(
                     backgroundColor: AppColors.mint.withAlpha(130),
-                    icon: Icons.directions_walk_rounded,
+                    icon: CupertinoIcons.compass,
                     animationMetricType: 'steps',
                     label: 'Steps',
                     value: stepsStr,
@@ -1031,8 +1040,25 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                 const SizedBox(width: AppSpacing.sm),
                 Expanded(
                   child: PastelStatCard(
+                    backgroundColor: AppColors.butter.withAlpha(130),
+                    icon: CupertinoIcons.flame_fill,
+                    animationMetricType: 'burned',
+                    label: 'Burned',
+                    value: burnedStr,
+                    unit: totalBurned > 0 ? 'kcal' : '',
+                    trend: burnedTrend,
+                    onTap: () => context.push('/health/metric-detail?type=calories'),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: AppSpacing.sm),
+            Row(
+              children: [
+                Expanded(
+                  child: PastelStatCard(
                     backgroundColor: AppColors.peach.withAlpha(130),
-                    icon: Icons.favorite_rounded,
+                    icon: CupertinoIcons.heart_fill,
                     animationMetricType: 'heart_rate',
                     label: 'Heart Rate',
                     value: hrStr,
@@ -1042,18 +1068,20 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                         context.push('/health/metric-detail?type=heart_rate'),
                   ),
                 ),
+                const SizedBox(width: AppSpacing.sm),
+                Expanded(
+                  child: PastelStatCard(
+                    backgroundColor: AppColors.lilac.withAlpha(130),
+                    icon: CupertinoIcons.moon_fill,
+                    animationMetricType: 'sleep',
+                    label: 'Sleep',
+                    value: sleepHours,
+                    unit: 'hrs',
+                    trend: sleepTrend,
+                    onTap: () => context.push('/health/sleep'),
+                  ),
+                ),
               ],
-            ),
-            const SizedBox(height: AppSpacing.sm),
-            PastelStatCard(
-              backgroundColor: AppColors.lilac.withAlpha(130),
-              icon: Icons.bedtime_rounded,
-              animationMetricType: 'sleep',
-              label: 'Sleep',
-              value: sleepHours,
-              unit: 'hrs',
-              trend: sleepTrend,
-              onTap: () => context.push('/health/sleep'),
             ),
           ],
         );
@@ -1081,7 +1109,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
               shape: BoxShape.circle,
             ),
             child: Icon(
-              Icons.flag_rounded,
+              CupertinoIcons.flag_fill,
               color: context.appInk,
               size: 22,
             ),
@@ -1092,7 +1120,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Today's Target Plan",
+                  context.tr('plan_title'),
                   style: TextStyle(
                     fontFamily: 'Baloo 2',
                     fontSize: 16,
@@ -1108,7 +1136,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
             ),
           ),
           Icon(
-            Icons.arrow_forward_ios_rounded,
+            CupertinoIcons.chevron_forward,
             size: 16,
             color: context.appInk,
           ),
@@ -1129,78 +1157,73 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
       );
     }
 
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
-      child: Stack(
-        children: [
-          ImageFiltered(
-            imageFilter: ImageFilter.blur(sigmaX: 4.5, sigmaY: 4.5),
-            child: baseCard,
-          ),
-          Positioned.fill(
-            child: Material(
-              color: context.isDarkMode ? context.appSurface.withAlpha(210) : context.appSurface.withAlpha(190),
-              child: InkWell(
-                onTap: () => context.push('/settings/premium'),
-                borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: 8),
-                  child: Row(
+    return Container(
+      decoration: BoxDecoration(
+        color: context.appSurface,
+        borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+        boxShadow: context.appCardShadow,
+        border: Border.all(color: AppColors.softOrange, width: 1.5),
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => context.push('/settings/premium'),
+          borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: 12),
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Color.alphaBlend(AppColors.softOrange.withOpacity(0.15), context.appSurface),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(CupertinoIcons.lock_fill, color: AppColors.softOrange, size: 20),
+                ),
+                const SizedBox(width: AppSpacing.sm),
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          color: AppColors.softOrange.withAlpha(40),
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(Icons.lock_rounded, color: AppColors.softOrange, size: 20),
-                      ),
-                      const SizedBox(width: AppSpacing.sm),
-                      Expanded(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Today's Target Plan 🔒",
-                              style: TextStyle(
-                                fontFamily: 'Baloo 2',
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                                color: context.appInk,
-                              ),
-                            ),
-                            Text(
-                              'Upgrade to unlock personalized daily targets & AI plan',
-                              style: TextStyle(fontSize: 11, color: context.appSlate),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                        decoration: BoxDecoration(
+                      Text(
+                        '${context.tr('plan_title')} 🔒',
+                        style: TextStyle(
+                          fontFamily: 'Baloo 2',
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
                           color: context.appInk,
-                          borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Text(
-                          'Unlock 👑',
-                          style: TextStyle(
-                            fontSize: 11,
-                            fontWeight: FontWeight.w700,
-                            color: context.appSurface,
-                          ),
-                        ),
+                      ),
+                      Text(
+                        context.tr('home_upgrade_plan_desc'),
+                        style: TextStyle(fontSize: 11, color: context.appSlate, fontWeight: FontWeight.w600),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ],
                   ),
                 ),
-              ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: context.appInk,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    context.tr('home_unlock'),
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                      color: context.appSurface,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-        ],
+        ),
       ),
     );
   }

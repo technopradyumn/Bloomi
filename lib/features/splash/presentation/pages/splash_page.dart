@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_widget.dart';
@@ -67,28 +68,28 @@ class _SplashPageState extends State<SplashPage>
             // Soft floating pastel icons in background
             if (!reduceMotion) ...[
               const _FloatingIcon(
-                icon: Icons.favorite_rounded,
+                icon: CupertinoIcons.heart_fill,
                 color: AppColors.peach,
                 top: 120,
                 left: 50,
                 phase: 0.0,
               ),
               const _FloatingIcon(
-                icon: Icons.water_drop_rounded,
+                icon: CupertinoIcons.drop_fill,
                 color: AppColors.sky,
                 top: 160,
                 right: 60,
                 phase: 1.5,
               ),
               const _FloatingIcon(
-                icon: Icons.spa_rounded,
+                icon: CupertinoIcons.sparkles,
                 color: AppColors.mint,
                 bottom: 180,
                 left: 70,
                 phase: 3.0,
               ),
               const _FloatingIcon(
-                icon: Icons.wb_sunny_rounded,
+                icon: CupertinoIcons.sun_max_fill,
                 color: AppColors.butter,
                 bottom: 140,
                 right: 80,

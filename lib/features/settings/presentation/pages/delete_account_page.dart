@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -75,7 +76,7 @@ class _DeleteAccountPageState extends State<DeleteAccountPage> {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.warning_amber_rounded,
+                    Icon(CupertinoIcons.exclamationmark_triangle,
                         color: Theme.of(context).colorScheme.error, size: 28),
                     const SizedBox(width: 8),
                     Text(
@@ -127,7 +128,7 @@ class _DeleteAccountPageState extends State<DeleteAccountPage> {
             label: _isDeleting
                 ? 'Deleting Everything...'
                 : 'Delete My Account & All Data',
-            icon: Icons.delete_forever_rounded,
+            icon: CupertinoIcons.trash_fill,
             variant: PillButtonVariant.secondary,
             onPressed: _isDeleting ? null : _handleDeleteAccount,
           ),

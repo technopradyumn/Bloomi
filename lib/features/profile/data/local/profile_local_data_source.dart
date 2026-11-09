@@ -6,6 +6,8 @@ abstract class ProfileLocalDataSource {
   Future<UserProfile?> getProfile();
   Stream<Target?> watchTargets();
   Stream<BodyEntry?> watchLatestWeight();
+  Stream<BodyEntry?> watchLatestWaist();
+  Stream<BodyEntry?> watchLatestHip();
   Future<void> updateProfile({
     required String name,
     required String gender,
@@ -47,6 +49,30 @@ class ProfileLocalDataSourceImpl implements ProfileLocalDataSource {
           ..where((b) =>
               b.userId.equals(_currentUserId) &
               b.type.equals('weight') &
+              b.deleted.equals(false))
+          ..orderBy([(b) => drift.OrderingTerm.desc(b.measuredAt)])
+          ..limit(1))
+        .watchSingleOrNull();
+  }
+
+  @override
+  Stream<BodyEntry?> watchLatestWaist() {
+    return (_db.select(_db.bodyEntries)
+          ..where((b) =>
+              b.userId.equals(_currentUserId) &
+              b.type.equals('waist') &
+              b.deleted.equals(false))
+          ..orderBy([(b) => drift.OrderingTerm.desc(b.measuredAt)])
+          ..limit(1))
+        .watchSingleOrNull();
+  }
+
+  @override
+  Stream<BodyEntry?> watchLatestHip() {
+    return (_db.select(_db.bodyEntries)
+          ..where((b) =>
+              b.userId.equals(_currentUserId) &
+              b.type.equals('hip') &
               b.deleted.equals(false))
           ..orderBy([(b) => drift.OrderingTerm.desc(b.measuredAt)])
           ..limit(1))

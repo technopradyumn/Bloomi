@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -162,35 +163,35 @@ class _PremiumPaywallPageState extends State<PremiumPaywallPage> {
                 child: Column(
                   children: [
                     _buildPerkRow(
-                      Icons.auto_awesome_rounded,
+                      CupertinoIcons.wand_stars,
                       'Unlimited AI Photo Meal Scans',
                       'Scan meals freely without daily limits (Free is 5/day).',
                       AppColors.mint,
                     ),
                     const Divider(height: 16),
                     _buildPerkRow(
-                      Icons.biotech_rounded,
+                      CupertinoIcons.lab_flask,
                       'Full Lab Micronutrients & RDA',
                       'Track vitamins, minerals, and micronutrient balance.',
                       AppColors.butter,
                     ),
                     const Divider(height: 16),
                     _buildPerkRow(
-                      Icons.watch_rounded,
+                      CupertinoIcons.radiowaves_right,
                       'Wear OS Tiles & Home Screen Widgets',
                       'Live pastel progress right on your wrist and phone display.',
                       AppColors.sky,
                     ),
                     const Divider(height: 16),
                     _buildPerkRow(
-                      Icons.palette_rounded,
+                      CupertinoIcons.paintbrush_fill,
                       'Custom Pastel Themes & Outfits',
                       'Unlock cheerful seasonal wardrobe themes for your mascot.',
                       AppColors.lilac,
                     ),
                     const Divider(height: 16),
                     _buildPerkRow(
-                      Icons.shield_rounded,
+                      CupertinoIcons.shield_fill,
                       'Support 100% Offline-First Privacy',
                       'Zero trackers, zero remote ads, zero server profiling.',
                       AppColors.peach,
@@ -236,8 +237,8 @@ class _PremiumPaywallPageState extends State<PremiumPaywallPage> {
                         children: [
                           Icon(
                             isSelected
-                                ? Icons.check_circle_rounded
-                                : Icons.radio_button_unchecked_rounded,
+                                ? CupertinoIcons.checkmark_circle_fill
+                                : CupertinoIcons.circle,
                             color:
                                 isSelected ? AppColors.mint : context.appSlate,
                           ),
@@ -291,7 +292,7 @@ class _PremiumPaywallPageState extends State<PremiumPaywallPage> {
                 const SizedBox(height: AppSpacing.md),
                 PillButton(
                   label: _buttonLabel,
-                  icon: Icons.star_rounded,
+                  icon: CupertinoIcons.star_fill,
                   isLoading: _isLoading,
                   onPressed: _isLoading ? null : _handlePurchase,
                 ),
@@ -312,7 +313,7 @@ class _PremiumPaywallPageState extends State<PremiumPaywallPage> {
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.verified_rounded,
+                      Icon(CupertinoIcons.checkmark_seal_fill,
                           color: context.appInk, size: 28),
                       const SizedBox(width: AppSpacing.md),
                       Expanded(

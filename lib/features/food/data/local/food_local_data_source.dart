@@ -69,7 +69,10 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
   @override
   Future<List<FavouriteFoodEntity>> getFavourites() async {
     final prefs = _prefs ?? await SharedPreferences.getInstance();
-    final raw = prefs.getString(_favKey);
+    var raw = prefs.getString(_favKey);
+    if ((raw == null || raw.isEmpty) && _currentUserId != 'default_user') {
+      raw = prefs.getString('bloomi_favourites_default_user');
+    }
     if (raw == null || raw.isEmpty) return [];
     try {
       final List<dynamic> list = jsonDecode(raw) as List<dynamic>;
@@ -92,14 +95,24 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
   @override
   Future<bool> isFavourite(String foodId) async {
     final list = await getFavourites();
-    return list.any((f) => f.foodId == foodId);
+    final lowerId = foodId.trim().toLowerCase();
+    return list.any((f) =>
+        f.foodId == foodId ||
+        (f.name.isNotEmpty && f.name.trim().toLowerCase() == lowerId));
   }
 
   @override
   Future<bool> toggleFavourite(FavouriteFoodEntity food) async {
     final prefs = _prefs ?? await SharedPreferences.getInstance();
     final current = await getFavourites();
-    final index = current.indexWhere((f) => f.foodId == food.foodId);
+    final foodIdLower = food.foodId.trim().toLowerCase();
+    final foodNameLower = food.name.trim().toLowerCase();
+
+    final index = current.indexWhere((f) =>
+        (f.foodId.isNotEmpty && f.foodId == food.foodId) ||
+        (f.name.isNotEmpty && f.name.trim().toLowerCase() == foodNameLower) ||
+        (f.foodId.isNotEmpty && f.foodId.toLowerCase() == foodIdLower));
+
     bool nowFav;
     if (index >= 0) {
       current.removeAt(index);
@@ -108,9 +121,12 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
       current.insert(0, food);
       nowFav = true;
     }
-    await prefs.setString(
-        _favKey, jsonEncode(current.map((e) => e.toJson()).toList()));
-    _favouritesStreamController.add(current);
+    final encoded = jsonEncode(current.map((e) => e.toJson()).toList());
+    await prefs.setString(_favKey, encoded);
+    if (_currentUserId != 'default_user') {
+      await prefs.setString('bloomi_favourites_default_user', encoded);
+    }
+    _favouritesStreamController.add(List<FavouriteFoodEntity>.unmodifiable(current));
     return nowFav;
   }
 
@@ -176,12 +192,28 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
   }
 
   @override
-  Stream<List<MealLog>> watchRecentFoods({int limit = 15}) {
+  Stream<List<MealLog>> watchRecentFoods({int limit = 30}) {
     return (_db.select(_db.mealLogs)
-          ..where((t) => t.userId.equals(_currentUserId) & t.deleted.equals(false))
-          ..orderBy([(t) => OrderingTerm(expression: t.createdAt, mode: OrderingMode.desc)])
-          ..limit(limit))
+          ..where((t) =>
+              (t.userId.equals(_currentUserId) | t.userId.equals('default_user')) &
+              t.deleted.equals(false))
+          ..orderBy([
+            (t) => OrderingTerm(expression: t.createdAt, mode: OrderingMode.desc),
+            (t) => OrderingTerm(expression: t.date, mode: OrderingMode.desc),
+          ])
+          ..limit(250))
         .watch()
+        .map((logs) {
+          final Map<String, MealLog> distinct = {};
+          for (final l in logs) {
+            final key = l.foodName.trim().toLowerCase();
+            if (!distinct.containsKey(key)) {
+              distinct[key] = l;
+            }
+            if (distinct.length >= limit) break;
+          }
+          return distinct.values.toList();
+        })
         .asBroadcastStream();
   }
 

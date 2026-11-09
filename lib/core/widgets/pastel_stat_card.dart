@@ -1,8 +1,9 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
+import 'package:bloomi/core/widgets/animated_card_background.dart';
 import 'package:bloomi/core/widgets/metric_animations/health_metric_animations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 /// A polished, tactile stat card featuring:
 /// - Adaptive light/dark theme colors
@@ -66,12 +67,31 @@ class _PastelStatCardState extends State<PastelStatCard> {
     final primaryTextColor = context.appInk;
     final secondaryTextColor = context.appSlate;
 
-    // Resolve background color gracefully for dark mode
-    final cardBg = (widget.backgroundColor == AppColors.surface)
+    // Resolve solid background color - strictly no glassmorphism or semi-transparent backgrounds
+    final cardBg = (widget.backgroundColor == AppColors.surface || widget.backgroundColor == Colors.white)
         ? context.appSurface
-        : (isDark ? widget.backgroundColor.withAlpha(50) : widget.backgroundColor);
+        : (isDark
+            ? Color.alphaBlend(widget.backgroundColor.withOpacity(0.18), context.appSurface)
+            : widget.backgroundColor);
 
-    final iconCircleBg = isDark ? primaryTextColor.withAlpha(25) : context.appSurface.withAlpha(160);
+    final iconCircleBg = isDark
+        ? Color.alphaBlend(primaryTextColor.withOpacity(0.12), context.appSurface)
+        : Color.alphaBlend(Colors.black.withOpacity(0.06), cardBg);
+
+    // Determine card background animation type based on content/metric
+    AnimatedCardBackgroundType? bgAnimType;
+    if (widget.animationMetricType != null) {
+      final t = widget.animationMetricType!.toLowerCase();
+      if (t.contains('water') || t.contains('hydrat')) {
+        bgAnimType = AnimatedCardBackgroundType.waves;
+      } else if (t.contains('calor') || t.contains('burn')) {
+        bgAnimType = AnimatedCardBackgroundType.gradientShift;
+      } else if (t.contains('step') || t.contains('walk') || t.contains('distance')) {
+        bgAnimType = AnimatedCardBackgroundType.floatingShapes;
+      } else if (t.contains('sleep') || t.contains('heart') || t.contains('pulse')) {
+        bgAnimType = AnimatedCardBackgroundType.subtlePulse;
+      }
+    }
 
     return Semantics(
       button: widget.onTap != null,
@@ -88,117 +108,135 @@ class _PastelStatCardState extends State<PastelStatCard> {
             onTapDown: _onTapDown,
             onTapUp: _onTapUp,
             onTapCancel: _onTapCancel,
-            onTap: widget.onTap != null
-                ? () {
-                    HapticFeedback.lightImpact();
-                    widget.onTap!();
-                  }
-                : null,
+            onTap: widget.onTap,
             borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-            splashColor: cardBg.withAlpha(80),
-            highlightColor: cardBg.withAlpha(40),
-            child: Container(
-              padding: const EdgeInsets.all(AppSpacing.md),
-              constraints: const BoxConstraints(minHeight: 120),
-              decoration: BoxDecoration(
-                boxShadow: isDark ? AppColors.darkCardShadow : AppColors.softCardShadow,
-                borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
+              child: Stack(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(4),
-                        decoration: BoxDecoration(
-                          color: iconCircleBg,
-                          shape: BoxShape.circle,
+                  if (bgAnimType != null)
+                    Positioned.fill(
+                      child: IgnorePointer(
+                        child: AnimatedCardBackground(
+                          type: bgAnimType,
+                          baseColor: widget.backgroundColor,
                         ),
-                        child: widget.customAnimation ??
-                            (widget.animationMetricType != null
-                                ? HealthMetricAnimation(
-                                    metricType: widget.animationMetricType!,
-                                    size: 18,
-                                    color: primaryTextColor,
-                                  )
-                                : Icon(widget.icon, color: primaryTextColor, size: 16)),
                       ),
-                      if (widget.trend != null)
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
-                          decoration: BoxDecoration(
-                            color: iconCircleBg,
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(AppSpacing.chipRadius),
-                            ),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(
-                                widget.isPositiveTrend
-                                    ? Icons.arrow_upward_rounded
-                                    : Icons.arrow_downward_rounded,
-                                size: 12,
-                                color: primaryTextColor,
+                    ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    constraints: const BoxConstraints(minHeight: 108),
+                    decoration: BoxDecoration(
+                      boxShadow: isDark ? AppColors.darkCardShadow : AppColors.softCardShadow,
+                      borderRadius: const BorderRadius.all(Radius.circular(AppSpacing.cardRadius)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                color: iconCircleBg,
+                                shape: BoxShape.circle,
                               ),
-                              const SizedBox(width: 2),
+                              child: widget.customAnimation ??
+                                  (widget.animationMetricType != null
+                                      ? HealthMetricAnimation(
+                                          metricType: widget.animationMetricType!,
+                                          size: 18,
+                                          color: primaryTextColor,
+                                        )
+                                      : Icon(widget.icon, color: primaryTextColor, size: 16)),
+                            ),
+                            if (widget.trend != null)
+                              Flexible(
+                                child: Container(
+                                  margin: const EdgeInsets.only(left: 4),
+                                  padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+                                  decoration: BoxDecoration(
+                                    color: iconCircleBg,
+                                    borderRadius: const BorderRadius.all(
+                                      Radius.circular(AppSpacing.chipRadius),
+                                    ),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(
+                                        widget.isPositiveTrend
+                                            ? CupertinoIcons.arrow_up
+                                            : CupertinoIcons.arrow_down,
+                                        size: 11,
+                                        color: primaryTextColor,
+                                      ),
+                                      const SizedBox(width: 2),
+                                      Flexible(
+                                        child: Text(
+                                          widget.trend!,
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontFamily: 'Nunito',
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 10,
+                                            color: primaryTextColor,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          widget.label,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontFamily: 'Nunito',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                            color: secondaryTextColor,
+                          ),
+                        ),
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.centerLeft,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.baseline,
+                            textBaseline: TextBaseline.alphabetic,
+                            children: [
                               Text(
-                                widget.trend!,
+                                widget.value,
                                 style: TextStyle(
-                                  fontFamily: 'Nunito',
+                                  fontFamily: 'Baloo 2',
                                   fontWeight: FontWeight.w700,
-                                  fontSize: 10,
+                                  fontSize: 30,
+                                  height: 1.0,
                                   color: primaryTextColor,
                                 ),
                               ),
+                              if (widget.unit != null) ...[
+                                const SizedBox(width: 4),
+                                Text(
+                                  widget.unit!,
+                                  style: TextStyle(
+                                    fontFamily: 'Nunito',
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 13,
+                                    color: primaryTextColor,
+                                  ),
+                                ),
+                              ],
                             ],
                           ),
                         ),
-                    ],
-                  ),
-                  const SizedBox(height: AppSpacing.sm),
-                  Text(
-                    widget.label,
-                    style: TextStyle(
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 13,
-                      color: secondaryTextColor,
-                    ),
-                  ),
-                  FittedBox(
-                    fit: BoxFit.scaleDown,
-                    alignment: Alignment.centerLeft,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.baseline,
-                      textBaseline: TextBaseline.alphabetic,
-                      children: [
-                        Text(
-                          widget.value,
-                          style: TextStyle(
-                            fontFamily: 'Baloo 2',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 36,
-                            height: 1.0,
-                            color: primaryTextColor,
-                          ),
-                        ),
-                        if (widget.unit != null) ...[
-                          const SizedBox(width: 4),
-                          Text(
-                            widget.unit!,
-                            style: TextStyle(
-                              fontFamily: 'Nunito',
-                              fontWeight: FontWeight.w700,
-                              fontSize: 14,
-                              color: primaryTextColor,
-                            ),
-                          ),
-                        ],
                       ],
                     ),
                   ),

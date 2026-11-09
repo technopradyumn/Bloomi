@@ -12,12 +12,20 @@ abstract class HealthRepository {
   Future<HealthDataBundleEntity> getLatestBundle({bool forceRefresh = false});
 
   Stream<List<BodyEntry>> watchBodyEntries({String? type});
+  Stream<BodyEntry?> watchLatestBodyEntry(String type);
+  Future<BodyEntry?> getLatestBodyEntry(String type);
   Future<void> logBodyEntry({
     required String type,
     required double value,
     required String unit,
     DateTime? measuredAt,
     String? source,
+  });
+  Future<void> updateBodyEntry({
+    required String id,
+    required double value,
+    required String unit,
+    DateTime? measuredAt,
   });
   Future<void> softDeleteBodyEntry(String id);
 
@@ -36,6 +44,7 @@ abstract class HealthRepository {
     required String type,
     required int durationMinutes,
     required double calories,
+    DateTime? recordedAt,
   });
 
   Stream<HealthOverviewEntity> watchHealthOverview();

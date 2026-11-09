@@ -1,9 +1,12 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/database/app_database.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/features/health/domain/repositories/health_repository.dart';
+import 'package:bloomi/features/health/presentation/pages/workout_editor_page.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutEditorDialog extends StatefulWidget {
@@ -170,7 +173,7 @@ class _WorkoutEditorDialogState extends State<WorkoutEditorDialog> {
                 decoration: InputDecoration(
                   labelText: 'Activity Name / Type',
                   hintText: 'e.g. Morning Walk, Zumba, CrossFit...',
-                  prefixIcon: Icon(Icons.fitness_center_rounded, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 20),
+                  prefixIcon: Icon(CupertinoIcons.bolt_fill, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 20),
                   contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
@@ -196,7 +199,7 @@ class _WorkoutEditorDialogState extends State<WorkoutEditorDialog> {
                 keyboardType: TextInputType.number,
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14, color: context.appInk),
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.timer_outlined, color: context.appSlate, size: 20),
+                  prefixIcon: Icon(CupertinoIcons.timer, color: context.appSlate, size: 20),
                   suffixText: 'mins',
                   contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   border: OutlineInputBorder(
@@ -218,7 +221,7 @@ class _WorkoutEditorDialogState extends State<WorkoutEditorDialog> {
                 keyboardType: TextInputType.number,
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14, color: context.appInk),
                 decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.local_fire_department_rounded, color: AppColors.softOrange, size: 20),
+                  prefixIcon: const Icon(CupertinoIcons.flame_fill, color: AppColors.softOrange, size: 20),
                   suffixText: 'kcal',
                   contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   border: OutlineInputBorder(
@@ -234,7 +237,7 @@ class _WorkoutEditorDialogState extends State<WorkoutEditorDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: Text('Cancel', style: TextStyle(color: context.appSlate)),
+          child: Text(context.tr('cancel'), style: TextStyle(color: context.appSlate)),
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -296,9 +299,13 @@ Future<void> showWorkoutEditorDialog(
   WorkoutLog? workout,
   VoidCallback? onSaved,
 }) {
-  return showDialog<void>(
-    context: context,
-    builder: (ctx) => WorkoutEditorDialog(existingWorkout: workout, onSaved: onSaved),
+  return Navigator.of(context).push<void>(
+    CupertinoPageRoute<void>(
+      builder: (_) => WorkoutEditorPage(
+        existingWorkout: workout,
+        onSaved: onSaved,
+      ),
+    ),
   );
 }
 
@@ -324,7 +331,7 @@ Future<void> confirmAndDeleteWorkout(
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(ctx, false),
-          child: Text('Cancel', style: TextStyle(color: context.appSlate)),
+          child: Text(context.tr('cancel'), style: TextStyle(color: context.appSlate)),
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -334,7 +341,7 @@ Future<void> confirmAndDeleteWorkout(
             shape: const StadiumBorder(),
           ),
           onPressed: () => Navigator.pop(ctx, true),
-          child: const Text('Delete', style: TextStyle(fontWeight: FontWeight.w700)),
+          child: Text(context.tr('delete'), style: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ],
     ),

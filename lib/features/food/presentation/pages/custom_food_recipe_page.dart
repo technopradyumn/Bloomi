@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -59,7 +61,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
           backgroundColor: context.appSurface,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+            icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
             onPressed: () => context.pop(),
           ),
           title: Text(
@@ -142,7 +144,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
                   keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   style: TextStyle(color: context.appInk),
                   decoration: InputDecoration(
-                    labelText: 'Calories (kcal)',
+                    labelText: context.tr('customFood_calories_hint'),
                     hintText: '0',
                     filled: true,
                     fillColor: context.appSurface,
@@ -156,7 +158,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
                   keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   style: TextStyle(color: context.appInk),
                   decoration: InputDecoration(
-                    labelText: 'Protein (g)',
+                    labelText: context.tr('customFood_protein_hint'),
                     hintText: '0',
                     filled: true,
                     fillColor: context.appSurface,
@@ -175,7 +177,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
                   keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   style: TextStyle(color: context.appInk),
                   decoration: InputDecoration(
-                    labelText: 'Carbs (g)',
+                    labelText: context.tr('customFood_carbs_hint'),
                     hintText: '0',
                     filled: true,
                     fillColor: context.appSurface,
@@ -189,7 +191,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
                   keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   style: TextStyle(color: context.appInk),
                   decoration: InputDecoration(
-                    labelText: 'Fat (g)',
+                    labelText: context.tr('customFood_fat_hint'),
                     hintText: '0',
                     filled: true,
                     fillColor: context.appSurface,
@@ -282,7 +284,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
             keyboardType: const TextInputType.numberWithOptions(decimal: true),
             style: TextStyle(color: context.appInk),
             decoration: InputDecoration(
-              labelText: 'Number of Servings',
+              labelText: context.tr('food_number_servings'),
               hintText: '4',
               filled: true,
               fillColor: context.appSurface,
@@ -334,7 +336,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
               ),
               TextButton.icon(
                 onPressed: _showAddIngredientDialog,
-                icon: const Icon(Icons.add_rounded),
+                icon: const Icon(CupertinoIcons.add),
                 label: const Text('Add Item'),
               ),
             ],
@@ -360,7 +362,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
                   title: Text(ing['name'] as String, style: TextStyle(fontWeight: FontWeight.w600, color: context.appInk)),
                   subtitle: Text('${ing['kcal']} kcal · ${ing['protein']}g protein', style: TextStyle(color: context.appSlate)),
                   trailing: IconButton(
-                    icon: Icon(Icons.delete_outline_rounded, color: context.appSlate),
+                    icon: Icon(CupertinoIcons.trash, color: context.appSlate),
                     onPressed: () => setState(() => _ingredients.removeAt(index)),
                   ),
                 );
@@ -413,7 +415,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
       builder: (dialogCtx) {
         return AlertDialog(
           backgroundColor: context.appSurface,
-          title: Text('Add Ingredient', style: TextStyle(fontFamily: 'Baloo 2', fontWeight: FontWeight.bold, color: context.appInk)),
+          title: Text(context.tr('food_recipe_add_ingredient'), style: TextStyle(fontFamily: 'Baloo 2', fontWeight: FontWeight.bold, color: context.appInk)),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -427,21 +429,21 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
                 controller: _ingKcalCtrl,
                 keyboardType: const TextInputType.numberWithOptions(decimal: true),
                 style: TextStyle(color: context.appInk),
-                decoration: const InputDecoration(labelText: 'Calories (kcal)'),
+                decoration: InputDecoration(labelText: context.tr('customFood_calories_hint')),
               ),
               const SizedBox(height: 12),
               TextField(
                 controller: _ingProteinCtrl,
                 keyboardType: const TextInputType.numberWithOptions(decimal: true),
                 style: TextStyle(color: context.appInk),
-                decoration: const InputDecoration(labelText: 'Protein (g)'),
+                decoration: InputDecoration(labelText: context.tr('customFood_protein_hint')),
               ),
             ],
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(dialogCtx).pop(),
-              child: const Text('Cancel'),
+              child: Text(context.tr('cancel')),
             ),
             ElevatedButton(
               onPressed: () {
@@ -459,7 +461,7 @@ class _CustomFoodRecipePageState extends State<CustomFoodRecipePage> {
                 }
                 Navigator.of(dialogCtx).pop();
               },
-              child: const Text('Add'),
+              child: Text(context.tr('add')),
             ),
           ],
         );

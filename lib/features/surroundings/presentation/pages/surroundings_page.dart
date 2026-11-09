@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/utils/app_settings_helper.dart';
@@ -177,7 +179,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
       backgroundColor: context.appBackground,
       appBar: AppBar(
         title: Text(
-          'Surroundings & Weather',
+          context.tr('surroundings_title'),
           style: TextStyle(
             fontFamily: 'Baloo 2',
             fontWeight: FontWeight.w700,
@@ -198,8 +200,8 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                       color: context.appInk,
                     ),
                   )
-                : Icon(Icons.refresh_rounded, color: context.appInk),
-            tooltip: 'Refresh Weather',
+                : Icon(CupertinoIcons.arrow_clockwise, color: context.appInk),
+            tooltip: context.tr('surroundings_refresh'),
             onPressed: _isRefreshing
                 ? null
                 : () => _checkPermissionsAndLoad(
@@ -243,7 +245,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                 shape: BoxShape.circle,
               ),
               child: Icon(
-                Icons.location_off_rounded,
+                CupertinoIcons.location_slash,
                 size: 52,
                 color: context.isDarkMode ? const Color(0xFFF87171) : const Color(0xFFDC2626),
               ),
@@ -273,7 +275,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
             const SizedBox(height: AppSpacing.xl),
             PillButton(
               label: 'Allow Location Access',
-              icon: Icons.near_me_rounded,
+              icon: CupertinoIcons.location_north_fill,
               variant: PillButtonVariant.primary,
               height: 50,
               onPressed: _requestLocationPermission,
@@ -299,7 +301,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                 shape: BoxShape.circle,
               ),
               child: Icon(
-                Icons.location_disabled_rounded,
+                CupertinoIcons.location_slash,
                 size: 52,
                 color: context.isDarkMode ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
               ),
@@ -329,7 +331,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
             const SizedBox(height: AppSpacing.xl),
             PillButton(
               label: 'Turn On Location (GPS)',
-              icon: Icons.settings_outlined,
+              icon: CupertinoIcons.settings,
               variant: PillButtonVariant.primary,
               height: 50,
               onPressed: _handleOpenLocationSettings,
@@ -347,7 +349,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.cloud_off_rounded, size: 48, color: context.appSlate),
+            Icon(CupertinoIcons.wifi_slash, size: 48, color: context.appSlate),
             const SizedBox(height: AppSpacing.md),
             const Text(
               'Could not load weather info',
@@ -384,7 +386,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                 shape: BoxShape.circle,
               ),
               child: Icon(
-                Icons.location_searching_rounded,
+                CupertinoIcons.scope,
                 size: 52,
                 color: context.isDarkMode ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
               ),
@@ -414,7 +416,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
             const SizedBox(height: AppSpacing.xl),
             PillButton(
               label: 'Detect Location',
-              icon: Icons.refresh_rounded,
+              icon: CupertinoIcons.arrow_clockwise,
               variant: PillButtonVariant.primary,
               height: 50,
               onPressed: () => _checkPermissionsAndLoad(forceRefresh: true),
@@ -442,7 +444,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
             child: Row(
               children: [
                 Icon(
-                  Icons.location_off_rounded,
+                  CupertinoIcons.location_slash,
                   size: 20,
                   color: context.isDarkMode ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
                 ),
@@ -508,7 +510,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                   shape: BoxShape.circle,
                 ),
                 child: Icon(
-                  Icons.location_on_rounded,
+                  CupertinoIcons.location_solid,
                   size: 20,
                   color: context.appInk,
                 ),
@@ -549,7 +551,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(
-                      data.isFromCache ? Icons.history_rounded : Icons.bolt_rounded,
+                      data.isFromCache ? CupertinoIcons.clock_fill : CupertinoIcons.bolt,
                       size: 14,
                       color: context.appInk,
                     ),
@@ -649,7 +651,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                 children: [
                   Row(
                     children: [
-                      const Icon(Icons.air_rounded, color: AppColors.sky, size: 20),
+                      const Icon(CupertinoIcons.wind, color: AppColors.sky, size: 20),
                       const SizedBox(width: 8),
                       Text(
                         'Air Quality Index (AQI)',
@@ -744,7 +746,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                 title: 'UV Index',
                 value: data.uvIndex.toStringAsFixed(1),
                 subtitle: data.uvLabel,
-                icon: Icons.wb_sunny_outlined,
+                icon: CupertinoIcons.sun_max,
                 bgColor: AppColors.peach.withAlpha(50),
                 borderColor: AppColors.peach,
               ),
@@ -755,7 +757,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                 title: 'Humidity',
                 value: '${data.humidityPercent}%',
                 subtitle: _getHumidityLabel(data.humidityPercent),
-                icon: Icons.water_drop_outlined,
+                icon: CupertinoIcons.drop,
                 bgColor: AppColors.sky.withAlpha(50),
                 borderColor: AppColors.sky,
               ),
@@ -766,7 +768,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                 title: 'Wind',
                 value: '${data.windSpeedKmH.round()}',
                 subtitle: 'km/h',
-                icon: Icons.air_rounded,
+                icon: CupertinoIcons.wind,
                 bgColor: AppColors.mint.withAlpha(50),
                 borderColor: AppColors.mint,
               ),
@@ -790,7 +792,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
                   padding: const EdgeInsets.all(10),
                   decoration: const BoxDecoration(
                       color: AppColors.sky, shape: BoxShape.circle),
-                  child: Icon(Icons.water_drop_rounded,
+                  child: Icon(CupertinoIcons.drop_fill,
                       color: context.appInk, size: 22),
                 ),
                 const SizedBox(width: AppSpacing.sm),
@@ -830,7 +832,7 @@ class _SurroundingsPageState extends State<SurroundingsPage>
             children: [
               Row(
                 children: [
-                  const Icon(Icons.tips_and_updates_rounded, color: AppColors.mint, size: 20),
+                  const Icon(CupertinoIcons.lightbulb_fill, color: AppColors.mint, size: 20),
                   const SizedBox(width: 8),
                   Text(
                     'Surroundings & Health Guidance',

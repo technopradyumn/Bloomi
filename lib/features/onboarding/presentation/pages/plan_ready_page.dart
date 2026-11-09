@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -32,7 +33,7 @@ class _PlanReadyPageState extends State<PlanReadyPage> {
       BloomiToast.show(
         context,
         message: 'Please review and accept the wellness disclaimer to continue.',
-        icon: Icons.info_outline_rounded,
+        icon: CupertinoIcons.info_circle,
       );
       return;
     }
@@ -47,7 +48,7 @@ class _PlanReadyPageState extends State<PlanReadyPage> {
         BloomiToast.show(
           context,
           message: 'Google Health Connect permission is mandatory to finish onboarding.',
-          icon: Icons.lock_rounded,
+          icon: CupertinoIcons.lock_fill,
         );
         final granted = await healthService.requestPermissions();
         if (!granted) {
@@ -92,7 +93,7 @@ class _PlanReadyPageState extends State<PlanReadyPage> {
           BloomiToast.show(
             context,
             message: 'Error saving your plan. Please try again.',
-            icon: Icons.error_outline_rounded,
+            icon: CupertinoIcons.exclamationmark_circle,
           );
         }
       },
@@ -120,7 +121,7 @@ class _PlanReadyPageState extends State<PlanReadyPage> {
               backgroundColor: Colors.transparent,
               elevation: 0,
               leading: IconButton(
-                icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+                icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
                 onPressed: handleBack,
               ),
             ),
@@ -189,7 +190,7 @@ class _PlanReadyPageState extends State<PlanReadyPage> {
                                 children: [
                                   Row(
                                     children: [
-                                      const Icon(Icons.local_fire_department_rounded, color: AppColors.softOrange),
+                                      const Icon(CupertinoIcons.flame_fill, color: AppColors.softOrange),
                                       const SizedBox(width: AppSpacing.sm),
                                       Text(
                                         'Daily Calorie Target',
@@ -258,7 +259,7 @@ class _PlanReadyPageState extends State<PlanReadyPage> {
                               Expanded(
                                 child: PastelStatCard(
                                   backgroundColor: AppColors.sky,
-                                  icon: Icons.water_drop_rounded,
+                                  icon: CupertinoIcons.drop_fill,
                                   label: 'Water Target',
                                   value: (plan.waterMl / 1000.0).toStringAsFixed(1),
                                   unit: 'L/day',
@@ -268,7 +269,7 @@ class _PlanReadyPageState extends State<PlanReadyPage> {
                               const Expanded(
                                 child: PastelStatCard(
                                   backgroundColor: AppColors.butter,
-                                  icon: Icons.directions_walk_rounded,
+                                  icon: CupertinoIcons.compass,
                                   label: 'Daily Steps',
                                   value: '8,000',
                                   unit: 'steps',

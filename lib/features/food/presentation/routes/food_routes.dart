@@ -26,6 +26,10 @@ final List<RouteBase> foodRoutes = [
     ),
     routes: [
       GoRoute(
+        path: 'diary',
+        redirect: (context, state) => '/food',
+      ),
+      GoRoute(
         path: 'add',
         builder: (context, state) => BlocProvider<FoodBloc>(
           create: (_) => sl<FoodBloc>(),
@@ -53,6 +57,8 @@ final List<RouteBase> foodRoutes = [
             create: (_) => sl<FoodBloc>(),
             child: FoodDetailPage(
               foodId: id,
+              mealEntryId: state.uri.queryParameters['mealEntryId'],
+              isEditMode: state.uri.queryParameters['isEdit'] == 'true',
               initialMealType:
                   state.uri.queryParameters['mealType'] ?? 'lunch',
               fallbackName: state.uri.queryParameters['name'],
@@ -63,6 +69,9 @@ final List<RouteBase> foodRoutes = [
               fallbackFibre: double.tryParse(state.uri.queryParameters['fib'] ?? ''),
               fallbackIsCustom: state.uri.queryParameters['isCustom'] == 'true',
               fallbackServingGrams: double.tryParse(state.uri.queryParameters['servingGrams'] ?? '') ?? 100.0,
+              savedQuantity: double.tryParse(state.uri.queryParameters['quantity'] ?? ''),
+              savedUnit: state.uri.queryParameters['unit'],
+              savedTotalGrams: double.tryParse(state.uri.queryParameters['grams'] ?? ''),
             ),
           );
         },
@@ -75,6 +84,8 @@ final List<RouteBase> foodRoutes = [
             create: (_) => sl<FoodBloc>(),
             child: FoodDetailPage(
               foodId: id,
+              mealEntryId: state.uri.queryParameters['mealEntryId'],
+              isEditMode: state.uri.queryParameters['isEdit'] == 'true',
               initialMealType:
                   state.uri.queryParameters['mealType'] ?? 'lunch',
               fallbackName: state.uri.queryParameters['name'],
@@ -85,6 +96,9 @@ final List<RouteBase> foodRoutes = [
               fallbackFibre: double.tryParse(state.uri.queryParameters['fib'] ?? ''),
               fallbackIsCustom: state.uri.queryParameters['isCustom'] == 'true',
               fallbackServingGrams: double.tryParse(state.uri.queryParameters['servingGrams'] ?? '') ?? 100.0,
+              savedQuantity: double.tryParse(state.uri.queryParameters['quantity'] ?? ''),
+              savedUnit: state.uri.queryParameters['unit'],
+              savedTotalGrams: double.tryParse(state.uri.queryParameters['grams'] ?? ''),
             ),
           );
         },

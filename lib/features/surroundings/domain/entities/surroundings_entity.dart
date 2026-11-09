@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class CityLocationEntity extends Equatable {
   final String name;
@@ -184,14 +184,14 @@ class SurroundingsEntity extends Equatable {
   IconData get weatherIcon {
     switch (weatherCode) {
       case 0:
-        return Icons.wb_sunny_rounded;
+        return CupertinoIcons.sun_max_fill;
       case 1:
       case 2:
       case 3:
-        return Icons.wb_cloudy_rounded;
+        return CupertinoIcons.cloud_fill;
       case 45:
       case 48:
-        return Icons.cloud_outlined;
+        return CupertinoIcons.cloud;
       case 51:
       case 53:
       case 55:
@@ -201,17 +201,17 @@ class SurroundingsEntity extends Equatable {
       case 80:
       case 81:
       case 82:
-        return Icons.water_drop_rounded;
+        return CupertinoIcons.drop_fill;
       case 71:
       case 73:
       case 75:
-        return Icons.ac_unit_rounded;
+        return CupertinoIcons.snow;
       case 95:
       case 96:
       case 99:
-        return Icons.flash_on_rounded;
+        return CupertinoIcons.bolt_fill;
       default:
-        return Icons.wb_sunny_rounded;
+        return CupertinoIcons.sun_max_fill;
     }
   }
 

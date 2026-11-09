@@ -1,0 +1,1381 @@
+{
+  "en": {
+    "code": "en",
+    "name": "English",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "hi": {
+    "code": "hi",
+    "name": "Hindi",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "hinglish": {
+    "code": "hinglish",
+    "name": "Hinglish",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ta": {
+    "code": "ta",
+    "name": "Tamil",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "te": {
+    "code": "te",
+    "name": "Telugu",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "bn": {
+    "code": "bn",
+    "name": "Bengali",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "gu": {
+    "code": "gu",
+    "name": "Gujarati",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ur": {
+    "code": "ur",
+    "name": "Urdu",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "mr": {
+    "code": "mr",
+    "name": "Marathi",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "kok": {
+    "code": "kok",
+    "name": "Konkani",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "mai": {
+    "code": "mai",
+    "name": "Maithili",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "kn": {
+    "code": "kn",
+    "name": "Kannada",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ml": {
+    "code": "ml",
+    "name": "Malayalam",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "pa": {
+    "code": "pa",
+    "name": "Punjabi",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "mni": {
+    "code": "mni",
+    "name": "Manipuri",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "or": {
+    "code": "or",
+    "name": "Odia",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "sa": {
+    "code": "sa",
+    "name": "Sanskrit",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "as": {
+    "code": "as",
+    "name": "Assamese",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ne": {
+    "code": "ne",
+    "name": "Nepali",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "sd": {
+    "code": "sd",
+    "name": "Sindhi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "sat": {
+    "code": "sat",
+    "name": "Santali",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "bho": {
+    "code": "bho",
+    "name": "Bhojpuri",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "raj": {
+    "code": "raj",
+    "name": "Rajasthani",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "hne": {
+    "code": "hne",
+    "name": "Chhattisgarhi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "brx": {
+    "code": "brx",
+    "name": "Bodo",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "mag": {
+    "code": "mag",
+    "name": "Magahi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "doi": {
+    "code": "doi",
+    "name": "Dogri",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "gbm": {
+    "code": "gbm",
+    "name": "Garhwali",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ks": {
+    "code": "ks",
+    "name": "Kashmiri",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "lus": {
+    "code": "lus",
+    "name": "Mizo",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "bgc": {
+    "code": "bgc",
+    "name": "Haryanvi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "mwr": {
+    "code": "mwr",
+    "name": "Marwari",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "awa": {
+    "code": "awa",
+    "name": "Awadhi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "tcy": {
+    "code": "tcy",
+    "name": "Tulu",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "kfy": {
+    "code": "kfy",
+    "name": "Kumaoni",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "kha": {
+    "code": "kha",
+    "name": "Khasi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "grt": {
+    "code": "grt",
+    "name": "Garo",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "zh-cn": {
+    "code": "zh-cn",
+    "name": "Chinese (Simplified)",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "trp": {
+    "code": "trp",
+    "name": "Kokborok",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "zh-tw": {
+    "code": "zh-tw",
+    "name": "Chinese (Traditional)",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ja": {
+    "code": "ja",
+    "name": "Japanese",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "new": {
+    "code": "new",
+    "name": "Newari",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "vi": {
+    "code": "vi",
+    "name": "Vietnamese",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "lbj": {
+    "code": "lbj",
+    "name": "Ladakhi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ko": {
+    "code": "ko",
+    "name": "Korean",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "th": {
+    "code": "th",
+    "name": "Thai",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "id": {
+    "code": "id",
+    "name": "Indonesian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "fil": {
+    "code": "fil",
+    "name": "Filipino / Tagalog",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "my": {
+    "code": "my",
+    "name": "Burmese",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "km": {
+    "code": "km",
+    "name": "Khmer",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ms": {
+    "code": "ms",
+    "name": "Malay",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "lo": {
+    "code": "lo",
+    "name": "Lao",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "si": {
+    "code": "si",
+    "name": "Sinhala",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "dz": {
+    "code": "dz",
+    "name": "Dzongkha",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "jv": {
+    "code": "jv",
+    "name": "Javanese",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "bo": {
+    "code": "bo",
+    "name": "Tibetan",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ceb": {
+    "code": "ceb",
+    "name": "Cebuano",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "su": {
+    "code": "su",
+    "name": "Sundanese",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "mn": {
+    "code": "mn",
+    "name": "Mongolian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ilo": {
+    "code": "ilo",
+    "name": "Ilocano",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "war": {
+    "code": "war",
+    "name": "Waray",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ksw": {
+    "code": "ksw",
+    "name": "S\\",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "pam": {
+    "code": "pam",
+    "name": "Kapampangan",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "pag": {
+    "code": "pag",
+    "name": "Pangasinan",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "bcl": {
+    "code": "bcl",
+    "name": "Bikol",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "hil": {
+    "code": "hil",
+    "name": "Hiligaynon",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "hmn": {
+    "code": "hmn",
+    "name": "Hmong",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "shn": {
+    "code": "shn",
+    "name": "Shan",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "mi": {
+    "code": "mi",
+    "name": "Maori",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "mnw": {
+    "code": "mnw",
+    "name": "Mon",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "sm": {
+    "code": "sm",
+    "name": "Samoan",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "haw": {
+    "code": "haw",
+    "name": "Hawaiian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "fj": {
+    "code": "fj",
+    "name": "Fijian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "to": {
+    "code": "to",
+    "name": "Tongan",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "tpi": {
+    "code": "tpi",
+    "name": "Tok Pisin",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "bi": {
+    "code": "bi",
+    "name": "Bislama",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ar": {
+    "code": "ar",
+    "name": "Arabic",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "fa": {
+    "code": "fa",
+    "name": "Persian / Farsi",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ch": {
+    "code": "ch",
+    "name": "Chamorro",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "mh": {
+    "code": "mh",
+    "name": "Marshallese",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "he": {
+    "code": "he",
+    "name": "Hebrew",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "az": {
+    "code": "az",
+    "name": "Azerbaijani",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "kk": {
+    "code": "kk",
+    "name": "Kazakh",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "tr": {
+    "code": "tr",
+    "name": "Turkish",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "uz": {
+    "code": "uz",
+    "name": "Uzbek",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ky": {
+    "code": "ky",
+    "name": "Kyrgyz",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "tg": {
+    "code": "tg",
+    "name": "Tajik",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "tk": {
+    "code": "tk",
+    "name": "Turkmen",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ps": {
+    "code": "ps",
+    "name": "Pashto",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ku": {
+    "code": "ku",
+    "name": "Kurdish",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "hy": {
+    "code": "hy",
+    "name": "Armenian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ug": {
+    "code": "ug",
+    "name": "Uyghur",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ka": {
+    "code": "ka",
+    "name": "Georgian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "dv": {
+    "code": "dv",
+    "name": "Dhivehi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "tt": {
+    "code": "tt",
+    "name": "Tatar",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ba": {
+    "code": "ba",
+    "name": "Bashkir",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "cv": {
+    "code": "cv",
+    "name": "Chuvash",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "sah": {
+    "code": "sah",
+    "name": "Sakha / Yakut",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "tyv": {
+    "code": "tyv",
+    "name": "Tuvan",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "bua": {
+    "code": "bua",
+    "name": "Buryat",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ce": {
+    "code": "ce",
+    "name": "Chechen",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "es": {
+    "code": "es",
+    "name": "Spanish",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "av": {
+    "code": "av",
+    "name": "Avar",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "os": {
+    "code": "os",
+    "name": "Ossetian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "fr": {
+    "code": "fr",
+    "name": "French",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "de": {
+    "code": "de",
+    "name": "German",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "it": {
+    "code": "it",
+    "name": "Italian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ru": {
+    "code": "ru",
+    "name": "Russian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "pt": {
+    "code": "pt",
+    "name": "Portuguese",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "pl": {
+    "code": "pl",
+    "name": "Polish",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "uk": {
+    "code": "uk",
+    "name": "Ukrainian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "nl": {
+    "code": "nl",
+    "name": "Dutch",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "el": {
+    "code": "el",
+    "name": "Greek",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "cs": {
+    "code": "cs",
+    "name": "Czech",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "sv": {
+    "code": "sv",
+    "name": "Swedish",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "hu": {
+    "code": "hu",
+    "name": "Hungarian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ro": {
+    "code": "ro",
+    "name": "Romanian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "da": {
+    "code": "da",
+    "name": "Danish",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "fi": {
+    "code": "fi",
+    "name": "Finnish",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "no": {
+    "code": "no",
+    "name": "Norwegian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "sk": {
+    "code": "sk",
+    "name": "Slovak",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "bg": {
+    "code": "bg",
+    "name": "Bulgarian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "hr": {
+    "code": "hr",
+    "name": "Croatian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "lt": {
+    "code": "lt",
+    "name": "Lithuanian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "sr": {
+    "code": "sr",
+    "name": "Serbian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "sl": {
+    "code": "sl",
+    "name": "Slovenian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "et": {
+    "code": "et",
+    "name": "Estonian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "lv": {
+    "code": "lv",
+    "name": "Latvian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "eu": {
+    "code": "eu",
+    "name": "Basque",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ca": {
+    "code": "ca",
+    "name": "Catalan",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "gl": {
+    "code": "gl",
+    "name": "Galician",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "cy": {
+    "code": "cy",
+    "name": "Welsh",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ga": {
+    "code": "ga",
+    "name": "Irish",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "gd": {
+    "code": "gd",
+    "name": "Scottish Gaelic",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "is": {
+    "code": "is",
+    "name": "Icelandic",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "mt": {
+    "code": "mt",
+    "name": "Maltese",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "sq": {
+    "code": "sq",
+    "name": "Albanian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "mk": {
+    "code": "mk",
+    "name": "Macedonian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "bs": {
+    "code": "bs",
+    "name": "Bosnian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "be": {
+    "code": "be",
+    "name": "Belarusian",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "lb": {
+    "code": "lb",
+    "name": "Luxembourgish",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "fo": {
+    "code": "fo",
+    "name": "Faroese",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "yi": {
+    "code": "yi",
+    "name": "Yiddish",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "la": {
+    "code": "la",
+    "name": "Latin",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "eo": {
+    "code": "eo",
+    "name": "Esperanto",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "br": {
+    "code": "br",
+    "name": "Breton",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "oc": {
+    "code": "oc",
+    "name": "Occitan",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "co": {
+    "code": "co",
+    "name": "Corsican",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "rm": {
+    "code": "rm",
+    "name": "Romansh",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "fy": {
+    "code": "fy",
+    "name": "Western Frisian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "sc": {
+    "code": "sc",
+    "name": "Sardinian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "fur": {
+    "code": "fur",
+    "name": "Friulian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "lij": {
+    "code": "lij",
+    "name": "Ligurian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "vec": {
+    "code": "vec",
+    "name": "Venetian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "szl": {
+    "code": "szl",
+    "name": "Silesian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "csb": {
+    "code": "csb",
+    "name": "Kashubian",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "sw": {
+    "code": "sw",
+    "name": "Swahili",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "am": {
+    "code": "am",
+    "name": "Amharic",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "yo": {
+    "code": "yo",
+    "name": "Yoruba",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ig": {
+    "code": "ig",
+    "name": "Igbo",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "zu": {
+    "code": "zu",
+    "name": "Zulu",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "ha": {
+    "code": "ha",
+    "name": "Hausa",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "xh": {
+    "code": "xh",
+    "name": "Xhosa",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "af": {
+    "code": "af",
+    "name": "Afrikaans",
+    "status": "complete",
+    "translatedCount": 471,
+    "totalCount": 468
+  },
+  "so": {
+    "code": "so",
+    "name": "Somali",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "om": {
+    "code": "om",
+    "name": "Oromo",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ti": {
+    "code": "ti",
+    "name": "Tigrinya",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "sn": {
+    "code": "sn",
+    "name": "Shona",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "mg": {
+    "code": "mg",
+    "name": "Malagasy",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "st": {
+    "code": "st",
+    "name": "Sesotho",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "rw": {
+    "code": "rw",
+    "name": "Kinyarwanda",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ny": {
+    "code": "ny",
+    "name": "Chichewa / Nyanja",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ln": {
+    "code": "ln",
+    "name": "Lingala",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "wo": {
+    "code": "wo",
+    "name": "Wolof",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "lg": {
+    "code": "lg",
+    "name": "Luganda",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ak": {
+    "code": "ak",
+    "name": "Akan / Twi",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "bm": {
+    "code": "bm",
+    "name": "Bambara",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ff": {
+    "code": "ff",
+    "name": "Fula / Fulfulde",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ee": {
+    "code": "ee",
+    "name": "Ewe",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ts": {
+    "code": "ts",
+    "name": "Tsonga",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "tn": {
+    "code": "tn",
+    "name": "Tswana",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ve": {
+    "code": "ve",
+    "name": "Venda",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ss": {
+    "code": "ss",
+    "name": "Swati",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "nr": {
+    "code": "nr",
+    "name": "Southern Ndebele",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "qu": {
+    "code": "qu",
+    "name": "Quechua",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "gn": {
+    "code": "gn",
+    "name": "Guarani",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ay": {
+    "code": "ay",
+    "name": "Aymara",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "nah": {
+    "code": "nah",
+    "name": "Nahuatl",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "kl": {
+    "code": "kl",
+    "name": "Greenlandic",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "iu": {
+    "code": "iu",
+    "name": "Inuktitut",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "chr": {
+    "code": "chr",
+    "name": "Cherokee",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "ht": {
+    "code": "ht",
+    "name": "Haitian Creole",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "nv": {
+    "code": "nv",
+    "name": "Navajo",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "pap": {
+    "code": "pap",
+    "name": "Papiamento",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "yua": {
+    "code": "yua",
+    "name": "Yucatec Maya",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "oj": {
+    "code": "oj",
+    "name": "Ojibwe",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  },
+  "cr": {
+    "code": "cr",
+    "name": "Cree",
+    "status": "complete",
+    "translatedCount": 468,
+    "totalCount": 468
+  }
+}

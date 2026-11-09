@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'dart:io';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
@@ -17,20 +19,13 @@ import 'package:bloomi/services/widget/widget_sync_service.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-enum WallpaperTheme {
-  mintGlow,
-  blossom,
-  darkLauncher,
-  cleanNeutral,
-}
-
 /// Home Screen Widgets Page
-/// Showcases the 3 essential widgets with 100% real SQLite and Health data:
+/// Showcases all 5 Android widgets with 100% real SQLite and Health data:
 /// 1. Steps Counter Widget (Total Steps & Target Steps)
 /// 2. Water Tracker Widget (Logged ml & Daily Target ml)
-/// 3. All-in-One Daily Hub Widget (Surroundings Weather/AQI/UV, Steps, Water, Nutrients Consumed Daily)
-///
-/// Gated behind Bloomi Premium.
+/// 3. All-in-One Daily Hub Widget (Surroundings Weather/AQI/UV, Steps, Water, Nutrients)
+/// 4. Daily Nutrition & Macros Widget (Calories, Target, Carbs, Protein, Fat)
+/// 5. Cheerful Mascot & Mood Widget (Mascot state, Streak, Cheerful motivation)
 class WidgetsPage extends StatefulWidget {
   const WidgetsPage({super.key});
 
@@ -42,7 +37,6 @@ class _WidgetsPageState extends State<WidgetsPage> {
   final WidgetSyncService _widgetSyncService = WidgetSyncService();
   StreamSubscription<HomeDashboardEntity>? _dashboardSub;
   StreamSubscription<bool>? _premiumSub;
-  WallpaperTheme _selectedWallpaper = WallpaperTheme.mintGlow;
 
   bool _isPremium = false;
 
@@ -59,6 +53,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
   double _proteinGrams = 65;
   double _fatGrams = 42;
   double _fibreGrams = 22;
+  int _streakDays = 1;
   SurroundingsEntity? _surroundings;
 
   @override
@@ -97,6 +92,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
           _proteinGrams = homeData.protein.currentGrams;
           _fatGrams = homeData.fat.currentGrams;
           _fibreGrams = homeData.fibre.currentGrams;
+          _streakDays = homeData.streakDays > 0 ? homeData.streakDays : 1;
         });
       }).catchError((_) {});
 
@@ -113,6 +109,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
           _proteinGrams = homeData.protein.currentGrams;
           _fatGrams = homeData.fat.currentGrams;
           _fibreGrams = homeData.fibre.currentGrams;
+          _streakDays = homeData.streakDays > 0 ? homeData.streakDays : 1;
         });
       });
     } catch (_) {}
@@ -148,7 +145,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
       BloomiToast.show(
         context,
         message: 'Touch & hold your home screen, tap Widgets, and drag Bloomi $widgetTitle!',
-        icon: Icons.widgets_rounded,
+        icon: CupertinoIcons.square_grid_2x2_fill,
       );
       return;
     }
@@ -162,7 +159,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
           message: success
               ? 'Widget request sent! Check your launcher home screen.'
               : 'Could not pin widget automatically. You can add it manually from widget picker.',
-          icon: success ? Icons.check_circle_rounded : Icons.info_outline_rounded,
+          icon: success ? CupertinoIcons.checkmark_circle_fill : CupertinoIcons.info_circle,
         );
       }
     } else {
@@ -170,7 +167,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
         BloomiToast.show(
           context,
           message: 'Long-press on your Home Screen -> Widgets -> Bloomi to place $widgetTitle.',
-          icon: Icons.touch_app_rounded,
+          icon: CupertinoIcons.hand_point_right_fill,
         );
       }
     }
@@ -206,7 +203,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
                   foregroundColor: AppColors.softOrange,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 ),
-                icon: const Icon(Icons.star_rounded, size: 16),
+                icon: const Icon(CupertinoIcons.star_fill, size: 16),
                 label: const Text('PRO', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12)),
               ),
             ),
@@ -215,18 +212,8 @@ class _WidgetsPageState extends State<WidgetsPage> {
       body: ListView(
         padding: const EdgeInsets.all(AppSpacing.md),
         children: [
-          // Premium Paywall Status Card
-          _buildPremiumHeaderBanner(),
-
-          const SizedBox(height: AppSpacing.md),
-
-          // Wallpaper Simulator Picker
-          _buildWallpaperPicker(),
-
-          const SizedBox(height: AppSpacing.lg),
-
           Text(
-            'Featured Home Screen Widgets (3)',
+            'Android Home Screen Widgets (5)',
             style: TextStyle(
               fontFamily: 'Baloo 2',
               fontSize: 18,
@@ -236,7 +223,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
           ),
           const SizedBox(height: 4),
           Text(
-            'Real-time data automatically synced from your local database & sensors.',
+            'All 5 widgets available in your Android widget picker. Real-time data synced from your local storage & health sensors.',
             style: TextStyle(fontSize: 12, color: context.appSlate),
           ),
 
@@ -246,7 +233,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
           _buildWidgetShowcaseCard(
             title: '1. Steps Counter Widget',
             subtitle: 'Total Steps, Daily Target, Distance & Active Calories',
-            dimensions: '2x4 (Medium)',
+            dimensions: '2x2 (Medium)',
             widgetType: 'steps',
             child: _buildStepsWidgetPreview(),
           ),
@@ -257,7 +244,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
           _buildWidgetShowcaseCard(
             title: '2. Water Tracker Widget',
             subtitle: 'Logged Intake, Daily Water Target & Glasses Progress',
-            dimensions: '2x4 (Medium)',
+            dimensions: '2x2 (Medium)',
             widgetType: 'water',
             child: _buildWaterWidgetPreview(),
           ),
@@ -267,91 +254,36 @@ class _WidgetsPageState extends State<WidgetsPage> {
           // WIDGET 3: ALL-IN-ONE DAILY HUB WIDGET
           _buildWidgetShowcaseCard(
             title: '3. Main Daily Hub Widget',
-            subtitle: 'Surroundings (Weather/AQI/UV) + Steps + Water + Daily Nutrients',
-            dimensions: '2x4 (Standard)',
+            subtitle: 'Surroundings (Weather/AQI/UV) + Steps + Water + Nutrients',
+            dimensions: '4x2 (Standard)',
             widgetType: 'overview',
             child: _buildDailyHubWidgetPreview(),
           ),
 
+          const SizedBox(height: AppSpacing.lg),
+
+          // WIDGET 4: DAILY NUTRITION & MACROS WIDGET
+          _buildWidgetShowcaseCard(
+            title: '4. Daily Nutrition & Macros Widget',
+            subtitle: 'Calories Consumed, Daily Target & Macro Breakdown (Carbs, Protein, Fat)',
+            dimensions: '4x2 (Medium)',
+            widgetType: 'nutrition',
+            child: _buildNutritionWidgetPreview(),
+          ),
+
+          const SizedBox(height: AppSpacing.lg),
+
+          // WIDGET 5: CHEERFUL MASCOT & MOOD WIDGET
+          _buildWidgetShowcaseCard(
+            title: '5. Cheerful Mascot & Mood Widget',
+            subtitle: 'Bloomi Mascot, Daily Habit Streak & Encouraging Health Quote',
+            dimensions: '2x2 (Compact)',
+            widgetType: 'mascot',
+            child: _buildMascotWidgetPreview(),
+          ),
+
           const SizedBox(height: AppSpacing.xxl),
         ],
-      ),
-    );
-  }
-
-  Widget _buildPremiumHeaderBanner() {
-    return const SizedBox.shrink();
-  }
-
-  Widget _buildWallpaperPicker() {
-    return Container(
-      padding: const EdgeInsets.all(AppSpacing.sm),
-      decoration: BoxDecoration(
-        color: context.appSurface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: context.appBorderColor),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-            child: Text(
-              'Simulated Launcher Wallpaper:',
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 12, color: context.appSlate),
-            ),
-          ),
-          Row(
-            children: [
-              _buildWallpaperChip('Mint Glow', WallpaperTheme.mintGlow, const Color(0xFFD4F1E4)),
-              _buildWallpaperChip('Blossom', WallpaperTheme.blossom, const Color(0xFFFFE3E3)),
-              _buildWallpaperChip('Dark UI', WallpaperTheme.darkLauncher, const Color(0xFF1E222A)),
-              _buildWallpaperChip('Neutral', WallpaperTheme.cleanNeutral, const Color(0xFFF0F0EE)),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildWallpaperChip(String title, WallpaperTheme theme, Color sample) {
-    final isSel = _selectedWallpaper == theme;
-    return Expanded(
-      child: GestureDetector(
-        onTap: () => setState(() => _selectedWallpaper = theme),
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 4),
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          decoration: BoxDecoration(
-            color: isSel ? context.appInk : Colors.transparent,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              color: isSel ? context.appInk : context.appInk.withAlpha(20),
-            ),
-          ),
-          child: Column(
-            children: [
-              Container(
-                width: 16,
-                height: 16,
-                decoration: BoxDecoration(
-                  color: sample,
-                  shape: BoxShape.circle,
-                  border: Border.all(color: context.appDivider),
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 10,
-                  fontWeight: isSel ? FontWeight.w700 : FontWeight.w500,
-                  color: isSel ? Theme.of(context).colorScheme.onPrimary : context.appInk,
-                ),
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }
@@ -363,33 +295,11 @@ class _WidgetsPageState extends State<WidgetsPage> {
     required String widgetType,
     required Widget child,
   }) {
-    Color bgGradientStart;
-    Color bgGradientEnd;
-
-    switch (_selectedWallpaper) {
-      case WallpaperTheme.mintGlow:
-        bgGradientStart = const Color(0xFFD7F5E9);
-        bgGradientEnd = const Color(0xFFF2FBF6);
-        break;
-      case WallpaperTheme.blossom:
-        bgGradientStart = const Color(0xFFFFECEB);
-        bgGradientEnd = const Color(0xFFFFF7F6);
-        break;
-      case WallpaperTheme.darkLauncher:
-        bgGradientStart = const Color(0xFF191D24);
-        bgGradientEnd = const Color(0xFF282E3A);
-        break;
-      case WallpaperTheme.cleanNeutral:
-        bgGradientStart = const Color(0xFFECECEB);
-        bgGradientEnd = const Color(0xFFF9F9F8);
-        break;
-    }
-
     return Container(
       decoration: BoxDecoration(
         color: context.appSurface,
         borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
-        border: Border.all(color: context.appInk.withAlpha(20)),
+        border: Border.all(color: context.appBorderColor),
         boxShadow: context.appCardShadow,
       ),
       child: Column(
@@ -405,22 +315,16 @@ class _WidgetsPageState extends State<WidgetsPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Flexible(
-                            child: Text(
-                              title,
-                              style: TextStyle(
-                                fontFamily: 'Baloo 2',
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16,
-                                color: context.appInk,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 6),
-                        ],
+                      Text(
+                        title,
+                        style: TextStyle(
+                          fontFamily: 'Baloo 2',
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16,
+                          color: context.appInk,
+                        ),
                       ),
+                      const SizedBox(height: 2),
                       Text(
                         subtitle,
                         style: TextStyle(fontSize: 11, color: context.appSlate),
@@ -431,27 +335,31 @@ class _WidgetsPageState extends State<WidgetsPage> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: context.appInk.withAlpha(15),
+                    color: context.isDarkMode
+                        ? AppColors.darkSurface
+                        : const Color(0xFFF1F5F9),
                     borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: context.appBorderColor),
                   ),
                   child: Text(
                     dimensions,
-                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: context.appInk),
+                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: context.appInk),
                   ),
                 ),
               ],
             ),
           ),
 
-          // Wallpaper background preview container
+          // Solid background preview container (no simulated wallpaper, no glassmorphism)
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(AppSpacing.lg),
+            padding: const EdgeInsets.all(AppSpacing.md),
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [bgGradientStart, bgGradientEnd],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+              color: context.isDarkMode
+                  ? const Color(0xFF0F141C)
+                  : const Color(0xFFF1F5F9),
+              border: Border.symmetric(
+                horizontal: BorderSide(color: context.appBorderColor),
               ),
             ),
             child: Center(child: child),
@@ -487,8 +395,8 @@ class _WidgetsPageState extends State<WidgetsPage> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: context.appSurface,
-        borderRadius: BorderRadius.circular(24),
-        boxShadow: context.appCardShadow,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: context.appBorderColor),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -506,7 +414,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
                         color: AppColors.mint.withAlpha(60),
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(Icons.directions_walk_rounded, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 20),
+                      child: Icon(CupertinoIcons.compass, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 20),
                     ),
                     const SizedBox(width: 8),
                     Flexible(
@@ -571,7 +479,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.straighten_rounded, size: 14, color: context.appSlate),
+                    Icon(CupertinoIcons.chart_bar, size: 14, color: context.appSlate),
                     const SizedBox(width: 4),
                     Flexible(
                       child: Text(
@@ -588,7 +496,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Icon(Icons.local_fire_department_rounded, size: 14, color: AppColors.softOrange),
+                    const Icon(CupertinoIcons.flame_fill, size: 14, color: AppColors.softOrange),
                     const SizedBox(width: 4),
                     Flexible(
                       child: Text(
@@ -622,8 +530,8 @@ class _WidgetsPageState extends State<WidgetsPage> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: context.appSurface,
-        borderRadius: BorderRadius.circular(24),
-        boxShadow: context.appCardShadow,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: context.appBorderColor),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -641,7 +549,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
                         color: AppColors.sky.withAlpha(60),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(Icons.water_drop_rounded, color: AppColors.sky, size: 20),
+                      child: const Icon(CupertinoIcons.drop_fill, color: AppColors.sky, size: 20),
                     ),
                     const SizedBox(width: 8),
                     Flexible(
@@ -745,8 +653,8 @@ class _WidgetsPageState extends State<WidgetsPage> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: context.appSurface,
-        borderRadius: BorderRadius.circular(28),
-        boxShadow: context.appCardShadow,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: context.appBorderColor),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -756,12 +664,15 @@ class _WidgetsPageState extends State<WidgetsPage> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             decoration: BoxDecoration(
-              color: context.appBackground,
+              color: context.isDarkMode
+                  ? AppColors.darkSurface
+                  : const Color(0xFFF8FAFC),
               borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: context.appBorderColor),
             ),
             child: Row(
               children: [
-                const Icon(Icons.wb_sunny_rounded, color: AppColors.softOrange, size: 22),
+                const Icon(CupertinoIcons.sun_max_fill, color: AppColors.softOrange, size: 22),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Column(
@@ -831,15 +742,16 @@ class _WidgetsPageState extends State<WidgetsPage> {
                   decoration: BoxDecoration(
                     color: AppColors.mint.withAlpha(30),
                     borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: AppColors.mint.withAlpha(60)),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.directions_walk_rounded, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 16),
+                          Icon(CupertinoIcons.compass, color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark, size: 16),
                           const SizedBox(width: 4),
-                          Text('Steps', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: context.appSlate)),
+                          Text(context.tr('steps'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: context.appSlate)),
                         ],
                       ),
                       const SizedBox(height: 4),
@@ -875,15 +787,16 @@ class _WidgetsPageState extends State<WidgetsPage> {
                   decoration: BoxDecoration(
                     color: AppColors.sky.withAlpha(30),
                     borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: AppColors.sky.withAlpha(60)),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
-                          const Icon(Icons.water_drop_rounded, color: AppColors.sky, size: 16),
+                          const Icon(CupertinoIcons.drop_fill, color: AppColors.sky, size: 16),
                           const SizedBox(width: 4),
-                          Text('Water', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: context.appSlate)),
+                          Text(context.tr('water'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: context.appSlate)),
                         ],
                       ),
                       const SizedBox(height: 4),
@@ -918,9 +831,11 @@ class _WidgetsPageState extends State<WidgetsPage> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: context.appSurface,
+              color: context.isDarkMode
+                  ? AppColors.darkSurface
+                  : const Color(0xFFF8FAFC),
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: context.appInk.withAlpha(20)),
+              border: Border.all(color: context.appBorderColor),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -968,6 +883,214 @@ class _WidgetsPageState extends State<WidgetsPage> {
               ],
             ),
           ),
+        ],
+      ),
+    );
+  }
+
+  // ==========================================
+  // 4. DAILY NUTRITION & MACROS WIDGET PREVIEW
+  // ==========================================
+  Widget _buildNutritionWidgetPreview() {
+    final caloriesProgress = _targetCalories > 0 ? (_consumedCalories / _targetCalories).clamp(0.0, 1.0) : 0.0;
+    final remaining = (_targetCalories - _consumedCalories).clamp(0, 9999);
+
+    return Container(
+      width: double.infinity,
+      constraints: const BoxConstraints(maxWidth: 350),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: context.appSurface,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: context.appBorderColor),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Row(
+                  children: [
+                    const Text('🥗', style: TextStyle(fontSize: 16)),
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Text(
+                        'Daily Nutrition & Macros',
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13, color: context.appInk),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                '$remaining kcal left',
+                style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: context.appSlate),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Flexible(
+                child: Text(
+                  '$_consumedCalories kcal',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontFamily: 'Baloo 2',
+                    fontSize: 24,
+                    fontWeight: FontWeight.w800,
+                    color: context.appInk,
+                    height: 1.0,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 6),
+              Flexible(
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 2),
+                  child: Text(
+                    '/ $_targetCalories target',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: context.appSlate),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(6),
+            child: LinearProgressIndicator(
+              value: caloriesProgress,
+              backgroundColor: AppColors.softOrange.withAlpha(30),
+              valueColor: const AlwaysStoppedAnimation<Color>(AppColors.softOrange),
+              minHeight: 6,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(child: _buildMacroBadge('🍞 Carbs', '${_carbsGrams.toInt()}g', AppColors.mint)),
+              const SizedBox(width: 6),
+              Expanded(child: _buildMacroBadge('🍗 Protein', '${_proteinGrams.toInt()}g', AppColors.peach)),
+              const SizedBox(width: 6),
+              Expanded(child: _buildMacroBadge('🥑 Fat', '${_fatGrams.toInt()}g', AppColors.lilac)),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ==========================================
+  // 5. CHEERFUL MASCOT & MOOD WIDGET PREVIEW
+  // ==========================================
+  Widget _buildMascotWidgetPreview() {
+    return Container(
+      width: double.infinity,
+      constraints: const BoxConstraints(maxWidth: 340),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: context.appSurface,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: context.appBorderColor),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  const Text('🌸', style: TextStyle(fontSize: 16)),
+                  const SizedBox(width: 6),
+                  Text(
+                    'Bloomi Mascot',
+                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13, color: context.appInk),
+                  ),
+                ],
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                decoration: BoxDecoration(
+                  color: AppColors.softOrange.withAlpha(40),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  '🔥 Day $_streakDays',
+                  style: const TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.softOrange,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Text(
+            'Cheerful & Happy! ✨',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w800,
+              color: context.appInk,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            'Take gentle steps today. You are doing wonderfully on your wellness journey!',
+            style: TextStyle(
+              fontSize: 11,
+              color: context.appSlate,
+              height: 1.3,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Text(
+                'Tap to visit Bloomi',
+                style: TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w700,
+                  color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark,
+                ),
+              ),
+              const SizedBox(width: 4),
+              Icon(
+                CupertinoIcons.arrow_right,
+                size: 12,
+                color: context.isDarkMode ? AppColors.darkMint : AppColors.mintDark,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMacroBadge(String label, String value, Color color) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+      decoration: BoxDecoration(
+        color: color.withAlpha(30),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: color.withAlpha(60)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(label, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: context.appSlate)),
+          const SizedBox(height: 2),
+          Text(value, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: context.appInk)),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui';
 import 'package:bloomi/app/app.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/features/auth/presentation/bloc/auth_bloc.dart';
@@ -8,6 +9,18 @@ import 'package:flutter/services.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Global Flutter error handling to catch unhandled framework errors and prevent silent freezes
+  FlutterError.onError = (FlutterErrorDetails details) {
+    FlutterError.presentError(details);
+    debugPrint('Bloomi FlutterError: ${details.exceptionAsString()}');
+  };
+
+  // Global platform error handling for asynchronous exceptions
+  PlatformDispatcher.instance.onError = (Object error, StackTrace stack) {
+    debugPrint('Bloomi PlatformDispatcher Error: $error\n$stack');
+    return true; // handled
+  };
 
   // Ensure status bar text and icons are always crisp and dark on light theme
   SystemChrome.setSystemUIOverlayStyle(

@@ -223,7 +223,7 @@ class NotificationService {
             importance: def.importance,
             playSound: playSound,
             sound: playSound ? RawResourceAndroidNotificationSound(def.rawSoundName) : null,
-            enableVibration: true,
+            enableVibration: false,
             showBadge: true,
           );
           await androidPlugin.createNotificationChannel(channel);
@@ -347,7 +347,7 @@ class NotificationService {
       priority: Priority.high,
       sound: RawResourceAndroidNotificationSound(def.rawSoundName),
       playSound: true,
-      enableVibration: true,
+      enableVibration: false,
       showWhen: true,
       actions: actions,
       styleInformation: const BigTextStyleInformation(''),

@@ -29,10 +29,19 @@ abstract class HealthLocalDataSource {
     required String type,
     required int durationMinutes,
     required double calories,
+    DateTime? recordedAt,
   });
 
   Future<double?> getLatestWeight();
   Future<Map<String, double?>?> getLatestBloodPressure();
+  Stream<BodyEntry?> watchLatestBodyEntry(String type);
+  Future<BodyEntry?> getLatestBodyEntry(String type);
+  Future<void> updateBodyEntry({
+    required String id,
+    required double value,
+    required String unit,
+    DateTime? measuredAt,
+  });
 
   Future<void> saveImportedRecords(List<ImportedHealthRecordsCompanion> records);
   Future<List<ImportedHealthRecord>> getImportedRecords({
@@ -187,12 +196,18 @@ class HealthLocalDataSourceImpl implements HealthLocalDataSource {
     required String type,
     required int durationMinutes,
     required double calories,
+    DateTime? recordedAt,
   }) async {
-    await (_db.update(_db.workoutLogs)..where((tbl) => tbl.id.equals(id) & tbl.userId.equals(_currentUserId))).write(
+    await (_db.update(_db.workoutLogs)
+          ..where((tbl) =>
+              tbl.id.equals(id) &
+              (tbl.userId.equals(_currentUserId) | tbl.userId.equals('default_user'))))
+        .write(
       WorkoutLogsCompanion(
         type: drift.Value(type),
         durationMinutes: drift.Value(durationMinutes),
         calories: drift.Value(calories),
+        recordedAt: recordedAt != null ? drift.Value(recordedAt) : const drift.Value.absent(),
         isDirty: const drift.Value(true),
         updatedAt: drift.Value(DateTime.now()),
       ),
@@ -212,19 +227,69 @@ class HealthLocalDataSourceImpl implements HealthLocalDataSource {
   @override
   Future<Map<String, double?>?> getLatestBloodPressure() async {
     final sys = await (_db.select(_db.bodyEntries)
-          ..where((tbl) => tbl.userId.equals(_currentUserId) & tbl.type.equals('blood_pressure_sys') & tbl.deleted.equals(false))
+          ..where((tbl) =>
+              tbl.userId.equals(_currentUserId) &
+              (tbl.type.equals('blood_pressure_sys') | tbl.type.equals('systolic_bp')) &
+              tbl.deleted.equals(false))
           ..orderBy([(tbl) => drift.OrderingTerm.desc(tbl.measuredAt)])
           ..limit(1))
         .getSingleOrNull();
 
     final dia = await (_db.select(_db.bodyEntries)
-          ..where((tbl) => tbl.userId.equals(_currentUserId) & tbl.type.equals('blood_pressure_dia') & tbl.deleted.equals(false))
+          ..where((tbl) =>
+              tbl.userId.equals(_currentUserId) &
+              (tbl.type.equals('blood_pressure_dia') | tbl.type.equals('diastolic_bp')) &
+              tbl.deleted.equals(false))
           ..orderBy([(tbl) => drift.OrderingTerm.desc(tbl.measuredAt)])
           ..limit(1))
         .getSingleOrNull();
 
     if (sys == null && dia == null) return null;
     return {'sys': sys?.value, 'dia': dia?.value};
+  }
+
+  @override
+  Stream<BodyEntry?> watchLatestBodyEntry(String type) {
+    return (_db.select(_db.bodyEntries)
+          ..where((tbl) =>
+              tbl.userId.equals(_currentUserId) &
+              tbl.type.equals(type) &
+              tbl.deleted.equals(false))
+          ..orderBy([(tbl) => drift.OrderingTerm.desc(tbl.measuredAt)])
+          ..limit(1))
+        .watchSingleOrNull();
+  }
+
+  @override
+  Future<BodyEntry?> getLatestBodyEntry(String type) {
+    return (_db.select(_db.bodyEntries)
+          ..where((tbl) =>
+              tbl.userId.equals(_currentUserId) &
+              tbl.type.equals(type) &
+              tbl.deleted.equals(false))
+          ..orderBy([(tbl) => drift.OrderingTerm.desc(tbl.measuredAt)])
+          ..limit(1))
+        .getSingleOrNull();
+  }
+
+  @override
+  Future<void> updateBodyEntry({
+    required String id,
+    required double value,
+    required String unit,
+    DateTime? measuredAt,
+  }) async {
+    await (_db.update(_db.bodyEntries)
+          ..where((tbl) => tbl.id.equals(id) & tbl.userId.equals(_currentUserId)))
+        .write(
+      BodyEntriesCompanion(
+        value: drift.Value(value),
+        unit: drift.Value(unit),
+        measuredAt: measuredAt != null ? drift.Value(measuredAt) : const drift.Value.absent(),
+        isDirty: const drift.Value(true),
+        updatedAt: drift.Value(DateTime.now()),
+      ),
+    );
   }
 
   @override

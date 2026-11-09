@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:flutter/material.dart';
 
@@ -122,7 +123,7 @@ class _QuantityPickerState extends State<QuantityPicker> {
           children: [
             _buildStepButton(
               context: context,
-              icon: Icons.remove_rounded,
+              icon: CupertinoIcons.minus,
               onPressed: widget.quantity > widget.minQuantity
                   ? () {
                       if (_isEditing) {
@@ -218,7 +219,7 @@ class _QuantityPickerState extends State<QuantityPicker> {
             const SizedBox(width: AppSpacing.md),
             _buildStepButton(
               context: context,
-              icon: Icons.add_rounded,
+              icon: CupertinoIcons.add,
               onPressed: widget.quantity < widget.maxQuantity
                   ? () {
                       if (_isEditing) {

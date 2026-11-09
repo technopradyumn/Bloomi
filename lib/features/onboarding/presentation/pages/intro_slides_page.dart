@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_widget.dart';
@@ -30,7 +31,7 @@ class _IntroSlidesPageState extends State<IntroSlidesPage> {
           'Track your meals in everyday household measures: roti, katori, bowl, glass, or grams. No confusing guesswork.',
       mascotState: MascotState.eating,
       cardColor: AppColors.mint,
-      icon: Icons.restaurant_rounded,
+      icon: CupertinoIcons.cart_fill,
     ),
     _SlideData(
       title: 'Synced with Your Body & Widgets',
@@ -38,7 +39,7 @@ class _IntroSlidesPageState extends State<IntroSlidesPage> {
           'Connect with Google Health Connect to pull real steps, sleep, and heart rate, and sync seamlessly with real data on mobile home widgets.',
       mascotState: MascotState.happy,
       cardColor: AppColors.sky,
-      icon: Icons.favorite_rounded,
+      icon: CupertinoIcons.heart_fill,
     ),
     _SlideData(
       title: 'Gentle, Shame-Free Guidance',
@@ -46,7 +47,7 @@ class _IntroSlidesPageState extends State<IntroSlidesPage> {
           'No harsh red alarms or restrictive crash diets. Bloomi encourages you every step of the way with a kind daily plan.',
       mascotState: MascotState.cheer,
       cardColor: AppColors.butter,
-      icon: Icons.spa_rounded,
+      icon: CupertinoIcons.sparkles,
     ),
   ];
 
@@ -105,7 +106,7 @@ class _IntroSlidesPageState extends State<IntroSlidesPage> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+            icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
             onPressed: _handleBack,
           ),
           actions: [
@@ -228,7 +229,7 @@ class _IntroSlidesPageState extends State<IntroSlidesPage> {
                       label: _currentIndex == _slides.length - 1
                           ? 'Get Started'
                           : 'Continue',
-                      icon: Icons.arrow_forward_rounded,
+                      icon: CupertinoIcons.arrow_right,
                       fullWidth: true,
                       height: 54,
                       onPressed: _onNext,

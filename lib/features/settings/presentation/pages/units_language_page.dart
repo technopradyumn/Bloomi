@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
@@ -150,7 +151,7 @@ class _UnitsLanguagePageState extends State<UnitsLanguagePage> {
                             color: AppColors.mint.withAlpha(51),
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.straighten_rounded,
+                          child: Icon(CupertinoIcons.chart_bar,
                               color: context.appInk, size: 20),
                         ),
                       ),
@@ -173,7 +174,7 @@ class _UnitsLanguagePageState extends State<UnitsLanguagePage> {
                             color: AppColors.butter.withAlpha(102),
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.square_foot_rounded,
+                          child: Icon(CupertinoIcons.chart_bar_alt_fill,
                               color: context.appInk, size: 20),
                         ),
                       ),

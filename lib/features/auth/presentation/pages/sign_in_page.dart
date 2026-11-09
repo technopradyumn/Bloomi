@@ -1,4 +1,5 @@
 import 'package:bloomi/core/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
@@ -43,7 +44,7 @@ class _SignInPageState extends State<SignInPage> {
       BloomiToast.show(
         context,
         message: 'Please enter your name.',
-        icon: Icons.info_outline_rounded,
+        icon: CupertinoIcons.info_circle,
       );
       return;
     }
@@ -85,7 +86,7 @@ class _SignInPageState extends State<SignInPage> {
             BloomiToast.show(
               context,
               message: state.errorMessage!,
-              icon: Icons.info_outline_rounded,
+              icon: CupertinoIcons.info_circle,
             );
           }
         } else if (state is AuthAuthenticatedState) {

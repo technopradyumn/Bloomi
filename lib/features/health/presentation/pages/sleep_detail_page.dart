@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/metric_animations/health_metric_animations.dart';
@@ -202,12 +203,12 @@ class _SleepDetailPageState extends State<SleepDetailPage> {
             children: [
               Expanded(
                 child: _buildTimeBox(context, 'Bedtime', bedtimeStr,
-                    Icons.nightlight_round, AppColors.lilac),
+                    CupertinoIcons.moon_fill, AppColors.lilac),
               ),
               const SizedBox(width: AppSpacing.sm),
               Expanded(
                 child: _buildTimeBox(context, 'Wake Time', wakeTimeStr,
-                    Icons.wb_sunny_rounded, AppColors.butter),
+                    CupertinoIcons.sun_max_fill, AppColors.butter),
               ),
             ],
           ),
@@ -224,7 +225,7 @@ class _SleepDetailPageState extends State<SleepDetailPage> {
               ),
               child: Column(
                 children: [
-                  const Icon(Icons.nightlight_outlined,
+                  const Icon(CupertinoIcons.moon,
                       size: 40, color: AppColors.lilac),
                   const SizedBox(height: AppSpacing.sm),
                   Text(
@@ -463,7 +464,7 @@ class _SleepDetailPageState extends State<SleepDetailPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(
-                  Icons.bedtime_rounded,
+                  CupertinoIcons.moon_fill,
                   color: context.isDarkMode ? const Color(0xFFA78BFA) : const Color(0xFF6B4EE6),
                   size: 22,
                 ),

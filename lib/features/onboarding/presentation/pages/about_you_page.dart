@@ -1,7 +1,9 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/utils/health_calculators.dart';
+import 'package:bloomi/core/widgets/bloomi_cupertino_picker.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/chip_selector.dart';
 import 'package:bloomi/core/widgets/metric_animations/floating_onboarding_illustration.dart';
@@ -65,24 +67,12 @@ class _AboutYouPageState extends State<AboutYouPage> {
     final maxDate = DateTime(now.year - 18, now.month, now.day);
     final initial = _selectedDob ?? DateTime(now.year - 25, 1, 1);
 
-    final picked = await showDatePicker(
-      context: context,
+    final picked = await BloomiCupertinoPicker.showDatePicker(
+      context,
       initialDate: initial.isBefore(maxDate) ? initial : maxDate,
       firstDate: minDate,
       lastDate: now,
-      builder: (context, child) {
-        return Theme(
-          data: Theme.of(context).copyWith(
-            colorScheme: Theme.of(context).colorScheme.copyWith(
-              primary: AppColors.mint,
-              onPrimary: Theme.of(context).colorScheme.onPrimary,
-              surface: context.appSurface,
-              onSurface: context.appInk,
-            ),
-          ),
-          child: child!,
-        );
-      },
+      title: 'Select Date of Birth',
     );
 
     if (picked != null) {
@@ -188,7 +178,7 @@ class _AboutYouPageState extends State<AboutYouPage> {
               backgroundColor: Colors.transparent,
               elevation: 0,
               leading: IconButton(
-                icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+                icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
                 onPressed: _handleBack,
               ),
               title: widget.isStandalone
@@ -284,7 +274,7 @@ class _AboutYouPageState extends State<AboutYouPage> {
                                 hintText: 'e.g. Priya, Alex',
                                 hintStyle: TextStyle(color: context.appSlate),
                                 prefixIcon: Icon(
-                                  Icons.person_outline_rounded,
+                                  CupertinoIcons.person,
                                   color: context.appSlate,
                                 ),
                                 filled: true,
@@ -394,7 +384,7 @@ class _AboutYouPageState extends State<AboutYouPage> {
                                   child: Row(
                                     children: [
                                       const Icon(
-                                        Icons.calendar_today_rounded,
+                                        CupertinoIcons.calendar_today,
                                         color: AppColors.mint,
                                         size: 22,
                                       ),
@@ -426,7 +416,7 @@ class _AboutYouPageState extends State<AboutYouPage> {
                                         ),
                                       ),
                                       Icon(
-                                        Icons.arrow_drop_down_rounded,
+                                        CupertinoIcons.arrowtriangle_down_fill,
                                         color: context.appSlate,
                                       ),
                                     ],
@@ -460,8 +450,8 @@ class _AboutYouPageState extends State<AboutYouPage> {
                             ? 'Save Changes'
                             : 'Continue to Body Numbers',
                         icon: widget.isStandalone
-                            ? Icons.check_rounded
-                            : Icons.arrow_forward_rounded,
+                            ? CupertinoIcons.checkmark
+                            : CupertinoIcons.arrow_right,
                         isLoading: _isSavingStandalone,
                         fullWidth: true,
                         height: 52,

@@ -20,6 +20,12 @@ class ProfileRepositoryImpl implements ProfileRepository {
   Stream<BodyEntry?> watchLatestWeight() => _localDataSource.watchLatestWeight();
 
   @override
+  Stream<BodyEntry?> watchLatestWaist() => _localDataSource.watchLatestWaist();
+
+  @override
+  Stream<BodyEntry?> watchLatestHip() => _localDataSource.watchLatestHip();
+
+  @override
   Future<void> updateProfile({
     required String name,
     required String gender,

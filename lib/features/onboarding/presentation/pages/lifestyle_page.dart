@@ -1,4 +1,5 @@
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/utils/health_calculators.dart';
@@ -89,7 +90,7 @@ class _LifestylePageState extends State<LifestylePage> {
               backgroundColor: Colors.transparent,
               elevation: 0,
               leading: IconButton(
-                icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+                icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
                 onPressed: _handleBack,
               ),
               title: widget.isStandalone
@@ -229,8 +230,8 @@ class _LifestylePageState extends State<LifestylePage> {
                                         children: [
                                           Icon(
                                             isSelected
-                                                ? Icons.check_circle_rounded
-                                                : Icons.radio_button_unchecked_rounded,
+                                                ? CupertinoIcons.checkmark_circle_fill
+                                                : CupertinoIcons.circle,
                                             color: isSelected
                                                 ? context.appInk
                                                 : context.appSlate,
@@ -392,8 +393,8 @@ class _LifestylePageState extends State<LifestylePage> {
                             ? 'Save Changes'
                             : 'Continue to Permissions',
                         icon: widget.isStandalone
-                            ? Icons.check_rounded
-                            : Icons.arrow_forward_rounded,
+                            ? CupertinoIcons.checkmark
+                            : CupertinoIcons.arrow_right,
                         isLoading: _isSavingStandalone,
                         fullWidth: true,
                         height: 52,

@@ -22,7 +22,9 @@ class NutrientSnapshotModel extends NutrientSnapshotEntity {
 
   factory NutrientSnapshotModel.fromMap(Map<String, dynamic> map) {
     return NutrientSnapshotModel(
-      calories: (map['kcal'] as num?)?.toDouble() ?? 0.0,
+      calories: (map['kcal'] as num?)?.toDouble() ??
+          (map['calories'] as num?)?.toDouble() ??
+          0.0,
       protein: (map['protein'] as num?)?.toDouble() ?? 0.0,
       carbs: (map['carbs'] as num?)?.toDouble() ?? 0.0,
       fat: (map['fat'] as num?)?.toDouble() ?? 0.0,
@@ -32,8 +34,14 @@ class NutrientSnapshotModel extends NutrientSnapshotEntity {
 
   factory NutrientSnapshotModel.fromJson(String jsonStr) {
     try {
-      final map = jsonDecode(jsonStr) as Map<String, dynamic>;
-      return NutrientSnapshotModel.fromMap(map);
+      dynamic decoded = jsonDecode(jsonStr);
+      if (decoded is String) {
+        decoded = jsonDecode(decoded);
+      }
+      if (decoded is Map<String, dynamic>) {
+        return NutrientSnapshotModel.fromMap(decoded);
+      }
+      return const NutrientSnapshotModel(calories: 0, protein: 0, carbs: 0, fat: 0, fibre: 0);
     } catch (_) {
       return const NutrientSnapshotModel(calories: 0, protein: 0, carbs: 0, fat: 0, fibre: 0);
     }

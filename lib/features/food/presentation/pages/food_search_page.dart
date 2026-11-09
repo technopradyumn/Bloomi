@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/features/food/domain/entities/food_search_result_entity.dart';
@@ -74,7 +76,7 @@ class _FoodSearchPageState extends State<FoodSearchPage> {
         backgroundColor: context.appSurface,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+          icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
           onPressed: () {
             if (context.canPop()) {
               context.pop();
@@ -92,8 +94,8 @@ class _FoodSearchPageState extends State<FoodSearchPage> {
         ),
         actions: [
           IconButton(
-            tooltip: 'Create Custom Food',
-            icon: Icon(Icons.add_rounded, color: context.appInk),
+            tooltip: context.tr('foodSearch_custom_food'),
+            icon: Icon(CupertinoIcons.add, color: context.appInk),
             onPressed: () => context.push('/food/custom'),
           ),
         ],
@@ -124,10 +126,10 @@ class _FoodSearchPageState extends State<FoodSearchPage> {
                           fontSize: 13,
                           color: context.appSlate,
                         ),
-                        prefixIcon: Icon(Icons.search_rounded, color: context.appSlate, size: 22),
+                        prefixIcon: Icon(CupertinoIcons.search, color: context.appSlate, size: 22),
                         suffixIcon: _searchCtrl.text.isNotEmpty
                             ? IconButton(
-                                icon: Icon(Icons.clear_rounded, color: context.appSlate, size: 18),
+                                icon: Icon(CupertinoIcons.clear_thick, color: context.appSlate, size: 18),
                                 onPressed: () {
                                   _searchCtrl.clear();
                                   _runSearch('');
@@ -218,7 +220,7 @@ class _FoodSearchPageState extends State<FoodSearchPage> {
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Icon(Icons.search_off_rounded, size: 48, color: context.appSlate),
+                              Icon(CupertinoIcons.search_circle, size: 48, color: context.appSlate),
                               const SizedBox(height: AppSpacing.sm),
                               Text(
                                 'No food matches found',
@@ -236,7 +238,7 @@ class _FoodSearchPageState extends State<FoodSearchPage> {
                                   foregroundColor: context.appInk,
                                   shape: const StadiumBorder(),
                                 ),
-                                icon: const Icon(Icons.add_rounded),
+                                icon: const Icon(CupertinoIcons.add),
                                 label: const Text('Add Custom Recipe'),
                                 onPressed: () => context.push('/food/custom'),
                               ),

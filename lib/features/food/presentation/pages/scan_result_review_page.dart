@@ -1,4 +1,6 @@
+import 'package:bloomi/core/localization/app_localizations.dart';
 import 'package:bloomi/app/di/injection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
@@ -161,7 +163,7 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
                 keyboardType: TextInputType.number,
                 style: TextStyle(color: context.appInk),
                 decoration: InputDecoration(
-                  labelText: 'Estimated Calories (kcal)',
+                  labelText: context.tr('health_workout_calories_label'),
                   labelStyle: TextStyle(color: context.appSlate),
                 ),
                 onChanged: (v) => kcal = double.tryParse(v) ?? 120,
@@ -171,7 +173,7 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(ctx),
-              child: const Text('Cancel'),
+              child: Text(context.tr('cancel')),
             ),
             PillButton(
               label: 'Add',
@@ -251,7 +253,7 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_rounded, color: context.appInk),
+          icon: Icon(CupertinoIcons.arrow_left, color: context.appInk),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -265,7 +267,7 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.add_circle_outline_rounded, color: context.appInk),
+            icon: Icon(CupertinoIcons.add_circled, color: context.appInk),
             tooltip: 'Add item',
             onPressed: _manualAddItem,
           ),
@@ -372,12 +374,12 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
                           value: _selectedMealType,
                           dropdownColor: context.appSurface,
                           underline: const SizedBox(),
-                          icon: Icon(Icons.arrow_drop_down_rounded, color: context.appInk),
-                          items: const [
-                            DropdownMenuItem(value: 'breakfast', child: Text('Breakfast')),
-                            DropdownMenuItem(value: 'lunch', child: Text('Lunch')),
-                            DropdownMenuItem(value: 'snack', child: Text('Snack')),
-                            DropdownMenuItem(value: 'dinner', child: Text('Dinner')),
+                          icon: Icon(CupertinoIcons.arrowtriangle_down_fill, color: context.appInk),
+                          items: [
+                            DropdownMenuItem(value: 'breakfast', child: Text(context.tr('food_breakfast'))),
+                            DropdownMenuItem(value: 'lunch', child: Text(context.tr('food_lunch'))),
+                            DropdownMenuItem(value: 'snack', child: Text(context.tr('food_snacks'))),
+                            DropdownMenuItem(value: 'dinner', child: Text(context.tr('food_dinner'))),
                           ],
                           onChanged: (val) {
                             if (val != null) setState(() => _selectedMealType = val);
@@ -417,7 +419,7 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
                             color: AppColors.softOrange,
                             borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
                           ),
-                          child: Icon(Icons.delete_outline_rounded, color: Theme.of(context).colorScheme.onError),
+                          child: Icon(CupertinoIcons.trash, color: Theme.of(context).colorScheme.onError),
                         ),
                         onDismissed: (_) {
                           setState(() => _items.removeAt(index));
@@ -439,7 +441,7 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
                                       shape: BoxShape.circle,
                                     ),
                                     child: Icon(
-                                      Icons.restaurant_rounded,
+                                      CupertinoIcons.cart_fill,
                                       size: 18,
                                       color: context.appInk,
                                     ),
@@ -483,7 +485,7 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
                                       Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
-                                          Icon(Icons.edit_outlined, size: 13, color: context.appSlate),
+                                          Icon(CupertinoIcons.pencil, size: 13, color: context.appSlate),
                                           const SizedBox(width: 2),
                                           Text('Adjust', style: TextStyle(fontSize: 11, color: context.appSlate)),
                                         ],
