@@ -15,6 +15,7 @@ abstract class SettingsLocalDataSource {
   Stream<List<Reminder>> watchReminders();
   Future<List<Reminder>> getReminders();
   Future<void> seedDefaultReminders();
+  Future<void> rescheduleAllReminders();
   Future<void> toggleReminder(String id, bool enabled);
   Future<void> updateReminderTime(String id, String newTime);
   Future<Map<String, String>> getUnitsAndLanguage();
@@ -98,19 +99,33 @@ class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
                 t.deleted.equals(false)))
           .getSingleOrNull();
       if (existing == null) {
-        await _db.into(_db.reminders).insert(
-              RemindersCompanion(
-                id: drift.Value(const Uuid().v4()),
-                userId: drift.Value(_currentUserId),
-                isDirty: const drift.Value(true),
-                type: drift.Value(def.$1),
-                time: drift.Value(def.$2),
-                enabled: drift.Value(def.$3),
-                createdAt: drift.Value(now),
-                updatedAt: drift.Value(now),
-                deleted: const drift.Value(false),
-              ),
-            );
+        final row = RemindersCompanion(
+          id: drift.Value(const Uuid().v4()),
+          userId: drift.Value(_currentUserId),
+          isDirty: const drift.Value(true),
+          type: drift.Value(def.$1),
+          time: drift.Value(def.$2),
+          enabled: drift.Value(def.$3),
+          createdAt: drift.Value(now),
+          updatedAt: drift.Value(now),
+          deleted: const drift.Value(false),
+        );
+        await _db.into(_db.reminders).insert(row);
+      }
+    }
+    await rescheduleAllReminders();
+  }
+
+  @override
+  Future<void> rescheduleAllReminders() async {
+    final list = await (_db.select(_db.reminders)
+          ..where((t) =>
+              (t.userId.equals(_currentUserId) | t.userId.equals('default_user')) &
+              t.deleted.equals(false)))
+        .get();
+    for (final r in list) {
+      if (r.enabled) {
+        await _scheduleReminderFromRow(r);
       }
     }
   }

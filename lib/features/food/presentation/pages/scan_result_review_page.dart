@@ -238,7 +238,11 @@ class _ScanResultReviewPageState extends State<ScanResultReviewPage> {
     if (mounted) {
       BloomiToast.show(context, message: '$_selectedMealType logged successfully! 🌿');
       try {
-        context.go('/food');
+        if (context.canPop()) {
+          context.pop();
+        } else {
+          context.go('/food');
+        }
       } catch (_) {
         await Navigator.of(context).maybePop();
       }

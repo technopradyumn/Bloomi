@@ -62,6 +62,7 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
   final AppDatabase _db;
   final SharedPreferences? _prefs;
   final String Function()? _userIdProvider;
+  List<FoodItem>? _cachedFoodItems;
 
   final _favouritesStreamController =
       StreamController<List<FavouriteFoodEntity>>.broadcast();
@@ -245,16 +246,20 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
     final userDiet = (userProfile?.dietType ?? '').toLowerCase();
     final userAllergies = (userProfile?.allergies ?? '').toLowerCase();
 
-    var foods = await (_db.select(_db.foodItems)
-          ..where((t) => t.deleted.equals(false)))
-        .get();
-
-    // Auto-heal: If database hasn't been seeded yet, seed it and reload
-    if (foods.isEmpty) {
-      await ensureSeeded();
+    var foods = _cachedFoodItems;
+    if (foods == null) {
       foods = await (_db.select(_db.foodItems)
             ..where((t) => t.deleted.equals(false)))
           .get();
+
+      // Auto-heal: If database hasn't been seeded yet, seed it and reload
+      if (foods.isEmpty) {
+        await ensureSeeded();
+        foods = await (_db.select(_db.foodItems)
+              ..where((t) => t.deleted.equals(false)))
+            .get();
+      }
+      _cachedFoodItems = foods;
     }
 
     final isCustomCategoryOnly = category == 'Custom' || category == 'Custom Foods';
@@ -1140,6 +1145,7 @@ class FoodLocalDataSourceImpl implements FoodLocalDataSource {
     for (final item in seedItems) {
       await _db.into(_db.foodItems).insertOnConflictUpdate(item);
     }
+    _cachedFoodItems = null;
     return seedItems.length;
   }
 }

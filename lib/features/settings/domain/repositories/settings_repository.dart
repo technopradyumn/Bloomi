@@ -4,6 +4,7 @@ abstract class SettingsRepository {
   Stream<List<ReminderEntity>> watchReminders();
   Future<List<ReminderEntity>> getReminders();
   Future<void> seedDefaultReminders();
+  Future<void> rescheduleAllReminders();
   Future<void> toggleReminder(String id, bool enabled);
   Future<void> updateReminderTime(String id, String newTime);
   Future<Map<String, String>> getUnitsAndLanguage();

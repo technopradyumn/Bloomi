@@ -92,8 +92,12 @@ class HealthRepositoryImpl implements HealthRepository {
   }
 
   @override
-  Stream<List<BodyEntry>> watchBodyEntries({String? type}) =>
-      _localDataSource.watchBodyEntries(type: type);
+  Stream<List<BodyEntry>> watchBodyEntries({String? type, int? limit}) =>
+      _localDataSource.watchBodyEntries(type: type, limit: limit);
+
+  @override
+  Future<List<BodyEntry>> getRecentBodyEntries({String? type, int limit = 20}) =>
+      _localDataSource.getRecentBodyEntries(type: type, limit: limit);
 
   @override
   Stream<BodyEntry?> watchLatestBodyEntry(String type) =>
@@ -196,43 +200,60 @@ class HealthRepositoryImpl implements HealthRepository {
   Stream<HealthOverviewEntity> watchHealthOverview() {
     late StreamController<HealthOverviewEntity> controller;
 
-    void refresh() async {
+    Future<HealthOverviewEntity> buildFromLocal({HealthDataBundleEntity? overrideBundle}) async {
+      final bundle = overrideBundle ?? _cachedBundle ?? HealthDataBundleEntity.empty();
+      final now = DateTime.now();
+      final recentEntries = await _localDataSource.getRecentBodyEntries(limit: 20);
+      final todayWorkouts = await _localDataSource.getWorkoutLogsForDate(now);
+      final weightEntry = await _localDataSource.getLatestWeight();
+      final bp = await _localDataSource.getLatestBloodPressure();
+      final target = await _localDataSource.getLatestTargets();
+
+      return HealthOverviewEntity(
+        bundle: bundle,
+        recentBodyEntries: recentEntries,
+        todayWorkouts: todayWorkouts,
+        latestWeightKg: weightEntry ?? bundle.weightKg ?? 0.0,
+        latestSystolicBp: bp?['sys'] ?? bundle.systolicBp,
+        latestDiastolicBp: bp?['dia'] ?? bundle.diastolicBp,
+        stepGoal: target?.steps ?? 10000,
+      );
+    }
+
+    void refreshFromLocal() async {
       if (controller.isClosed) return;
       try {
-        var bundle = await getLatestBundle();
-        if (bundle.steps == 0) {
-          bundle = await getLatestBundle(forceRefresh: true);
-        }
-        final now = DateTime.now();
-        final recentEntries = await _localDataSource.watchBodyEntries().first;
-        final todayWorkouts = await _localDataSource.getWorkoutLogsForDate(now);
-        final weightEntry = await _localDataSource.getLatestWeight();
-        final bp = await _localDataSource.getLatestBloodPressure();
-        final target = await _localDataSource.getLatestTargets();
-
+        final entity = await buildFromLocal();
         if (!controller.isClosed) {
-          controller.add(HealthOverviewEntity(
-            bundle: bundle,
-            recentBodyEntries: recentEntries,
-            todayWorkouts: todayWorkouts,
-            latestWeightKg: weightEntry ?? bundle.weightKg ?? 0.0,
-            latestSystolicBp: bp?['sys'] ?? bundle.systolicBp,
-            latestDiastolicBp: bp?['dia'] ?? bundle.diastolicBp,
-            stepGoal: target?.steps ?? 10000,
-          ));
+          controller.add(entity);
         }
       } catch (_) {}
     }
 
-    controller = StreamController<HealthOverviewEntity>(
+    void syncInBackground() async {
+      try {
+        final freshBundle = await getLatestBundle();
+        if (!controller.isClosed) {
+          final updated = await buildFromLocal(overrideBundle: freshBundle);
+          if (!controller.isClosed) {
+            controller.add(updated);
+          }
+        }
+      } catch (_) {}
+    }
+
+    controller = StreamController<HealthOverviewEntity>.broadcast(
       onListen: () {
-        refresh();
+        // 1. Emit local cached data immediately (zero delay)
+        refreshFromLocal();
+        // 2. Fetch fresh Health Connect data in background
+        syncInBackground();
       },
     );
 
-    final subBody = _localDataSource.watchBodyEntries().listen((_) => refresh());
-    final subTargets = _localDataSource.watchTargets().listen((_) => refresh());
-    final subWorkouts = _localDataSource.watchWorkoutLogs().listen((_) => refresh());
+    final subBody = _localDataSource.watchBodyEntries(limit: 20).listen((_) => refreshFromLocal());
+    final subTargets = _localDataSource.watchTargets().listen((_) => refreshFromLocal());
+    final subWorkouts = _localDataSource.watchWorkoutLogs().listen((_) => refreshFromLocal());
 
     controller.onCancel = () {
       subBody.cancel();

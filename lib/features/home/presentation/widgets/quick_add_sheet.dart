@@ -67,7 +67,7 @@ class QuickAddSheet extends StatelessWidget {
                       subtitle: 'Browse 1,000+ foods',
                       onTap: () {
                         if (context.canPop()) context.pop();
-                        context.go('/food/search');
+                        context.push('/food/search');
                       },
                     ),
                   ),
@@ -81,7 +81,7 @@ class QuickAddSheet extends StatelessWidget {
                       subtitle: 'Premium package scan',
                       onTap: () {
                         if (context.canPop()) context.pop();
-                        context.go('/food/barcode');
+                        context.push('/food/barcode');
                       },
                     ),
                   ),
@@ -120,7 +120,7 @@ class QuickAddSheet extends StatelessWidget {
                       subtitle: 'Add custom recipe',
                       onTap: () {
                         if (context.canPop()) context.pop();
-                        context.go('/food/custom');
+                        context.push('/food/custom');
                       },
                     ),
                   ),

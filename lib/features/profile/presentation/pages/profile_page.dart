@@ -27,10 +27,21 @@ class _ProfilePageState extends State<ProfilePage> {
   bool _isPremium = false;
   double? _latestWeight;
   Target? _target;
+  late final Stream<UserProfile?> _profileStream;
+  late final Stream<Target?> _targetsStream;
+  late final Stream<BodyEntry?> _weightStream;
+  late final Stream<BodyEntry?> _waistStream;
+  late final Stream<BodyEntry?> _hipStream;
 
   @override
   void initState() {
     super.initState();
+    final profileRepo = sl<ProfileRepository>();
+    _profileStream = profileRepo.watchProfile();
+    _targetsStream = profileRepo.watchTargets();
+    _weightStream = profileRepo.watchLatestWeight();
+    _waistStream = profileRepo.watchLatestWaist();
+    _hipStream = profileRepo.watchLatestHip();
     _checkPremium();
     _loadHealthStats();
   }
@@ -95,23 +106,23 @@ class _ProfilePageState extends State<ProfilePage> {
         ],
       ),
       body: StreamBuilder<UserProfile?>(
-        stream: sl<ProfileRepository>().watchProfile(),
+        stream: _profileStream,
         builder: (context, profileSnapshot) {
           final profile = profileSnapshot.data;
           return StreamBuilder<Target?>(
-            stream: sl<ProfileRepository>().watchTargets(),
+            stream: _targetsStream,
             builder: (context, targetSnapshot) {
               final target = targetSnapshot.data ?? _target;
               return StreamBuilder<BodyEntry?>(
-                stream: sl<ProfileRepository>().watchLatestWeight(),
+                stream: _weightStream,
                 builder: (context, weightSnapshot) {
                   final latestWeightEntry = weightSnapshot.data;
                   return StreamBuilder<BodyEntry?>(
-                    stream: sl<ProfileRepository>().watchLatestWaist(),
+                    stream: _waistStream,
                     builder: (context, waistSnapshot) {
                       final waistEntry = waistSnapshot.data;
                       return StreamBuilder<BodyEntry?>(
-                        stream: sl<ProfileRepository>().watchLatestHip(),
+                        stream: _hipStream,
                         builder: (context, hipSnapshot) {
                           final hipEntry = hipSnapshot.data;
                           final displayName =

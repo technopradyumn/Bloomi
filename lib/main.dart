@@ -4,6 +4,8 @@ import 'package:bloomi/app/app.dart';
 import 'package:bloomi/app/di/injection.dart';
 import 'package:bloomi/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:bloomi/features/food/domain/repositories/food_repository.dart';
+import 'package:bloomi/features/settings/domain/repositories/settings_repository.dart';
+import 'package:bloomi/services/notifications/notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -35,6 +37,16 @@ Future<void> main() async {
   );
 
   await setupServiceLocator();
+
+  // Initialize notification channels and timezone on startup
+  try {
+    await sl<NotificationService>().initialize();
+    unawaited(sl<SettingsRepository>().rescheduleAllReminders().catchError((Object e) {
+      debugPrint('Startup reminder reschedule error: $e');
+    }));
+  } catch (e) {
+    debugPrint('Notification startup init error: $e');
+  }
 
   // Pre-seed offline food items in SQLite in background
   unawaited(sl<FoodRepository>().ensureSeeded().catchError((Object e) {

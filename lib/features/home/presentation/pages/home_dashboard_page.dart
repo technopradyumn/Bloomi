@@ -42,23 +42,17 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
   bool _isPremium = false;
   bool _hasHealthPermission = true;
   StreamSubscription<bool>? _premiumSub;
-  Timer? _realtimeStepTimer;
+  late final Stream<HealthOverviewEntity> _healthOverviewStream;
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    _healthOverviewStream = sl<HealthRepository>().watchHealthOverview();
     _checkPremium();
     _checkHealthPermission();
     _premiumSub = sl<BillingService>().onPremiumChanged.listen((val) {
       if (mounted) setState(() => _isPremium = val);
-    });
-    // Real-time step counter polling while dashboard is active
-    _realtimeStepTimer = Timer.periodic(const Duration(seconds: 10), (_) {
-      if (mounted) {
-        setState(() {});
-        sl<WidgetSyncService>().syncToNativeWidgets();
-      }
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
@@ -100,7 +94,6 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
 
   @override
   void dispose() {
-    _realtimeStepTimer?.cancel();
     _premiumSub?.cancel();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
@@ -208,7 +201,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                       const SizedBox(height: AppSpacing.lg),
                       CaloriesInOutCard(
                         onBurnedTap: () => context.push('/health/metric-detail?type=calories'),
-                        onIntakeTap: () => context.push('/food'),
+                        onIntakeTap: () => context.go('/food'),
                       ),
                       const SizedBox(height: AppSpacing.lg),
                       _buildPlanPreviewCard(context, data),
@@ -928,7 +921,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
 
   Widget _buildHealthMetrics(BuildContext context) {
     return StreamBuilder<HealthOverviewEntity>(
-      stream: sl<HealthRepository>().watchHealthOverview(),
+      stream: _healthOverviewStream,
       builder: (context, snapshot) {
         final overview = snapshot.data;
         final bundle = overview?.bundle;
@@ -986,7 +979,7 @@ class _HomeDashboardPageState extends State<HomeDashboardPage>
                   ),
                 ),
                 TextButton(
-                  onPressed: () => context.push('/health'),
+                  onPressed: () => context.go('/health'),
                   style: TextButton.styleFrom(
                     foregroundColor: context.appInk,
                     padding: EdgeInsets.zero,

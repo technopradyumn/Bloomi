@@ -34,7 +34,10 @@ class AppDatabase extends _$AppDatabase {
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
-        onCreate: (m) => m.createAll(),
+        onCreate: (m) async {
+          await m.createAll();
+          await _createIndexes();
+        },
         onUpgrade: (m, from, to) async {
           if (from < 2) {
             // Add userId and isDirty to existing tables for multi-account isolation
@@ -67,8 +70,23 @@ class AppDatabase extends _$AppDatabase {
           if (from < 4) {
             await m.addColumn(scanQueue, scanQueue.userId);
           }
+          await _createIndexes();
+        },
+        beforeOpen: (details) async {
+          await _createIndexes();
         },
       );
+
+  Future<void> _createIndexes() async {
+    try {
+      await customStatement('CREATE INDEX IF NOT EXISTS idx_body_entries_user_type ON body_entries (user_id, type, deleted, measured_at);');
+      await customStatement('CREATE INDEX IF NOT EXISTS idx_workout_logs_user_date ON workout_logs (user_id, deleted, recorded_at);');
+      await customStatement('CREATE INDEX IF NOT EXISTS idx_meal_logs_user_date ON meal_logs (user_id, deleted, date);');
+      await customStatement('CREATE INDEX IF NOT EXISTS idx_water_logs_user_date ON water_logs (user_id, deleted, date);');
+      await customStatement('CREATE INDEX IF NOT EXISTS idx_imported_records_user_type ON imported_health_records (user_id, data_type, start_time, end_time);');
+      await customStatement('CREATE INDEX IF NOT EXISTS idx_targets_user ON targets (user_id, deleted);');
+    } catch (_) {}
+  }
 
   static LazyDatabase _openConnection() {
     return LazyDatabase(() async {

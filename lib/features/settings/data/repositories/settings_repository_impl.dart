@@ -46,6 +46,9 @@ class SettingsRepositoryImpl implements SettingsRepository {
   Future<void> seedDefaultReminders() => localDataSource.seedDefaultReminders();
 
   @override
+  Future<void> rescheduleAllReminders() => localDataSource.rescheduleAllReminders();
+
+  @override
   Future<void> toggleReminder(String id, bool enabled) =>
       localDataSource.toggleReminder(id, enabled);
 

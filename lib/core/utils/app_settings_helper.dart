@@ -28,6 +28,17 @@ class AppSettingsHelper {
     await openAppSettings();
   }
 
+  /// Opens the Android Battery Optimization Settings screen so user can exempt Bloomi.
+  static Future<void> openBatteryOptimizationSettings() async {
+    if (Platform.isAndroid) {
+      try {
+        final success = await _channel.invokeMethod<bool>('openBatteryOptimizationSettings');
+        if (success == true) return;
+      } catch (_) {}
+    }
+    await openAppSettings();
+  }
+
   /// Opens the system Location Source / Services settings page directly.
   static Future<void> openLocationSettings() async {
     if (Platform.isAndroid) {

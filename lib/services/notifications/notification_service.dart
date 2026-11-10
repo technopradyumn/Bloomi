@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:bloomi/app/router/app_router.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
@@ -174,10 +175,20 @@ class NotificationService {
   Future<void> initialize() async {
     if (_isInitialized) return;
     try {
-      // 1. Initialize timezones
+      // 1. Initialize timezones with device local timezone
       try {
         tz.initializeTimeZones();
-      } catch (_) {}
+        final timezoneInfo = await FlutterTimezone.getLocalTimezone();
+        final timeZoneName = timezoneInfo.identifier;
+        try {
+          tz.setLocalLocation(tz.getLocation(timeZoneName));
+          debugPrint('NotificationService: Local timezone configured: $timeZoneName');
+        } catch (_) {
+          debugPrint('NotificationService: Timezone $timeZoneName not found directly in tz database, using default');
+        }
+      } catch (e) {
+        debugPrint('NotificationService: Timezone initialization error: $e');
+      }
 
       // 2. Initialize platform settings
       const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
@@ -223,7 +234,7 @@ class NotificationService {
             importance: def.importance,
             playSound: playSound,
             sound: playSound ? RawResourceAndroidNotificationSound(def.rawSoundName) : null,
-            enableVibration: false,
+            enableVibration: true,
             showBadge: true,
           );
           await androidPlugin.createNotificationChannel(channel);
@@ -260,9 +271,6 @@ class NotificationService {
           .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
       if (androidImplementation != null) {
         final granted = await androidImplementation.requestNotificationsPermission();
-        try {
-          await androidImplementation.requestExactAlarmsPermission();
-        } catch (_) {}
         return granted ?? false;
       }
       final iosImplementation =
@@ -280,6 +288,37 @@ class NotificationService {
       debugPrint('Notification permission request error: $e');
       return false;
     }
+  }
+
+  /// Checks whether exact alarms can be scheduled on Android 12+ (API 31+).
+  Future<bool> canScheduleExactAlarms() async {
+    try {
+      final androidPlugin = _plugin.resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>();
+      if (androidPlugin != null) {
+        return await androidPlugin.canScheduleExactNotifications() ?? false;
+      }
+    } catch (_) {}
+    return true;
+  }
+
+  /// Requests exact alarms permission by opening system settings if not already granted.
+  Future<bool> requestExactAlarmPermission() async {
+    try {
+      final androidPlugin = _plugin.resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>();
+      if (androidPlugin != null) {
+        final canExact = await androidPlugin.canScheduleExactNotifications() ?? false;
+        if (!canExact) {
+          final granted = await androidPlugin.requestExactAlarmsPermission();
+          return granted ?? false;
+        }
+        return true;
+      }
+    } catch (e) {
+      debugPrint('Error requesting exact alarm permission: $e');
+    }
+    return true;
   }
 
   BloomiNotificationType resolveNotificationType(String typeStr) {
@@ -337,6 +376,7 @@ class NotificationService {
   NotificationDetails _buildNotificationDetails({
     required BloomiNotificationType type,
     List<AndroidNotificationAction>? actions,
+    bool playSound = true,
   }) {
     final def = channels[type]!;
     final androidDetails = AndroidNotificationDetails(
@@ -345,9 +385,10 @@ class NotificationService {
       channelDescription: def.description,
       importance: def.importance,
       priority: Priority.high,
-      sound: RawResourceAndroidNotificationSound(def.rawSoundName),
-      playSound: true,
-      enableVibration: false,
+      icon: '@mipmap/ic_launcher',
+      sound: playSound ? RawResourceAndroidNotificationSound(def.rawSoundName) : null,
+      playSound: playSound,
+      enableVibration: true,
       showWhen: true,
       actions: actions,
       styleInformation: const BigTextStyleInformation(''),
@@ -356,8 +397,8 @@ class NotificationService {
     final darwinDetails = DarwinNotificationDetails(
       presentAlert: true,
       presentBadge: true,
-      presentSound: true,
-      sound: '${def.rawSoundName}.wav',
+      presentSound: playSound,
+      sound: playSound ? '${def.rawSoundName}.wav' : null,
     );
 
     return NotificationDetails(android: androidDetails, iOS: darwinDetails);
@@ -374,7 +415,6 @@ class NotificationService {
   }) async {
     try {
       if (!_isInitialized) await initialize();
-      await requestPermission();
 
       final details = _buildNotificationDetails(
         type: type,
@@ -396,6 +436,7 @@ class NotificationService {
   }
 
   /// Schedules a timezone-aware recurring daily reminder with exact alarm capability.
+  /// Falls back safely to inexact schedule mode if exact alarms permission is revoked.
   Future<void> scheduleDailyReminder({
     required int id,
     required String title,
@@ -404,10 +445,10 @@ class NotificationService {
     required int minute,
     String typeStr = 'nutrition',
     String? payload,
+    bool showImmediateConfirmation = false,
   }) async {
     try {
       if (!_isInitialized) await initialize();
-      await requestPermission();
 
       final type = resolveNotificationType(typeStr);
 
@@ -445,16 +486,18 @@ class NotificationService {
         actions: actions,
       );
 
-      // 1. Immediate trigger for user confirmation
-      await _plugin.show(
-        id: id,
-        title: title,
-        body: body,
-        notificationDetails: details,
-        payload: payload,
-      );
+      // 1. Optional immediate trigger for user confirmation or test dispatch
+      if (showImmediateConfirmation) {
+        await _plugin.show(
+          id: id,
+          title: title,
+          body: body,
+          notificationDetails: details,
+          payload: payload,
+        );
+      }
 
-      // 2. Schedule recurring daily reminder
+      // 2. Schedule recurring daily reminder with device timezone
       final now = tz.TZDateTime.now(tz.local);
       var scheduledDate = tz.TZDateTime(
         tz.local,
@@ -468,19 +511,33 @@ class NotificationService {
         scheduledDate = scheduledDate.add(const Duration(days: 1));
       }
 
+      // Verify exact alarm permission to prevent SecurityException on Android 13/14+
+      final androidPlugin = _plugin.resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>();
+      bool canExact = false;
+      if (androidPlugin != null) {
+        try {
+          canExact = await androidPlugin.canScheduleExactNotifications() ?? false;
+        } catch (_) {}
+      }
+
+      final scheduleMode = canExact
+          ? AndroidScheduleMode.exactAllowWhileIdle
+          : AndroidScheduleMode.inexactAllowWhileIdle;
+
       await _plugin.zonedSchedule(
         id: id,
         title: title,
         body: body,
         scheduledDate: scheduledDate,
         notificationDetails: details,
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        androidScheduleMode: scheduleMode,
         matchDateTimeComponents: DateTimeComponents.time,
         payload: payload,
       );
 
       debugPrint(
-          'Scheduled timezone-aware daily notification #$id ($typeStr) for $hour:$minute at $scheduledDate');
+          'Scheduled timezone-aware daily notification #$id ($typeStr) for $hour:$minute at $scheduledDate (mode: $scheduleMode)');
     } catch (e) {
       debugPrint('Failed to schedule daily reminder #$id: $e');
     }

@@ -6,10 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppShell extends StatefulWidget {
-  const AppShell({
-    required this.navigationShell,
-    super.key,
-  });
+  const AppShell({required this.navigationShell, super.key});
 
   final StatefulNavigationShell navigationShell;
 
@@ -17,9 +14,11 @@ class AppShell extends StatefulWidget {
   State<AppShell> createState() => _AppShellState();
 }
 
-class _AppShellState extends State<AppShell> with SingleTickerProviderStateMixin {
+class _AppShellState extends State<AppShell>
+    with SingleTickerProviderStateMixin {
   late final AnimationController _animController;
   int _lastTappedIndex = -1;
+  final List<int> _tabHistory = [0];
 
   static const List<_TabItemData> _tabs = [
     _TabItemData(
@@ -79,6 +78,11 @@ class _AppShellState extends State<AppShell> with SingleTickerProviderStateMixin
   }
 
   void _onTabTapped(int index) {
+    if (index != widget.navigationShell.currentIndex) {
+      _tabHistory.remove(index);
+      _tabHistory.add(index);
+    }
+
     setState(() {
       _lastTappedIndex = index;
     });
@@ -95,69 +99,106 @@ class _AppShellState extends State<AppShell> with SingleTickerProviderStateMixin
     final isDark = context.isDarkMode;
     // Solid background - strictly no glassmorphism or blur
     final barBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final topBorderColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final topBorderColor = isDark
+        ? const Color(0xFF334155)
+        : const Color(0xFFE2E8F0);
     final currentIndex = widget.navigationShell.currentIndex;
 
-    return Scaffold(
-      backgroundColor: context.appBackground,
-      body: widget.navigationShell,
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: barBg,
-          border: Border(
-            top: BorderSide(color: topBorderColor, width: 1.0),
-          ),
-          boxShadow: isDark
-              ? const [
-                  BoxShadow(
-                    color: Color(0x33000000),
-                    blurRadius: 8,
-                    offset: Offset(0, -2),
-                  )
-                ]
-              : const [
-                  BoxShadow(
-                    color: Color(0x0F000000),
-                    blurRadius: 8,
-                    offset: Offset(0, -2),
-                  )
-                ],
-        ),
-        child: SafeArea(
-          top: false,
-          child: SizedBox(
-            height: 64,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: List.generate(_tabs.length, (index) {
-                final tab = _tabs[index];
-                final isSelected = index == currentIndex;
-                final isAnimatingThis = _lastTappedIndex == index;
+    if (_tabHistory.isEmpty || _tabHistory.last != currentIndex) {
+      _tabHistory.remove(currentIndex);
+      _tabHistory.add(currentIndex);
+    }
 
-                return Expanded(
-                  child: RepaintBoundary(
-                    child: InkWell(
-                      onTap: () => _onTabTapped(index),
-                      splashColor: tab.color.withValues(alpha: 0.12),
-                      highlightColor: tab.color.withValues(alpha: 0.08),
-                      borderRadius: BorderRadius.circular(16),
-                      child: ConstrainedBox(
-                        constraints: const BoxConstraints(
-                          minWidth: 48,
-                          minHeight: 48,
-                        ),
-                        child: AnimatedBuilder(
-                          animation: _animController,
-                          builder: (context, child) {
-                            final animValue = isAnimatingThis ? _animController.value : 0.0;
-                            return _buildAnimatedIcon(index, tab, isSelected, animValue, isDark);
-                          },
+    final canPopRoot = currentIndex == 0 && _tabHistory.length <= 1;
+
+    return PopScope(
+      canPop: canPopRoot,
+      onPopInvokedWithResult: (didPop, _) {
+        if (didPop) return;
+        // 1. If tab history has previous tabs, pop back to the previous tab
+        if (_tabHistory.length > 1) {
+          _tabHistory.removeLast();
+          final prevIndex = _tabHistory.last;
+          widget.navigationShell.goBranch(prevIndex);
+          setState(() {});
+          return;
+        }
+        // 2. If not on Home (tab 0), return to Home root
+        if (widget.navigationShell.currentIndex != 0) {
+          _tabHistory.clear();
+          _tabHistory.add(0);
+          widget.navigationShell.goBranch(0);
+          setState(() {});
+          return;
+        }
+      },
+      child: Scaffold(
+        backgroundColor: context.appBackground,
+        body: widget.navigationShell,
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            color: barBg,
+            border: Border(top: BorderSide(color: topBorderColor, width: 1.0)),
+            boxShadow: isDark
+                ? const [
+                    BoxShadow(
+                      color: Color(0x33000000),
+                      blurRadius: 8,
+                      offset: Offset(0, -2),
+                    ),
+                  ]
+                : const [
+                    BoxShadow(
+                      color: Color(0x0F000000),
+                      blurRadius: 8,
+                      offset: Offset(0, -2),
+                    ),
+                  ],
+          ),
+          child: SafeArea(
+            top: false,
+            child: SizedBox(
+              height: 64,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: List.generate(_tabs.length, (index) {
+                  final tab = _tabs[index];
+                  final isSelected = index == currentIndex;
+                  final isAnimatingThis = _lastTappedIndex == index;
+
+                  return Expanded(
+                    child: RepaintBoundary(
+                      child: InkWell(
+                        onTap: () => _onTabTapped(index),
+                        splashColor: tab.color.withValues(alpha: 0.12),
+                        highlightColor: tab.color.withValues(alpha: 0.08),
+                        borderRadius: BorderRadius.circular(16),
+                        child: ConstrainedBox(
+                          constraints: const BoxConstraints(
+                            minWidth: 48,
+                            minHeight: 48,
+                          ),
+                          child: AnimatedBuilder(
+                            animation: _animController,
+                            builder: (context, child) {
+                              final animValue = isAnimatingThis
+                                  ? _animController.value
+                                  : 0.0;
+                              return _buildAnimatedIcon(
+                                index,
+                                tab,
+                                isSelected,
+                                animValue,
+                                isDark,
+                              );
+                            },
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                );
-              }),
+                  );
+                }),
+              ),
             ),
           ),
         ),
@@ -176,7 +217,9 @@ class _AppShellState extends State<AppShell> with SingleTickerProviderStateMixin
     Widget iconWidget = Icon(
       isSelected ? tab.selectedIcon : tab.unselectedIcon,
       size: isSelected ? 24 : 22,
-      color: isSelected ? tab.color : (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B)),
+      color: isSelected
+          ? tab.color
+          : (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B)),
     );
 
     if (animProgress > 0 && animProgress < 1.0) {
@@ -192,25 +235,23 @@ class _AppShellState extends State<AppShell> with SingleTickerProviderStateMixin
 
         case 1:
           // Food Diary: Wobble / tilt
-          final angle = 0.20 * math.sin(animProgress * math.pi * 3) * (1.0 - animProgress);
-          iconWidget = Transform.rotate(
-            angle: angle,
-            child: iconWidget,
-          );
+          final angle =
+              0.20 *
+              math.sin(animProgress * math.pi * 3) *
+              (1.0 - animProgress);
+          iconWidget = Transform.rotate(angle: angle, child: iconWidget);
           break;
 
         case 2:
           // Workout Log: Single pulse
           final scale = 1.0 + 0.28 * math.sin(animProgress * math.pi);
-          iconWidget = Transform.scale(
-            scale: scale,
-            child: iconWidget,
-          );
+          iconWidget = Transform.scale(scale: scale, child: iconWidget);
           break;
 
         case 3:
           // Health: Ring shake (horizontal vibration)
-          final shakeX = 5.0 * math.sin(animProgress * math.pi * 4) * (1.0 - animProgress);
+          final shakeX =
+              5.0 * math.sin(animProgress * math.pi * 4) * (1.0 - animProgress);
           iconWidget = Transform.translate(
             offset: Offset(shakeX, 0),
             child: iconWidget,
@@ -228,7 +269,9 @@ class _AppShellState extends State<AppShell> with SingleTickerProviderStateMixin
       }
     }
 
-    final unselectedTextColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final unselectedTextColor = isDark
+        ? const Color(0xFF94A3B8)
+        : const Color(0xFF64748B);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -240,7 +283,9 @@ class _AppShellState extends State<AppShell> with SingleTickerProviderStateMixin
             vertical: 4,
           ),
           decoration: BoxDecoration(
-            color: isSelected ? tab.color.withValues(alpha: isDark ? 0.22 : 0.14) : Colors.transparent,
+            color: isSelected
+                ? tab.color.withValues(alpha: isDark ? 0.22 : 0.14)
+                : Colors.transparent,
             borderRadius: BorderRadius.circular(16),
           ),
           child: iconWidget,

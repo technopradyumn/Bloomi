@@ -4,7 +4,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
 abstract class HealthLocalDataSource {
-  Stream<List<BodyEntry>> watchBodyEntries({String? type});
+  Stream<List<BodyEntry>> watchBodyEntries({String? type, int? limit});
+  Future<List<BodyEntry>> getRecentBodyEntries({String? type, int limit = 20});
   Future<void> insertBodyEntry({
     required String type,
     required double value,
@@ -75,14 +76,29 @@ class HealthLocalDataSourceImpl implements HealthLocalDataSource {
   String get _currentUserId => _userIdProvider?.call() ?? 'default_user';
 
   @override
-  Stream<List<BodyEntry>> watchBodyEntries({String? type}) {
+  Stream<List<BodyEntry>> watchBodyEntries({String? type, int? limit}) {
     final query = _db.select(_db.bodyEntries)
       ..where((tbl) => tbl.userId.equals(_currentUserId) & tbl.deleted.equals(false));
     if (type != null) {
       query.where((tbl) => tbl.type.equals(type));
     }
     query.orderBy([(tbl) => drift.OrderingTerm.desc(tbl.measuredAt)]);
+    if (limit != null) {
+      query.limit(limit);
+    }
     return query.watch();
+  }
+
+  @override
+  Future<List<BodyEntry>> getRecentBodyEntries({String? type, int limit = 20}) {
+    final query = _db.select(_db.bodyEntries)
+      ..where((tbl) => tbl.userId.equals(_currentUserId) & tbl.deleted.equals(false));
+    if (type != null) {
+      query.where((tbl) => tbl.type.equals(type));
+    }
+    query.orderBy([(tbl) => drift.OrderingTerm.desc(tbl.measuredAt)]);
+    query.limit(limit);
+    return query.get();
   }
 
   @override

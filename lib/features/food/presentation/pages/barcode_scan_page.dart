@@ -178,7 +178,11 @@ class _BarcodeScanPageState extends State<BarcodeScanPage> {
         message: 'Logged "${_foundProduct!.name}" to $targetMeal! 🌿',
       );
       try {
-        context.go('/food');
+        if (context.canPop()) {
+          context.pop();
+        } else {
+          context.go('/food');
+        }
       } catch (_) {
         await Navigator.of(context).maybePop();
       }

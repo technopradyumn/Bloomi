@@ -49,22 +49,28 @@ class CaloriesInOutCard extends StatefulWidget {
 class _CaloriesInOutCardState extends State<CaloriesInOutCard> {
   bool _show7DayView = false;
   int? _selectedDayIndex;
+  late final Stream<HealthOverviewEntity> _healthStream;
+  late final Stream<List<MealLog>> _mealStream;
+
+  @override
+  void initState() {
+    super.initState();
+    _healthStream = sl<HealthRepository>().watchHealthOverview();
+    final db = sl<AppDatabase>();
+    _mealStream = (db.select(db.mealLogs)..where((t) => t.deleted.equals(false))).watch();
+  }
 
   @override
   Widget build(BuildContext context) {
-    final healthRepo = sl<HealthRepository>();
-
     return StreamBuilder<HealthOverviewEntity>(
-      stream: healthRepo.watchHealthOverview(),
+      stream: _healthStream,
       builder: (context, healthSnapshot) {
         final healthData = healthSnapshot.data;
         final bundle = healthData?.bundle;
         final todayWorkouts = healthData?.todayWorkouts ?? [];
 
         return StreamBuilder<List<MealLog>>(
-          stream: sl<AppDatabase>()
-              .select(sl<AppDatabase>().mealLogs)
-              .watch(),
+          stream: _mealStream,
           builder: (context, mealSnapshot) {
             final now = DateTime.now();
             final todayStart = DateTime(now.year, now.month, now.day);

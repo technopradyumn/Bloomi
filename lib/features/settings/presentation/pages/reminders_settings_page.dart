@@ -2,11 +2,13 @@ import 'package:bloomi/app/di/injection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:bloomi/core/constants/app_colors.dart';
 import 'package:bloomi/core/constants/app_spacing.dart';
+import 'package:bloomi/core/utils/app_settings_helper.dart';
 import 'package:bloomi/core/widgets/bloomi_cupertino_picker.dart';
 import 'package:bloomi/core/widgets/bloomi_overlays.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_state.dart';
 import 'package:bloomi/core/widgets/mascot/mascot_widget.dart';
 import 'package:bloomi/core/widgets/metric_animations/health_metric_animations.dart';
+import 'package:bloomi/core/widgets/pill_button.dart';
 import 'package:bloomi/features/settings/domain/entities/reminder_entity.dart';
 import 'package:bloomi/features/settings/presentation/bloc/settings_bloc.dart';
 import 'package:bloomi/services/notifications/notification_service.dart';
@@ -314,6 +316,51 @@ class _RemindersSettingsPageState extends State<RemindersSettingsPage> {
                   ],
                 ),
               ),
+              const SizedBox(height: AppSpacing.md),
+
+              // Test Notification & Device Permission Actions
+              Row(
+                children: [
+                  Expanded(
+                    child: PillButton(
+                      label: 'Send Test Alert',
+                      icon: CupertinoIcons.bell_fill,
+                      variant: PillButtonVariant.primary,
+                      onPressed: () async {
+                        if (sl.isRegistered<NotificationService>()) {
+                          final notif = sl<NotificationService>();
+                          await notif.requestPermission();
+                          await notif.showNotification(
+                            id: 9999,
+                            title: 'Hydration Nudge 💧',
+                            body: 'Mindful water check-in: Time to take a fresh sip of water!',
+                            type: BloomiNotificationType.hydration,
+                            payload: '/food/water',
+                          );
+                          if (context.mounted) {
+                            BloomiToast.show(context, message: 'Test notification sent! ✨');
+                          }
+                        }
+                      },
+                    ),
+                  ),
+                  const SizedBox(width: AppSpacing.sm),
+                  Expanded(
+                    child: PillButton(
+                      label: 'Battery & Alarms',
+                      icon: CupertinoIcons.battery_100,
+                      variant: PillButtonVariant.secondary,
+                      onPressed: () async {
+                        if (sl.isRegistered<NotificationService>()) {
+                          await sl<NotificationService>().requestExactAlarmPermission();
+                        }
+                        await AppSettingsHelper.openBatteryOptimizationSettings();
+                      },
+                    ),
+                  ),
+                ],
+              ),
+
               const SizedBox(height: AppSpacing.lg),
               Text(
                 'DAILY NUDGES',

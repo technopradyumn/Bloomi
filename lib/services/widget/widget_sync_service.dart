@@ -65,6 +65,9 @@ class WidgetSyncData {
 class WidgetSyncService {
   static const MethodChannel _channel = MethodChannel('com.bloomi.app/widgets');
   StreamSubscription<HomeDashboardEntity>? _dashboardSub;
+  Timer? _debounceTimer;
+  bool _isSyncing = false;
+  DateTime? _lastSyncTime;
 
   /// Starts listening to the local database to update native widgets in real time
   void startLiveListening() {
@@ -73,12 +76,20 @@ class WidgetSyncService {
       _dashboardSub = sl<HomeRepository>()
           .watchDashboardData(userName: 'Friend')
           .listen((_) {
-        syncToNativeWidgets();
+        scheduleSync();
       });
     } catch (_) {}
   }
 
+  void scheduleSync() {
+    _debounceTimer?.cancel();
+    _debounceTimer = Timer(const Duration(seconds: 4), () {
+      syncToNativeWidgets();
+    });
+  }
+
   void dispose() {
+    _debounceTimer?.cancel();
     _dashboardSub?.cancel();
   }
 
@@ -190,8 +201,15 @@ class WidgetSyncService {
   /// Pushes latest real data to native Android AppWidgets
   Future<bool> syncToNativeWidgets() async {
     if (kIsWeb || !Platform.isAndroid) return false;
+    if (_isSyncing) return false;
+    final now = DateTime.now();
+    if (_lastSyncTime != null && now.difference(_lastSyncTime!).inSeconds < 5) {
+      return false;
+    }
+    _isSyncing = true;
     try {
       final data = await fetchRealWidgetData();
+      _lastSyncTime = DateTime.now();
       final caloriesStr = '${data.remainingKcal} kcal';
       final caloriesSub = data.remainingKcal > 0 ? 'remaining today' : 'goal reached! ✨';
       final waterStr = '💧 ${data.waterMl} ml';
@@ -301,6 +319,8 @@ class WidgetSyncService {
     } catch (e) {
       debugPrint('WidgetSyncService: syncToNativeWidgets error: $e');
       return false;
+    } finally {
+      _isSyncing = false;
     }
   }
 

@@ -10,13 +10,26 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
-class DailyNutritionDetailPage extends StatelessWidget {
+class DailyNutritionDetailPage extends StatefulWidget {
   const DailyNutritionDetailPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final now = DateTime.now();
+  State<DailyNutritionDetailPage> createState() => _DailyNutritionDetailPageState();
+}
 
+class _DailyNutritionDetailPageState extends State<DailyNutritionDetailPage> {
+  late final DateTime _today;
+  late final Stream<FoodDiaryStateEntity> _diaryStream;
+
+  @override
+  void initState() {
+    super.initState();
+    _today = DateTime.now();
+    _diaryStream = sl<FoodRepository>().watchFoodDiaryForDate(_today);
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.appBackground,
       appBar: AppBar(
@@ -27,7 +40,7 @@ class DailyNutritionDetailPage extends StatelessWidget {
           onPressed: () => context.pop(),
         ),
         title: Text(
-          'Nutrition: ${DateFormat('d MMM').format(now)}',
+          'Nutrition: ${DateFormat('d MMM').format(_today)}',
           style: TextStyle(
             fontFamily: 'Baloo 2',
             fontWeight: FontWeight.w700,
@@ -37,7 +50,7 @@ class DailyNutritionDetailPage extends StatelessWidget {
         ),
       ),
       body: StreamBuilder<FoodDiaryStateEntity>(
-        stream: sl<FoodRepository>().watchFoodDiaryForDate(now),
+        stream: _diaryStream,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting &&
               !snapshot.hasData) {
@@ -49,7 +62,7 @@ class DailyNutritionDetailPage extends StatelessWidget {
             return Center(child: Text('Error: ${snapshot.error}'));
           }
 
-          final state = snapshot.data ?? FoodDiaryStateEntity.empty(now);
+          final state = snapshot.data ?? FoodDiaryStateEntity.empty(_today);
           final totalKcal = state.dayTotals.calories;
           final proteinKcal = state.dayTotals.protein * 4;
           final carbsKcal = state.dayTotals.carbs * 4;

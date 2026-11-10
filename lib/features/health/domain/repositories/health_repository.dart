@@ -11,7 +11,8 @@ abstract class HealthRepository {
   Future<void> setPreferredHealthSource(String source);
   Future<HealthDataBundleEntity> getLatestBundle({bool forceRefresh = false});
 
-  Stream<List<BodyEntry>> watchBodyEntries({String? type});
+  Stream<List<BodyEntry>> watchBodyEntries({String? type, int? limit});
+  Future<List<BodyEntry>> getRecentBodyEntries({String? type, int limit = 20});
   Stream<BodyEntry?> watchLatestBodyEntry(String type);
   Future<BodyEntry?> getLatestBodyEntry(String type);
   Future<void> logBodyEntry({

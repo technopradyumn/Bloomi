@@ -137,7 +137,13 @@ class _PhotoAnalysingPageState extends State<PhotoAnalysingPage> {
                   const SizedBox(height: AppSpacing.xl),
                   PillButton(
                     label: 'Return to Diary',
-                    onPressed: () => context.go('/food'),
+                    onPressed: () {
+                      if (context.canPop()) {
+                        context.pop();
+                      } else {
+                        context.go('/food');
+                      }
+                    },
                   ),
                 ] else if (_errorMessage != null) ...[
                   PillButton(

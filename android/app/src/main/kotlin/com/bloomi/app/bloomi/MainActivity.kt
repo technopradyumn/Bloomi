@@ -272,6 +272,18 @@ class MainActivity : FlutterActivity(), SensorEventListener {
                         result.success(true)
                     }
                 }
+                "openBatteryOptimizationSettings" -> {
+                    try {
+                        val intent = Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS).apply {
+                            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        }
+                        startActivity(intent)
+                        result.success(true)
+                    } catch (e: Exception) {
+                        openAppDetailsFallback()
+                        result.success(true)
+                    }
+                }
                 "openLocationSettings" -> {
                     try {
                         val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS).apply {
